@@ -1,6 +1,6 @@
 ---
 title: python+selenium webdriver自动化测试
-tags: selenium
+tags: Selenium
 category: Python
 abbrlink: 730667ac
 date: 2021-07-23 10:18:50

@@ -1,6 +1,6 @@
 ---
 title: manjaro安装后必须做的事情
-tags: manjaro
+tags: Manjaro
 category: Linux
 abbrlink: 15bbee35
 date: 2021-04-24 22:43:29
