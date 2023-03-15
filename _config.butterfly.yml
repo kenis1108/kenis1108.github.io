@@ -149,3 +149,16 @@ fireworks:
 
 # 加载动画 Loading Animation
 preloader: true
+
+# 本地搜索
+# yarn add hexo-generator-search
+local_search:
+    enable: true
+    labels: 
+        input_placeholder: "Search for Posts"
+        hits_empty: "we didn't find any results for the search: ${query}"
+
+# 公告
+card announcement:
+    enable: true
+    content: '上班摸鱼ing' #修改公告栏信息

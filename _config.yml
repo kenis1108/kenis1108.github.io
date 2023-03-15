@@ -130,7 +130,7 @@ deploy:
 #     secret: kenis
 #     deployCommand: ./admin_script/hexo-d.sh
 
-# hexo-hide-posts
+# yarn add hexo-hide-posts
 hide_posts:
   enable: true
   # front-matter变量名
