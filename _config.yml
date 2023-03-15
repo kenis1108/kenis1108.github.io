@@ -120,6 +120,9 @@ deploy:
     type: git
     repo:
         github: git@github.com:hjhdsg/hjhdsg.github.io.git
+    branch: gh-pages
+    type: git
+    repo:
         gitee: git@gitee.com:huang_jian_hua/huang_jian_hua.git
     branch: master
 
