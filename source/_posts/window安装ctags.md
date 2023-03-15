@@ -1,10 +1,9 @@
 ---
 title: window安装ctags
 tags: 
-- Windows
 - ctags
 category: 
-- 软件使用和配置
+- [软件使用和配置,Windows]
 abbrlink: f9fa4d10
 date: 2021-04-19 09:36:27
 cover:

@@ -1,10 +1,9 @@
 ---
 title: javascript-questions
 tags: 
-- JavaScript
-- 前端
+- 面试题
 category: 
-- 编程相关
+- [编程相关,JavaScript]
 abbrlink: 63b082fb
 date: 2019-04-08 09:15:00
 cover:

@@ -1,7 +1,10 @@
 ---
 title: art-template前端模板引擎
-tags: JavaScript
-category: 前端
+tags: 
+- art-template
+- 模板引擎
+category: 
+- [编程相关,JavaScript]
 abbrlink: 3762f4c
 date: 2019-03-13 09:47:35
 cover:

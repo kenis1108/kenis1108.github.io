@@ -1,10 +1,9 @@
 ---
 title: manjaro安装后必须做的事情
 tags: 
-- Linux
 - Manjaro
 category: 
-- 软件使用和配置
+- [软件使用和配置,Linux,Manjaro]
 abbrlink: 15bbee35
 date: 2021-04-24 22:43:29
 cover:

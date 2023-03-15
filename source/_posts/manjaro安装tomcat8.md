@@ -2,10 +2,9 @@
 title: manjaro安装tomcat8
 tags: 
 - Tomcat
-- Linux
 - Manjaro
 category: 
-- 软件使用和配置
+- [软件使用和配置,Linux,Manjaro]
 abbrlink: 399136aa
 date: 2021-07-30 09:14:56
 cover:
