@@ -159,6 +159,6 @@ local_search:
         hits_empty: "we didn't find any results for the search: ${query}"
 
 # 公告
-card announcement:
+card_announcement:
     enable: true
-    content: '上班摸鱼ing' #修改公告栏信息
+    content: 上班摸鱼ing #修改公告栏信息
