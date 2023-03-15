@@ -13,7 +13,7 @@ timezone: ""
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: https://huang_jian_hua.gitee.io
+url: https://hjhdsg.github.io
 root: /
 permalink: posts/:abbrlink.html
 abbrlink:

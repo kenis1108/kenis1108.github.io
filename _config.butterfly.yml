@@ -60,7 +60,7 @@ inject:
     head:
         - <link rel="stylesheet" href="//at.alicdn.com/t/font_2379442_x21af219iw.css"> # 引入iconfont图标
         - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-        - <script src="https://huang_jian_hua.gitee.io/live2d-widget/autoload.js"></script>
+        - <script src="https://cdn.jsdelivr.net/gh/hjhdsg/hjhdsg.github.io@main/source/live2d-widget/autoload.js"></script>
         # - <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
 
 # 社交图标
