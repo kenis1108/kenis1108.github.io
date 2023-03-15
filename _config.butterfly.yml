@@ -76,7 +76,7 @@ index_img: https://cdn.jsdelivr.net/gh/hjhdsg/imgbed@main/img/wallhaven-p2qrjm.j
 # =>默认
 default_top_img: https://cdn.jsdelivr.net/gh/hjhdsg/imgbed@main/img/wallhaven-95j9pw.jpg
 # =>tag
-tag_img:
+tag_img: https://cdn.jsdelivr.net/gh/hjhdsg/imgbed@main/img/wallhaven-95j9pw.jpg
 # =>category
 category_img: https://cdn.jsdelivr.net/gh/hjhdsg/imgbed@main/img/wallhaven-95j9pw.jpg
 
