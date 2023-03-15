@@ -1,0 +1,340 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HTML基础 | Kenis</title><meta name="robots" content="noindex"><meta name="keywords" content="HTML"><meta name="author" content="Kenis"><meta name="copyright" content="Kenis"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="网站的建站流程 页面图例 网页的结构 WEB标准WEB标准是网页制作的标准，它不是一个标准，它是根据网页的不同组成部分生成的一系列标准。这些标准大部分由W3C起草发布，也有部分标准由ECMA起草发布   （1）W3C( World Wide Web Consortium )万维网联盟，创建于1994年是Web技术领域最具权威和影响力的国际中立性技术标准机构；是专门负责网络标准制定的非赢利组织。制定">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML基础">
+<meta property="og:url" content="https://hjhdsg.github.io/posts/e173abca">
+<meta property="og:site_name" content="Kenis">
+<meta property="og:description" content="网站的建站流程 页面图例 网页的结构 WEB标准WEB标准是网页制作的标准，它不是一个标准，它是根据网页的不同组成部分生成的一系列标准。这些标准大部分由W3C起草发布，也有部分标准由ECMA起草发布   （1）W3C( World Wide Web Consortium )万维网联盟，创建于1994年是Web技术领域最具权威和影响力的国际中立性技术标准机构；是专门负责网络标准制定的非赢利组织。制定">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/hjhdsg/imgbed@main/img/wallhaven-95j9pw.jpg">
+<meta property="article:published_time" content="2018-02-24T01:56:49.000Z">
+<meta property="article:modified_time" content="2023-03-15T11:08:26.423Z">
+<meta property="article:author" content="Kenis">
+<meta property="article:tag" content="HTML">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/hjhdsg/imgbed@main/img/wallhaven-95j9pw.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://hjhdsg.github.io/posts/e173abca"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'HTML基础',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-03-15 19:08:26'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="//at.alicdn.com/t/font_2379442_x21af219iw.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"><script src="https://cdn.jsdelivr.net/gh/hjhdsg/hjhdsg.github.io@main/source/live2d_widget/autoload.js"></script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/hjhdsg/imgbed@main/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/caseshow/"><i class="fa-fw far fa-grin-hearts"></i><span> 案例展示</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-dragon"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/hjhdsg/imgbed@main/img/wallhaven-95j9pw.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Kenis</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/caseshow/"><i class="fa-fw far fa-grin-hearts"></i><span> 案例展示</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-dragon"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">HTML基础</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2018-02-24T01:56:49.000Z" title="发表于 2018-02-24 09:56:49">2018-02-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-03-15T11:08:26.423Z" title="更新于 2023-03-15 19:08:26">2023-03-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>12分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="HTML基础"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="网站的建站流程"><a href="#网站的建站流程" class="headerlink" title="网站的建站流程"></a>网站的建站流程</h1><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/6D69hQ"><img src="https://s3.ax1x.com/2021/03/15/6D69hQ.png" alt="6D69hQ.png"></a></p>
+<h1 id="页面图例"><a href="#页面图例" class="headerlink" title="页面图例"></a>页面图例</h1><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/6D6Z7T"><img src="https://s3.ax1x.com/2021/03/15/6D6Z7T.jpg" alt="6D6Z7T.jpg"></a></p>
+<h1 id="网页的结构"><a href="#网页的结构" class="headerlink" title="网页的结构"></a>网页的结构</h1><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/6Dyv0f"><img src="https://s3.ax1x.com/2021/03/15/6Dyv0f.png" alt="6Dyv0f.png"></a></p>
+<h1 id="WEB标准"><a href="#WEB标准" class="headerlink" title="WEB标准"></a>WEB标准</h1><figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">WEB标准是网页制作的标准，它不是一个标准，它是根据网页的不同组成部分生成的一系列标准。这些标准大部分由W3C起草发布，也有部分标准由ECMA起草发布</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/6Dyx78"><img src="https://s3.ax1x.com/2021/03/15/6Dyx78.png" alt="6Dyx78.png"></a></p>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">（1）W3C( World Wide Web Consortium )万维网联盟，创建于1994年是Web技术领域最具权威和影响力的国际中立性技术标准机构；是专门负责网络标准制定的非赢利组织。制定了结构标准和样式标准；</span><br><span class="line">（2）ECMA：欧洲电脑网商联合会（厂商协会），制定了行为标准；</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">HTML 指的是超文本标记语言 (Hyper Text Markup Language) www万维网的描述性语言。</span><br><span class="line"></span><br><span class="line">XHTML指可扩展超文本标记语言（标识语言）（EXtensible HyperText Markup Language）是一种置标语言，表现方式与超文本标记语言（HTML）类似，不过语法上更加严格。</span><br><span class="line"></span><br><span class="line">HTML5指的是HTML的第五次重大修改（第5个版本）</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="HTML发展"><a href="#HTML发展" class="headerlink" title="HTML发展"></a>HTML发展</h2><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/6D6ptg"><img src="https://s3.ax1x.com/2021/03/15/6D6ptg.png" alt="6D6ptg.png"></a></p>
+<h2 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h2><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/6D6Ppj"><img src="https://s3.ax1x.com/2021/03/15/6D6Ppj.png" alt="6D6Ppj.png"></a></p>
+<h2 id="建立站点"><a href="#建立站点" class="headerlink" title="建立站点"></a>建立站点</h2><ul>
+<li>规划网站的所有内容和代码</li>
+<li>整合资源</li>
+</ul>
+<h2 id="文件的命名规范"><a href="#文件的命名规范" class="headerlink" title="文件的命名规范"></a>文件的命名规范</h2><ul>
+<li>小写英文字母、数字、下划线的组合，</li>
+<li>其中不得包含汉字、空格和特殊字符；</li>
+<li>必须以英文字母开头。</li>
+</ul>
+<h1 id="HTML开始"><a href="#HTML开始" class="headerlink" title="HTML开始"></a>HTML开始</h1><h2 id="HTML架构"><a href="#HTML架构" class="headerlink" title="HTML架构"></a>HTML架构</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span> <span class="keyword">PUBLIC</span> <span class="string">&quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;</span></span></span><br><span class="line"><span class="meta"><span class="string">&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">有三种：  Strict（严格型)、Trasitional（过渡型）、Frameset（框架型）</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="HTML5基本结构"><a href="#HTML5基本结构" class="headerlink" title="HTML5基本结构"></a>HTML5基本结构</h2><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/6D6Fcn"><img src="https://s3.ax1x.com/2021/03/15/6D6Fcn.png" alt="6D6Fcn.png"></a></p>
+<h2 id="HTML语言"><a href="#HTML语言" class="headerlink" title="HTML语言"></a>HTML语言</h2><ul>
+<li><p>HTML语言组成</p>
+<ul>
+<li>标签<ul>
+<li>写在尖角号&lt;&gt;里的第一个单词，叫做标记，也叫做标签，也称作元素；</li>
+</ul>
+</li>
+<li>属性<ul>
+<li>标记和属性用空格隔开，属性和属性值用等号连接，属性值必须放在双引号内一个标记可以有多个属性，属性和属性之间用空格隔开，属性不分先后顺序</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>HTML语法</strong></p>
+<ul>
+<li>常规标记(双标记)：<br>&lt;标记名称 属性1名=”属性1值” 属性2名=”属性2值” ………… &gt;&lt;/标记名&gt;</li>
+<li>空标记（单标记）：&lt;标记名 属性1名=”属性1值” /&gt;</li>
+</ul>
+</li>
+</ul>
+<h1 id="常用标签"><a href="#常用标签" class="headerlink" title="常用标签"></a>常用标签</h1><h2 id="文本标题标签"><a href="#文本标题标签" class="headerlink" title="文本标题标签"></a>文本标题标签</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">文本标题共有6个（h1-h6）</span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>一级标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span>(唯一性,放网站LOGO)</span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>二级标题<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="tag">&lt;<span class="name">h6</span>&gt;</span>六级标题<span class="tag">&lt;/<span class="name">h6</span>&gt;</span> </span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="字体倾斜-amp-加粗标记"><a href="#字体倾斜-amp-加粗标记" class="headerlink" title="字体倾斜&amp;加粗标记"></a>字体倾斜&amp;加粗标记</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">文本倾斜:</span><br><span class="line">	<span class="tag">&lt;<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">em</span>&gt;</span></span><br><span class="line">	</span><br><span class="line">文本加粗：</span><br><span class="line">	<span class="tag">&lt;<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">strong</span>&gt;</span><span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="下划线-amp-删除线"><a href="#下划线-amp-删除线" class="headerlink" title="下划线&amp;删除线"></a>下划线&amp;删除线</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">u</span>&gt;</span><span class="tag">&lt;/<span class="name">u</span>&gt;</span> 下划线</span><br><span class="line"><span class="tag">&lt;<span class="name">del</span>&gt;</span><span class="tag">&lt;/<span class="name">del</span>&gt;</span> 删除线</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="换行-amp-水平线"><a href="#换行-amp-水平线" class="headerlink" title="换行&amp;水平线"></a>换行&amp;水平线</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="上标-amp-下标"><a href="#上标-amp-下标" class="headerlink" title="上标&amp;下标"></a>上标&amp;下标</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">sup</span>&gt;</span><span class="tag">&lt;/<span class="name">sup</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">sub</span>&gt;</span><span class="tag">&lt;/<span class="name">sub</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="段落标记"><a href="#段落标记" class="headerlink" title="段落标记"></a>段落标记</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="字符-（-小段文本-）"><a href="#字符-（-小段文本-）" class="headerlink" title="字符 （ 小段文本 ）"></a>字符 （ 小段文本 ）</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="常用转义字符"><a href="#常用转义字符" class="headerlink" title="常用转义字符"></a>常用转义字符</h2><figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">&amp;nbsp;     空格</span><br><span class="line">&amp;gt;       &gt;右尖括号</span><br><span class="line">&amp;lt;       &lt;左尖括号</span><br><span class="line">&amp;copy;     备案中图标版权 ©</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>（1） 无序列表</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>列表项内容<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>列表项内容<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>列表项内容<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>（2）有序列表</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>列表项内容<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>列表项内容<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>列表项内容<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line"></span><br><span class="line">type:规定列表中的列表项目的项目符号的类型</span><br><span class="line">语法：<span class="tag">&lt;<span class="name">ol</span> <span class="attr">type</span>=<span class="string">“</span> <span class="attr">a</span>&quot;&gt;</span><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line">1 数字顺序的有序列表（默认值）（1, 2, 3, 4）。</span><br><span class="line">a 字母顺序的有序列表，小写（a, b, c, d）。</span><br><span class="line">A 字母顺序的有序列表，大写（A,B,C,D)</span><br><span class="line">i 罗马数字，小写（i, ii, iii, iv）。</span><br><span class="line">I 罗马数字，大写（i, ii, iii, iv）。</span><br><span class="line"></span><br><span class="line">start 属性规定有序列表的开始点。(start的属性值必须是数字)</span><br><span class="line">语法：<span class="tag">&lt;<span class="name">ol</span> <span class="attr">start</span>=<span class="string">&quot;5&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>​（3）自定义列表</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">dt</span>&gt;</span><span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">dd</span>&gt;</span><span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">&lt;a&gt;&lt;/a&gt;</span><br><span class="line">	属性：</span><br><span class="line">		href = &#x27;url&#x27;</span><br><span class="line">		target = &quot;_blank  /表示的是新窗口打开（打开新的标签页）  _self&quot; 默认的，表示的是当前的窗口打开</span><br><span class="line">		title = &#x27;文本提示&#x27;</span><br><span class="line">		</span><br><span class="line">	拓展：</span><br><span class="line">		rel = &#x27;nofollow&#x27;; 告诉搜索引擎不要此网页上的链接或不要追踪此特定链接</span><br></pre></td></tr></table></figure>
+
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span>&gt;</span></span><br><span class="line">	属性：</span><br><span class="line">		src = &#x27;url&#x27;;</span><br><span class="line">		alt = &#x27; 标签 实例 带有指定替代文本的图像&#x27;  </span><br><span class="line">        title = &#x27;文本提示&#x27;</span><br><span class="line">		width = &#x27;&#x27;</span><br><span class="line">		height = &#x27;&#x27;</span><br><span class="line">		border = &#x27;&#x27;</span><br></pre></td></tr></table></figure>
+
+<h2 id="图片-title-和-alt区别："><a href="#图片-title-和-alt区别：" class="headerlink" title="图片 title 和 alt区别："></a>图片 title 和 alt区别：</h2><figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">alt:</span><br><span class="line">       1、alt属性是考虑到不支持图像显示或者图像显示被关闭的浏览器的用户，以及视觉障碍的用户和使用屏幕阅读器的用户。当图片不显示的时候，图片的替换文字。</span><br><span class="line">       2、alt属性值得长度必须少于100个英文字符</span><br><span class="line">       3、alt属性是img标签的必须属性，如果没有特别意义的图片，可以写alt=&quot;&quot;</span><br><span class="line">       4、alt属性是搜索引擎判断图片与文字是否相关的重要依据，alt属性添加到img主要的目的才是为了SEO</span><br><span class="line">       </span><br><span class="line">   title:</span><br><span class="line">   	1、title属性并不是必须的。</span><br><span class="line">       2、title属性规定元素的额外信息，有视觉效果，当鼠标放到文字或是图片上时有文字显示。</span><br><span class="line">       3、title属性并不作为搜索引擎抓取图片的参考，更多倾向于用户体验的考虑。</span><br></pre></td></tr></table></figure>
+
+<h2 id="相对路径"><a href="#相对路径" class="headerlink" title="相对路径"></a>相对路径</h2><figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">（同级）</span><br><span class="line">	1)当当前文件与目标文件在同一目录下，直接书写目标文件的文件名+扩展名；</span><br><span class="line">（上级找下级）</span><br><span class="line">	2)当当前文件与目标文件所处的文件夹在同一目录下，写法如下：</span><br><span class="line">	文件夹名/目标文件全称+扩展名；</span><br><span class="line">（下级找上级）</span><br><span class="line">	3)当当前文件所处的文件夹和目标文件在同一目录下，写法如下：</span><br><span class="line">	../目标文件文件名+扩展名；</span><br></pre></td></tr></table></figure>
+
+<h2 id="DIV"><a href="#DIV" class="headerlink" title="DIV"></a>DIV</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="HTML注释"><a href="#HTML注释" class="headerlink" title="HTML注释"></a>HTML注释</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 注释 --&gt;</span>  	ctrl+/ </span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/6D6i1s"><img src="https://s3.ax1x.com/2021/03/15/6D6i1s.png" alt="6D6i1s.png"></a></p>
+<h2 id="表格基本结构"><a href="#表格基本结构" class="headerlink" title="表格基本结构"></a>表格基本结构</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- </span></span><br><span class="line"><span class="comment">	table 为表格</span></span><br><span class="line"><span class="comment">	tr 行</span></span><br><span class="line"><span class="comment">	td 列（每一个单元格）</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="表格的html属性"><a href="#表格的html属性" class="headerlink" title="表格的html属性"></a>表格的html属性</h2><figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">1）width=&quot;表格的宽度&quot;</span><br><span class="line">2）height=&quot;表格的高度&quot;</span><br><span class="line">3）border=&quot;表格的边框&quot;</span><br><span class="line">4）bordercolor=&quot;边框色&quot;</span><br><span class="line">5）cellspacing=&quot;单元格与单元格之间的间距&quot;</span><br><span class="line">6）cellpadding=“单元格与内容之间的距离&quot;</span><br><span class="line">7）align=&quot;表格水平对齐方式&quot;</span><br><span class="line">   取值：left 左边、right 右边、center 居中、</span><br><span class="line">   valign=“垂直对齐” top 上边\bottom 下边\middle 居中</span><br><span class="line">8）合并单元格属性：(td)</span><br><span class="line">  合并列： colspan=“所要合并的单元格的列数&quot;</span><br><span class="line">  合并行： rowspan=“要合并单元格的行数”</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h1><p><strong>表单的作用：获取用户信息的</strong></p>
+<h2 id="表单标签"><a href="#表单标签" class="headerlink" title="表单标签"></a>表单标签</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">	属性 ： </span><br><span class="line">		action = &#x27;接口地址&#x27;</span><br><span class="line">		method = &#x27;get / post&#x27;</span><br><span class="line">		name = &#x27;表单名称&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="表单控件"><a href="#表单控件" class="headerlink" title="表单控件"></a>表单控件</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span>&gt;</span></span><br><span class="line">	属性：</span><br><span class="line">		type = &#x27;控件类型&#x27;</span><br><span class="line">		name：属性标识表单域的名称；</span><br><span class="line">		Value：属性定义表单域的默认值，其他属性根据type的不同而有所变化。</span><br><span class="line">		maxlength：控制最多输入的字符数，</span><br><span class="line">		Size：控制框的宽度（以字符为单位）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">1)文本框</span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">value</span>=<span class="string">&quot;默认值&quot;</span>/&gt;</span></span><br><span class="line">2)密码框</span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span> /&gt;</span></span><br><span class="line">3)提交按钮</span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;按钮内容&quot;</span> /&gt;</span></span><br><span class="line">4)重置按钮</span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;reset&quot;</span> <span class="attr">value</span>=<span class="string">&quot;按钮内容&quot;</span> /&gt;</span></span><br><span class="line">5)空按钮</span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">value</span>=<span class="string">&quot;按钮内容&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h1 id="拓展：post-get"><a href="#拓展：post-get" class="headerlink" title="拓展：post/get"></a>拓展：post/get</h1><ul>
+<li>从功能上讲，GET一般用来从服务器上获取资源，POST一般用来更新服务器上的资源；</li>
+<li>从REST服务角度上说，GET是幂等的，即读取同一个资源，总是得到相同的数据，而POST不是幂等的，因为每次请求对资源的改变并不是相同的；进一步地，GET不会改变服务器上的资源，而POST会对服务器资源进行改变；</li>
+<li>从请求参数形式上看，GET请求的数据会附在URL之后，即将请求数据放置在HTTP报文的 请求头 中，以?分割URL和传输数据，参数之间以&amp;相连。特别地，如果数据是英文字母/数字，原样发送；否则，会将其编码为 application/x-www-form-urlencoded MIME 字符串(如果是空格，转换为+，如果是中文/其他字符，则直接把字符串用BASE64加密，得出如：%E4%BD%A0%E5%A5%BD，其中％XX中的XX为该符号以16进制表示的ASCII)；而POST请求会把提交的数据则放置在是HTTP请求报文的 请求体 中。</li>
+<li>就安全性而言，POST的安全性要比GET的安全性高，因为GET请求提交的数据将明文出现在URL上，而且POST请求参数则被包装到请求体中，相对更安全。</li>
+<li>从请求的大小看，GET请求的长度受限于浏览器或服务器对URL长度的限制，允许发送的数据量比较小，而POST请求则是没有大小限制的。</li>
+</ul>
+<h1 id="表格补充"><a href="#表格补充" class="headerlink" title="表格补充"></a>表格补充</h1><h2 id="数据行分组"><a href="#数据行分组" class="headerlink" title="数据行分组"></a>数据行分组</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">thead</span>&gt;</span><span class="tag">&lt;/<span class="name">thead</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">tbody</span>&gt;</span><span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">tfoot</span>&gt;</span><span class="tag">&lt;/<span class="name">tfoot</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="数据列分组"><a href="#数据列分组" class="headerlink" title="数据列分组"></a>数据列分组</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">colgroup</span> <span class="attr">span</span>=<span class="string">&quot;value&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">colgroup</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">col</span> /&gt;</span></span><br><span class="line"><span class="comment">&lt;!--span属性为把几列分为一组--&gt;</span></span><br><span class="line">1）col和colgroup元素会根据从左到右的顺序依次对数据表格进行分组。</span><br><span class="line">2）span属性显示指定相邻几列组成一组，span属性值默认为1，默认时仅定义一列为一组。</span><br><span class="line">3）可以通过给table添加rules=&quot;groups&quot;属性来给分组列添加组分割线。</span><br><span class="line">４）rules=&quot;groups/rows/cols/all/none&quot;    添加组分隔线 加给table标签上</span><br><span class="line">说明：</span><br><span class="line">rows:位于行之间的线条</span><br><span class="line">cols:位于列之间的线条</span><br><span class="line">all：位于行和列之间的线条</span><br><span class="line">none:没有线条</span><br><span class="line">groups:位于行组和列组之间的线条</span><br><span class="line"></span><br><span class="line">注意：虽然col和colgroup具有相同的功能，但是，我们只能使用colgroup元素来设置表格内容部分分割线（rules）应该处于的位置，而col没有这个功能。</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="列标题"><a href="#列标题" class="headerlink" title="列标题"></a>列标题</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">th</span>&gt;</span><span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="表格标题"><a href="#表格标题" class="headerlink" title="表格标题"></a>表格标题</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">caption</span>&gt;</span><span class="tag">&lt;/<span class="name">caption</span>&gt;</span></span><br><span class="line">表格标题位置：caption-side:top/right/bottom/left</span><br><span class="line">说明：定义表格的caption对象放于表格的哪个位置，与caption对象一起使用；</span><br><span class="line">  top为默认值；</span><br><span class="line">  left,right位置只有火狐识别，</span><br><span class="line">  top,bottom IE6以上版本支持，IE6以下        版本不支持其它属性值，只识别top;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="表格属性"><a href="#表格属性" class="headerlink" title="表格属性"></a>表格属性</h2><p><strong>1、单元格间距：border-spacing:value;</strong></p>
+<p>​            说明：单元格间距(该属性必须给table添加) 表示单元格边框之间的距离， 不可取负值</p>
+<p><strong>2、合并相邻单元格边框：border-collapse:separate/collapse;</strong></p>
+<p>​            说明：合并相邻单元格边框 (该属性必须给table添加) separate(边框分开)默认值； collapse(边框合并)</p>
+<p><strong>3、无内容时单元格的设置：empty-cells:show/hide;</strong></p>
+<p>​           说明：定义当单元格无内容时，是否显示该单元格的边框区域；show：显示 ；hide：隐藏；</p>
+<p><strong>注，不能和**</strong>border-collapse：collapse一起使用，否则无效</p>
+<p><strong>4、显示单元格行和列的算法(加快运行的速度)： table-layout:auto/fixed;</strong></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/6DyjnP"><img src="https://s3.ax1x.com/2021/03/15/6DyjnP.png" alt="6DyjnP.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/6D6En0"><img src="https://s3.ax1x.com/2021/03/15/6D6En0.png" alt="6D6En0.png"></a></p>
+<h1 id="表单补充"><a href="#表单补充" class="headerlink" title="表单补充"></a>表单补充</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1）单选按钮组</span><br><span class="line">    &lt;input type=“radio” name=“ral” /&gt;男</span><br><span class="line">    &lt;input type=“radio” name=“ral”</span><br><span class="line">    checked=“checked”/&gt;(默认选中)女</span><br><span class="line">2）复选框组</span><br><span class="line">    &lt;input type=&quot;checkbox&quot; name=&quot;&quot; /&gt;</span><br><span class="line">    &lt;input type=&quot;checkbox&quot; name=&quot;&quot; disabled=&quot;disabled&quot; /&gt;</span><br><span class="line">     *  disabled=&quot;disabled&quot; (禁用)</span><br><span class="line">     *  checked=&quot;checked&quot;   (默认选中)</span><br><span class="line">3）下拉列表（菜单）内联块元素：</span><br><span class="line">	&lt;select &gt;</span><br><span class="line">   		&lt;option&gt;下拉选项1&lt;/option&gt;</span><br><span class="line">   		&lt;option&gt;下拉选项2&lt;/option&gt;</span><br><span class="line">   		…………</span><br><span class="line">	&lt;/select&gt;</span><br><span class="line">	表示下拉列表，name属性不是必须的</span><br><span class="line">	默认选择项用selected属性；</span><br><span class="line">4）表单域多行文本定义（内联块）：</span><br><span class="line">	语法:	&lt;textarea name=&quot;&quot;  cols=&quot;&quot;  rows=&quot;&quot; &gt;&lt;/textarea&gt;</span><br><span class="line">	多行文本。rows属性和cols属性用来设置文本输入窗口的高度和宽度，单位是字符。</span><br><span class="line">	阻止浏览器对窗口的拖动设置:&#123;resize:none;&#125;（css属性）</span><br><span class="line">5)上传文件：</span><br><span class="line">	语法：&lt;input type=&quot;file&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="表单标签-1"><a href="#表单标签-1" class="headerlink" title="表单标签"></a>表单标签</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">1）表单字段集</span><br><span class="line">语法：<span class="tag">&lt;<span class="name">fieldset</span>&gt;</span><span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br><span class="line"></span><br><span class="line">说明：相当于一个方框，在字段集中可以包含文本和其他元素。该元素用于对表单中的元素进行分组并在文档中区别标出文本。fieldset元素可以嵌套，在其内部可以在设置多个fieldset对象。</span><br><span class="line"></span><br><span class="line">2）字段集标题：</span><br><span class="line">语法：<span class="tag">&lt;<span class="name">legend</span> <span class="attr">align</span>=<span class="string">&quot;left/center/right/justify&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">legend</span>&gt;</span></span><br><span class="line">说明：legend元素可以在fieldset对象绘制的方框内插入一个标题。legend元素必须是fieldset内的唯一个元素。</span><br><span class="line">3)提示信息标签：</span><br><span class="line">语法：<span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;绑定控件id名&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">tpye</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">id</span>=<span class="string">&quot;绑定控件id名&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">说明：label元素用来定义标签，为页面上的其他元素指定提示信息。要将label元素绑定到其他的控件上，可以将label元素的for属性设置为与该控件的id属性值相同。</span><br><span class="line"></span><br><span class="line">4)定义选项组：</span><br><span class="line"><span class="tag">&lt;<span class="name">optgroup</span> <span class="attr">label</span>=<span class="string">&quot;组名&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">optgroup</span>&gt;</span></span><br><span class="line">用于组合选项。当使用一个长的选项列表时，对相关的选项进行组合会使处理更加容易。</span><br><span class="line">例如：</span><br><span class="line">         <span class="tag">&lt;<span class="name">select</span>&gt;</span></span><br><span class="line">	    <span class="tag">&lt;<span class="name">optgroup</span> <span class="attr">label</span>=<span class="string">&quot;西安&quot;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">option</span>&gt;</span>雁塔区<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">option</span>&gt;</span>灞桥区<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">option</span>&gt;</span>高新区<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">	    <span class="tag">&lt;/<span class="name">optgroup</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/6D6VBV"><img src="https://s3.ax1x.com/2021/03/15/6D6VBV.png" alt="6D6VBV.png"></a></p>
+<!-- flag of hidden posts --></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Kenis</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://hjhdsg.github.io/posts/e173abca">https://hjhdsg.github.io/posts/e173abca</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://hjhdsg.github.io" target="_blank">Kenis</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/HTML/">HTML</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/hjhdsg/imgbed@main/img/wallhaven-95j9pw.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn.jsdelivr.net/gh/hjhdsg/imgbed@main/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Kenis</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com" target="_blank" title="GitHub"><i class="fab fa-github"></i></a><a class="social-icon" href="/img/default_cover.jpg" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="/img/default_cover.jpg" target="_blank" title="weixin"><i class="fab fa-weixin"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BD%91%E7%AB%99%E7%9A%84%E5%BB%BA%E7%AB%99%E6%B5%81%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">网站的建站流程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%B5%E9%9D%A2%E5%9B%BE%E4%BE%8B"><span class="toc-number">2.</span> <span class="toc-text">页面图例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BD%91%E9%A1%B5%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-number">3.</span> <span class="toc-text">网页的结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#WEB%E6%A0%87%E5%87%86"><span class="toc-number">4.</span> <span class="toc-text">WEB标准</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML"><span class="toc-number">5.</span> <span class="toc-text">HTML</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML%E5%8F%91%E5%B1%95"><span class="toc-number">5.1.</span> <span class="toc-text">HTML发展</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-number">5.2.</span> <span class="toc-text">编辑器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BB%BA%E7%AB%8B%E7%AB%99%E7%82%B9"><span class="toc-number">5.3.</span> <span class="toc-text">建立站点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83"><span class="toc-number">5.4.</span> <span class="toc-text">文件的命名规范</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML%E5%BC%80%E5%A7%8B"><span class="toc-number">6.</span> <span class="toc-text">HTML开始</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML%E6%9E%B6%E6%9E%84"><span class="toc-number">6.1.</span> <span class="toc-text">HTML架构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML5%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-number">6.2.</span> <span class="toc-text">HTML5基本结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML%E8%AF%AD%E8%A8%80"><span class="toc-number">6.3.</span> <span class="toc-text">HTML语言</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE"><span class="toc-number">7.</span> <span class="toc-text">常用标签</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E6%A0%87%E9%A2%98%E6%A0%87%E7%AD%BE"><span class="toc-number">7.1.</span> <span class="toc-text">文本标题标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E4%BD%93%E5%80%BE%E6%96%9C-amp-%E5%8A%A0%E7%B2%97%E6%A0%87%E8%AE%B0"><span class="toc-number">7.2.</span> <span class="toc-text">字体倾斜&amp;加粗标记</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E5%88%92%E7%BA%BF-amp-%E5%88%A0%E9%99%A4%E7%BA%BF"><span class="toc-number">7.3.</span> <span class="toc-text">下划线&amp;删除线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8D%A2%E8%A1%8C-amp-%E6%B0%B4%E5%B9%B3%E7%BA%BF"><span class="toc-number">7.4.</span> <span class="toc-text">换行&amp;水平线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E6%A0%87-amp-%E4%B8%8B%E6%A0%87"><span class="toc-number">7.5.</span> <span class="toc-text">上标&amp;下标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AE%B5%E8%90%BD%E6%A0%87%E8%AE%B0"><span class="toc-number">7.6.</span> <span class="toc-text">段落标记</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6-%EF%BC%88-%E5%B0%8F%E6%AE%B5%E6%96%87%E6%9C%AC-%EF%BC%89"><span class="toc-number">7.7.</span> <span class="toc-text">字符 （ 小段文本 ）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="toc-number">7.8.</span> <span class="toc-text">常用转义字符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E8%A1%A8"><span class="toc-number">7.9.</span> <span class="toc-text">列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="toc-number">7.10.</span> <span class="toc-text">超链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87"><span class="toc-number">7.11.</span> <span class="toc-text">图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87-title-%E5%92%8C-alt%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="toc-number">7.12.</span> <span class="toc-text">图片 title 和 alt区别：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84"><span class="toc-number">7.13.</span> <span class="toc-text">相对路径</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DIV"><span class="toc-number">7.14.</span> <span class="toc-text">DIV</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML%E6%B3%A8%E9%87%8A"><span class="toc-number">7.15.</span> <span class="toc-text">HTML注释</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC"><span class="toc-number">8.</span> <span class="toc-text">表格</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-number">8.1.</span> <span class="toc-text">表格基本结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E7%9A%84html%E5%B1%9E%E6%80%A7"><span class="toc-number">8.2.</span> <span class="toc-text">表格的html属性</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95"><span class="toc-number">9.</span> <span class="toc-text">表单</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95%E6%A0%87%E7%AD%BE"><span class="toc-number">9.1.</span> <span class="toc-text">表单标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95%E6%8E%A7%E4%BB%B6"><span class="toc-number">9.2.</span> <span class="toc-text">表单控件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8B%93%E5%B1%95%EF%BC%9Apost-get"><span class="toc-number">10.</span> <span class="toc-text">拓展：post&#x2F;get</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E8%A1%A5%E5%85%85"><span class="toc-number">11.</span> <span class="toc-text">表格补充</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%A1%8C%E5%88%86%E7%BB%84"><span class="toc-number">11.1.</span> <span class="toc-text">数据行分组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%88%97%E5%88%86%E7%BB%84"><span class="toc-number">11.2.</span> <span class="toc-text">数据列分组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E6%A0%87%E9%A2%98"><span class="toc-number">11.3.</span> <span class="toc-text">列标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E6%A0%87%E9%A2%98"><span class="toc-number">11.4.</span> <span class="toc-text">表格标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E5%B1%9E%E6%80%A7"><span class="toc-number">11.5.</span> <span class="toc-text">表格属性</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95%E8%A1%A5%E5%85%85"><span class="toc-number">12.</span> <span class="toc-text">表单补充</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95%E6%A0%87%E7%AD%BE-1"><span class="toc-number">12.1.</span> <span class="toc-text">表单标签</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/80d480ac" title="koa2+mongodb搭建后端api项目"><img src="https://cdn.jsdelivr.net/gh/hjhdsg/imgbed@main/img/wallhaven-95j9pw.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="koa2+mongodb搭建后端api项目"/></a><div class="content"><a class="title" href="/posts/80d480ac" title="koa2+mongodb搭建后端api项目">koa2+mongodb搭建后端api项目</a><time datetime="2021-11-22T03:28:28.000Z" title="发表于 2021-11-22 11:28:28">2021-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/730667ac" title="python+selenium webdriver自动化测试"><img src="https://cdn.jsdelivr.net/gh/hjhdsg/imgbed@main/img/wallhaven-95j9pw.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python+selenium webdriver自动化测试"/></a><div class="content"><a class="title" href="/posts/730667ac" title="python+selenium webdriver自动化测试">python+selenium webdriver自动化测试</a><time datetime="2021-07-23T02:18:50.000Z" title="发表于 2021-07-23 10:18:50">2021-07-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/ccd37491" title="electron"><img src="https://cdn.jsdelivr.net/gh/hjhdsg/imgbed@main/img/wallhaven-95j9pw.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="electron"/></a><div class="content"><a class="title" href="/posts/ccd37491" title="electron">electron</a><time datetime="2021-07-22T02:16:27.000Z" title="发表于 2021-07-22 10:16:27">2021-07-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/15bbee35" title="manjaro安装后必须做的事情"><img src="https://cdn.jsdelivr.net/gh/hjhdsg/imgbed@main/img/wallhaven-95j9pw.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="manjaro安装后必须做的事情"/></a><div class="content"><a class="title" href="/posts/15bbee35" title="manjaro安装后必须做的事情">manjaro安装后必须做的事情</a><time datetime="2021-04-24T14:43:29.000Z" title="发表于 2021-04-24 22:43:29">2021-04-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/c8833c04" title="Win7/10 qutebrowser安装和使用"><img src="https://cdn.jsdelivr.net/gh/hjhdsg/imgbed@main/img/wallhaven-95j9pw.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Win7/10 qutebrowser安装和使用"/></a><div class="content"><a class="title" href="/posts/c8833c04" title="Win7/10 qutebrowser安装和使用">Win7/10 qutebrowser安装和使用</a><time datetime="2021-04-23T01:22:40.000Z" title="发表于 2021-04-23 09:22:40">2021-04-23</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2018 - 2023 By Kenis</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a href="https://hjhdsg.github.io">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
