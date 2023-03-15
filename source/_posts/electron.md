@@ -3,8 +3,8 @@ title: electron
 tags: 
 - Electron
 category: 
-- 软件使用和配置
-- 编程相关
+- [软件使用和配置]
+- [编程相关]
 abbrlink: ccd37491
 date: 2021-07-22 10:16:27
 cover:

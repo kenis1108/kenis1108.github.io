@@ -2,6 +2,8 @@
 title: Win7/10 qutebrowser安装和使用
 tags: 
 - Windows
+- QuteBrowser
+- Vim
 category: 
 - 软件使用和配置
 abbrlink: c8833c04

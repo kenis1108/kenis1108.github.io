@@ -1,7 +1,8 @@
 ---
 title: 阿里云部署code-server
 tags: 
-- [Linux,Ubuntu]
+- Linux
+- Ubuntu
 category: 
 - 软件使用和配置
 abbrlink: ebb73e0

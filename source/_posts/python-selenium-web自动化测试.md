@@ -1,7 +1,8 @@
 ---
 title: python+selenium webdriver自动化测试
 tags: 
-- [Python,Selenium]
+- Python
+- Selenium
 - 自动化测试
 category: 
 - 编程相关

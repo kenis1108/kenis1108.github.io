@@ -2,7 +2,8 @@
 title: aliyun+Ubuntu20.04+xfce4+vnc+xdrp
 tags: 
 - VNC
-- [Linux,Ubuntu]
+- Linux
+- Ubuntu
 category: 
 - 软件使用和配置
 abbrlink: 6aafa0a1
