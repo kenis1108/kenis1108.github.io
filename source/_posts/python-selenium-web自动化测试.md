@@ -1,7 +1,10 @@
 ---
 title: python+selenium webdriver自动化测试
-tags: Selenium
-category: Python
+tags: 
+- [Python,Selenium]
+- 自动化测试
+category: 
+- 编程相关
 abbrlink: 730667ac
 date: 2021-07-23 10:18:50
 cover:

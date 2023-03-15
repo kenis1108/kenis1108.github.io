@@ -1,7 +1,10 @@
 ---
 title: javascript-questions
-tags: JavaScript
-category: 前端
+tags: 
+- JavaScript
+- 前端
+category: 
+- 编程相关
 abbrlink: 63b082fb
 date: 2019-04-08 09:15:00
 cover:

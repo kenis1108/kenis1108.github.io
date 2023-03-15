@@ -1,7 +1,10 @@
 ---
 title: Event Loop
-tags: JavaScript
-category: 前端
+tags: 
+- JavaScript
+- 前端
+category:
+- 编程相关 
 abbrlink: 2a798ab5
 date: 2019-03-26 15:44:57
 cover:

@@ -1,9 +1,11 @@
 ---
 title: Win7/10 qutebrowser安装和使用
+tags: 
+- Windows
+category: 
+- 软件使用和配置
 abbrlink: c8833c04
 date: 2021-04-23 09:22:40
-tags: Windows
-category: Windows
 cover:
 ---
 
