@@ -1,7 +1,7 @@
 ---
 title: oh-my-posh的使用
-tags: powershell
-category: 前端
+tags: PowerShell
+category: Windows
 abbrlink: 9cb524da
 date: 2021-03-26 16:37:11
 cover:

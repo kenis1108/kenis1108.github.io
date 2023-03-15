@@ -5,6 +5,7 @@ category: 桌面应用自动化
 abbrlink: 1622a5e0
 date: 2021-08-25 17:42:38
 cover:
+hidden: true
 ---
 
 ## 安装pywinauto

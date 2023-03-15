@@ -1,7 +1,7 @@
 ---
 title: electron
-tags: Javascript
-category: 前端
+tags: Electron
+category: 
 abbrlink: ccd37491
 date: 2021-07-22 10:16:27
 cover:

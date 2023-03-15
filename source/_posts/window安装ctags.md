@@ -1,7 +1,7 @@
 ---
 title: window安装ctags
-tags: window
-category: tools
+tags: Windows
+category: [Tools,Windows]
 abbrlink: f9fa4d10
 date: 2021-04-19 09:36:27
 cover:

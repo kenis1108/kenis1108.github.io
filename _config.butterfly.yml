@@ -1,14 +1,14 @@
 # A simple 404 page
 error_404:
     enable: true
-    subtitle: "頁面沒有找到"
+    subtitle: "页面沒有找到"
     background:
 
 # 跳过渲染
 skip_render: myhtml/**
 
 # 网站图标
-# favicon: https://gitee.com/huang_jian_hua/blog-images-bed/raw/master/20210614212308.png
+favicon: /img/favicon.ico
 
 # 导航
 menu:
@@ -27,7 +27,7 @@ code_word_wrap: true
 
 # 头像
 avatar:
-    img: https://gitee.com/huang_jian_hua/blog-images-bed/raw/master/20210516021219.jpg
+    img: https://cdn.jsdelivr.net/gh/hjhdsg/imgbed@main/img/avatar.jpg
     # img: /img/avatar.jpg
     effect: false # true头像会一直转圈
 

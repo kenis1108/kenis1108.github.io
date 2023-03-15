@@ -1,6 +1,6 @@
 ---
 title: Event Loop
-tags: Javascript
+tags: JavaScript
 category: 前端
 abbrlink: 2a798ab5
 date: 2019-03-26 15:44:57

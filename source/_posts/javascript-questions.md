@@ -1,6 +1,6 @@
 ---
 title: javascript-questions
-tags: Javascript
+tags: JavaScript
 category: 前端
 abbrlink: 63b082fb
 date: 2019-04-08 09:15:00
