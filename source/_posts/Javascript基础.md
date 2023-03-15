@@ -2,7 +2,7 @@
 title: Javascript基础
 abbrlink: b18b9acc
 date: 2019-02-27 20:35:09
-tags: Javascript
+tags: JavaScript
 category: 前端
 cover: 
 hidden: true

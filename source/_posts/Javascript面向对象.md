@@ -1,6 +1,6 @@
 ---
 title: Javascript面向对象
-tags: Javascript
+tags: JavaScript
 category: 前端
 abbrlink: 28239a8d
 date: 2019-03-18 20:55:50

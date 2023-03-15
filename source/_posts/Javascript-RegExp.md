@@ -1,7 +1,7 @@
 ---
 title: Javascript_RegExp
 category: 前端
-tags: Javascript
+tags: JavaScript
 abbrlink: ad65cb4e
 date: 2019-03-11 11:20:33
 cover:

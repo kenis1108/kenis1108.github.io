@@ -1,6 +1,6 @@
 ---
 title: vuepress的使用
-tags: Javascript
+tags: JavaScript
 category: 前端
 abbrlink: f93195bc
 date: 2021-07-13 15:29:33

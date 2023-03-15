@@ -1,6 +1,6 @@
 ---
 title: Javascript运动函数
-tags: Javascript
+tags: JavaScript
 category: 前端
 abbrlink: 3ee5605f
 date: 2019-03-18 20:54:55

@@ -1,7 +1,7 @@
 ---
 title: ES5和ES6
 category: 前端
-tags: Javascript
+tags: JavaScript
 abbrlink: 31430fd1
 date: 2019-03-14 13:22:49
 cover:

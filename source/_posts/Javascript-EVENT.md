@@ -1,7 +1,7 @@
 ---
 title: Javascript_EVENT
 category: 前端
-tags: Javascript
+tags: JavaScript
 abbrlink: d7924347
 date: 2019-03-10 14:30:14
 cover:
