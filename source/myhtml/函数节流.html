@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 函数节流 -->
+    <!-- 滚动条不停滚动，每隔一秒打印一次位置 -->
+    <!-- 准备一个开关，事件处理程序根据开关来决定是否执行 -->
+    <!-- 撑出滚动条 -->
+    <div style="height: 8000px;width: 100px;"></div>
+    <script>
+        const showLocaltion = () => {
+            var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop
+            console.log('滚动条位置:', scrollTop)
+            // 隔段事件后打开开关，下次才能进入该分支
+            isGo = true
+        }
+        // 事件监听
+        // 开关
+        var isGo = true
+        window.addEventListener('scroll', () => {
+            if (isGo) {
+                // 关掉开关
+                isGo = false
+                setTimeout(showLocaltion, 1000)
+            } else {
+                return
+            }
+        })
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div style="height: 8000px; width: 200px"></div>
+		<script>
+			const showLocaltion = () => {
+				//  获取滚动条位置(兼容写法)
+				var scrollTop =
+					document.documentElement.scrollTop ||
+					window.pageYOffset ||
+					document.body.scrollTop
+				// 按方向键也会执行7、8次
+				console.log("滚动条位置:", scrollTop)
+			}
+
+			function debounce(fn, delay) {
+				let timer = null
+				return function () {
+					if (timer) {
+						clearTimeout(timer)
+						timer = setTimeout(fn, delay)
+					} else {
+						timer = setTimeout(fn, delay)
+					}
+				}
+			}
+
+			window.onscroll = debounce(showLocaltion, 1000)
+			function a(ab) {
+				if (ab === { age: 0 }) {
+					console.log("a")
+				} else if (ab == { age: 0 }) {
+					console.log("b")
+				} else {
+					console.log("c")
+				}
+			}
+			a({ age: 0 })
+		</script>
+	</body>
+</html>

@@ -1,0 +1,87 @@
+---
+title: manjaro安装tomcat8
+tags: Tomcat
+category: 服务器
+abbrlink: 399136aa
+date: 2021-07-30 09:14:56
+cover:
+---
+
+## 安装java
+`yay -S jdk8-openjdk`
+
+## 安装tomcat
+`yay -S tomcat`
+
+## 目录结构
+![](https://gitee.com/huang_jian_hua/blog-images-bed/raw/master/20210730091658.png)
+
+## 修改配置文件
+1. 修改文件夹权限 `sudo chmod 777 -R /etc/tomcat8`
+2. 修改`/etc/tomcat8/tomcat-users.xml`文件,解开user和role标签的注释
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <!--
+     Licensed to the Apache Software Foundation (ASF) under one or more
+     contributor license agreements.  See the NOTICE file distributed with
+     this work for additional information regarding copyright ownership.
+     The ASF licenses this file to You under the Apache License, Version 2.0
+     (the "License"); you may not use this file except in compliance with
+     the License.  You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+   -->
+   <tomcat-users xmlns="http://tomcat.apache.org/xml"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xsd"
+                 version="1.0">
+   <!--
+     By default, no user is included in the "manager-gui" role required
+     to operate the "/manager/html" web application.  If you wish to use this app,
+     you must define such a user - the username and password are arbitrary.
+
+     Built-in Tomcat manager roles:
+       - manager-gui    - allows access to the HTML GUI and the status pages
+       - manager-script - allows access to the HTTP API and the status pages
+       - manager-jmx    - allows access to the JMX proxy and the status pages
+       - manager-status - allows access to the status pages only
+
+     The users below are wrapped in a comment and are therefore ignored. If you
+     wish to configure one or more of these users for use with the manager web
+     application, do not forget to remove the <!.. ..> that surrounds them. You
+     will also need to set the passwords to something appropriate.
+   -->
+
+     <user username="admin" password="123456" roles="manager-gui"/>
+     <user username="robot" password="123456" roles="manager-script"/>
+
+   <!--
+     The sample user and role entries below are intended for use with the
+     examples web application. They are wrapped in a comment and thus are ignored
+     when reading this file. If you wish to configure these users for use with the
+     examples web application, do not forget to remove the <!.. ..> that surrounds
+     them. You will also need to set the passwords to something appropriate.
+   -->
+
+     <role rolename="tomcat"/>
+     <role rolename="role1"/>
+     <user username="tomcat" password="123456" roles="tomcat"/>
+     <user username="both" password="123456" roles="tomcat,role1"/>
+     <user username="role1" password="123456" roles="role1"/>
+
+   </tomcat-users>
+   ```
+
+
+
+## 启动
+`sudo systemctl start tomcat8`
+
+## 浏览器访问http://127.0.0.1:8080
+

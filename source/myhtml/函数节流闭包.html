@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="height: 8000px;width: 200px;"></div>
+    <script>
+        const showLocaltion = () => {
+            var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop
+            console.log('滚动条位置:', scrollTop)
+            // 隔段事件后打开开关，下次才能进入该分支
+            isGo = true
+        }
+       
+
+        function throttle(fn, delay) {
+            let isGo = true
+            return function () {
+                if (isGo) {
+                    // 关掉开关
+                    isGo = false
+                    setTimeout(()=>{
+                        fn()
+                        // 隔段事件后打开开关，下次才能进入该分支
+                        isGo = true
+                    }, delay)
+                }else{
+                    return
+                } 
+            }
+        }
+
+        window.onscroll = throttle(showLocaltion, 1000)
+    </script>
+</body>
+</html>
