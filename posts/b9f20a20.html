@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>webpack | Kenis</title><meta name="robots" content="noindex"><meta name="keywords" content="Webpack"><meta name="author" content="Kenis"><meta name="copyright" content="Kenis"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="WebPack一、概述官网：https:&#x2F;&#x2F;webpack.js.org 中文网：https:&#x2F;&#x2F;www.webpackjs.com 目的：  为了react的学习 为了了解vue的脚手架的2个命令操作的实现 npm run serve（启动开发服务器） npm run build（打包上线的代码）    1、webpack是什么？ webpack是一种前端资源构建（打包）工具（npm run b">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>webpack | Kenis</title><meta name="author" content="Kenis"><meta name="copyright" content="Kenis"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="WebPack一、概述官网：https:&#x2F;&#x2F;webpack.js.org 中文网：https:&#x2F;&#x2F;www.webpackjs.com 目的：  为了react的学习 为了了解vue的脚手架的2个命令操作的实现 npm run serve（启动开发服务器） npm run build（打包上线的代码）    1、webpack是什么？ webpack是一种前端资源构建（打包）工具（npm run b">
 <meta property="og:type" content="article">
 <meta property="og:title" content="webpack">
 <meta property="og:url" content="https://kenis1108.github.io/posts/b9f20a20">
@@ -6,18 +6,18 @@
 <meta property="og:description" content="WebPack一、概述官网：https:&#x2F;&#x2F;webpack.js.org 中文网：https:&#x2F;&#x2F;www.webpackjs.com 目的：  为了react的学习 为了了解vue的脚手架的2个命令操作的实现 npm run serve（启动开发服务器） npm run build（打包上线的代码）    1、webpack是什么？ webpack是一种前端资源构建（打包）工具（npm run b">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg">
-<meta property="article:published_time" content="2021-06-18T21:21:33.000Z">
-<meta property="article:modified_time" content="2024-09-03T02:41:11.851Z">
+<meta property="article:published_time" content="2021-06-18T13:21:33.000Z">
+<meta property="article:modified_time" content="2024-09-03T11:22:44.648Z">
 <meta property="article:author" content="Kenis">
 <meta property="article:tag" content="Webpack">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://kenis1108.github.io/posts/b9f20a20"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://kenis1108.github.io/posts/b9f20a20"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
   root: '/',
   algolia: undefined,
-  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
   translate: undefined,
   noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
   copy: {
     success: '复制成功',
     error: '复制错误',
@@ -28,7 +28,7 @@
     post: true
   },
   runtime: '',
-  date_suffix: {
+  dateSuffix: {
     just: '刚刚',
     min: '分钟前',
     hour: '小时前',
@@ -38,90 +38,96 @@
   copyright: undefined,
   lightbox: 'fancybox',
   Snackbar: undefined,
-  source: {
-    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
-    },
-    fancybox: {
-      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
-    }
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
   },
   isPhotoFigcaption: false,
   islazyload: false,
-  isanchor: false
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
 }</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
   title: 'webpack',
   isPost: true,
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2024-09-03 02:41:11'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
-
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
+  postUpdate: '2024-09-03 19:22:44'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
         }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
-
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
-
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
-
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
       }
-    }
-  
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-      win.activateDarkMode = function () {
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
         document.documentElement.setAttribute('data-theme', 'dark')
         if (document.querySelector('meta[name="theme-color"]') !== null) {
           document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
         }
       }
-      win.activateLightMode = function () {
+      win.activateLightMode = () => {
         document.documentElement.setAttribute('data-theme', 'light')
         if (document.querySelector('meta[name="theme-color"]') !== null) {
           document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
@@ -129,9 +135,9 @@
       }
       const t = saveToLocal.get('theme')
     
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
       const asideStatus = saveToLocal.get('aside-status')
       if (asideStatus !== undefined) {
         if (asideStatus === 'hide') {
@@ -141,18 +147,13 @@
         }
       }
     
-    const fontSizeVal = saveToLocal.get('global-font-size')
-    if (fontSizeVal !== undefined) {
-      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
-    }
-    
-    const detectApple = () => {
-      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
       }
-    }
-    detectApple()
-    })(window)</script><link rel="stylesheet" href="//at.alicdn.com/t/font_2379442_x21af219iw.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"><script src="https://cdn.jsdelivr.net/gh/kenis1108/kenis1108.github.io@main/source/live2d_widget/autoload.js"></script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/caseshow/"><i class="fa-fw far fa-grin-hearts"></i><span> 案例展示</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-dragon"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Kenis</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/caseshow/"><i class="fa-fw far fa-grin-hearts"></i><span> 案例展示</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-dragon"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">webpack</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-06-18T21:21:33.000Z" title="发表于 2021-06-18 21:21:33">2021-06-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-09-03T02:41:11.851Z" title="更新于 2024-09-03 02:41:11">2024-09-03</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">5.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>18分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="webpack"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="WebPack"><a href="#WebPack" class="headerlink" title="WebPack"></a>WebPack</h1><h1 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h1><p>官网：<a target="_blank" rel="noopener" href="https://webpack.js.org/">https://webpack.js.org</a></p>
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="//at.alicdn.com/t/font_2379442_x21af219iw.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"><script src="https://cdn.jsdelivr.net/gh/kenis1108/kenis1108.github.io@main/source/live2d_widget/autoload.js"></script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/caseshow/"><i class="fa-fw far fa-grin-hearts"></i><span> 案例展示</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-dragon"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Kenis"><span class="site-name">Kenis</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/caseshow/"><i class="fa-fw far fa-grin-hearts"></i><span> 案例展示</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-dragon"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">webpack</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-06-18T13:21:33.000Z" title="发表于 2021-06-18 21:21:33">2021-06-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-09-03T11:22:44.648Z" title="更新于 2024-09-03 19:22:44">2024-09-03</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">5.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>19分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="webpack"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="WebPack"><a href="#WebPack" class="headerlink" title="WebPack"></a>WebPack</h1><h1 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h1><p>官网：<a target="_blank" rel="noopener" href="https://webpack.js.org/">https://webpack.js.org</a></p>
 <p>中文网：<a target="_blank" rel="noopener" href="https://www.webpackjs.com/">https://www.webpackjs.com</a></p>
 <p>目的：</p>
 <ul>
@@ -164,7 +165,7 @@
 </li>
 </ul>
 <h2 id="1、webpack是什么？"><a href="#1、webpack是什么？" class="headerlink" title="1、webpack是什么？"></a>1、webpack是什么？</h2><p><img src="https://storage.lynnn.cn/assets/markdown/91147/pictures/2020/10/45b0f95bb1c04f3f8c5c2d3f16bcea63c0dd1170.gif?sign=0d1284b61f08ec87b1f742c3e170a432&t=5f8d1bd4"></p>
-<p>webpack是<strong>一种前端资源构建（打包）工具（npm run build）</strong>，一个静态模块打包器。在webpack看来，前端的所有资源文件（js/json/css/image/less/sass…）都会作为模块处理。它将根据模块的依赖关系进行静态分析，打包生成对应的静态资源。webpack可以解决当前web开发中所面临的困境，webpack提供了：</p>
+<p>webpack是<strong>一种前端资源构建（打包）工具（npm run build）</strong>，一个静态模块打包器。在webpack看来，前端的所有资源文件（js&#x2F;json&#x2F;css&#x2F;image&#x2F;less&#x2F;sass…）都会作为模块处理。它将根据模块的依赖关系进行静态分析，打包生成对应的静态资源。webpack可以解决当前web开发中所面临的困境，webpack提供了：</p>
 <ul>
 <li>友好的模块化支持</li>
 <li>代码压缩混淆</li>
@@ -173,7 +174,7 @@
 </ul>
 <p>目前绝大多数企业中的前端项目，都是基于webpack进行打包构建的。</p>
 <p><img src="https://storage.lynnn.cn/assets/markdown/91147/pictures/2020/08/3ed87fed6859579595666cc45aabe79a5b41bce1.png?sign=d9bb626d5bf10643dc0625447a0b6312&t=5f436a97" alt="webpack"></p>
-<p><strong>示例：使用==模块化开发思想（能拆就拆原则）==创建一个隔行换色的效果</strong></p>
+<p><strong>示例：使用&#x3D;&#x3D;模块化开发思想（能拆就拆原则）&#x3D;&#x3D;创建一个隔行换色的效果</strong></p>
 <p>先初始化一个空项目<code>npm init -y</code></p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>这是第1个li标签<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>这是第2个li标签<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>这是第3个li标签<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>这是第4个li标签<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>这是第5个li标签<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>这是第6个li标签<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>这是第7个li标签<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./index.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -182,7 +183,7 @@
 <p>在浏览器中执行的时候会报错，需要注意，代码是没有问题的，问题是浏览器不兼容（浏览器不认识模块化的语法，需要使用特定的工具进行转化）。</p>
 <h2 id="2、webpack的核心概念"><a href="#2、webpack的核心概念" class="headerlink" title="2、webpack的核心概念"></a>2、webpack的核心概念</h2><p>核心概念即webpack的<strong>五个核心配置项</strong>。</p>
 <ul>
-<li> <strong>entry入口</strong></li>
+<li><strong>entry入口</strong></li>
 </ul>
 <p>本项目应该使用哪个模块来作为构建其内部依赖图的开始（指定打包入口文件）。<strong>打包入口文件默认为<code>src/index.js</code></strong></p>
 <ul>
@@ -204,13 +205,13 @@
 <h1 id="二、webpack的使用"><a href="#二、webpack的使用" class="headerlink" title="二、webpack的使用"></a>二、webpack的使用</h1><blockquote>
 <p>webpack学习的时候很多包都指定了版本，都是被<code>webpack-dev-server</code>包给害的。被指定版本号的包新的大版本都不兼容老的<code>webpack-dev-server</code>包。如果不采用低版本号安装其它的包，安装<code>webpack-dev-server</code>包的时候就会报错。</p>
 </blockquote>
-<h2 id="1、基本的安装与配置"><a href="#1、基本的安装与配置" class="headerlink" title="1、基本的安装与配置"></a>1、基本的安装与配置</h2><p>webpack是运行在node环境中的，需要Node&gt;= 8.10和npm&gt;=5.6的版本支持。在项目中安装webpack的方式如下：</p>
+<h2 id="1、基本的安装与配置"><a href="#1、基本的安装与配置" class="headerlink" title="1、基本的安装与配置"></a>1、基本的安装与配置</h2><p>webpack是运行在node环境中的，需要Node&gt;&#x3D; 8.10和npm&gt;&#x3D;5.6的版本支持。在项目中安装webpack的方式如下：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm i -D webpack@4 webpack-cli@3</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">由于目前这个2个工具大版本号已经升级，并且不兼容后续使用的工具，所以这边使用指定的低版本号</span></span><br></pre></td></tr></table></figure>
 
 <p>安装好后可以通过先前提及过的<code>npx</code>命令来检查webpack的版本以确定是否安装成功：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npx webpack --version</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">npx可以帮助我们快速执行一些模块内部的命令</span></span><br></pre></td></tr></table></figure>
 
-<p>确认能够通过上述命令输出<code>webpack</code>的版本信息后，再在package.json文件中的<code>scripts</code>节点配置webpack运行脚本命令（**==指令名称自行决定==**）：</p>
+<p>确认能够通过上述命令输出<code>webpack</code>的版本信息后，再在package.json文件中的<code>scripts</code>节点配置webpack运行脚本命令（**&#x3D;&#x3D;指令名称自行决定&#x3D;&#x3D;**）：</p>
 <p><img src="https://storage.lynnn.cn/assets/markdown/91147/pictures/2020/10/7cf1f69b852d4fb5fb1762fe90d4bc977df70b79.png?sign=27c5dfa96c85c20a85be0ea5533135d0&t=5f8d5e64"></p>
 <p>此时，我们可以在终端中运行自定义命令<code>npm run compact</code>来对项目使用webpack打包，例如打包之前写的<code>隔行换色</code>代码：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm run compact</span><br></pre></td></tr></table></figure>
@@ -235,7 +236,7 @@
 <p>如果需要将项目打包成生产环境需要的代码则执行命令：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm run compact:pro</span><br></pre></td></tr></table></figure>
 
-<p>注意：由于在config下面的配置文件中指定了输出的路径，此时路径也需要做一下修改，否则打包的dist目录就会在”config/dist”这个位置。只需要给“dist”加上“../”即可：==该路径一定要求是绝对路径==</p>
+<p>注意：由于在config下面的配置文件中指定了输出的路径，此时路径也需要做一下修改，否则打包的dist目录就会在”config&#x2F;dist”这个位置。只需要给“dist”加上“..&#x2F;”即可：&#x3D;&#x3D;该路径一定要求是绝对路径&#x3D;&#x3D;</p>
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">path: path.resolve(__dirname, &quot;../dist&quot;),</span><br></pre></td></tr></table></figure>
 
 <p><strong>在实际开发的时候推荐使用多套配置文件的方案，便于管理不同环境下需要的打包的配置，避免来回切换配置。</strong></p>
@@ -305,7 +306,7 @@
 
 <p>在写加载器<code>use</code>的时候，需要注意：</p>
 <ul>
-<li><p>use数组中指定的加载器顺序是<strong>固定</strong>的，==顺序不能随意调换==</p>
+<li><p>use数组中指定的加载器顺序是<strong>固定</strong>的，&#x3D;&#x3D;顺序不能随意调换&#x3D;&#x3D;</p>
 </li>
 <li><p>多个加载器调用的顺序是：<strong>从后往前、从下往上</strong>调用（倒序执行）</p>
 </li>
@@ -350,7 +351,7 @@
 </li>
 <li><p>导入插件</p>
 <ul>
-<li>const MiniCssExtractPlugin = require(‘mini-css-extract-plugin’)</li>
+<li>const MiniCssExtractPlugin &#x3D; require(‘mini-css-extract-plugin’)</li>
 </ul>
 </li>
 <li><p>配置插件</p>
@@ -405,7 +406,7 @@
 <p>在开发项目时，有些外部模块通过<code>CDN链接</code>使用<code>script</code>标签引入到页面中可能要比通过打包使用更加方便，例如jQuery库。此时就可以使用<code>externals</code>忽略打包的方式去指定哪些库不需要webpack进行打包。</p>
 <p>请注意，不被webpack打包的外部依赖，后期依旧可以通过以下方式在项目中使用：</p>
 <ul>
-<li><code>script</code>标签链入远程/本地js文件（推荐）</li>
+<li><code>script</code>标签链入远程&#x2F;本地js文件（推荐）</li>
 <li>import导入<ul>
 <li><code>import ... from &#39;xxx&#39;</code></li>
 <li><code>import &#123; a,b,c &#125; from &#39;xxx&#39;</code></li>
@@ -443,15 +444,41 @@
 <p>安装好对应的加载器后需要进一步配置打包规则，首先需要在webpack的配置文件中引入vue-loader的插件：</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">VueLoaderPlugin</span> = <span class="built_in">require</span>(<span class="string">&quot;vue-loader/lib/plugin&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    <span class="attr">plugins</span>: [</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">VueLoaderPlugin</span>(),</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">module</span>: &#123;</span><br><span class="line">        <span class="attr">rules</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">test</span>: <span class="regexp">/\.vue$/</span>,</span><br><span class="line">                <span class="attr">loader</span>: <span class="string">&quot;vue-loader&quot;</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<!-- flag of hidden posts --></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Kenis</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://kenis1108.github.io/posts/b9f20a20">https://kenis1108.github.io/posts/b9f20a20</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://kenis1108.github.io" target="_blank">Kenis</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Webpack/">Webpack</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">G</span><span class="switch-btn"></span><span class="second-comment">i</span></div></div><div class="comment-wrap"><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Kenis</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com" target="_blank" title="GitHub"><i class="fab fa-github"></i></a><a class="social-icon" href="/img/default_cover.jpg" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="/img/default_cover.jpg" target="_blank" title="weixin"><i class="fab fa-weixin"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#WebPack"><span class="toc-number">1.</span> <span class="toc-text">WebPack</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%A6%82%E8%BF%B0"><span class="toc-number">2.</span> <span class="toc-text">一、概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81webpack%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">2.1.</span> <span class="toc-text">1、webpack是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81webpack%E7%9A%84%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="toc-number">2.2.</span> <span class="toc-text">2、webpack的核心概念</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81webpack%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">二、webpack的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%9F%BA%E6%9C%AC%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE"><span class="toc-number">3.1.</span> <span class="toc-text">1、基本的安装与配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81webpack%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">3.2.</span> <span class="toc-text">2、webpack的配置文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1%E3%80%81%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE"><span class="toc-number">3.2.1.</span> <span class="toc-text">2.1、基本配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2%E3%80%81%E9%85%8D%E7%BD%AE%E9%BB%98%E8%AE%A4%E9%A2%84%E8%A7%88%E9%A1%B5"><span class="toc-number">3.2.2.</span> <span class="toc-text">2.2、配置默认预览页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3%E3%80%81%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%97%B6%E6%89%93%E5%8C%85%E9%A2%84%E8%A7%88"><span class="toc-number">3.2.3.</span> <span class="toc-text">2.3、配置实时打包预览</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%8A%A0%E8%BD%BD%E5%99%A8"><span class="toc-number">3.3.</span> <span class="toc-text">3、加载器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1%E3%80%81%E5%8A%A0%E8%BD%BD%E5%99%A8%E6%A6%82%E8%BF%B0"><span class="toc-number">3.3.1.</span> <span class="toc-text">3.1、加载器概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2%E3%80%81%E5%A4%84%E7%90%86%E6%A0%B7%E5%BC%8F"><span class="toc-number">3.3.2.</span> <span class="toc-text">3.2、处理样式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-1%E3%80%81%E5%A4%84%E7%90%86css%E6%96%87%E4%BB%B6"><span class="toc-number">3.3.2.1.</span> <span class="toc-text">3.2.1、处理css文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-2%E3%80%81%E5%A4%84%E7%90%86less%E6%96%87%E4%BB%B6"><span class="toc-number">3.3.2.2.</span> <span class="toc-text">3..2.2、处理less文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-3%E3%80%81%E5%A4%84%E7%90%86scss%E6%96%87%E4%BB%B6"><span class="toc-number">3.3.2.3.</span> <span class="toc-text">3.2.3、处理scss文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-4%E3%80%81%E6%8A%BD%E5%8F%96css%EF%BC%88%E4%BC%98%E5%8C%96%EF%BC%89"><span class="toc-number">3.3.2.4.</span> <span class="toc-text">3.2.4、抽取css（优化）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4%E3%80%81%E5%A4%84%E7%90%86js%E6%96%87%E4%BB%B6%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95"><span class="toc-number">3.3.3.</span> <span class="toc-text">3.4、处理js文件高级语法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81webpack%E7%9A%84%E5%85%B6%E4%BB%96%E7%BB%86%E8%8A%82"><span class="toc-number">3.4.</span> <span class="toc-text">4、webpack的其他细节</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1%E3%80%81entry%E5%A4%9A%E5%85%A5%E5%8F%A3"><span class="toc-number">3.4.1.</span> <span class="toc-text">4.1、entry多入口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2%E3%80%81%E8%B7%AF%E5%BE%84%E5%88%AB%E5%90%8D%E4%B8%8E%E9%BB%98%E8%AE%A4%E5%90%8E%E7%BC%80%EF%BC%88%E4%BC%98%E5%8C%96%EF%BC%89"><span class="toc-number">3.4.2.</span> <span class="toc-text">4.2、路径别名与默认后缀（优化）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3%E3%80%81%E5%BF%BD%E7%95%A5%E6%89%93%E5%8C%85%EF%BC%88%E4%BC%98%E5%8C%96%EF%BC%89"><span class="toc-number">3.4.3.</span> <span class="toc-text">4.3、忽略打包（优化）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4%E3%80%81%E6%89%93%E5%8C%85%E5%A4%84%E7%90%86vue%E6%96%87%E4%BB%B6"><span class="toc-number">3.4.4.</span> <span class="toc-text">4.4、打包处理vue文件</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/80d480ac" title="koa2+mongodb搭建后端api项目"><img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="koa2+mongodb搭建后端api项目"/></a><div class="content"><a class="title" href="/posts/80d480ac" title="koa2+mongodb搭建后端api项目">koa2+mongodb搭建后端api项目</a><time datetime="2021-11-22T11:28:28.000Z" title="发表于 2021-11-22 11:28:28">2021-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/730667ac" title="python+selenium webdriver自动化测试"><img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python+selenium webdriver自动化测试"/></a><div class="content"><a class="title" href="/posts/730667ac" title="python+selenium webdriver自动化测试">python+selenium webdriver自动化测试</a><time datetime="2021-07-23T10:18:50.000Z" title="发表于 2021-07-23 10:18:50">2021-07-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/ccd37491" title="electron"><img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="electron"/></a><div class="content"><a class="title" href="/posts/ccd37491" title="electron">electron</a><time datetime="2021-07-22T10:16:27.000Z" title="发表于 2021-07-22 10:16:27">2021-07-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/15bbee35" title="manjaro安装后必须做的事情"><img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="manjaro安装后必须做的事情"/></a><div class="content"><a class="title" href="/posts/15bbee35" title="manjaro安装后必须做的事情">manjaro安装后必须做的事情</a><time datetime="2021-04-24T22:43:29.000Z" title="发表于 2021-04-24 22:43:29">2021-04-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/c8833c04" title="Win7/10 qutebrowser安装和使用"><img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Win7/10 qutebrowser安装和使用"/></a><div class="content"><a class="title" href="/posts/c8833c04" title="Win7/10 qutebrowser安装和使用">Win7/10 qutebrowser安装和使用</a><time datetime="2021-04-23T09:22:40.000Z" title="发表于 2021-04-23 09:22:40">2021-04-23</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2018 - 2024 By Kenis</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a href="https://kenis1108.github.io">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
-  endLoading: () => {
-    document.body.style.overflow = 'auto';
-    document.getElementById('loading-box').classList.add("loaded")
-  },
-  initLoading: () => {
-    document.body.style.overflow = '';
-    document.getElementById('loading-box').classList.remove("loaded")
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://kenis1108.github.io">Kenis</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://kenis1108.github.io/posts/b9f20a20">https://kenis1108.github.io/posts/b9f20a20</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://kenis1108.github.io" target="_blank">Kenis</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Webpack/">Webpack</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/44d63540" title="ng-alain的使用"><img class="cover" src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">ng-alain的使用</div></div></a></div><div class="next-post pull-right"><a href="/posts/cb417bc6" title="Redux"><img class="cover" src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Redux</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Kenis</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/kenis1108" target="_blank" title="GitHub"><i class="fab fa-github"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#WebPack"><span class="toc-number">1.</span> <span class="toc-text">WebPack</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%A6%82%E8%BF%B0"><span class="toc-number">2.</span> <span class="toc-text">一、概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81webpack%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">2.1.</span> <span class="toc-text">1、webpack是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81webpack%E7%9A%84%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="toc-number">2.2.</span> <span class="toc-text">2、webpack的核心概念</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81webpack%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">二、webpack的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%9F%BA%E6%9C%AC%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE"><span class="toc-number">3.1.</span> <span class="toc-text">1、基本的安装与配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81webpack%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">3.2.</span> <span class="toc-text">2、webpack的配置文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1%E3%80%81%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE"><span class="toc-number">3.2.1.</span> <span class="toc-text">2.1、基本配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2%E3%80%81%E9%85%8D%E7%BD%AE%E9%BB%98%E8%AE%A4%E9%A2%84%E8%A7%88%E9%A1%B5"><span class="toc-number">3.2.2.</span> <span class="toc-text">2.2、配置默认预览页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3%E3%80%81%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%97%B6%E6%89%93%E5%8C%85%E9%A2%84%E8%A7%88"><span class="toc-number">3.2.3.</span> <span class="toc-text">2.3、配置实时打包预览</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%8A%A0%E8%BD%BD%E5%99%A8"><span class="toc-number">3.3.</span> <span class="toc-text">3、加载器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1%E3%80%81%E5%8A%A0%E8%BD%BD%E5%99%A8%E6%A6%82%E8%BF%B0"><span class="toc-number">3.3.1.</span> <span class="toc-text">3.1、加载器概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2%E3%80%81%E5%A4%84%E7%90%86%E6%A0%B7%E5%BC%8F"><span class="toc-number">3.3.2.</span> <span class="toc-text">3.2、处理样式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-1%E3%80%81%E5%A4%84%E7%90%86css%E6%96%87%E4%BB%B6"><span class="toc-number">3.3.2.1.</span> <span class="toc-text">3.2.1、处理css文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-2%E3%80%81%E5%A4%84%E7%90%86less%E6%96%87%E4%BB%B6"><span class="toc-number">3.3.2.2.</span> <span class="toc-text">3..2.2、处理less文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-3%E3%80%81%E5%A4%84%E7%90%86scss%E6%96%87%E4%BB%B6"><span class="toc-number">3.3.2.3.</span> <span class="toc-text">3.2.3、处理scss文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-4%E3%80%81%E6%8A%BD%E5%8F%96css%EF%BC%88%E4%BC%98%E5%8C%96%EF%BC%89"><span class="toc-number">3.3.2.4.</span> <span class="toc-text">3.2.4、抽取css（优化）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4%E3%80%81%E5%A4%84%E7%90%86js%E6%96%87%E4%BB%B6%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95"><span class="toc-number">3.3.3.</span> <span class="toc-text">3.4、处理js文件高级语法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81webpack%E7%9A%84%E5%85%B6%E4%BB%96%E7%BB%86%E8%8A%82"><span class="toc-number">3.4.</span> <span class="toc-text">4、webpack的其他细节</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1%E3%80%81entry%E5%A4%9A%E5%85%A5%E5%8F%A3"><span class="toc-number">3.4.1.</span> <span class="toc-text">4.1、entry多入口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2%E3%80%81%E8%B7%AF%E5%BE%84%E5%88%AB%E5%90%8D%E4%B8%8E%E9%BB%98%E8%AE%A4%E5%90%8E%E7%BC%80%EF%BC%88%E4%BC%98%E5%8C%96%EF%BC%89"><span class="toc-number">3.4.2.</span> <span class="toc-text">4.2、路径别名与默认后缀（优化）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3%E3%80%81%E5%BF%BD%E7%95%A5%E6%89%93%E5%8C%85%EF%BC%88%E4%BC%98%E5%8C%96%EF%BC%89"><span class="toc-number">3.4.3.</span> <span class="toc-text">4.3、忽略打包（优化）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4%E3%80%81%E6%89%93%E5%8C%85%E5%A4%84%E7%90%86vue%E6%96%87%E4%BB%B6"><span class="toc-number">3.4.4.</span> <span class="toc-text">4.4、打包处理vue文件</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/80d480ac" title="koa2+mongodb搭建后端api项目"><img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="koa2+mongodb搭建后端api项目"/></a><div class="content"><a class="title" href="/posts/80d480ac" title="koa2+mongodb搭建后端api项目">koa2+mongodb搭建后端api项目</a><time datetime="2021-11-22T03:28:28.000Z" title="发表于 2021-11-22 11:28:28">2021-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/b93d4cd8" title="Angular"><img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Angular"/></a><div class="content"><a class="title" href="/posts/b93d4cd8" title="Angular">Angular</a><time datetime="2021-08-04T00:54:25.000Z" title="发表于 2021-08-04 08:54:25">2021-08-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/399136aa" title="manjaro安装tomcat8"><img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="manjaro安装tomcat8"/></a><div class="content"><a class="title" href="/posts/399136aa" title="manjaro安装tomcat8">manjaro安装tomcat8</a><time datetime="2021-07-30T01:14:56.000Z" title="发表于 2021-07-30 09:14:56">2021-07-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/730667ac" title="python+selenium webdriver自动化测试"><img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python+selenium webdriver自动化测试"/></a><div class="content"><a class="title" href="/posts/730667ac" title="python+selenium webdriver自动化测试">python+selenium webdriver自动化测试</a><time datetime="2021-07-23T02:18:50.000Z" title="发表于 2021-07-23 10:18:50">2021-07-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/ccd37491" title="electron"><img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="electron"/></a><div class="content"><a class="title" href="/posts/ccd37491" title="electron">electron</a><time datetime="2021-07-22T02:16:27.000Z" title="发表于 2021-07-22 10:16:27">2021-07-22</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2018 - 2024 By Kenis</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a href="https://kenis1108.github.io">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const initGitalk = () => {
+    const gitalk = new Gitalk(Object.assign({
+      clientID: '748f83045ba6e97360fd',
+      clientSecret: 'babb5c5943be448a55199564686ff5adff76a567',
+      repo: 'kenis1108.github.io',
+      owner: 'kenis1108',
+      admin: ['kenis1108'],
+      id: 'd76524b862edf989f8ca36b01471a27a',
+      updateCountCallback: commentCount
+    },null))
 
+    gitalk.render('gitalk-container')
   }
-}
-window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+
+  const loadGitalk = async() => {
+    if (typeof Gitalk === 'function') initGitalk()
+    else {
+      await getCSS('https://cdn.jsdelivr.net/npm/gitalk@1.8.0/dist/gitalk.min.css')
+      await getScript('https://cdn.jsdelivr.net/npm/gitalk@1.8.0/dist/gitalk.min.js')
+      initGitalk()
+    }
+  }
+  
+  const commentCount = n => {
+    const isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+    if (isCommentCount) {
+      isCommentCount.textContent= n
+    }
+  }
+
+  if ('Gitalk' === 'Gitalk' || !true) {
+    if (true) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+    else loadGitalk()
+  } else {
+    window.loadOtherComment = loadGitalk
+  }
+})()</script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/fireworks.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.13.0"></script></div></div></body></html>
