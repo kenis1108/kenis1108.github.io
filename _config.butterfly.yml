@@ -1,8 +1,8 @@
 # A simple 404 page
 error_404:
-    enable: true
-    subtitle: "页面沒有找到"
-    background:
+  enable: true
+  subtitle: "页面沒有找到"
+  background:
 
 # 跳过渲染
 skip_render: myhtml/**
@@ -12,12 +12,12 @@ favicon: /img/favicon.ico
 
 # 导航
 menu:
-    首页: / || fas fa-home
-    标签: /tags/ || fas fa-tags
-    分类: /categories/ || fas fa-folder-open
-    案例展示: /caseshow/ || far fa-grin-hearts
-    # 关于我: /about/ || fas fa-mars-stroke
-    关于我: /about/ || fas fa-dragon
+  首页: / || fas fa-home
+  标签: /tags/ || fas fa-tags
+  分类: /categories/ || fas fa-folder-open
+  案例展示: /caseshow/ || far fa-grin-hearts
+  # 关于我: /about/ || fas fa-mars-stroke
+  关于我: /about/ || fas fa-dragon
 
 # 代码高亮
 highlight_theme: mac
@@ -27,66 +27,66 @@ code_word_wrap: true
 
 # 头像
 avatar:
-    img: https://cdn.jsdelivr.net/gh/hjhdsg/imgbed@main/img/avatar.jpg
-    # img: /img/avatar.jpg
-    effect: false # true头像会一直转圈
+  img: https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/avatar.jpg
+  # img: /img/avatar.jpg
+  effect: false # true头像会一直转圈
 
 # 网站副标题
 subtitle:
-    enable: true
-    # 打字效果
-    effect: true
-    # 循环或者只打字一次
-    loop: true
-    # source调用第三方服务
-    # source: false 关闭调用
-    # source: 1  调用搏天api的随机语录（简体）
-    # source: 2  调用一言网的一句话（简体）
-    # source: 3  调用一句网（简体）
-    # source: 4  调用今日诗词（简体）
-    # subtitle 会先显示 source , 再显示 sub 的内容
-    source: 1
-    # 如果有英文逗号' , ',请使用转义字元 &#44;
-    # 如果有英文双引号' " ',请使用转义字元 &quot;
-    # 开头不允许转义字元，如需要，请把整个句子用双引号包住
-    # 例如 ”&quotNever put off till tomorrow what you can do today&quot"
-    # 如果关闭打字效果，subtitle只会显示sub的第一行文字
-    sub:
-        - Never off till tomorrow what you can do today
+  enable: true
+  # 打字效果
+  effect: true
+  # 循环或者只打字一次
+  loop: true
+  # source调用第三方服务
+  # source: false 关闭调用
+  # source: 1  调用搏天api的随机语录（简体）
+  # source: 2  调用一言网的一句话（简体）
+  # source: 3  调用一句网（简体）
+  # source: 4  调用今日诗词（简体）
+  # subtitle 会先显示 source , 再显示 sub 的内容
+  source: 1
+  # 如果有英文逗号' , ',请使用转义字元 &#44;
+  # 如果有英文双引号' " ',请使用转义字元 &quot;
+  # 开头不允许转义字元，如需要，请把整个句子用双引号包住
+  # 例如 ”&quotNever put off till tomorrow what you can do today&quot"
+  # 如果关闭打字效果，subtitle只会显示sub的第一行文字
+  sub:
+    - Never off till tomorrow what you can do today
 
 # Inject
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
-    head:
-        - <link rel="stylesheet" href="//at.alicdn.com/t/font_2379442_x21af219iw.css"> # 引入iconfont图标
-        - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-        - <script src="https://cdn.jsdelivr.net/gh/hjhdsg/hjhdsg.github.io@main/source/live2d_widget/autoload.js"></script>
-        # - <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+  head:
+    - <link rel="stylesheet" href="//at.alicdn.com/t/font_2379442_x21af219iw.css"> # 引入iconfont图标
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+    - <script src="https://cdn.jsdelivr.net/gh/kenis1108/kenis1108.github.io@main/source/live2d_widget/autoload.js"></script>
+    # - <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
 
 # 社交图标
 social:
-    fab fa-github: https://github.com || GitHub
-    fab fa-qq: /img/default_cover.jpg || QQ
-    # iconfont icon-weixin: /img/default_cover.jpg || weixin
-    fab fa-weixin: /img/default_cover.jpg || weixin
+  fab fa-github: https://github.com || GitHub
+  fab fa-qq: /img/default_cover.jpg || QQ
+  # iconfont icon-weixin: /img/default_cover.jpg || weixin
+  fab fa-weixin: /img/default_cover.jpg || weixin
 
 # 顶部图
 # =>首页
-index_img: https://cdn.jsdelivr.net/gh/hjhdsg/imgbed@main/img/wallhaven-p2qrjm.jpg
+index_img: https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-p2qrjm.jpg
 # =>默认
-default_top_img: https://cdn.jsdelivr.net/gh/hjhdsg/imgbed@main/img/wallhaven-95j9pw.jpg
+default_top_img: https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg
 # =>tag
-tag_img: https://cdn.jsdelivr.net/gh/hjhdsg/imgbed@main/img/wallhaven-95j9pw.jpg
+tag_img: https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg
 # =>category
-category_img: https://cdn.jsdelivr.net/gh/hjhdsg/imgbed@main/img/wallhaven-95j9pw.jpg
+category_img: https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg
 
 # 文章封面
 cover:
-    index_enable: true
-    aside_enable: true
-    archives_enable: true
-    position: both #left/right/both
-    default_cover: https://cdn.jsdelivr.net/gh/hjhdsg/imgbed@main/img/wallhaven-95j9pw.jpg
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+  position: both #left/right/both
+  default_cover: https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg
 
 # 右下角按钮
 # =>阅读模式
@@ -96,10 +96,10 @@ change_font_size: true
 
 # 自定义footer文本
 footer:
-    owner:
-        enable: true
-        since: 2018
-    custom_text: Hi, welcome to my <a href="https://hjhdsg.github.io">blog</a>!
+  owner:
+    enable: true
+    since: 2018
+  custom_text: Hi, welcome to my <a href="https://kenis1108.github.io">blog</a>!
 
 # 主页文章节选
 # 1 - description： 只显示description
@@ -107,45 +107,45 @@ footer:
 # 3 - auto_excerpt：只显示自动节选
 # 4 - false： 不显示文章内容
 index_post_content:
-    method: 3
-    length: 400 # if you set method to 2 or 3, the length need to config
+  method: 3
+  length: 400 # if you set method to 2 or 3, the length need to config
 
 # 文章meta显示
 post_meta:
-    page:
-        date_type: both # created or updated or both 主页文章日期是创建日或者更新日或都显示
-        date_format: relative # date/relative 显示日期还是相对日期
-        categories: true # true or false 主页是否显示分类
-        tags: true # true or false 主页是否显示标籤
-        label: true # true or false 显示描述性文字
-    post:
-        date_type: both # created or updated or both 文章页日期是创建日或者更新日或都显示
-        date_format: relative # date/relative 显示日期还是相对日期
-        categories: true # true or false 文章页是否显示分类
-        tags: true # true or false 文章页是否显示标籤
-        label: true # true or false 显示描述性文字
+  page:
+    date_type: both # created or updated or both 主页文章日期是创建日或者更新日或都显示
+    date_format: relative # date/relative 显示日期还是相对日期
+    categories: true # true or false 主页是否显示分类
+    tags: true # true or false 主页是否显示标籤
+    label: true # true or false 显示描述性文字
+  post:
+    date_type: both # created or updated or both 文章页日期是创建日或者更新日或都显示
+    date_format: relative # date/relative 显示日期还是相对日期
+    categories: true # true or false 文章页是否显示分类
+    tags: true # true or false 文章页是否显示标籤
+    label: true # true or false 显示描述性文字
 
 # 字数统计(npm install hexo-wordcount --save)
 wordcount:
-    enable: true
-    post_wordcount: true
-    min2read: true
-    total_wordcount: true
+  enable: true
+  post_wordcount: true
+  min2read: true
+  total_wordcount: true
 
 # 背景特效
 canvas_nest:
-    enable: true
-    color: "0,0,255" #color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
-    opacity: 0.7 # the opacity of line (0~1), default: 0.5.
-    zIndex: -1 # z-index property of the background, default: -1.
-    count: 99 # the number of lines, default: 99.
-    mobile: false # false 手机端不显示 true 手机端显示
+  enable: true
+  color: "0,0,255" #color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
+  opacity: 0.7 # the opacity of line (0~1), default: 0.5.
+  zIndex: -1 # z-index property of the background, default: -1.
+  count: 99 # the number of lines, default: 99.
+  mobile: false # false 手机端不显示 true 手机端显示
 
 # 鼠标点击特效
 fireworks:
-    enable: true
-    zIndex: 9999 # -1 or 9999
-    mobile: false
+  enable: true
+  zIndex: 9999 # -1 or 9999
+  mobile: false
 
 # 加载动画 Loading Animation
 preloader: true
@@ -153,15 +153,15 @@ preloader: true
 # 本地搜索
 # yarn add hexo-generator-search
 local_search:
-    enable: true
-    labels: 
-        input_placeholder: "Search for Posts"
-        hits_empty: "we didn't find any results for the search: ${query}"
+  enable: true
+  labels:
+    input_placeholder: "Search for Posts"
+    hits_empty: "we didn't find any results for the search: ${query}"
 
 # 公告
 card_announcement:
-    enable: true
-    content: 上班摸鱼ing #修改公告栏信息
+  enable: true
+  content: 上班摸鱼ing #修改公告栏信息
 
 # 评论系统
 comments:
@@ -178,7 +178,7 @@ comments:
 gitalk:
   client_id: 748f83045ba6e97360fd
   client_secret: babb5c5943be448a55199564686ff5adff76a567
-  repo: hjhdsg.github.io
-  owner: hjhdsg
-  admin: hjhdsg
+  repo: kenis1108.github.io
+  owner: kenis1108
+  admin: kenis1108
   language: zh-CN

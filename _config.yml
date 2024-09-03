@@ -13,7 +13,7 @@ timezone: ""
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: https://hjhdsg.github.io
+url: https://kenis1108.github.io
 root: /
 permalink: posts/:abbrlink.html
 abbrlink:
@@ -112,16 +112,14 @@ theme: butterfly
 # deploy:
 #     type: git
 #     repo:
-#         github: git@github.com:hjhdsg/hjhdsg.github.io.git
-#         gitee: git@gitee.com:huang_jian_hua/huang_jian_hua.git
+#         github: git@github.com:kenis1108/kenis1108.github.io.git
 #     branch: master
 
 deploy:
     type: git
     repo:
-      github: git@github.com:hjhdsg/hjhdsg.github.io.git
-      gitee: git@gitee.com:huang_jian_hua/huang_jian_hua.git
-    branch: master
+      github: git@github.com:kenis1108/kenis1108.github.io.git
+    branch: gh-pages
 
 # hexo-admin authentification
 # admin:
