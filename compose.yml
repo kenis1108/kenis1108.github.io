@@ -7,4 +7,5 @@ services:
       - .:/usr/src/app
     ports:
       - "4000:4000"
-    command: sh -c "yarn install && yarn run server"
+    tty: true
+    stdin_open: true

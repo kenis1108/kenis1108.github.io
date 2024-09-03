@@ -65,10 +65,8 @@ inject:
 
 # 社交图标
 social:
-  fab fa-github: https://github.com || GitHub
-  fab fa-qq: /img/default_cover.jpg || QQ
-  # iconfont icon-weixin: /img/default_cover.jpg || weixin
-  fab fa-weixin: /img/default_cover.jpg || weixin
+  # 書寫格式 圖標名：url || 描述性文字 || color
+  fab fa-github: https://github.com/kenis1108 || GitHub
 
 # 顶部图
 # =>首页

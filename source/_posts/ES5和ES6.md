@@ -5,7 +5,7 @@ tags: JavaScript
 abbrlink: 31430fd1
 date: 2019-03-14 13:22:49
 cover:
-hidden: true
+
 ---
 
 # ES5和ES6
