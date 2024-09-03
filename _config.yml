@@ -105,9 +105,3 @@ deploy:
   repo:
     github: git@github.com:kenis1108/kenis1108.github.io.git
   branch: gh-pages
-# hexo-admin authentification
-# admin:
-#     username: kenis
-#     password_hash: $2a$10$ivBPgZabCkbnPM.JuPekbeo2NXMC6rXaXvY0rDXb.vOypEyBYB9pS
-#     secret: kenis
-#     deployCommand: ./admin_script/hexo-d.sh
