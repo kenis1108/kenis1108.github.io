@@ -7,7 +7,7 @@ category:
 - [软件使用和配置,Linux,Ubuntu]
 abbrlink: ebb73e0
 date: 2021-02-21 17:51:22
-cover:
+
 ---
 ## 服务器放行8080端口
 

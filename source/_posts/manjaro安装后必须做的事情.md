@@ -6,7 +6,7 @@ category:
 - [软件使用和配置,Linux,Manjaro]
 abbrlink: 15bbee35
 date: 2021-04-24 22:43:29
-cover:
+
 ---
 
 ## 系统版本

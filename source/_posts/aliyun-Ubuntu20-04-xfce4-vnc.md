@@ -7,7 +7,7 @@ category:
 - [软件使用和配置,Linux,Ubuntu]
 abbrlink: 6aafa0a1
 date: 2021-01-01 15:35:00
-cover:
+
 ---
 
 # 阿里云安全组添加端口5901,3389

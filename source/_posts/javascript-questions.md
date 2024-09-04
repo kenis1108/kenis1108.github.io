@@ -6,7 +6,7 @@ category:
 - [编程相关,JavaScript]
 abbrlink: 63b082fb
 date: 2019-04-08 09:15:00
-cover:
+
 ---
 
 从基础到进阶，测试你有多了解 JavaScript，刷新你的知识，或者帮助你的 coding 面试！
