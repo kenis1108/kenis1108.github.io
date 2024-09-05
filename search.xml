@@ -353,35 +353,6 @@
     
     
     <entry>
-      <title>Win7/10 qutebrowser安装和使用</title>
-      <link href="/posts/c8833c04.html"/>
-      <url>/posts/c8833c04.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul><li><p>使用 powershell 的包管理工具安装<br>  <code>Install-Package qutebrowser</code></p></li><li><p>使用 Scoop 安装</p><p>  <code>scoop bucket add extras</code><br>  <code>scoop install qutebrowser</code></p></li><li><p>使用 Chocolatey 安装</p><p>  <code>choco install qutebrowser</code></p></li><li><p>手动安装</p><ol><li>安装python3.6以上的版本</li><li>更换pip源</li><li>克隆到本地:<code>git clone https://github.com/qutebrowser/qutebrowser.git</code></li><li>进入项目根目录:<code>cd qutebrowser</code></li><li>安装生成文档的工具:<code>pip install asciidoc</code></li><li><code>python3 scripts/mkvenv.py</code></li></ol></li><li><p>注意</p><ul><li>除了<code>手动安装</code>其他方式安装的都是基于<code>python3.9</code>版本的</li><li>所以只有win7需要手动安装</li><li>手动安装的启动程序在项目根目录下的<code>.venv\Scripts</code>目录中有个<code>qutebrowser.exe</code></li></ul></li></ul><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="基础操作"><a href="#基础操作" class="headerlink" title="基础操作"></a>基础操作</h3><p><a href="https://gitee.com/huang_jian_hua/blog-images-bed/raw/master/20210530100106.jpg"><img src="https://gitee.com/huang_jian_hua/blog-images-bed/raw/master/20210530100106.jpg" alt="20210530094550.png"></a></p><h3 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h3><ol><li>进入设置界面步骤:按下<code>o</code>,输入<code>qute://settings</code>，回车</li><li>修改首页和搜索引擎(eg:不同搜索引擎url格式不同)<ul><li>首页<br>   [![20210530094728.png](<a href="https://gitee.com/huang_jian_hua/blog-images-bed/raw/master/20210530100220.png">https://gitee.com/huang_jian_hua/blog-images-bed/raw/master/20210530100220.png</a></li></ul></li></ol><p>)](<a href="https://gitee.com/huang_jian_hua/blog-images-bed/raw/master/20210530100220.png">https://gitee.com/huang_jian_hua/blog-images-bed/raw/master/20210530100220.png</a><br>)</p><ul><li>搜索引擎<br>   <a href="https://gitee.com/huang_jian_hua/blog-images-bed/raw/master/20210530100105.jpg"><img src="https://gitee.com/huang_jian_hua/blog-images-bed/raw/master/20210530100105.jpg" alt="20210530094816.png"></a></li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 软件使用和配置 </category>
-          
-          <category> Windows </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> QuteBrowser </tag>
-            
-            <tag> Vim </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>window安装ctags</title>
       <link href="/posts/f9fa4d10.html"/>
       <url>/posts/f9fa4d10.html</url>
@@ -401,37 +372,6 @@
         <tags>
             
             <tag> ctags </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>阿里云部署code-server</title>
-      <link href="/posts/ebb73e0.html"/>
-      <url>/posts/ebb73e0.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="服务器放行8080端口"><a href="#服务器放行8080端口" class="headerlink" title="服务器放行8080端口"></a>服务器放行8080端口</h2><h2 id="执行安装脚本"><a href="#执行安装脚本" class="headerlink" title="执行安装脚本"></a>执行安装脚本</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://code-server.dev/install.sh | sh</span><br></pre></td></tr></table></figure><h2 id="先启动一次，让他生成配置文件"><a href="#先启动一次，让他生成配置文件" class="headerlink" title="先启动一次，让他生成配置文件"></a>先启动一次，让他生成配置文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code-server --bind-addr=0.0.0.0:8080</span><br></pre></td></tr></table></figure><h2 id="修改配置文件-config-code-server-config-yaml"><a href="#修改配置文件-config-code-server-config-yaml" class="headerlink" title="修改配置文件**~&#x2F;.config&#x2F;code-server&#x2F;config.yaml**"></a>修改配置文件**~&#x2F;.config&#x2F;code-server&#x2F;config.yaml**</h2><ul><li>bind-addr为0.0.0.0才能远程访问</li><li>password设置密码<blockquote><p>修改后</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&gt;bind-addr:</span> <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span><span class="string">:8080</span></span><br><span class="line"><span class="string">&gt;auth:</span> <span class="string">password</span></span><br><span class="line"><span class="string">&gt;password:</span> <span class="number">123456</span></span><br><span class="line"><span class="string">&gt;cert:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure></blockquote></li></ul><h2 id="配置系统管理进程"><a href="#配置系统管理进程" class="headerlink" title="配置系统管理进程"></a>配置系统管理进程</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> --now code-server@<span class="variable">$USER</span></span><br></pre></td></tr></table></figure><p>常用命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">systemctl status code-server@<span class="variable">$USER</span> <span class="comment"># 查看 code-server 进程状态</span></span><br><span class="line">systemctl start code-server@<span class="variable">$USER</span>    <span class="comment"># 启动 code-server 进程</span></span><br><span class="line">systemctl stop code-server@<span class="variable">$USER</span>    <span class="comment"># 停止 code-server 进程</span></span><br><span class="line">systemctl restart code-server@<span class="variable">$USER</span>    <span class="comment"># 重启 code-server 进程</span></span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> 软件使用和配置 </category>
-          
-          <category> Linux </category>
-          
-          <category> Ubuntu </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Ubuntu </tag>
-            
-            <tag> code-server </tag>
             
         </tags>
       
