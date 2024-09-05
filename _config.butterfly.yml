@@ -117,7 +117,7 @@ aside:
       link: https://github.com/kenis1108
   card_announcement:
     enable: true
-    content: 文章大部分都过时了,清理中
+    content: "文章同步发表在微信公众号: 爱折腾的肯, 欢迎关注"
 
 # Bottom right button (右下角按鈕)
 # --------------------------------------
