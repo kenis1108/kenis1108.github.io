@@ -1,21 +1,19 @@
-# Site
 title: Kenis
 author: Kenis
 language: zh-CN
 timezone: Asia/Shanghai
-
-# URL
 url: https://kenis1108.github.io
 root: /
 permalink: posts/:abbrlink.html
-
-skip_render: "live2d-widget/**/*"
+skip_render: 
+  - "live2d-widget/**/*"
+  - "myhtml/**"
+meta_generator: true
+theme: butterfly
 
 post_asset_folder: true
 marked:
   prependRoot: true
   postAsset: true
 
-meta_generator: true
 
-theme: butterfly

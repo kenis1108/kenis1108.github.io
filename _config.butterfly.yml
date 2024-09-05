@@ -2,13 +2,6 @@
 error_404:
   enable: true
   subtitle: "页面沒有找到"
-  background:
-
-# 跳过渲染
-skip_render: myhtml/**
-
-# 网站图标
-favicon: /img/favicon.ico
 
 # 导航
 menu:
@@ -16,20 +9,41 @@ menu:
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
   案例展示: /caseshow/ || far fa-grin-hearts
-  # 关于我: /about/ || fas fa-mars-stroke
   关于我: /about/ || fas fa-dragon
 
 # 代码高亮
 highlight_theme: mac
-
 # 代码换行
 code_word_wrap: true
 
 # 头像
 avatar:
   img: https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/avatar.jpg
-  # img: /img/avatar.jpg
   effect: false # true头像会一直转圈
+
+# 侧边栏
+aside:
+  enable: true
+  hide: true
+  button: true
+  mobile: true # display on mobile
+  position: right # left or right
+  display:
+    archive: true
+    tag: true
+    category: true
+  card_author:
+    enable: true
+    description: "心静能治三千疾"
+    button:
+      enable: true
+      icon: fab fa-github
+      text: Follow Me
+      link: https://github.com/kenis1108
+  card_announcement:
+    enable: true
+    content: 文章大部分都过时了,清理中
+
 
 # 网站副标题
 subtitle:
@@ -61,12 +75,11 @@ inject:
     - <link rel="stylesheet" href="//at.alicdn.com/t/font_2379442_x21af219iw.css"> # 引入iconfont图标
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
     - <script src="https://cdn.jsdelivr.net/gh/kenis1108/kenis1108.github.io@main/source/live2d_widget/autoload.js"></script>
-    # - <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
 
 # 社交图标
 social:
-  # 書寫格式 圖標名：url || 描述性文字 || color
-  fab fa-github: https://github.com/kenis1108 || GitHub
+  # 書寫格式 圖標名：url || 描述性文字 || color 
+  fas fa-envelope: mailto:kenisdsg1108@gmail.com || Email 
 
 # 顶部图
 # =>首页
@@ -86,11 +99,7 @@ cover:
   position: both #left/right/both
   default_cover: https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg
 
-# 右下角按钮
-# =>阅读模式
-readmode: true
-# =>修改字体大小
-change_font_size: true
+
 
 # 自定义footer文本
 footer:
@@ -155,11 +164,6 @@ local_search:
   labels:
     input_placeholder: "Search for Posts"
     hits_empty: "we didn't find any results for the search: ${query}"
-
-# 公告
-card_announcement:
-  enable: true
-  content: 上班摸鱼ing #修改公告栏信息
 
 # 评论系统
 comments:
