@@ -1,37 +1,117 @@
+# Navigation bar settings (導航欄設置)
+# see https://butterfly.js.org/posts/4aa8abbe/##導航欄設置-Navigation-bar-settings
+# --------------------------------------
+
+# Menu 目錄
+menu:
+  Home: / || fas fa-home
+  # Archives: /archives/ || fas fa-archive
+  Tags: /tags/ || fas fa-tags
+  Categories: /categories/ || fas fa-folder-open
+  # List||fas fa-list:
+  #   Music: /music/ || fas fa-music
+  #   Movie: /movies/ || fas fa-video
+  # Link: /link/ || fas fa-link
+  About: /about/ || fas fa-dragon
+  案例展示: /caseshow/ || far fa-grin-hearts
+
+# Code Blocks (代碼相關)
+# --------------------------------------
+
+highlight_theme: mac #  darker / pale night / light / ocean / mac / mac light / false
+code_word_wrap: true
+
+# Social Settings (社交圖標設置)
+# formal:
+#   icon: link || the description || color
+social:
+  fas fa-envelope: mailto:kenisdsg1108@gmail.com || Email 
+
+# Image (圖片設置)
+# --------------------------------------
+
+# Avatar (頭像)
+avatar:
+  img: https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/avatar.jpg
+
+# The banner image of home page
+index_img: https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-p2qrjm.jpg
+
+# If the banner of page not setting, it will show the top_img
+default_top_img: https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg
+
+# If the banner of tag page not setting, it will show the top_img
+# note: tag page, not tags page (子標籤頁面的 top_img)
+tag_img: https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg
+
+# If the banner of category page not setting, it will show the top_img
+# note: category page, not categories page (子分類頁面的 top_img)
+category_img: https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg
+
+cover:
+  default_cover: https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg
+
 # A simple 404 page
 error_404:
   enable: true
-  subtitle: "页面沒有找到"
 
-# 导航
-menu:
-  首页: / || fas fa-home
-  标签: /tags/ || fas fa-tags
-  分类: /categories/ || fas fa-folder-open
-  案例展示: /caseshow/ || far fa-grin-hearts
-  关于我: /about/ || fas fa-dragon
+post_meta:
+  page: # Home Page
+    date_type: both # created or updated or both 主頁文章日期是創建日或者更新日或都顯示
+    date_format: relative # date/relative 顯示日期還是相對日期
+    categories: true # true or false 主頁是否顯示分類
+    tags: true # true or false 主頁是否顯示標籤
+    label: true # true or false 顯示描述性文字
+  post:
+    date_type: both # created or updated or both 文章頁日期是創建日或者更新日或都顯示
+    date_format: relative # date/relative 顯示日期還是相對日期
+    categories: true # true or false 文章頁是否顯示分類
+    tags: true # true or false 文章頁是否顯示標籤
+    label: true # true or false 顯示描述性文字
 
-# 代码高亮
-highlight_theme: mac
-# 代码换行
-code_word_wrap: true
+# Display the article introduction on homepage
+# 1: description
+# 2: both (if the description exists, it will show description, or show the auto_excerpt)
+# 3: auto_excerpt (default)
+# false: do not show the article introduction
+index_post_content:
+  method: 3
+  length: 500 # if you set method to 2 or 3, the length need to config
 
-# 头像
-avatar:
-  img: https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/avatar.jpg
-  effect: false # true头像会一直转圈
 
-# 侧边栏
+# Post
+# --------------------------------------
+
+# Sponsor/reward
+reward:
+  enable: false
+  text:
+  QR_code:
+    # - img: /img/wechat.jpg
+    #   link:
+    #   text: wechat
+    # - img: /img/alipay.jpg
+    #   link:
+    #   text: alipay
+
+# Displays outdated notice for a post (文章過期提醒)
+noticeOutdate:
+  enable: true
+
+# Footer Settings
+# --------------------------------------
+footer:
+  owner:
+    enable: true
+    since: 2018
+  custom_text: Hi, welcome to my <a href="https://kenis1108.github.io">blog</a>!
+  copyright: true # Copyright of theme and framework
+
+# aside (側邊欄)
+# --------------------------------------
+
 aside:
   enable: true
-  hide: true
-  button: true
-  mobile: true # display on mobile
-  position: right # left or right
-  display:
-    archive: true
-    tag: true
-    category: true
   card_author:
     enable: true
     description: "心静能治三千疾"
@@ -44,139 +124,71 @@ aside:
     enable: true
     content: 文章大部分都过时了,清理中
 
+# Bottom right button (右下角按鈕)
+# --------------------------------------
 
-# 网站副标题
-subtitle:
+# Conversion between Traditional and Simplified Chinese (簡繁轉換)
+translate:
   enable: true
-  # 打字效果
-  effect: true
-  # 循环或者只打字一次
-  loop: true
-  # source调用第三方服务
-  # source: false 关闭调用
-  # source: 1  调用搏天api的随机语录（简体）
-  # source: 2  调用一言网的一句话（简体）
-  # source: 3  调用一句网（简体）
-  # source: 4  调用今日诗词（简体）
-  # subtitle 会先显示 source , 再显示 sub 的内容
-  source: 1
-  # 如果有英文逗号' , ',请使用转义字元 &#44;
-  # 如果有英文双引号' " ',请使用转义字元 &quot;
-  # 开头不允许转义字元，如需要，请把整个句子用双引号包住
-  # 例如 ”&quotNever put off till tomorrow what you can do today&quot"
-  # 如果关闭打字效果，subtitle只会显示sub的第一行文字
-  sub:
-    - Never off till tomorrow what you can do today
 
-# Inject
-# 插入代码到头部 </head> 之前 和 底部 </body> 之前
-inject:
-  head:
-    - <link rel="stylesheet" href="//at.alicdn.com/t/font_2379442_x21af219iw.css"> # 引入iconfont图标
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-    - <script src="https://cdn.jsdelivr.net/gh/kenis1108/kenis1108.github.io@main/source/live2d_widget/autoload.js"></script>
+# search (搜索)
+# see https://butterfly.js.org/posts/ceeb73f/#搜索系統
+# --------------------------------------
 
-# 社交图标
-social:
-  # 書寫格式 圖標名：url || 描述性文字 || color 
-  fas fa-envelope: mailto:kenisdsg1108@gmail.com || Email 
+# Algolia search
+algolia_search:
+  enable: false
+  hits:
+    per_page: 6
 
-# 顶部图
-# =>首页
-index_img: https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-p2qrjm.jpg
-# =>默认
-default_top_img: https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg
-# =>tag
-tag_img: https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg
-# =>category
-category_img: https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg
-
-# 文章封面
-cover:
-  index_enable: true
-  aside_enable: true
-  archives_enable: true
-  position: both #left/right/both
-  default_cover: https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/img/wallhaven-95j9pw.jpg
-
-
-
-# 自定义footer文本
-footer:
-  owner:
-    enable: true
-    since: 2018
-  custom_text: Hi, welcome to my <a href="https://kenis1108.github.io">blog</a>!
-
-# 主页文章节选
-# 1 - description： 只显示description
-# 2 - both： 优先选择description，如果没有配置description，则显示自动节选的内容
-# 3 - auto_excerpt：只显示自动节选
-# 4 - false： 不显示文章内容
-index_post_content:
-  method: 3
-  length: 400 # if you set method to 2 or 3, the length need to config
-
-# 文章meta显示
-post_meta:
-  page:
-    date_type: both # created or updated or both 主页文章日期是创建日或者更新日或都显示
-    date_format: relative # date/relative 显示日期还是相对日期
-    categories: true # true or false 主页是否显示分类
-    tags: true # true or false 主页是否显示标籤
-    label: true # true or false 显示描述性文字
-  post:
-    date_type: both # created or updated or both 文章页日期是创建日或者更新日或都显示
-    date_format: relative # date/relative 显示日期还是相对日期
-    categories: true # true or false 文章页是否显示分类
-    tags: true # true or false 文章页是否显示标籤
-    label: true # true or false 显示描述性文字
-
-# 字数统计(npm install hexo-wordcount --save)
-wordcount:
-  enable: true
-  post_wordcount: true
-  min2read: true
-  total_wordcount: true
-
-# 背景特效
-canvas_nest:
-  enable: true
-  color: "0,0,255" #color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
-  opacity: 0.7 # the opacity of line (0~1), default: 0.5.
-  zIndex: -1 # z-index property of the background, default: -1.
-  count: 99 # the number of lines, default: 99.
-  mobile: false # false 手机端不显示 true 手机端显示
-
-# 鼠标点击特效
-fireworks:
-  enable: true
-  zIndex: 9999 # -1 or 9999
-  mobile: false
-
-# 加载动画 Loading Animation
-preloader: true
-
-# 本地搜索
-# yarn add hexo-generator-search
+# Local search
 local_search:
   enable: true
-  labels:
-    input_placeholder: "Search for Posts"
-    hits_empty: "we didn't find any results for the search: ${query}"
+  # Preload the search data when the page loads.
+  preload: false
+  # Show top n results per article, show all results by setting to -1
+  top_n_per_article: 1
+  # Unescape html strings to the readable one.
+  unescape: false
+  CDN:
 
-# 评论系统
+# Docsearch
+docsearch:
+  enable: false
+  appId:
+  apiKey:
+  indexName:
+  option:
+
+# Share System (分享)
+# --------------------------------------
+
+# Share.js
+# https://github.com/overtrue/share.js
+sharejs:
+  enable: false
+
+# AddToAny
+# https://www.addtoany.com/
+addtoany:
+  enable: true
+  item: facebook,twitter,wechat,sina_weibo,facebook_messenger,email,copy_link
+
+# Comments System
+# --------------------------------------
+
 comments:
   # Up to two comments system, the first will be shown as default
-  # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo
-  use: Gitalk
+  # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
+  use: Gitalk # Valine,Disqus
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
   lazyload: true
-  count: true # Display comment count in top_img
-  card_post_count: false # Display comment count in Home Page
+  count: true # Display comment count in post's top_img
 
+# gitalk
+# https://github.com/gitalk/gitalk
 gitalk:
   client_id: 748f83045ba6e97360fd
   client_secret: babb5c5943be448a55199564686ff5adff76a567
@@ -184,3 +196,55 @@ gitalk:
   owner: kenis1108
   admin: kenis1108
   language: zh-CN
+
+# Background effects (背景特效)
+# --------------------------------------
+
+# canvas_nest
+# https://github.com/hustcc/canvas-nest.js
+canvas_nest:
+  enable: true
+
+# Mouse click effects: fireworks (鼠標點擊效果: 煙火特效)
+fireworks:
+  enable: true
+
+# the subtitle on homepage (主頁subtitle)
+subtitle:
+  enable: true
+  # Typewriter Effect (打字效果)
+  effect: true
+  # Customize typed.js (配置typed.js)
+  # https://github.com/mattboldt/typed.js/#customization
+  typed_option:
+  # source 調用第三方服務
+  # source: false 關閉調用
+  # source: 1  調用一言網的一句話（簡體） https://hitokoto.cn/
+  # source: 2  調用一句網（簡體） https://yijuzhan.com/
+  # source: 3  調用今日詩詞（簡體） https://www.jinrishici.com/
+  # subtitle 會先顯示 source , 再顯示 sub 的內容
+  source: 1
+  # 如果關閉打字效果，subtitle 只會顯示 sub 的第一行文字
+  sub:
+    - Never off till tomorrow what you can do today
+
+# Loading Animation (加載動畫)
+preloader: 
+  enable: true
+
+# wordcount (字數統計)
+# see https://butterfly.js.org/posts/ceeb73f/#字數統計
+wordcount:
+  enable: true
+
+# other
+# --------------------------------------
+
+# Inject
+# Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
+# 插入代码到头部 </head> 之前 和 底部 </body> 之前
+inject:
+  head:
+    - <link rel="stylesheet" href="//at.alicdn.com/t/font_2379442_x21af219iw.css"> # 引入iconfont图标
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+    - <script src="https://cdn.jsdelivr.net/gh/kenis1108/kenis1108.github.io@main/source/live2d_widget/autoload.js"></script>
