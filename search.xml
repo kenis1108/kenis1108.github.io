@@ -85,37 +85,6 @@
     
     
     <entry>
-      <title>manjaro安装tomcat8</title>
-      <link href="/posts/399136aa.html"/>
-      <url>/posts/399136aa.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="安装java"><a href="#安装java" class="headerlink" title="安装java"></a>安装java</h2><p><code>yay -S jdk8-openjdk</code></p><h2 id="安装tomcat"><a href="#安装tomcat" class="headerlink" title="安装tomcat"></a>安装tomcat</h2><p><code>yay -S tomcat</code></p><h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><p><img src="https://gitee.com/huang_jian_hua/blog-images-bed/raw/master/20210730091658.png"></p><h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><ol><li>修改文件夹权限 <code>sudo chmod 777 -R /etc/tomcat8</code></li><li>修改<code>/etc/tomcat8/tomcat-users.xml</code>文件,解开user和role标签的注释<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">  Licensed to the Apache Software Foundation (ASF) under one or more</span></span><br><span class="line"><span class="comment">  contributor license agreements.  See the NOTICE file distributed with</span></span><br><span class="line"><span class="comment">  this work for additional information regarding copyright ownership.</span></span><br><span class="line"><span class="comment">  The ASF licenses this file to You under the Apache License, Version 2.0</span></span><br><span class="line"><span class="comment">  (the &quot;License&quot;); you may not use this file except in compliance with</span></span><br><span class="line"><span class="comment">  the License.  You may obtain a copy of the License at</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">      http://www.apache.org/licenses/LICENSE-2.0</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">  Unless required by applicable law or agreed to in writing, software</span></span><br><span class="line"><span class="comment">  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span></span><br><span class="line"><span class="comment">  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></span><br><span class="line"><span class="comment">  See the License for the specific language governing permissions and</span></span><br><span class="line"><span class="comment">  limitations under the License.</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">tomcat-users</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://tomcat.apache.org/xml&quot;</span></span></span><br><span class="line"><span class="tag">              <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">              <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://tomcat.apache.org/xml tomcat-users.xsd&quot;</span></span></span><br><span class="line"><span class="tag">              <span class="attr">version</span>=<span class="string">&quot;1.0&quot;</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">  By default, no user is included in the &quot;manager-gui&quot; role required</span></span><br><span class="line"><span class="comment">  to operate the &quot;/manager/html&quot; web application.  If you wish to use this app,</span></span><br><span class="line"><span class="comment">  you must define such a user - the username and password are arbitrary.</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">  Built-in Tomcat manager roles:</span></span><br><span class="line"><span class="comment">    - manager-gui    - allows access to the HTML GUI and the status pages</span></span><br><span class="line"><span class="comment">    - manager-script - allows access to the HTTP API and the status pages</span></span><br><span class="line"><span class="comment">    - manager-jmx    - allows access to the JMX proxy and the status pages</span></span><br><span class="line"><span class="comment">    - manager-status - allows access to the status pages only</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">  The users below are wrapped in a comment and are therefore ignored. If you</span></span><br><span class="line"><span class="comment">  wish to configure one or more of these users for use with the manager web</span></span><br><span class="line"><span class="comment">  application, do not forget to remove the &lt;!.. ..&gt; that surrounds them. You</span></span><br><span class="line"><span class="comment">  will also need to set the passwords to something appropriate.</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">user</span> <span class="attr">username</span>=<span class="string">&quot;admin&quot;</span> <span class="attr">password</span>=<span class="string">&quot;123456&quot;</span> <span class="attr">roles</span>=<span class="string">&quot;manager-gui&quot;</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">user</span> <span class="attr">username</span>=<span class="string">&quot;robot&quot;</span> <span class="attr">password</span>=<span class="string">&quot;123456&quot;</span> <span class="attr">roles</span>=<span class="string">&quot;manager-script&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">  The sample user and role entries below are intended for use with the</span></span><br><span class="line"><span class="comment">  examples web application. They are wrapped in a comment and thus are ignored</span></span><br><span class="line"><span class="comment">  when reading this file. If you wish to configure these users for use with the</span></span><br><span class="line"><span class="comment">  examples web application, do not forget to remove the &lt;!.. ..&gt; that surrounds</span></span><br><span class="line"><span class="comment">  them. You will also need to set the passwords to something appropriate.</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">role</span> <span class="attr">rolename</span>=<span class="string">&quot;tomcat&quot;</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">role</span> <span class="attr">rolename</span>=<span class="string">&quot;role1&quot;</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">user</span> <span class="attr">username</span>=<span class="string">&quot;tomcat&quot;</span> <span class="attr">password</span>=<span class="string">&quot;123456&quot;</span> <span class="attr">roles</span>=<span class="string">&quot;tomcat&quot;</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">user</span> <span class="attr">username</span>=<span class="string">&quot;both&quot;</span> <span class="attr">password</span>=<span class="string">&quot;123456&quot;</span> <span class="attr">roles</span>=<span class="string">&quot;tomcat,role1&quot;</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">user</span> <span class="attr">username</span>=<span class="string">&quot;role1&quot;</span> <span class="attr">password</span>=<span class="string">&quot;123456&quot;</span> <span class="attr">roles</span>=<span class="string">&quot;role1&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">tomcat-users</span>&gt;</span></span><br></pre></td></tr></table></figure></li></ol><h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><p><code>sudo systemctl start tomcat8</code></p><h2 id="浏览器访问http-127-0-0-1-8080"><a href="#浏览器访问http-127-0-0-1-8080" class="headerlink" title="浏览器访问http://127.0.0.1:8080"></a>浏览器访问<a href="http://127.0.0.1:8080/">http://127.0.0.1:8080</a></h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> 软件使用和配置 </category>
-          
-          <category> Linux </category>
-          
-          <category> Manjaro </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Tomcat </tag>
-            
-            <tag> Manjaro </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>python+selenium webdriver自动化测试</title>
       <link href="/posts/730667ac.html"/>
       <url>/posts/730667ac.html</url>
@@ -380,37 +349,6 @@
     
     
     <entry>
-      <title>aliyun+Ubuntu20.04+xfce4+vnc+xdrp</title>
-      <link href="/posts/6aafa0a1.html"/>
-      <url>/posts/6aafa0a1.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="阿里云安全组添加端口5901-3389"><a href="#阿里云安全组添加端口5901-3389" class="headerlink" title="阿里云安全组添加端口5901,3389"></a>阿里云安全组添加端口5901,3389</h1><h1 id="apt-update-apt-upgrade-–fix-missing"><a href="#apt-update-apt-upgrade-–fix-missing" class="headerlink" title="apt update &amp;&amp; apt upgrade –fix-missing"></a>apt update &amp;&amp; apt upgrade –fix-missing</h1><h1 id="apt-install-xfce4-xfce4-terminal"><a href="#apt-install-xfce4-xfce4-terminal" class="headerlink" title="apt install xfce4 xfce4-terminal"></a>apt install xfce4 xfce4-terminal</h1><h1 id="apt-install-tightvncserver-xdrp"><a href="#apt-install-tightvncserver-xdrp" class="headerlink" title="apt install tightvncserver xdrp"></a>apt install tightvncserver xdrp</h1><h1 id="vncserver"><a href="#vncserver" class="headerlink" title="vncserver"></a>vncserver</h1><h1 id="此时可以连接但是是灰色的"><a href="#此时可以连接但是是灰色的" class="headerlink" title="此时可以连接但是是灰色的"></a>此时可以连接但是是灰色的</h1><h1 id="vncserver-kill-1"><a href="#vncserver-kill-1" class="headerlink" title="vncserver -kill :1"></a>vncserver -kill :1</h1><h1 id="mv-vnc-xstartup-vnc-xstartup-bak"><a href="#mv-vnc-xstartup-vnc-xstartup-bak" class="headerlink" title="mv ~&#x2F;.vnc&#x2F;xstartup ~&#x2F;.vnc&#x2F;xstartup.bak"></a>mv ~&#x2F;.vnc&#x2F;xstartup ~&#x2F;.vnc&#x2F;xstartup.bak</h1><h1 id="vim-vnc-xstartup"><a href="#vim-vnc-xstartup" class="headerlink" title="vim ~&#x2F;.vnc&#x2F;xstartup"></a>vim ~&#x2F;.vnc&#x2F;xstartup</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"><span class="comment"># Uncomment the following two lines for normal desktop:</span></span><br><span class="line"><span class="comment"># unset SESSION_MANAGER</span></span><br><span class="line"><span class="comment"># unset DBUS_SESSION_BUS_ADDRESS </span></span><br><span class="line"><span class="comment"># exec /etc/X11/xinit/xinitrc</span></span><br><span class="line">[ -x /etc/vnc/xstartup ] &amp;&amp; <span class="built_in">exec</span> /etc/vnc/xstartup</span><br><span class="line">[ -r <span class="variable">$HOME</span>/.Xresources ] &amp;&amp; xrdb <span class="variable">$HOME</span>/.Xresources</span><br><span class="line">xsetroot -solid grey</span><br><span class="line">vncconfig -iconic &amp;</span><br><span class="line">x-terminal-emulator -geometry 80x24+10+10 -<span class="built_in">ls</span> -title <span class="string">&quot;<span class="variable">$VNCDESKTOP</span> Desktop&quot;</span> &amp;</span><br><span class="line"><span class="comment"># x-window-manager &amp;</span></span><br><span class="line">x-session-manager &amp; </span><br><span class="line">xfdesktop &amp; xfce4-panel &amp;     </span><br><span class="line">xfce4-menu-plugin &amp;     </span><br><span class="line">xfsettingsd &amp;     </span><br><span class="line">xfconfd &amp;     </span><br><span class="line">xfwm4 &amp;</span><br></pre></td></tr></table></figure><h1 id="修改文件权限（无论什么用户都得修改）"><a href="#修改文件权限（无论什么用户都得修改）" class="headerlink" title="修改文件权限（无论什么用户都得修改）"></a>修改文件权限（无论什么用户都得修改）</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> +x ~/.vnc/xstartup</span><br></pre></td></tr></table></figure><h1 id="重新运行vncserver就可以使用vncviewer连接vnc了"><a href="#重新运行vncserver就可以使用vncviewer连接vnc了" class="headerlink" title="重新运行vncserver就可以使用vncviewer连接vnc了"></a>重新运行<code>vncserver</code>就可以使用vncviewer连接vnc了</h1><h1 id="配置xdrp"><a href="#配置xdrp" class="headerlink" title="配置xdrp"></a>配置xdrp</h1><ul><li>echo “xfce4-session” &gt;~&#x2F;.xsession</li><li>在&#x2F;etc&#x2F;xrdp&#x2F;startwm.sh开头插入xfce4-session</li><li>sudo systemctl restart xrdp</li><li>使用win10自带远程桌面连接</li></ul><h1 id="配置vnc默认分辨率"><a href="#配置vnc默认分辨率" class="headerlink" title="配置vnc默认分辨率"></a>配置vnc默认分辨率</h1><ul><li>修改&#x2F;usr&#x2F;bin&#x2F;vncserver里的$geometry</li><li>$geometry &#x3D; “1920x1080”;</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 软件使用和配置 </category>
-          
-          <category> Linux </category>
-          
-          <category> Ubuntu </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> VNC </tag>
-            
-            <tag> Ubuntu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>React</title>
       <link href="/posts/d8a440d1.html"/>
       <url>/posts/d8a440d1.html</url>
@@ -605,35 +543,6 @@
         <tags>
             
             <tag> JavaScript </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>art-template前端模板引擎</title>
-      <link href="/posts/3762f4c.html"/>
-      <url>/posts/3762f4c.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="模板引擎"><a href="#模板引擎" class="headerlink" title="模板引擎"></a>模板引擎</h1><h2 id="什么是模板引擎"><a href="#什么是模板引擎" class="headerlink" title="什么是模板引擎"></a>什么是模板引擎</h2><h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><pre><code>+ 帮助我们快速渲染页面+ 三体分离(结构 样式 行为)+ 一般都是第三方文件引入使用</code></pre><h3 id="常见的模板引擎"><a href="#常见的模板引擎" class="headerlink" title="常见的模板引擎"></a>常见的模板引擎</h3><pre><code>+ art-template 前后端都能用+ underscroll 后端js不能用+ e.js 后端js不能用+ template 后端js不能用</code></pre><h2 id="art-template模板引擎"><a href="#art-template模板引擎" class="headerlink" title="art-template模板引擎"></a>art-template模板引擎</h2><pre><code>+ 特点  1. html 和 js 代码分离  2. 有自己独立的语法，但也可以使用原生js 语法+ 安装  - 方法1、npm安装(require(&#39;art-template&#39;))    + 在要使用的项目文件夹下安装    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install art-template</span><br></pre></td></tr></table></figure>  - 方法2、浏览器实时编译(引入外部文件template-web.js)    + 从github下载放在lib文件夹里面的template-web.js    ``` html        &lt;link rel=&quot;stylesheet&quot; href=&quot;template-web.js&quot;&gt;    ```  </code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> 编程相关 </category>
-          
-          <category> JavaScript </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> art-template </tag>
-            
-            <tag> 模板引擎 </tag>
             
         </tags>
       
