@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>OPPO A56电池鼓包换直供通电自动开机模块</title>
+      <link href="/posts/64582.html"/>
+      <url>/posts/64582.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>5月份搬家后就把宽带给注销了，用一部闲置的OPPO A56插流量卡来放热点代替路由器WIFI的功能</p><h2 id="问题出现"><a href="#问题出现" class="headerlink" title="问题出现"></a>问题出现</h2><p>手机当热点就一直插着充电线，到现在就4个月，电池就鼓包了，于是萌生了把电池去掉改成直供通电的想法</p><h2 id="几个方案"><a href="#几个方案" class="headerlink" title="几个方案"></a>几个方案</h2><h3 id="方案一：原装电池保护板直接焊接一条usb线"><a href="#方案一：原装电池保护板直接焊接一条usb线" class="headerlink" title="方案一：原装电池保护板直接焊接一条usb线"></a>方案一：原装电池保护板直接焊接一条usb线</h3><p>这个方案在哔哩哔哩上很多up都是这样改的，大部分的评论区都说这样可能得加电阻或者二极管，不然电压高了一点</p><p>拼多多和海鲜市场也有已经焊接好电池保护板或者手机主板接口的线卖</p><p><img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/OPPOA56%E7%94%B5%E6%B1%A0%E9%BC%93%E5%8C%85%E6%8D%A2%E7%9B%B4%E4%BE%9B%E9%80%9A%E7%94%B5%E8%87%AA%E5%8A%A8%E5%BC%80%E6%9C%BA%E6%A8%A1%E5%9D%97-2024-09-07-15-40-01IMG_0988.png" alt="OPPOA56电池鼓包换直供通电自动开机模块-2024-09-07-15-40-01IMG_0988"></p><h3 id="方案二：海鲜市场上还有一种数据直供一体线"><a href="#方案二：海鲜市场上还有一种数据直供一体线" class="headerlink" title="方案二：海鲜市场上还有一种数据直供一体线"></a>方案二：海鲜市场上还有一种数据直供一体线</h3><p>方案二比方案一可以更美观和方便一点</p><p><img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/OPPOA56%E7%94%B5%E6%B1%A0%E9%BC%93%E5%8C%85%E6%8D%A2%E7%9B%B4%E4%BE%9B%E9%80%9A%E7%94%B5%E8%87%AA%E5%8A%A8%E5%BC%80%E6%9C%BA%E6%A8%A1%E5%9D%97-2024-09-07-15-42-31IMG_0986.png" alt="OPPOA56电池鼓包换直供通电自动开机模块-2024-09-07-15-42-31IMG_0986"></p><p><img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/OPPOA56%E7%94%B5%E6%B1%A0%E9%BC%93%E5%8C%85%E6%8D%A2%E7%9B%B4%E4%BE%9B%E9%80%9A%E7%94%B5%E8%87%AA%E5%8A%A8%E5%BC%80%E6%9C%BA%E6%A8%A1%E5%9D%97-2024-09-07-15-42-31IMG_0987.png" alt="OPPOA56电池鼓包换直供通电自动开机模块-2024-09-07-15-42-31IMG_0987"></p><h3 id="方案三：直供通电自动开机模块"><a href="#方案三：直供通电自动开机模块" class="headerlink" title="方案三：直供通电自动开机模块"></a>方案三：直供通电自动开机模块</h3><p>方案三和前面两个方案对比来说只是多了一个通电自动开机的功能，但是成本高了，手工成本和经济成本都高了很多啊</p><p>我这里就是选择了方案三，就是想折腾下</p><p>拼多多上买了这个模块</p><p><img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/OPPOA56%E7%94%B5%E6%B1%A0%E9%BC%93%E5%8C%85%E6%8D%A2%E7%9B%B4%E4%BE%9B%E9%80%9A%E7%94%B5%E8%87%AA%E5%8A%A8%E5%BC%80%E6%9C%BA%E6%A8%A1%E5%9D%97-2024-09-07-15-43-03image.png" alt="OPPOA56电池鼓包换直供通电自动开机模块-2024-09-07-15-43-03image"></p><h2 id="实操"><a href="#实操" class="headerlink" title="实操"></a>实操</h2><ol><li><p>没有热风枪，用吹风筒吹了一下后盖，用刀片把塑料后盖给拆下来了</p><p> <img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/OPPOA56%E7%94%B5%E6%B1%A0%E9%BC%93%E5%8C%85%E6%8D%A2%E7%9B%B4%E4%BE%9B%E9%80%9A%E7%94%B5%E8%87%AA%E5%8A%A8%E5%BC%80%E6%9C%BA%E6%A8%A1%E5%9D%97-2024-09-07-15-43-23image%201.png" alt="OPPOA56电池鼓包换直供通电自动开机模块-2024-09-07-15-43-23image 1"></p></li><li><p>清理了一下残留的背胶，拧下所有的螺丝，取下中框（忘记拍图了）</p></li><li><p>取下电池，用陶瓷剪刀剪断电池保护板和电池之间的连接</p><p> <img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/OPPOA56%E7%94%B5%E6%B1%A0%E9%BC%93%E5%8C%85%E6%8D%A2%E7%9B%B4%E4%BE%9B%E9%80%9A%E7%94%B5%E8%87%AA%E5%8A%A8%E5%BC%80%E6%9C%BA%E6%A8%A1%E5%9D%97-2024-09-07-15-43-50image%202.png" alt="OPPOA56电池鼓包换直供通电自动开机模块-2024-09-07-15-43-50image 2"><br> <img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/OPPOA56%E7%94%B5%E6%B1%A0%E9%BC%93%E5%8C%85%E6%8D%A2%E7%9B%B4%E4%BE%9B%E9%80%9A%E7%94%B5%E8%87%AA%E5%8A%A8%E5%BC%80%E6%9C%BA%E6%A8%A1%E5%9D%97-2024-09-07-15-43-50image%203.png" alt="OPPOA56电池鼓包换直供通电自动开机模块-2024-09-07-15-43-50image 3"><br> <img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/OPPOA56%E7%94%B5%E6%B1%A0%E9%BC%93%E5%8C%85%E6%8D%A2%E7%9B%B4%E4%BE%9B%E9%80%9A%E7%94%B5%E8%87%AA%E5%8A%A8%E5%BC%80%E6%9C%BA%E6%A8%A1%E5%9D%97-2024-09-07-15-43-50image%204.png" alt="OPPOA56电池鼓包换直供通电自动开机模块-2024-09-07-15-43-50image 4"></p></li><li><p>将保护板接上主板通电后先手动开机，没问题之后再关机继续焊接自动开机的导线（黑色的细细的那根）</p></li><li><p>联系了模块的技术人员，在大佬的远程指导下找到自动开机导线需要焊接的点</p><p> <img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/OPPOA56%E7%94%B5%E6%B1%A0%E9%BC%93%E5%8C%85%E6%8D%A2%E7%9B%B4%E4%BE%9B%E9%80%9A%E7%94%B5%E8%87%AA%E5%8A%A8%E5%BC%80%E6%9C%BA%E6%A8%A1%E5%9D%97-2024-09-07-15-44-29image%205.png" alt="OPPOA56电池鼓包换直供通电自动开机模块-2024-09-07-15-44-29image 5"></p></li><li><p>焊接好通电自动开机的导线后把所有东西固定好，该帖上胶带的贴胶带，重新安装中框，后盖就不装了，买模块的时候没考虑太多，买成侧面插口的，然后发现手机的中框用刀片切割不了，最知道买成背插的，就能直接在后盖开口子了，最后只能在手机壳上开个孔了</p><p> <img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/OPPOA56%E7%94%B5%E6%B1%A0%E9%BC%93%E5%8C%85%E6%8D%A2%E7%9B%B4%E4%BE%9B%E9%80%9A%E7%94%B5%E8%87%AA%E5%8A%A8%E5%BC%80%E6%9C%BA%E6%A8%A1%E5%9D%97-2024-09-07-15-44-54IMG_0976.jpg" alt="OPPOA56电池鼓包换直供通电自动开机模块-2024-09-07-15-44-54IMG_0976"></p><p> <img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/OPPOA56%E7%94%B5%E6%B1%A0%E9%BC%93%E5%8C%85%E6%8D%A2%E7%9B%B4%E4%BE%9B%E9%80%9A%E7%94%B5%E8%87%AA%E5%8A%A8%E5%BC%80%E6%9C%BA%E6%A8%A1%E5%9D%97-2024-09-07-15-45-10image%206.png" alt="OPPOA56电池鼓包换直供通电自动开机模块-2024-09-07-15-45-10image 6"></p><p> <img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/OPPOA56%E7%94%B5%E6%B1%A0%E9%BC%93%E5%8C%85%E6%8D%A2%E7%9B%B4%E4%BE%9B%E9%80%9A%E7%94%B5%E8%87%AA%E5%8A%A8%E5%BC%80%E6%9C%BA%E6%A8%A1%E5%9D%97-2024-09-07-15-45-10image%207.png" alt="OPPOA56电池鼓包换直供通电自动开机模块-2024-09-07-15-45-10image 7"></p></li></ol><h2 id="杂话"><a href="#杂话" class="headerlink" title="杂话"></a>杂话</h2><p>嘿嘿，后续就不用担心在鼓包了，都怕电池炸了，平时这部手机里还插了一张TF卡，扩充内存，当小服务器&#x2F;NAS&#x2F;下载机来用，很久之前也是在海鲜市场上找了大佬给这部手机远程root安装面具</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 手机改装 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 手机改装 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Docker部署RustDesk中继服务器</title>
       <link href="/posts/19282.html"/>
       <url>/posts/19282.html</url>
