@@ -42,6 +42,33 @@
     
     
     <entry>
+      <title>开发自己的 VSCode 插件：开启编程效率之旅</title>
+      <link href="/posts/40262.html"/>
+      <url>/posts/40262.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-准备开发环境"><a href="#1-准备开发环境" class="headerlink" title="1. 准备开发环境"></a>1. 准备开发环境</h2><ul><li>安装 Node.js 和 npm</li><li>安装 VSCode</li><li>安装 Yeoman 和 VSCode Extension Generator</li></ul><h2 id="2-创建插件项目"><a href="#2-创建插件项目" class="headerlink" title="2. 创建插件项目"></a>2. 创建插件项目</h2><p>打开终端，运行以下命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g yo generator-code</span><br><span class="line">yo code</span><br></pre></td></tr></table></figure><p>按照提示设置你的插件项目。</p><h2 id="3-了解插件结构"><a href="#3-了解插件结构" class="headerlink" title="3. 了解插件结构"></a>3. 了解插件结构</h2><p>主要文件包括：</p><ul><li><code>package.json</code>：插件的配置文件</li><li><code>extension.ts</code>：插件的主要代码</li><li><code>README.md</code>：插件的说明文档</li></ul><h2 id="4-编写插件代码"><a href="#4-编写插件代码" class="headerlink" title="4. 编写插件代码"></a>4. 编写插件代码</h2><p>在 <code>extension.ts</code> 中实现你的插件功能。</p><p>开发过程中可以安装推荐的几个vscode插件(.vscode\extensions.json)</p><h2 id="5-调试和测试"><a href="#5-调试和测试" class="headerlink" title="5. 调试和测试"></a>5. 调试和测试</h2><p>使用 VSCode 的调试功能来测试你的插件。</p><ul><li>按下F5后查看调试控制台可以看到日志输出</li><li>直接在编辑器里打断点,调用栈里查看变量和其他信息</li><li>yo脚手架生成的代码已经实现了热重载,更新代码后只需要reload(快捷键:ctrl+shift+r)一下调试窗口即可</li></ul><h2 id="6-发布插件"><a href="#6-发布插件" class="headerlink" title="6. 发布插件"></a>6. 发布插件</h2><p><a href="https://code.visualstudio.com/api/working-with-extensions/publishing-extension">发布扩展 | Visual Studio 代码扩展 API — Publishing Extensions | Visual Studio Code Extension API</a></p><p>使用 <code>vsce</code> 工具打包并发布到 VSCode 市场。</p><ul><li><p>全局安装vsce</p>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @vscode/vsce</span><br></pre></td></tr></table></figure></li><li><p>打包插件生成name.vsix文件</p>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vsce package</span><br></pre></td></tr></table></figure></li><li><p>发布插件</p><ol><li><p>用微软账户登录<a href="http://dev.azure.com/">dev.azure.com</a></p></li><li><p>创建token</p><p> <img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/image_1726912025709_d9e3c892.png"></p><p> <img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/image%201_1726912029217_51191025.png"></p><p> <img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/image%202_1726912032764_735cb8f8.png"></p></li><li><p>创建发布者</p><p> 用和<strong>Azure DevOps登录的微软账户同一个微软账户登录在浏览器里</strong>直接访问链接创建<a href="https://marketplace.visualstudio.com/manage">https://marketplace.visualstudio.com/manage</a></p><p> <img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/image%203_1726912036368_a04ee99d.png"></p><p> <img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/image%204_1726912040370_9eafe61e.png"></p></li><li><p>登录一下发布者账号</p><p> <img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/image%205_1726912043864_c9163369.png"></p><p> 妈的报错了说要密码</p><p> <img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/image%206_1726912049297_cbca7433.png"></p><p> 再试了一次就可以了</p><p> <img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/image%207_1726912052597_366675ae.png"></p></li><li><p>自动发布插件</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vsce publish</span><br></pre></td></tr></table></figure><p> <img src="https://cdn.jsdelivr.net/gh/kenis1108/imgbed@main/image%208_1726912055666_f80501c5.png"></p><p> <strong>自动增加扩展版本</strong></p><p> 发布扩展时，您可以通过指定要递增的<a href="https://semver.org/">SemVer</a>兼容号或版本（ <code>major</code> 、 <code>minor</code>或<code>patch</code> ）来自动递增其版本号。例如，要将扩展的版本从 1.0.0 更新到 1.1.0，您可以指定：</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vsce publish minor</span><br></pre></td></tr></table></figure><p> 或者</p> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vsce publish 1.1.0</span><br></pre></td></tr></table></figure><p> 这两个命令都会首先修改扩展的<code>package.json</code><a href="https://code.visualstudio.com/api/references/extension-manifest#fields">版本</a>属性，然后使用更新后的版本进行发布。</p><blockquote><p>注意：如果您在 git 存储库中运行vsce publish ，它还将通过npm-version创建版本提交和标记。默认提交消息将是扩展的版本，但您可以使用-m标志提供自定义提交消息。 （可以使用%s从提交消息中引用当前版本）。</p></blockquote></li><li><p>手动发布插件</p><p> 使用<code>vsce package</code>将扩展打包成可安装的 VSIX 格式，然后上传到<a href="https://marketplace.visualstudio.com/manage">Visual Studio Marketplace 发布者管理页面</a></p><p> <img src="https://code.visualstudio.com/assets/api/working-with-extensions/publishing-extension/add-extension.png" alt="https://code.visualstudio.com/assets/api/working-with-extensions/publishing-extension/add-extension.png"></p></li></ol></li></ul><h2 id="7-插件配置详解"><a href="#7-插件配置详解" class="headerlink" title="7. 插件配置详解"></a>7. 插件配置详解</h2><ul><li><p>VS Code 扩展清单 (package.json)</p><p>  <a href="https://code.visualstudio.com/api/references/extension-manifest">https://code.visualstudio.com/api/references/extension-manifest</a></p><p>  这个文档详细介绍了 package.json 中所有可用的字段及其用途。</p></li><li><p>发布内容配置</p><p>  <a href="https://code.visualstudio.com/api/references/contribution-points">https://code.visualstudio.com/api/references/contribution-points</a></p><p>  这个文档详细说明了 contributes 字段中可以使用的所有配置项。</p></li><li><p>本地化支持</p><p>  <a href="https://code.visualstudio.com/api/working-with-extensions/bundling-extension#localizing-the-manifest-file">https://code.visualstudio.com/api/working-with-extensions/bundling-extension#localizing-the-manifest-file</a></p><p>  这个文档解释了如何为你的扩展添加多语言支持,包括 README 和 package.json 的本地化。</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程相关 </category>
+          
+          <category> VSCode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> VSCode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Git高手必看！合并提交历史技巧🔧</title>
       <link href="/posts/55427.html"/>
       <url>/posts/55427.html</url>
