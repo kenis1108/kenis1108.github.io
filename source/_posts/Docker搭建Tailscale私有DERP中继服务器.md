@@ -1,3 +1,10 @@
+---
+title: Docker搭建Tailscale私有DERP中继服务器
+category: Linux
+tags: Docker
+date: 2024-09-06 10:03:22
+---
+
 ## 准备一个域名并添加到cloudflare中
 这里就偷懒不写了
 
