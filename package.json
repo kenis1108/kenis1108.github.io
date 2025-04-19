@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "vitepress": "^1.6.3"
+  },
+  "dependencies": {
+    "@catppuccin/vitepress": "^0.1.0"
+  }
+}

@@ -1,0 +1,30 @@
+---
+# https://vitepress.dev/reference/default-theme-home-page
+layout: home
+
+hero:
+  name: "Kenis Blog"
+  text: Casual Notes、Miscellaneous Jottings
+  tagline: "随笔杂记"
+  actions:
+    - theme: brand
+      text: Articles
+      link: /articles
+    - theme: alt
+      text: API Examples
+      link: /api-examples
+
+features:
+  - title: 待完成文章
+    details: 通用任务队列 - 用于控制并发任务数量 - 多文件上传 - 分片上传
+  - title: 待完成文章
+    details: 大文件分片上传，根据网络质量实时修改分片大小
+  - title: 待完成文章
+    details: 前端实战：文件虚拟列表 实现缩略图的缓存，以及图标的缓存，不要在滚动的时候重复请求同一个图片
+  - title: 待完成文章
+    details: 如何将 Unicode 代码点转换为 \u 转义序列格式，每种编程语言表示Unicode 代码点有点差异
+  - title: 待完成文章
+    details: 使用 father 4 快速开发自己的前端工具npm包
+  - title: 发现问题
+    details: windows openssh server在加入了域的计算机上无法使用密码验证方式，只能使用密钥验证方式
+---
