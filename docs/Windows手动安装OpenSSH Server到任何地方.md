@@ -8,7 +8,7 @@ https://github.com/PowerShell/Win32-OpenSSH/releases/download/v9.8.2.0p2-Preview
 
 ## 随意解压到任意路径
 
-```powshell
+```powershell
 7z x OpenSSH-Win64.zip
 ```
 
