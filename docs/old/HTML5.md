@@ -105,17 +105,25 @@ HTML5草案的前身名为 Web Applications 1.0，于2004年被WHATWG提出，�
 # 多媒体标签
 
 ```html
+<!-- video 标签示例 -->
 <video src=""></video>
-ogg 文件，适用于Firefox、Opera 以及 Chrome 浏览器。 
- video 元素支持三种视频格式： .MP4, .WebM, 和.ogg:
 
+<!-- 说明部分 -->
+<p>ogg 文件，适用于 Firefox、Opera 以及 Chrome 浏览器。</p>
+<p>video 元素支持三种视频格式：.MP4, .WebM, 和 .ogg。</p>
+
+<!-- audio 标签示例 -->
 <audio src=""></audio>
-    音频文件必须是 MP3 或 Wav 类型 mpeg。 
-     <video   controls="controls" autoplay="autoplay">
-          <source src="video/movie.ogg" type="video/ogg" >
-          <source src="video/movie.webm" type="video/webm">
-          <embed src="video/oceans.mp4" >   
-    </video>
+
+<!-- 说明部分 -->
+<p>音频文件必须是 MP3 或 Wav 类型 mpeg。</p>
+
+<!-- 包含多个源的 video 标签示例 -->
+<video controls autoplay>
+  <source src="video/movie.ogg" type="video/ogg">
+  <source src="video/movie.webm" type="video/webm">
+  <embed src="video/oceans.mp4" />
+</video>
 ```
 
 + 属性
