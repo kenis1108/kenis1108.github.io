@@ -107,7 +107,7 @@ HTML5草案的前身名为 Web Applications 1.0，于2004年被WHATWG提出，�
 ```html
 <video src=""></video>
 ogg 文件，适用于Firefox、Opera 以及 Chrome 浏览器。 
- <video> 元素支持三种视频格式： .MP4, .WebM, 和.ogg:
+ video 元素支持三种视频格式： .MP4, .WebM, 和.ogg:
 
 <audio src=""></audio>
     音频文件必须是 MP3 或 Wav 类型 mpeg。 
