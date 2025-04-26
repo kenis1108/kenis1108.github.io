@@ -27,4 +27,14 @@ features:
     details: 使用 father 4 快速开发自己的前端工具npm包
   - title: 发现问题
     details: windows openssh server在加入了域的计算机上无法使用密码验证方式，只能使用密钥验证方式
+  - title: 编码风格
+    details: 先写注释，再填充代码；先整体再细节；
+  - title: ACM 竞赛
+    details: 跟对项目，年包50
+  - title: TS类型体操
+    details:
+  - title: 柯里化
+    details:
+  - title: 前端监控
+    details: 数据埋点，前端操作录制引擎，录制脚本，直接跑脚本复现生产环境问题，减少沟通成本。
 ---
