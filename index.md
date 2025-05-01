@@ -37,4 +37,8 @@ features:
     details:
   - title: 前端监控
     details: 数据埋点，前端操作录制引擎，录制脚本，直接跑脚本复现生产环境问题，减少沟通成本。
+  - title: 待完成文章
+    details: Windows（VcXsrv）通过X11转发显示远程Linux上的图形界面，Windows（X11服务端）安装VcXsrv服务器，Linux（SSH服务端）配置sshd_config开启X11转发，Windows（SSH客户端）配置~/.ssh/config开启X11转发，Linux（X11客户端）配置DISPLAY环境变量为X11服务端`IP:显示号.屏幕号`。https://zhuanlan.zhihu.com/p/16034352413
+  - title: 待完成文章
+    details: 配置Window自带的RemoteApp功能
 ---
