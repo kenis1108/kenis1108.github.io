@@ -20,6 +20,13 @@ sudo mkdir /mnt/shared # 创建挂载路径
 sudo vmhgfs-fuse .host:/shared /mnt/shared -o subtype=vmhgfs-fuse,allow_other
 ```
 
+or
+
+```bash
+sudo mkdir /mnt/hgfs
+sudo mount -t fuse.vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other
+```
+
 - 命令解释
 
   - vmhgfs-fuse
