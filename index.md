@@ -43,4 +43,6 @@ features:
     details: 配置Window自带的RemoteApp功能
   - title: 待完成文章
     details: 将各种shell的function用python/node.js什么的脚本语言实现，不用每一种shell都单独编写了
+  - title: 待完成文章
+    details: github actions配置自动merge PR
 ---
