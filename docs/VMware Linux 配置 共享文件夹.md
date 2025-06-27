@@ -18,6 +18,8 @@ sudo apt install open-vm-tools-desktop -y
 ```bash
 sudo mkdir /mnt/shared # 创建挂载路径
 sudo vmhgfs-fuse .host:/shared /mnt/shared -o subtype=vmhgfs-fuse,allow_other
+# or `sudo vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other`
+
 ```
 
 or
