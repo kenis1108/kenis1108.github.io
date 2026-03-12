@@ -47,7 +47,8 @@ features:
     details: github actions配置自动merge PR
   - title: 发现问题
     details: windows下 为什么删除 .git-credentials 后能自动恢复？主存储位置是 Windows 凭证管理器：.git-credentials 只是一个“影子文件”，真正的凭据安全存储在系统密钥链中。Git 的自动同步行为：当检测到 .git-credentials 不存在时，Git 会从凭证管理器读取凭据并重新生成该文件（设计如此，为了兼容旧工具）。
-
+  - title: bash 的 fc 命令
+    details: fc
 
 
 
