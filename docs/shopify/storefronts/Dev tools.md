@@ -7,6 +7,7 @@
     3. MCP
         1. [MCP Registry | Chrome DevTools MCP](https://github.com/mcp/io.github.ChromeDevTools/chrome-devtools-mcp)
         2. [MCP Registry | Figma MCP Server](https://github.com/mcp/com.figma.mcp/mcp)
+        3. [飞书 MCP](https://open.feishu.cn/page/mcp/7616292338294688698)
 
 3. Google Chrome
 
@@ -16,3 +17,4 @@
     1. MCP
         1. [MCP Registry | Chrome DevTools MCP](https://github.com/mcp/io.github.ChromeDevTools/chrome-devtools-mcp)
         2. [MCP Registry | Figma MCP Server](https://github.com/mcp/com.figma.mcp/mcp)
+        3. [飞书 MCP](https://open.feishu.cn/page/mcp/7616292338294688698)
