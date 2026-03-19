@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import fs from 'fs'
 import path from 'path'
+import { get } from 'http'
 
 /** 递归获取所有 markdown 文件 */
 function getAllMarkdownFiles(dir: string): any[] {
@@ -27,12 +28,6 @@ function getAllMarkdownFiles(dir: string): any[] {
   return routes
 }
 
-/** 动态生成侧边栏 */
-function getSidebar() {
-  const docsPath = path.resolve(__dirname, '../docs/')
-  return getAllMarkdownFiles(docsPath)
-}
-
 export default defineConfig({
   title: "Kenis Blog",
   description: "随笔",
@@ -45,13 +40,35 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Articles', link: '/articles' }
+      { 
+        text: 'Old Articles',
+        items: getAllMarkdownFiles(path.resolve(__dirname, '../docs/old'))
+      },
+      {
+        text: 'Notion',
+        items: getAllMarkdownFiles(path.resolve(__dirname, '../docs/notion'))
+      },
+      {
+        text: 'Shopify',
+        items: getAllMarkdownFiles(path.resolve(__dirname, '../docs/shopify'))
+      }
     ],
 
     sidebar: [
       {
-        text: 'Articles',
-        items: getSidebar() // 自动生成的侧边栏
+        text: 'Old Articles',
+        collapsed: true,
+        items: getAllMarkdownFiles(path.resolve(__dirname, '../docs/old'))
+      },
+      {
+        text: 'Notion',
+        collapsed: true,
+        items: getAllMarkdownFiles(path.resolve(__dirname, '../docs/notion'))
+      },
+      {
+        text: 'Shopify',
+        collapsed: true,
+        items: getAllMarkdownFiles(path.resolve(__dirname, '../docs/shopify'))
       }
     ],
 
