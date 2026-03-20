@@ -54,23 +54,23 @@ export default defineConfig({
       }
     ],
 
-    sidebar: [
-      {
+    sidebar: {
+      '/docs/old/': [{
         text: 'Old Articles',
         collapsed: true,
         items: getAllMarkdownFiles(path.resolve(__dirname, '../docs/old'))
-      },
-      {
+      }],
+      '/docs/notion/': [{
         text: 'Notion',
         collapsed: true,
         items: getAllMarkdownFiles(path.resolve(__dirname, '../docs/notion'))
-      },
-      {
+      }],
+      '/docs/shopify/': [{
         text: 'Shopify',
         collapsed: true,
         items: getAllMarkdownFiles(path.resolve(__dirname, '../docs/shopify'))
-      }
-    ],
+      }]
+    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/kenis1108' }
