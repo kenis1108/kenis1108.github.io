@@ -70,3 +70,8 @@ Dev Dashboard 负责「应用开发、监控、日志、dev store」层面。
 + 要不要立即办 Partner 账户
 + 推荐的账号结构（个人 vs 公司组织）
 + 接下来在 Dev Dashboard 里的操作路径。
+
+## 结论
+
+1. 不需要走Partner账户这个Channel了
+2. 需要具有给员工配置Organization级别权限的账号才能配置Dev Bashboard的访问权限
