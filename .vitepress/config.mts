@@ -1,7 +1,6 @@
 import { defineConfig } from 'vitepress'
 import fs from 'fs'
 import path from 'path'
-import { get } from 'http'
 
 /** 递归获取所有 markdown 文件 */
 function getAllMarkdownFiles(dir: string): any[] {
@@ -37,41 +36,64 @@ export default defineConfig({
       dark: "catppuccin-mocha",
     },
   },
+  locales: {
+    root: {
+      label: '简体中文',
+      lang: 'zh-CN',
+    },
+    en: {
+      label: 'English',
+      lang: 'en-US',
+      link: '/en/'
+    }
+  },
   themeConfig: {
+    logo: '/logo.png',
+    search: { 
+      provider: 'local'
+    },
     nav: [
       { text: 'Home', link: '/' },
       { 
         text: 'Old Articles',
-        items: getAllMarkdownFiles(path.resolve(__dirname, '../docs/old'))
+        items: getAllMarkdownFiles(path.resolve(__dirname, '../old'))
       },
       {
         text: 'Notion',
-        items: getAllMarkdownFiles(path.resolve(__dirname, '../docs/notion'))
+        items: getAllMarkdownFiles(path.resolve(__dirname, '../notion'))
       },
       {
         text: 'Shopify',
-        items: getAllMarkdownFiles(path.resolve(__dirname, '../docs/shopify'))
+        items: getAllMarkdownFiles(path.resolve(__dirname, '../shopify'))
       }
     ],
 
     sidebar: {
-      '/docs/old/': [{
+      '/old/': [{
         text: 'Old Articles',
         collapsed: true,
-        items: getAllMarkdownFiles(path.resolve(__dirname, '../docs/old'))
+        items: getAllMarkdownFiles(path.resolve(__dirname, '../old'))
       }],
-      '/docs/notion/': [{
+      '/notion/': [{
         text: 'Notion',
         collapsed: true,
-        items: getAllMarkdownFiles(path.resolve(__dirname, '../docs/notion'))
+        items: getAllMarkdownFiles(path.resolve(__dirname, '../notion'))
       }],
-      '/docs/shopify/': [{
+      '/shopify/': [{
         text: 'Shopify',
         collapsed: true,
-        items: getAllMarkdownFiles(path.resolve(__dirname, '../docs/shopify'))
+        items: getAllMarkdownFiles(path.resolve(__dirname, '../shopify'))
       }]
     },
-
+    outline: { 
+      level: [2,4], // 显示2-4级标题
+      // level: 'deep', // 显示2-6级标题
+      label: '目录' // 文字显示
+    },
+    editLink: { 
+      pattern: 'https://github.com/kenis1108/kenis1108.github.io/:path', // 改成自己的仓库
+      text: '在GitHub编辑本页'
+    },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/kenis1108' }
     ]
