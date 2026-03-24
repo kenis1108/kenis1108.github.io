@@ -91,7 +91,7 @@ export default defineConfig({
       label: '目录' // 文字显示
     },
     editLink: { 
-      pattern: 'https://github.com/kenis1108/kenis1108.github.io/:path', // 改成自己的仓库
+      pattern: 'https://github.com/kenis1108/kenis1108.github.io/blob/vitepress/:path', // 改成自己的仓库
       text: '在GitHub编辑本页'
     },
     socialLinks: [
