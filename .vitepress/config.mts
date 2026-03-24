@@ -15,11 +15,11 @@ function getAllMarkdownFiles(dir: string): any[] {
       // 递归处理子目录
       routes = routes.concat(getAllMarkdownFiles(filePath))
     } else if (file.endsWith('.md') && file !== 'index.md') {
-      // 获取相对于 docs 目录的路径
-      const relativePath = path.relative(path.resolve(__dirname, '../docs/'), filePath)
+      // 获取相对路径
+      const relativePath = path.relative(path.resolve(__dirname, '../'), filePath)
       routes.push({
         text: file.replace('.md', ''),
-        link: `/docs/${relativePath.replace('.md', '')}`
+        link: `/${relativePath.replace('.md', '')}`
       })
     }
   })
