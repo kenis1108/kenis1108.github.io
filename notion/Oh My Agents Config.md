@@ -18,6 +18,10 @@
   url: https://github.com/upstash/context7#installation
   description:
 
+- name: DesktopCommanderMCP
+  url: https://github.com/wonderwhy-er/DesktopCommanderMCP
+  description:
+
 ---
 
 ## Skills
