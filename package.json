@@ -3,8 +3,9 @@
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview",
-    "notion:import-md": "node scripts/import-md-to-notion.mjs",
-    "notion:import-md:dry": "node scripts/import-md-to-notion.mjs --dry-run"
+    "notion:export-page": "node scripts/export-notion-page.mjs",
+    "notion:import-md": "node scripts/notion-import-markdown.mjs",
+    "notion:import-md:dry": "node scripts/notion-import-markdown.mjs --dry-run"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
