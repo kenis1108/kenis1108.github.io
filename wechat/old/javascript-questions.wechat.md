@@ -54,14 +54,16 @@ sayHi()
 + C: `ReferenceError` 和 `21`
 + D: `undefined` 和 `ReferenceError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 ### 答案: D
 
 + 在函数内部，我们首先通过 var 关键字声明了 name 变量。这意味着变量被提升了（内存空间在创建阶段就被设置好了），直到程序运行到定义变量位置之前默认值都是 undefined。因为当我们打印 name 变量时还没有执行到定义变量的位置，因此变量的值保持为 undefined。
 
 + 通过 let 和 const 关键字声明的变量也会提升，但是和 var 不同，它们不会被初始化。在我们声明（初始化）之前是不能访问它们的。这个行为被称之为暂时性死区。当我们试图在声明之前访问它们时，JavaScript 将会抛出一个 ReferenceError 错误。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -81,14 +83,16 @@ for (let i = 0; i < 3; i++) {
 + B: `0 1 2` 和 `3 3 3`
 + C: `3 3 3` 和 `0 1 2`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 ### 答案: C
 
 + 由于 JavaScript 的事件循环，setTimeout 回调会在遍历结束后才执行。因为在第一个遍历中遍历 i 是通过 var 关键字声明的，所以这个值是全局作用域下的。在遍历过程中，我们通过一元操作符 ++ 来每次递增 i 的值。当 setTimeout 回调执行的时候，i 的值等于 3。
 
 + 在第二个遍历中，遍历 i 是通过 let 关键字声明的：通过 let 和 const 关键字声明的变量是拥有块级作用域（指的是任何在 {} 中的内容）。在每次的遍历过程中，i 都有一个新值，并且每个值都在循环内的作用域中。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -112,7 +116,9 @@ shape.perimeter()
 - C: `20` and `63`
 - D: `NaN` and `63`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: B
 
@@ -122,7 +128,7 @@ shape.perimeter()
 
 在 `window` 中没有 `radius` 这个属性，因此返回 `undefined`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -137,7 +143,9 @@ shape.perimeter()
 - B: `false` and `NaN`
 - C: `false` and `false`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
@@ -145,7 +153,7 @@ shape.perimeter()
 
 字符串 `'Lydia'` 是一个真值，真值取反那么就返回 `false`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -167,7 +175,9 @@ const mouse = {
 - C: `mouse[bird["size"]]`是无效的
 - D: 以上三个选项都是有效的
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
@@ -179,7 +189,7 @@ const mouse = {
 
 然后使用点语法的话，上面这一切都不会发生。`mouse` 没有 `bird` 这个 key，这也就意味着 `mouse.bird` 是 `undefined`。然后当我们使用点语法 `mouse.bird.size` 时，因为 `mouse.bird` 是 `undefined`，这也就变成了 `undefined.size`。这个行为是无效的，并且会抛出一个错误类似 `Cannot read property "size" of undefined`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -199,7 +209,9 @@ console.log(d.greeting)
 - C: `ReferenceError`
 - D: `TypeError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
@@ -211,7 +223,7 @@ console.log(d.greeting)
 
 因此当我们改变其中一个对象时，其实是改变了所有的对象。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -232,7 +244,9 @@ console.log(b === c)
 - C: `true` `false` `false`
 - D: `false` `true` `true`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: C
 
@@ -242,7 +256,7 @@ console.log(b === c)
 
 然后，当我们使用 `===` 操作符时，两者的值以及*类型*都应该是相同的。`new Number()` 是一个对象而不是 number，因此返回 `false`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -269,13 +283,15 @@ freddie.colorChange('orange')
 - C: `green`
 - D: `TypeError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: D
 
 `colorChange` 是一个静态方法。静态方法被设计为只能被创建它们的构造器使用（也就是 `Chameleon`），并且不能传递给实例。因为 `freddie` 是一个实例，静态方法不能被实例使用，因此抛出了 `TypeError` 错误。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -291,7 +307,9 @@ console.log(greetign)
 - B: `ReferenceError: greetign is not defined`
 - C: `undefined`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
@@ -299,7 +317,7 @@ console.log(greetign)
 
 为了避免这个为题，我们可以使用 `"use strict"。这能确保当你声明变量时必须赋值。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -318,7 +336,9 @@ bark.animal = 'dog'
 - C: `undefined`
 - D: `ReferenceError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
@@ -326,7 +346,7 @@ bark.animal = 'dog'
 
 函数是一个特殊的对象。你写的这个代码其实不是一个实际的函数。函数是一个拥有属性的对象，并且属性也可被调用。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -351,7 +371,9 @@ console.log(member.getFullName());
 - C: `Lydia Hallie`
 - D: `undefined` `undefined`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
@@ -365,7 +387,7 @@ Person.prototype.getFullName = function () {
 
 这才会使 `member.getFullName()` 起作用。为什么这么做有益的？假设我们将这个方法添加到构造函数本身里。也许不是每个 `Person` 实例都需要这个方法。这将浪费大量内存空间，因为它们仍然具有该属性，这将占用每个实例的内存空间。相反，如果我们只将它添加到原型中，那么它只存在于内存中的一个位置，但是所有实例都可以访问它！
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -389,7 +411,9 @@ console.log(sarah)
 - C: `Person {firstName: "Lydia", lastName: "Hallie"}` and `{}`
 - D:`Person {firstName: "Lydia", lastName: "Hallie"}` and `ReferenceError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
@@ -397,7 +421,7 @@ console.log(sarah)
 
 我们说 `this.firstName` 等于 `"Sarah"`，并且 `this.lastName` 等于 `"Smith"`。实际上我们做的是，定义了 `global.firstName = 'Sarah'` 和 `global.lastName = 'Smith'`。而 `sarah` 本身是 `undefined`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -408,13 +432,15 @@ console.log(sarah)
 - C: Target > Bubbling > Capturing
 - D: Capturing > Target > Bubbling
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: D
 
 在**捕获**（capturing）阶段中，事件从祖先元素向下传播到目标元素。当事件达到**目标**（target）元素后，**冒泡**（bubbling）才开始。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -423,13 +449,15 @@ console.log(sarah)
 - A: 对
 - B: 错
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: B
 
 除了**基本对象**（base object），所有对象都有原型。基本对象可以访问一些方法和属性，比如 `.toString`。这就是为什么你可以使用内置的 JavaScript 方法！所有这些方法在原型上都是可用的。虽然 JavaScript 不能直接在对象上找到这些方法，但 JavaScript 会沿着原型链找到它们，以便于你使用。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -448,7 +476,9 @@ sum(1, '2')
 - C: `"12"`
 - D: `3`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: C
 
@@ -456,7 +486,7 @@ JavaScript 是一种**动态类型语言**：我们不指定某些变量的类�
 
 在本例中，JavaScript 将数字 `1` 转换为字符串，以便函数有意义并返回一个值。在数字类型（`1`）和字符串类型（`'2'`）相加时，该数字被视为字符串。我们可以连接字符串，比如 `"Hello" + "World"`，这里发生的是 `"1" + "2"`，它返回 `"12"`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -474,7 +504,9 @@ console.log(number)
 - C: `0` `2` `2`
 - D: `0` `1` `2`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: C
 
@@ -490,7 +522,7 @@ console.log(number)
 
 结果是 `0 2 2`.
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -513,13 +545,15 @@ getPersonInfo`${person} is ${age} years old`
 - B: `["", " is ", " years old"]` `"Lydia"` `21`
 - C: `"Lydia"` `["", " is ", " years old"]` `21`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: B
 
 如果使用标记模板字面量，第一个参数的值总是包含字符串的数组。其余的参数获取的是传递的表达式的值！
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -543,7 +577,9 @@ checkAge({ age: 18 })
 - B: `You are still an adult.`
 - C: `Hmm.. You don't have an age I guess`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: C
 
@@ -553,7 +589,7 @@ checkAge({ age: 18 })
 
 这也是 `{ age: 18 } === { age: 18 }` 和 `{ age: 18 } == { age: 18 }` 都返回 `false` 的原因。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -572,13 +608,15 @@ getAge(21)
 - C: `"object"`
 - D: `"NaN"`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: C
 
 扩展运算符（`...args`）会返回实参组成的数组。而数组是对象，因此 `typeof args` 返回 `"object"`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -599,13 +637,15 @@ getAge()
 - C: `ReferenceError`
 - D: `TypeError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: C
 
 使用 `"use strict"`，你可以确保不会意外地声明全局变量。我们从来没有声明变量 `age`，因为我们使用 `"use strict"`，它将抛出一个引用错误。如果我们不使用 `"use strict"`，它就会工作，因为属性 `age` 会被添加到全局对象中了。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -620,13 +660,15 @@ const sum = eval('10*10+5')
 - C: `TypeError`
 - D: `"10*10+5"`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
 代码以字符串形式传递进来，`eval` 对其求值。如果它是一个表达式，就像本例中那样，它对表达式求值。表达式是 `10 * 10 + 5`。这将返回数字 `105`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -641,7 +683,9 @@ sessionStorage.setItem('cool_secret', 123)
 - C: 当用户关掉整个浏览器，而不只是关掉标签页。
 - D: 当用户关闭电脑时。
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: B
 
@@ -649,7 +693,7 @@ sessionStorage.setItem('cool_secret', 123)
 
 如果使用 `localStorage`，那么数据将永远在那里，除非调用了 `localStorage.clear()`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -667,7 +711,9 @@ console.log(num)
 - C: `SyntaxError`
 - D: `ReferenceError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: B
 
@@ -675,7 +721,7 @@ console.log(num)
 
 你不能使用 `let` 或 `const` 来实现这一点，因为它们是块作用域的。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -696,7 +742,9 @@ set.has(1)
 - C: `true` `true` `false` `true`
 - D: `true` `true` `true` `true`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: C
 
@@ -704,7 +752,7 @@ set.has(1)
 
 对于集合，它不是这样工作的。在我们的集合中没有 `'1'`：`set.has('1')` 返回 `false`。它有数字类型为 `1`，`set.has(1)` 返回 `true`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -720,13 +768,15 @@ console.log(obj)
 - C: `{ a: "three", b: "two" }`
 - D: `SyntaxError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: C
 
 如果你有两个名称相同的键，则键会被替换掉。它仍然位于第一个键出现的位置，但是值是最后出现那个键的值。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -736,13 +786,15 @@ console.log(obj)
 - B: 错
 - C: 看情况
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
 基本执行上下文是全局执行上下文：它是代码中随处可访问的内容。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -760,13 +812,15 @@ for (let i = 1; i < 5; i++) {
 - C: `1` `2` `4`
 - D: `1` `3` `4`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: C
 
 如果某个条件返回 `true`，则 `continue` 语句跳过本次迭代。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -787,13 +841,15 @@ name.giveLydiaPizza()
 - C: `SyntaxError`
 - D: `undefined`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
 `String` 是内置的构造函数，我们可以向它添加属性。我只是在它的原型中添加了一个方法。基本类型字符串被自动转换为字符串对象，由字符串原型函数生成。因此，所有 string(string 对象)都可以访问该方法！
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -815,7 +871,9 @@ console.log(a[b])
 - C: `undefined`
 - D: `ReferenceError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: B
 
@@ -825,7 +883,7 @@ console.log(a[b])
 
 然后，我们打印 `a[b]`，也就是 `a["[object Object]"]`。之前刚设置为 `456`，因此返回的是 `456`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -846,7 +904,9 @@ baz()
 - C: `Second` `First` `Third`
 - D: `Second` `Third` `First`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: B
 
@@ -876,7 +936,7 @@ WebAPI 不能随时向栈内添加内容。相反，它将回调函数推到名�
 
 `bar` 被调用，打印 `"Second"`，然后它被栈弹出。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -897,13 +957,15 @@ WebAPI 不能随时向栈内添加内容。相反，它将回调函数推到名�
 - C: `button`
 - D: 一个包含所有嵌套元素的数组。
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: C
 
 导致事件的最深嵌套的元素是事件的 target。你可以通过 `event.stopPropagation` 来停止冒泡。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -922,13 +984,15 @@ WebAPI 不能随时向栈内添加内容。相反，它将回调函数推到名�
 - C: `p`
 - D: `div`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
 如果我们点击 `p`，我们会看到两个日志：`p` 和 `div`。在事件传播期间，有三个阶段：捕获、目标和冒泡。默认情况下，事件处理程序在冒泡阶段执行（除非将 `useCapture` 设置为 `true`）。它从嵌套最深的元素向外传播。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -950,7 +1014,9 @@ sayHi.bind(person, 21)
 - C: `Lydia is 21` `Lydia is 21`
 - D: `Lydia is 21` `function`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: D
 
@@ -958,7 +1024,7 @@ sayHi.bind(person, 21)
 
 `.bind` 返回函数的**副本**，但带有绑定上下文！它不是立即执行的。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -977,7 +1043,9 @@ typeof sayHi()
 - C: `"function"`
 - D: `"undefined"`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: B
 
@@ -985,7 +1053,7 @@ typeof sayHi()
 
 参考：只有7种内置类型：`null`，`undefined`，`boolean`，`number`，`string`，`object`, `symbol` 和 `bigint`。 ``function`` 不是一种类型，函数是对象，它的类型是``object``。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1005,7 +1073,9 @@ undefined
 - C: `0`, `''`, `new Boolean(false)`, `undefined`
 - D: All of them are falsy
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
@@ -1020,7 +1090,7 @@ undefined
 
 `Function` 构造函数, 比如 `new Number` 和 `new Boolean`，是 [truthy](https://developer.mozilla.org/zh-CN/docs/Glossary/Truthy)。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1035,14 +1105,16 @@ console.log(typeof typeof 1)
 - C: `"object"`
 - D: `"undefined"`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: B
 
 `typeof 1` 返回 `"number"`。
 `typeof "number"` 返回 `"string"`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1059,7 +1131,9 @@ console.log(numbers)
 - C: `[1, 2, 3, 7 x empty, 11]`
 - D: `SyntaxError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: C
 
@@ -1069,7 +1143,7 @@ console.log(numbers)
 
 这取决于你的运行环境（每个浏览器，以及 node 环境，都有可能不同）
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1094,7 +1168,9 @@ console.log(numbers)
 - C: `1` `1` `2`
 - D: `1` `undefined` `undefined`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
@@ -1104,7 +1180,7 @@ console.log(numbers)
 
 `catch` 块之外的变量 `x` 的值仍为 `undefined`， `y` 的值为 `2`。当我们在 `catch` 块之外执行 `console.log(x)` 时，返回 `undefined`，`y` 返回 `2`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1115,7 +1191,9 @@ console.log(numbers)
 - C: 只有对象
 - D: 数字与对象
 -
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
@@ -1123,7 +1201,7 @@ JavaScript 只有基本类型和对象。
 
 基本类型包括 `boolean`, `null`, `undefined`, `bigint`, `number`, `string`, `symbol`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1143,14 +1221,16 @@ JavaScript 只有基本类型和对象。
 - C: `[1, 2, 0, 1, 2, 3]`
 - D: `[1, 2, 6]`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: C
 
 `[1, 2]`是初始值。初始值将会作为首次调用时第一个参数 `acc` 的值。在第一次执行时， `acc` 的值是 `[1, 2]`， `cur` 的值是 `[0, 1]`。合并它们，结果为 `[1, 2, 0, 1]`。
 第二次执行， `acc` 的值是 `[1, 2, 0, 1]`， `cur` 的值是 `[2, 3]`。合并它们，最终结果为 `[1, 2, 0, 1, 2, 3]`
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1167,7 +1247,9 @@ JavaScript 只有基本类型和对象。
 - C: `false` `true` `true`
 - D: `true` `true` `false`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: B
 
@@ -1177,7 +1259,7 @@ JavaScript 只有基本类型和对象。
 
 `1` 是 [truthy](https://developer.mozilla.org/zh-CN/docs/Glossary/Truthy)。 `!1` 的值是 `false`。 `!false` 的值是 `true`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1192,13 +1274,15 @@ setInterval(() => console.log('Hi'), 1000)
 - C: 传递的函数
 - D: `undefined`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
 `setInterval` 返回一个唯一的 id。此 id 可被用于 `clearInterval` 函数来取消定时。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1213,13 +1297,15 @@ setInterval(() => console.log('Hi'), 1000)
 - C: `[[], "Lydia"]`
 - D: `[["L", "y", "d", "i", "a"]]`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
 string 类型是可迭代的。扩展运算符将迭代的每个字符映射成一个元素。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1242,7 +1328,9 @@ console.log(gen.next().value);
 - C: `10, 20`
 - D: `0, 10 and 10, 20`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: C
 
@@ -1252,7 +1340,7 @@ console.log(gen.next().value);
 
 然后，我们再执行`next()`方法。生成器会从刚才暂停的地方继续，这个时候`i`还是`10`。于是我们走到了第二个`yield`关键字处，这时候需要生成的值是`i*2`，`i`为`10`，那么此时生成的值便是`20`。所以这道题的最终结果是`10,20`。
 
-{% endhideBlock %}
+</details>
 
 ## 45. 返回值是什么?
 
@@ -1273,13 +1361,15 @@ Promise.race([firstPromise, secondPromise]).then(res => console.log(res));
 - C: `"two" "one"`
 - D: `"one" "two"`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: B
 
 当我们向`Promise.race`方法中传入多个`Promise`时，会进行 _优先_ 解析。在这个例子中，我们用`setTimeout`给`firstPromise`和`secondPromise`分别设定了500ms和100ms的定时器。这意味着`secondPromise`会首先解析出字符串`two`。那么此时`res`参数即为`two`，是为输出结果。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1298,7 +1388,9 @@ console.log(members);
 - C: `[{}]`
 - D: `[{ name: "Lydia" }]`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: D
 
@@ -1316,7 +1408,7 @@ console.log(members);
 
 我们没有修改数组第一个元素的值，而只是修改了变量`person`的值,因为元素（复制而来）的引用与`person`不同。`members`的第一个元素仍然保持着对原始对象的引用。当我们输出`members`数组时，第一个元素会将引用的对象打印出来。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1338,13 +1430,15 @@ for (const item in person) {
 - C: `"Lydia", 21`
 - D: `["name", "Lydia"], ["age", 21]`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: B
 
 在`for-in`循环中,我们可以通过对象的key来进行迭代,也就是这里的`name`和`age`。在底层，对象的key都是字符串（如果他们不是Symbol的话）。在每次循环中，我们将`item`设定为当前遍历到的key.所以一开始，`item`是`name`，之后 `item`输出的则是`age`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1359,7 +1453,9 @@ console.log(3 + 4 + "5");
 - C: `12`
 - D: `"12"`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: B
 
@@ -1369,7 +1465,7 @@ console.log(3 + 4 + "5");
 
 由于类型的强制转换，`7 + '5'`的结果是`"75"`. JavaScript将`7`转换成了字符串，可以参考问题15.我们可以用`+`号把两个字符串连接起来。 `"7" + "5"` 就得到了`"75"`.
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1384,7 +1480,9 @@ const num = parseInt("7*6", 10);
 - C: `7`
 - D: `NaN`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: C
 
@@ -1392,7 +1490,7 @@ const num = parseInt("7*6", 10);
 
 `*`就是不合法的数字字符。所以只解析到`"7"`，并将其解析为十进制的`7`. `num`的值即为`7`.
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1410,7 +1508,9 @@ const num = parseInt("7*6", 10);
 - C: `[undefined, undefined, undefined]`
 - D: `[ 3 x empty ]`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: C
 
@@ -1418,7 +1518,7 @@ const num = parseInt("7*6", 10);
 
 但是，没有任何值返回。当函数没有返回任何值时，即默认返回`undefined`.对数组中的每一个元素来说，函数块都得到了这个返回值，所以结果中每一个元素都是`undefined`.
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1443,7 +1543,9 @@ console.log(person, birthYear);
 - C: `{ name: "Lydia" }, "1998"`
 - D: `{ name: "Sarah" }, "1997"`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
@@ -1453,7 +1555,7 @@ console.log(person, birthYear);
 
 而`person`是个对象。参数`member`引用与之 _相同的_ 对象。当我们修改`member`所引用对象的属性时,`person`的相应属性也被修改了,因为他们引用了相同的对象. `person`的 `name`属性也变成了 `"Lydia"`.
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1481,7 +1583,9 @@ sayHi();
 - C: `SyntaxError: can only throw Error objects`
 - D: `"Oh no an error: Hello world!`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: D
 
@@ -1489,7 +1593,7 @@ sayHi();
 
 通过 `catch`语句，我们可以设定当`try`语句块中抛出异常后应该做什么处理。在本例中抛出的异常是字符串`'Hello world'`. `e`就是这个字符串，因此被输出。最终结果就是`'Oh an error: Hello world'`.
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1510,13 +1614,15 @@ console.log(myCar.make);
 - C: `ReferenceError`
 - D: `TypeError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: B
 
 返回属性的时候，属性的值等于 _返回的_ 值，而不是构造函数中设定的值。我们返回了字符串 `"Maserati"`，所以 `myCar.make`等于`"Maserati"`.
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1536,7 +1642,9 @@ console.log(typeof y);
 - C: `"object", "number"`
 - D: `"number", "undefined"`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
@@ -1553,7 +1661,7 @@ let x = y;
 
 而我们创建了全局变量`y`，并且设定`y`等于`10`.这个值在我们的代码各处都访问的到。 `y`已经被定义了，而且有一个`"number"`类型的值。 `console.log(typeof y)`返回`"number"`.
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1584,7 +1692,9 @@ pet.bark();
 - C: `"Woof I am Mara"`, `undefined`
 - D: `TypeError`, `TypeError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
@@ -1592,7 +1702,7 @@ pet.bark();
 
 当我们尝试调用一个不存在的函数时`TypeError`异常会被抛出。在本例中就是 `TypeError: pet.bark is not a function`，因为`pet.bark`是`undefined`.
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1609,7 +1719,9 @@ console.log(set);
 - C: `{1, 1, 2, 3, 4}`
 - D: `{1, 2, 3, 4}`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: D
 
@@ -1617,7 +1729,7 @@ console.log(set);
 
 我们传入了数组`[1, 1, 2, 3, 4]`，他有一个重复值`1`.以为一个集合里不能有两个重复的值，其中一个就被移除了。所以结果是 `{1, 2, 3, 4}`.
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1643,7 +1755,9 @@ console.log(myCounter);
 - C: `Error`
 - D: `NaN`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: C
 
@@ -1651,7 +1765,7 @@ console.log(myCounter);
 
 当我们给`myCounter`增加一个值的时候会抛出一个异常： `myCounter`是只读的，不能被修改。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1670,7 +1784,9 @@ console.log(delete age);
 - C: `true`, `true`
 - D: `undefined`, `undefined`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
@@ -1678,7 +1794,7 @@ console.log(delete age);
 
 `name`变量由`const`关键字声明，所以删除不成功:返回 `false`. 而我们设定`age`等于`21`时,我们实际上添加了一个名为`age`的属性给全局对象。对象中的属性是可以删除的，全局对象也是如此，所以`delete age`返回`true`.
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1696,7 +1812,9 @@ console.log(y);
 - C: `1`
 - D: `[1]`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: C
 
@@ -1718,7 +1836,7 @@ console.log(y);
 
 也就是说，`y`等于数组的第一个值就是数字`1`.我们输出`y`， 返回`1`.
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1736,13 +1854,15 @@ console.log(admin);
 - C: `{ admin: true, user: ["Lydia", 21] }`
 - D: `{ admin: true }`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: B
 
 扩展运算符`...`为对象的组合提供了可能。你可以复制对象中的键值对，然后把它们加到另一个对象里去。在本例中，我们复制了`user`对象键值对，然后把它们加入到`admin`对象中。`admin`对象就拥有了这些键值对，所以结果为`{ admin: true, name: "Lydia", age: 21 }`.
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1762,7 +1882,9 @@ console.log(Object.keys(person));
 - C: `{ name: "Lydia"}`, `["name", "age"]`
 - D: `{ name: "Lydia"}`, `["age"]`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: B
 
@@ -1770,7 +1892,7 @@ console.log(Object.keys(person));
 
 用`defineProperty`方法添加的属性默认不可变。你可以通过`writable`, `configurable` 和 `enumerable`属性来改变这一行为。这样的话， 相比于自己添加的属性，`defineProperty`方法添加的属性有了更多的控制权。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1792,7 +1914,9 @@ console.log(data);
 - C: `"["level", "health"]"`
 - D: `"{"username": "lydiahallie", "level":19, "health":90}"`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
@@ -1803,7 +1927,7 @@ console.log(data);
 而如果替代者(replacer)是个 _函数_，这个函数将被对象的每个属性都调用一遍。
 函数返回的值会成为这个属性的值，最终体现在转化后的JSON字符串中（译者注：Chrome下，经过实验，如果所有属性均返回同一个值的时候有异常，会直接将返回值作为结果输出而不会输出JSON字符串），而如果返回值为`undefined`，则该属性会被排除在外。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1827,7 +1951,9 @@ console.log(num2);
 - C: `11`, `11`
 - D: `11`, `12`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
@@ -1835,7 +1961,7 @@ console.log(num2);
 
 `num2`是`10`因为我们将 `num1`传入`increasePassedNumber`. `number`等于`10`（`num1`的值。同样道理，`++` _先返回_ 操作值, _再累加_ 操作值。） `number`是`10`，所以`num2`也是`10`.
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1859,7 +1985,9 @@ multiply(value);
 - C: `20`, `20`, `20`, `40`
 - D: `NaN`, `NaN`, `20`, `40`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: C
 
@@ -1871,7 +1999,7 @@ multiply(value);
 
 第四次，我们再次传递`value`对象。 `x.number`之前被修改为`20`，所以`x.number * = 2`打印为`40`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1886,7 +2014,9 @@ multiply(value);
 - C: `1` `undefined` and `2` `undefined` and `3` `undefined` and `4` `undefined`
 - D: `1` `2` and `undefined` `3` and `undefined` `4`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: D
 
@@ -1909,7 +2039,7 @@ multiply(value);
 
 在第四次调用时，回调函数依然没有返回值。 累加器再次为 `undefined` ，当前值为“4”。 `undefined`和`4`被打印出。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1951,7 +2081,9 @@ class Labrador extends Dog {
 - C: 3
 - D: 4
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: B
 
@@ -1961,7 +2093,7 @@ class Labrador extends Dog {
 
 `Labrador`类接收两个参数，`name`参数是由于它继承了`Dog`，`size`作为`Labrador`类的额外属性，它们都需要传递给`Labrador`的构造函数，因此使用构造函数2正确完成。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -1983,7 +2115,9 @@ export const sum = (a, b) => a + b;
 - C: `running sum.js`, `3`, `running index.js`
 - D: `running index.js`, `undefined`, `running sum.js`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: B
 
@@ -1991,7 +2125,7 @@ export const sum = (a, b) => a + b;
 
 这是CommonJS中`require（）`和`import`之间的区别。使用`require()`，您可以在运行代码时根据需要加载依赖项。 如果我们使用`require`而不是`import`，`running index.js`，`running sum.js`，`3`会被依次打印。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2008,13 +2142,15 @@ console.log(Symbol('foo') === Symbol('foo'))
 - C: `true`, `false`, `true`
 - D: `true`, `true`, `true`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
 每个`Symbol`都是完全唯一的。传递给`Symbol`的参数只是给`Symbol`的一个描述。 `Symbol`的值不依赖于传递的参数。 当我们测试相等时，我们创建了两个全新的符号：第一个`Symbol（'foo'）`，第二个`Symbol（'foo'）`, 这两个值是唯一的，彼此不相等，因此返回`false`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2031,7 +2167,9 @@ console.log(name.padStart(2))
 - C: `" Lydia Hallie"`, `"Lydia Hallie"` (`"[1x whitespace]Lydia Hallie"`, `"Lydia Hallie"`)
 - D: `"Lydia Hallie"`, `"Lyd"`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: C
 
@@ -2039,7 +2177,7 @@ console.log(name.padStart(2))
 
 如果传递给`padStart`方法的参数小于字符串的长度，则不会添加填充。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2054,13 +2192,15 @@ console.log("🥑" + "💻");
 - C: A string containing their code points
 - D: Error
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
 使用`+`运算符，您可以连接字符串。 上述情况，我们将字符串`“🥑”`与字符串`”💻“`连接起来，产生`”🥑💻“`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2085,7 +2225,9 @@ console.log(/* 2 */); // JavaScript loves you back ❤️
 - C: `game.next().value` and `game.next("Yes").value`
 - D: `game.next.value()` and `game.next.value("Yes")`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: C
 
@@ -2093,7 +2235,7 @@ console.log(/* 2 */); // JavaScript loves you back ❤️
 
 `next`方法可以带一个参数，该参数会被当作上一个 `yield` 表达式的返回值。当我们调用`game.next("Yes").value`时，先前的 `yield` 的返回值将被替换为传递给`next()`函数的参数`"Yes"`。此时变量 `答案` 被赋值为 `"Yes"`，`if`语句返回`false`，所以`JavaScript loves you back ❤️`被打印。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2108,7 +2250,9 @@ console.log(String.raw`Hello\nworld`);
 - C: `Hello\nworld`
 - D: `Hello\n` <br /> &nbsp; &nbsp; &nbsp;`world`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: C
 
@@ -2131,7 +2275,7 @@ String.raw`C:\Documents\Projects\table.html`
 
 上述情况，字符串是`Hello\nworld`被打印出。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2151,7 +2295,9 @@ console.log(data);
 - C: `Promise {<pending>}`
 - D: `undefined`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: C
 
@@ -2163,7 +2309,7 @@ console.log(data);
 
 这样将打印 `"I made it!"`
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2183,7 +2329,9 @@ console.log(result);
 - C: `true`
 - D: `undefined`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: B
 
@@ -2191,7 +2339,7 @@ console.log(result);
 
 `push`方法修改原始数组，如果你想从函数返回数组而不是数组长度，那么应该在push `item`之后返回`list`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2212,7 +2360,9 @@ console.log(shape)
 - C: `{ x: 100 }`
 - D: `ReferenceError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: B
 
@@ -2224,7 +2374,7 @@ console.log(shape)
 
 注意，上述例子我们对属性`x`进行修改，可能会导致抛出TypeError异常（最常见但不仅限于严格模式下时）。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2241,7 +2391,9 @@ console.log(name);
 - C: `undefined`
 - D: `ReferenceError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: D
 
@@ -2251,7 +2403,7 @@ console.log(name);
 
 当我们尝试打印`name`，一个未定义的变量时，就会引发`ReferenceError`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2266,7 +2418,9 @@ function sum(a, b) {
 - A: Yes
 - B: No
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
@@ -2276,7 +2430,7 @@ function sum(a, b) {
 纯函数与副作用的定义可参考：
 https://zh.wikipedia.org/wiki/%E5%89%AF%E4%BD%9C%E7%94%A8_(%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6)
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2307,7 +2461,9 @@ console.log(addFunction(5 * 2));
 - C: `Calculated! 20` `From cache! 20` `From cache! 20`
 - D: `Calculated! 20` `From cache! 20` `Error`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: C
 
@@ -2323,7 +2479,7 @@ console.log(addFunction(5 * 2));
 
 第三次，我们将`5 * 2`(值为10)传递给函数。 `cache`对象包含`10`的返回值。 if语句 `num in cache` 返回`true`，`From cache! 20`被打印。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2346,7 +2502,9 @@ for (let item of myLifeSummedUp) {
 - C: `"☕"` ` "💻"` `"🍷"` `"🍫"` and `0` `1` `2` `3`
 - D:  `0` `1` `2` `3` and `{0: "☕", 1: "💻", 2: "🍷", 3: "🍫"}`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
@@ -2358,7 +2516,7 @@ for (let item of myLifeSummedUp) {
 
 通过`for-of`循环，我们可以迭代**可迭代对象**（包括 `Array`，`Map`，`Set`，`String`，`arguments`等）。当我们迭代数组时，在每次迭代中，不同属性的值将被分配给变量`item`, 因此`“☕”`，`“💻”`，`“🍷”`，`“🍫”`被打印。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2374,7 +2532,9 @@ console.log(list)
 - C: `[3, 2, 0.5]`
 - D:  `[1, 1, 1]`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: C
 
@@ -2382,7 +2542,7 @@ console.log(list)
 
 元素将等于返回的值。 `1 + 2`返回`3`，`1 * 2`返回'2`，'1 / 2`返回`0.5`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2401,7 +2561,9 @@ console.log(sayHi())
 - C: `Hi there, null`
 - D:  `ReferenceError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: B
 
@@ -2413,7 +2575,7 @@ console.log(sayHi())
 
 在这种情况下，如果我们没有传递值或者如果我们传递`undefined`，`name`总是等于字符串`Lydia`
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2442,7 +2604,9 @@ setTimeout(() => {
 - C: `"😍"` and `"😎"`
 - D: `"😎"` and `"😎"`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: B
 
@@ -2450,7 +2614,7 @@ setTimeout(() => {
 
 使用`call`方法，可以更改`this`指向的对象。`data.getStatus.call(this)`是将`this`的指向由`data`对象更改为全局对象。在全局对象上，有一个名为`status`的变量，其值为`”😎“`。 因此打印`this.status`时，会打印`“😎”`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2473,7 +2637,9 @@ console.log(person)
 - C: `{ name: "Lydia", age: 21, city: undefined }`
 - D: `"Amsterdam"`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
@@ -2485,7 +2651,7 @@ console.log(person)
 
 因此打印`person`对象时，会返回未修改的对象。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2510,13 +2676,15 @@ console.log(checkAge(21))
 - C: `ReferenceError`
 - D: `undefined`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: C
 
 `const`和`let`声明的变量是具有**块级作用域**的，块是大括号（`{}`）之间的任何东西, 即上述情况`if / else`语句的花括号。 由于块级作用域，我们无法在声明的块之外引用变量，因此抛出`ReferenceError`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2533,13 +2701,15 @@ fetch('https://www.website.com/api/user/1')
 - C: 前一个`.then()`中回调方法返回的结果
 - D: 总是`undefined`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: C
 
 第二个`.then`中`res`的值等于前一个`.then`中的回调函数返回的值。 你可以像这样继续链接`.then`，将值传递给下一个处理程序。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2556,7 +2726,9 @@ function getName(name) {
 - C: `new Boolean(name)`
 - D: `name.length`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
@@ -2568,7 +2740,7 @@ function getName(name) {
 
 `name.length`返回传递的参数的长度，而不是布尔值`true`。
 
-{% endhideBlock %}
+</details>
 
 ## 87. 输出什么?
 
@@ -2581,7 +2753,9 @@ console.log("I want pizza"[0])
 - C: `SyntaxError`
 - D: `undefined`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: B
 
@@ -2589,7 +2763,7 @@ console.log("I want pizza"[0])
 
 请注意，IE7及更低版本不支持此方法。 在这种情况下，应该使用`.charAt（）`
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2608,7 +2782,9 @@ sum(10)
 - C: `ReferenceError`
 - D: `undefined`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: B
 
@@ -2624,7 +2800,7 @@ test(3) // 3 2
 test(3, 4) // 3 4
 ```
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2646,7 +2822,9 @@ console.log(data)
 - C: `{ default: "Hello world", name: "Lydia" }`
 - D: Global object of `module.js`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
@@ -2654,7 +2832,7 @@ console.log(data)
 
 `data`对象具有默认导出的`default`属性，其他属性具有指定exports的名称及其对应的值。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2676,7 +2854,9 @@ console.log(typeof member)
 - C: `"object"`
 - D: `"string"`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: C
 
@@ -2690,7 +2870,7 @@ function Person() {
 
 通过`new`来调用构造函数，将会生成构造函数`Person`的实例，对实例执行`typeof`关键字将返回`"object"`，上述情况打印出`"object"`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2707,7 +2887,9 @@ console.log(newList.push(5))
 - C: `[1, 2, 3, 4]`
 - D: `Error`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: D
 
@@ -2715,7 +2897,7 @@ console.log(newList.push(5))
 
 然后，尝试在`newList`上使用`.push`方法。 由于`newList`是数值`4`，抛出TypeError。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2737,13 +2919,15 @@ console.log(giveLydiaChocolate.prototype)
 - C: `{ constructor: ...}` `{}`
 - D: `{ constructor: ...}` `undefined`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: D
 
 常规函数，例如`giveLydiaPizza`函数，有一个`prototype`属性，它是一个带有`constructor`属性的对象（原型对象）。 然而，箭头函数，例如`giveLydiaChocolate`函数，没有这个`prototype`属性。 尝试使用`giveLydiaChocolate.prototype`访问`prototype`属性时会返回`undefined`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2765,7 +2949,9 @@ for (const [x, y] of Object.entries(person)) {
 - C: `["name", "age"]` and `undefined`
 - D: `Error`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 `Object.entries()`方法返回一个给定对象自身可枚举属性的键值对数组，上述情况返回一个二维数组，数组每个元素是一个包含键和值的数组：
@@ -2777,7 +2963,7 @@ for (const [x, y] of Object.entries(person)) {
 第一个子阵列是`[“name”，“Lydia”]`，其中`x`等于`name`，而`y`等于`Lydia`。
 第二个子阵列是`[“age”，21]`，其中`x`等于`age`，而`y`等于`21`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2796,7 +2982,9 @@ getItems(["banana", "apple"], "pear", "orange")
 - C: `["banana", "apple", ["pear"], "orange"]`
 - D: `SyntaxError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: D
 
@@ -2812,7 +3000,7 @@ getItems(["banana", "apple"], "pear", "orange")
 
 上述例子是有效的，将会返回数组：`[ 'banana', 'apple', 'orange', 'pear' ]`
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2838,7 +3026,9 @@ console.log(nums(1, 2))
 - C: `undefined` and `undefined`
 - D: `SyntaxError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: B
 
@@ -2853,7 +3043,7 @@ console.log(nums(1, 2))
 
 这意味着永远不会到达`a + b`，因为函数在`return`关键字之后停止运行。如果没有返回值，就像这里，函数返回`undefined`。注意，在`if/else`语句之后没有自动插入!
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2881,13 +3071,15 @@ console.log(member.name)
 - C: `Error: cannot redeclare Person`
 - D: `SyntaxError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: B
 
 我们可以将类设置为等于其他类/函数构造函数。 在这种情况下，我们将`Person`设置为`AnotherPerson`。 这个构造函数的名字是`Sarah`，所以新的`Person`实例`member`上的name属性是`Sarah`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2907,7 +3099,9 @@ console.log(Object.keys(info))
 - C: `{ a: "b" }` and `["a"]`
 - D: `{Symbol('a'): 'b'}` and `[]`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: D
 
@@ -2915,7 +3109,7 @@ console.log(Object.keys(info))
 
 这是`Symbol`的众多特性之一：除了表示完全唯一的值（防止对象意外名称冲突，例如当使用2个想要向同一对象添加属性的库时），您还可以`隐藏`这种方式对象的属性（尽管不完全。你仍然可以使用`Object.getOwnPropertySymbols()`方法访问 `Symbol`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2937,7 +3131,9 @@ console.log(getUser(user))
 - C: `[1, 2, 3, 4]` and `{ name: "Lydia", age: 21 }`
 - D: `Error` and `{ name: "Lydia", age: 21 }`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 ### 答案: A
 
@@ -2953,7 +3149,7 @@ console.log(getUser(user))
 
 由于在这种情况下不返回任何值，因此该函数返回`undefined`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2970,7 +3166,9 @@ console.log(name())
 - C: `TypeError`
 - D: `undefined`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: C
 
@@ -2981,7 +3179,7 @@ console.log(name())
 当你编写了一些非有效的JavaScript时，会抛出语法错误，例如当你把`return`这个词写成`retrun`时。
 当JavaScript无法找到您尝试访问的值的引用时，抛出`ReferenceErrors`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -2999,7 +3197,9 @@ You should${'' && `n't`} see a therapist after so much JavaScript lol`
 - C: `possible! You shouldn't see a therapist after so much JavaScript lol`
 - D: `Impossible! You shouldn't see a therapist after so much JavaScript lol`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: B
 
@@ -3007,7 +3207,7 @@ You should${'' && `n't`} see a therapist after so much JavaScript lol`
 
 `""`是一个假值。 如果左侧值是假的，则不返回任何内容。 `n't`不会被退回。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3026,7 +3226,9 @@ console.log(one, two, three)
 - C: `{}` `""` `[]`
 - D: `null` `null` `true`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: C
 
@@ -3038,7 +3240,7 @@ console.log(one, two, three)
 
 `（[] || 0 ||“”）`：空数组`[]`是一个真值。 这是第一个返回的真值。 `three`等于`[]`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3066,7 +3268,9 @@ secondFunction()
 - C: `I have resolved!`, `second` and `second`, `I have resolved!`
 - D: `second`, `I have resolved!` and `I have resolved!`, `second`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: D
 
@@ -3078,7 +3282,7 @@ secondFunction()
 
 在`secondFunction`方法中，我们通过`await`关键字，暂停了后面代码的执行，直到异步函数的值被解析才开始后面代码的执行。这意味着，它会等着直到 `myPromise` 以值`I have resolved`被解决之后，下一行`second`才开始执行。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3101,7 +3305,9 @@ for (let item of set) {
 - C: `3`, `Lydia2`, `[Object object]2`
 - D: `"12"`, `Lydia2`, `[Object object]2`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: C
 
@@ -3113,7 +3319,7 @@ for (let item of set) {
 
 `{name：“ Lydia”}`是一个对象。 数字和对象都不是字符串，因此将二者都字符串化。 每当我们对常规对象进行字符串化时，它就会变成`[Object object]`。 与“2”串联的“ [Object object]”成为“[Object object]2”。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3128,7 +3334,9 @@ Promise.resolve(5)
 - C: `Promise {<fulfilled>: 5}`
 - D: `Error`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: C
 
@@ -3136,7 +3344,7 @@ Promise.resolve(5)
 
 上述情况，我们传了数字5，因此返回一个resolved状态的promise，resolve值为`5`
 
-{% endhideBlock %}
+</details>
 
 ## 105. 输出什么?
 
@@ -3159,7 +3367,9 @@ compareMembers(person)
 - C: `ReferenceError`
 - D: `SyntaxError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: B
 
@@ -3171,7 +3381,7 @@ compareMembers(person)
 
 运行“ else”语句中的代码块，并记录`They are the same!` 。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3196,7 +3406,9 @@ console.log(colorConfig.colors[1])
 - C: `undefined`
 - D: `TypeError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: D
 
@@ -3207,7 +3419,7 @@ console.log(colorConfig.colors[1])
 
 JavaScript解释（或取消装箱）语句。 当我们使用方括号表示法时，它会看到第一个左方括号`[`并一直进行下去，直到找到右方括号`]`。 只有这样，它才会评估该语句。 如果我们使用了colorConfig [colors [1]]，它将返回colorConfig对象上red属性的值。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3220,13 +3432,15 @@ console.log('❤️' === '❤️')
 - A: `true`
 - B: `false`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: A
 
 在内部，表情符号是unicode。 heat表情符号的unicode是`“ U + 2764 U + FE0F”`。 对于相同的表情符号，它们总是相同的，因此我们将两个相等的字符串相互比较，这将返回true。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3248,7 +3462,9 @@ emojis.splice(1, 2, '✨')
 - C: `map` `slice` `splice`
 - D: `splice`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: D
 
@@ -3256,7 +3472,7 @@ emojis.splice(1, 2, '✨')
 
 `map`，`filter`和`slice`返回一个新数组，`find`返回一个元素，而`reduce`返回一个减小的值。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3276,7 +3492,9 @@ console.log(food)
 - C: `['🍝', '🍕', '🍫', '🥑', '🍔']`
 - D: `ReferenceError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: A
 
@@ -3284,7 +3502,7 @@ console.log(food)
 
 在这种情况下，我们将`info`对象上的`favoriteFood`属性的值设置为等于`food`数组中的第一个元素的值，字符串为披萨表情符号（`'🍕'` ）。字符串是原始数据类型，并且通过值进行交互，我们更改`info`对象上`favoriteFood`属性的值。 food数组没有改变，因为favoriteFood的值只是该数组中第一个元素的值的复制，并且与该元素上的元素没有相同的内存引用食物`[0]`。当我们记录食物时，它仍然是原始数组`['🍕'，'🍫'，'🥑'，'🍔']`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3299,7 +3517,9 @@ JSON.parse()
 - C: Parses any JavaScript value to JSON
 - D: Parses JSON to a JavaScript object only
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: A
 
@@ -3319,7 +3539,7 @@ const jsonArray = JSON.stringify({ name: "Lydia" }) // '{"name":"Lydia"}'
 JSON.parse(jsonArray) // { name: 'Lydia' }
 ```
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3341,7 +3561,9 @@ getName()
 - C: `undefined`
 - D: `ReferenceError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: D
 
@@ -3361,7 +3583,7 @@ function getName() {
 getName() // Lydia
 ```
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3388,7 +3610,9 @@ console.log(two.next().value)
 - C: `['a', 'b', 'c']` and `a`
 - D: `a` and `['a', 'b', 'c']`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: C
 
@@ -3410,7 +3634,7 @@ console.log(two.next().value) // 'c'
 console.log(two.next().value) // undefined
 ```
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3425,13 +3649,15 @@ console.log(`${(x => x)('I love')} to program`)
 - C: `${(x => x)('I love') to program`
 - D: `TypeError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: A
 
 带有模板字面量的表达式首先被执行。相当于字符串会包含表达式，这个立即执行函数 `(x => x)('I love')` 返回的值. 我们向箭头函数 `x => x` 传递 `'I love'` 作为参数。`x` 等价于返回的 `'I love'`。这就是结果 `I love to program`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3452,13 +3678,15 @@ config = null
 - C: `setInterval` 的回调仍然会被每秒钟调用
 - D: 我们从没调用过 `config.alert()`, config 为 `null`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: C
 
 一般情况下当我们将对象赋值为 `null`, 那些对象会被进行 _垃圾回收（garbage collected）_ 因为已经没有对这些对象的引用了。然而，`setInterval`的参数是一个箭头函数（所以上下文绑定到对象 `config` 了），回调函数仍然保留着对 `config`的引用。只要存在引用，对象就不会被垃圾回收。因为没有被垃圾回收，`setInterval` 的回调每1000ms (1s)会被调用一次。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3483,7 +3711,9 @@ myMap.get(() => 'greeting')
 - C: 2 and 3
 - D: All of them
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: B
 
@@ -3492,7 +3722,7 @@ myMap.get(() => 'greeting')
 1 是错的，因为键名不是 `'greeting'` 而是 `() => 'greeting'`。
 3 是错的，因为我们给`get` 方法传递了一个新的函数。对象受 _引用_ 影响。函数也是对象，因此两个函数严格上并不等价，尽管他们相同：他们有两个不同的内存引用地址。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3521,7 +3751,9 @@ console.log(person)
 - C: `{name: "Lydia", age: 22}`
 - D: `{name: "Lydia", age: 23}`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: C
 
@@ -3531,7 +3763,7 @@ console.log(person)
 
 然后，我们调用函数 `changeAgeAndName` ，然而我们没有传递参数。取而代之，`x` 的值等价 _new_ 生成的对象: `{ ...person }`。因为它是一个新生成的对象，它并不会对对象 `person` 造成任何副作用。`person` 仍然等价于 `{ name: "Lydia", age: 22 }`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3548,13 +3780,15 @@ function sumValues(x, y, z) {
 - C: `sumValues(...[1, 2, 3])`
 - D: `sumValues([1, 2, 3])`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: C
 
 通过展开操作符 `...`，我们可以 _暂开_ 单个可迭代的元素。函数 `sumValues` function 接收三个参数： `x`, `y` 和 `z`。`...[1, 2, 3]` 的执行结果为 `1, 2, 3`，将会传递给函数 `sumValues`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3572,13 +3806,15 @@ console.log(list[(num += 1)]);
 - C: `SyntaxError`
 - D: `ReferenceError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: B
 
 通过 `+=` 操作符，我们对值 `num` 进行加 `1` 操作。 `num` 有初始值 `1`，因此 `1 + 1` 的执行结果为 `2`。数组 `list` 的第二项为 🥰，`console.log(list[2])` 输出 🥰.
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3608,7 +3844,9 @@ console.log(member.getLastName?.());
 - C: `Mara` `null` `Lydia Hallie` `null`
 - D: `null` `ReferenceError` `null` `ReferenceError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: B
 
@@ -3619,7 +3857,7 @@ console.log(member.getLastName?.());
 `person.getFullName?.()`： `person` 有一个名为 `getFullName` 的属性： `person.getFullName()` 不是 nullish 并可以被调用，返回字符串 `Lydia Hallie`。
 `member.getLastName?.()`: `member` is not defined: `member.getLastName()` is nullish. The expression returns `undefined`.
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3640,13 +3878,15 @@ if (groceries.indexOf("banana")) {
 - C: `undefined`
 - D: `1`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: B
 
 我们传递了一个状态 `groceries.indexOf("banana")` 给if条件语句。`groceries.indexOf("banana")` 返回 `0`， 一个 falsy 的值。因为if条件语句的状态为 falsy，`else` 块区内的代码执行，并且 `We don't have to buy bananas!` 被输出.
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3668,13 +3908,15 @@ console.log(config.language);
 - C: `[]`
 - D: `undefined`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: D
 
 方法 `language` 是一个 `setter`。Setters 并不保存一个实际值，它们的使命在于 _修改_ 属性。当调用方法 `setter`， 返回 `undefined`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3692,7 +3934,9 @@ console.log(!typeof name === "string");
 - C: `false` `false`
 - D: `true` `true`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: C
 
@@ -3700,7 +3944,7 @@ console.log(!typeof name === "string");
 
 （如果我们想检测一个值的类型，我们应该用 `!==` 而不是 `!typeof`）
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3720,13 +3964,15 @@ add(4)(5)(6);
 - C: `4` `function` `function`
 - D: `undefined` `undefined` `6`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: A
 
 函数 `add` 是一个返回 返回箭头函数的箭头函数 的箭头函数（still with me?）。第一个函数接收一个值为 `4` 的参数 `x`。我们调用第二个函数，它接收一个值为 `5` 的参数 `y`。然后我们调用第三个函数，它接收一个值为 `6` 的参数 `z`。当我们尝试在最后一个箭头函数中获取 `x`, `y` 和 `z` 的值，JS 引擎根据作用域链去找 `x` 和 `y` 的值。得到 `4` `5` `6`.
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3752,13 +3998,15 @@ async function* range(start, end) {
 - C: `1` `2` `3`
 - D: `undefined` `undefined` `undefined`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: C
 
 我们给 函数range 传递： `Promise{1}`, `Promise{2}`, `Promise{3}`，Generator 函数 `range` 返回一个全是 async object promise 数组。我们将 async object 赋值给变量 `gen`，之后我们使用`for await ... of` 进行循环遍历。我们将返回的 Promise 实例赋值给 `item`： 第一个返回 `Promise{1}`， 第二个返回 `Promise{2}`，之后是 `Promise{3}`。因为我们正 _awaiting_ `item` 的值，resolved 状态的 promsie，promise数组的resolved _值_ 以此为： `1`，`2`，`3`.
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3777,13 +4025,15 @@ myFunc(1, 2, 3);
 - C: `{ 1: undefined }` `undefined` `undefined`
 - D: `undefined` `undefined` `undefined`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: D
 
 `myFunc` 期望接收一个包含 `x`, `y` 和 `z` 属性的对象作为它的参数。因为我们仅仅传递三个单独的数字值 (1, 2, 3) 而不是一个含有 `x`, `y` 和 `z` 属性的对象 ({x: 1, y: 2, z: 3})， `x`, `y` 和 `z` 有着各自的默认值 `undefined`.
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3812,13 +4062,15 @@ console.log(getFine(130, 300))
 - C: The driver drove undefined and has to pay undefined
 - D: The driver drove 130.00 and has to pay 300.00
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: B
 
 通过方法 `Intl.NumberFormat`，我们可以格式化任意区域的数字值。我们对数字值 `130` 进行 `mile-per-hour` 作为 `unit` 的 `en-US` 区域 格式化，结果为 `130 mph`。对数字值 `300` 进行 `USD` 作为 `currentcy` 的 `en-US` 区域格式化，结果为 `$300.00`.
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3836,13 +4088,15 @@ console.log(spookyItems);
 - C: `["👻", "🎃", "🕸", { item: "💀" }]`
 - D: `["👻", "🎃", "🕸", "[object Object]"]`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: B
 
 通过解构对象们，我们可以从右手边的对象中拆出值，并且将拆出的值分配给左手边对象同名的属性。在这种情况下，我们将值 "💀" 分配给 `spookyItems[3]`。相当于我们正在篡改数组 `spookyItems`，我们给它添加了值 "💀"。当输出 `spookyItems` 时，结果为 `["👻", "🎃", "🕸", "💀"]`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3864,7 +4118,9 @@ console.log(isNaN(age));
 - C: `false` `false` `true` `false`
 - D: `false` `true` `false` `true`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: C
 
@@ -3872,7 +4128,7 @@ console.log(isNaN(age));
 
 通过方法 `isNaN`， 你可以检测你传递的值是否一个 number。`name` 不是一个 `number`，因此 `isNaN(name)` 返回 `true`. `age` 是一个 `number` 因此 `isNaN(age)` 返回 `false`.
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3894,13 +4150,15 @@ getInfo();
 - C: `undefined`
 - D: `ReferenceError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: D
 
 通过 `const` 关键字声明的变量在被初始化之前不可被引用：这被称之为 _暂时性死区_。在函数 `getInfo` 中, 变量 `randomValue` 声明在`getInfo` 的作用域的此法环境中。在想要对 `typeof randomValue` 进行log之前，变量 `randomValue` 仍未被初始化： 错误`ReferenceError` 被抛出! JS引擎并不会根据作用域链网上寻找该变量，因为我们已经在 `getInfo` 函数中声明了 `randomValue` 变量。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3925,13 +4183,15 @@ const myPromise = Promise.resolve("Woah some cool data");
 - C: `Woah some cool data` `Oh finally!`
 - D: `Oops didn't work` `Oh finally!`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: C
 
 在 `try` 块区，我们打印 `myPromise` 变量的 awaited 值： `"Woah some cool data"`。因为`try` 块区没有错误抛出，`catch` 块区的代码并不执行。`finally` 块区的代码 _总是_ 执行，`"Oh finally!"` 被输出。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3948,13 +4208,15 @@ console.log(emojis.flat(1));
 - C: `['🥑', ['✨', '✨', '🍕', '🍕']]`
 - D: `['🥑', '✨', '✨', '🍕', '🍕']`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: B
 
 通过方法 `flat`， 我们可以创建一个新的, 已被扁平化的数组。被扁平化的深度取决于我们传递的值。在这个case里，我们传递了值 `1` (并不必要，这是默认值)，相当于只有第一层的数组才会被连接。即这个 case 里的 `['🥑']` and `['✨', '✨', ['🍕', '🍕']]`。连接这两个数组得到结果 `['🥑', '✨', '✨', ['🍕', '🍕']]`.
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -3986,7 +4248,9 @@ console.log(counterOne.count);
 - C: `2`
 - D: `3`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: D
 
@@ -4000,7 +4264,7 @@ console.log(counterOne.count);
 
 <img src="https://i.imgur.com/BNBHXmc.png" width="400">
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -4031,7 +4295,9 @@ funcTwo();
 - C: `Promise! Last line! Last line! Promise! Timeout! Timeout!`
 - D: `Last line! Promise! Promise! Last line! Timeout! Timeout!`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: D
 
@@ -4045,7 +4311,7 @@ promise 和 timeout 都是异步操作，函数继续执行当JS引擎忙于执�
 
 我们执行到函数 `funcTwo` 的最后一行，输出 `Last line!`。现在，因为 `funcTwo` 出栈，调用栈为空。在事件队列中等待的回调函数（`() => console.log("Timeout!")` from `funcOne`, and `() => console.log("Timeout!")` from `funcTwo`）以此入栈。第一个回调输出 `Timeout!`，并出栈。然后，第二个回调输出 `Timeout!`，并出栈。得到结果 `Last line! Promise! Promise! Last line! Timeout! Timeout!`
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -4066,7 +4332,9 @@ import * as sum from "./sum";
 - C: `sum.default(4)`
 - D: 默认导出不用 `*` 来导入，只能具名导出
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: C
 
@@ -4101,7 +4369,7 @@ console.log(info);
 
 我们可以通过调用 `sum.default` 来调用该函数
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -4124,7 +4392,9 @@ person.name;
 - C: `Added a new property!` `Accessed a property!`
 - D: 没有任何输出
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: C
 
@@ -4136,7 +4406,7 @@ person.name;
 
 然后，我们获取 proxy 对象的一个属性，对象 handler 的属性 `get` 被调用。输出 `"Accessed a property!"`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -4153,7 +4423,9 @@ Object.seal(person);
 - C: `delete person.name`
 - D: `Object.assign(person, { age: 21 })`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: A
 
@@ -4161,7 +4433,7 @@ Object.seal(person);
 
 然而，你仍然可以对存在属性进行更改。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -4183,7 +4455,9 @@ Object.freeze(person);
 - C: `person.address.street = "101 Main St"`
 - D: `person.pet = { name: "Mara" }`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: C
 
@@ -4191,7 +4465,7 @@ Object.freeze(person);
 
 然而，它仅 对对象进行 _浅_ 冻结，意味着只有 对象中的 _直接_ 属性被冻结。如果属性是另一个 object，像案例中的 `address`，`address` 中的属性没有被冻结，仍然可以被修改。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -4213,7 +4487,9 @@ myFunc(3);
 - C: `2` `Error` and `3` `6`
 - D: `2` `4` and `3` `Error`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: A
 
@@ -4221,7 +4497,7 @@ myFunc(3);
 
 然后，我们调用 `myFunc(3)` 并传递值 `3` 参数 `num` 的值。我们没有给 `value` 传递值。因为我们没有给参数 `value` 传递值，它获取默认值：函数 `add` 的返回值。对于函数 `add`，我们传递值为3的 `num`给它。函数 `add` 返回 `6` 作为 `value` 的值。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -4251,13 +4527,15 @@ console.log(counter.#number)
 - C: `undefined`
 - D: `SyntaxError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: D
 
 在 ES2020 中，通过 `#` 我们可以给 class 添加私有变量。在 class 的外部我们无法获取该值。当我们尝试输出 `counter.#number`，语法错误被抛出：我们无法在 class `Counter` 外部获取它!
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -4291,7 +4569,9 @@ obj.next(); // { value: "Lisa", done: false }
 - C: `return getMembers(teams[i].members)`
 - D: `return yield getMembers(teams[i].members)`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: B
 
@@ -4299,7 +4579,7 @@ obj.next(); // { value: "Lisa", done: false }
 
 如果我们没有写 `yield`，`return yield` 或者 `return`，整个 Generator 函数不会第一时间 return 当我们调用 `next` 方法.
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -4328,7 +4608,9 @@ console.log(person.hobbies);
 - C: `["coding", "dancing", "baking"]`
 - D: `["coding", "running", "dancing", "baking"]`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: C
 
@@ -4342,7 +4624,7 @@ console.log(person.hobbies);
 
 pushing `dancing` 和 `baking` 之后，`person.hobbies` 的值为 `["coding", "dancing", "baking"]`
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -4370,13 +4652,15 @@ const pet = new Flamingo();
 - C: `I'm a bird. 🦢` `I'm pink. 🌸`
 - D: Nothing, we didn't call any method
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: B
 
 我们创建了类 `Flamingo` 的实例 `pet`。当我们实例化这个实例，`Flamingo` 中的 `constructor` 被调用。首相，输出 `"I'm pink. 🌸"`, 之后我们调用`super()`。`super()` 调用父类的构造函数，`Bird`。`Bird` 的构造函数被调用，并输出 `"I'm a bird. 🦢"`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -4396,13 +4680,15 @@ const emojis = ["🎄", "🎅🏼", "🎁", "⭐"];
 - C: 3 and 4
 - D: 3
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: D
 
 `const` 关键字意味着我们不能 _重定义_ 变量中的值，它 _仅可读_。而然，值本身不可修改。数组 `emojis` 中的值可被修改，如 push 新的值, 拼接，又或者将数组的长度设置为0。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -4422,13 +4708,15 @@ const person = {
 - C: `*[Symbol.iterator]() { for (let x in this) yield* Object.values(this) }`
 - D: `*[Symbol.iterator]() { for (let x in this) yield this }`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: C
 
 对象默认并不是可迭代的。如果迭代规则被定义，则一个对象是可迭代的（An iterable is an iterable if the iterator protocol is present）。我们可以通过添加迭代器symbol `[Symbol.iterator]` 来定义迭代规则，其返回一个 generator 对象，比如说构建一个 generator 函数 `*[Symbol.iterator]() {}`。如果我们想要返回数组 `["Lydia Hallie", 21]`: `yield* Object.values(this)`，这个 generator 函数一定要 yield 对象 `person` 的`Object.values`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -4448,13 +4736,15 @@ console.log(count)
 - B: 2
 - C: 3
 - D: 4
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: C
 
 在 `forEach` 循环内部的 `if` 会判断 `num` 的值是truthy或者是falsy。因为 `nums` 数组的第一个数字是 `0`，一个falsy值， `if` 语句代码块不会被执行。`count` 仅仅在 `nums` 数组的其他3个数字 `1`，`2`，`3` 时加1。因为 `count` 执行了3次加 `1` 运算，所以 `count` 的值为 `3`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -4475,7 +4765,9 @@ getFruit([['🍍'], ['🍊', '🍌']])
 - C: `[]`, `[]`, 🍌
 - D: `undefined`, `undefined`, 🍌
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: D
 
@@ -4487,7 +4779,7 @@ getFruit([['🍍'], ['🍊', '🍌']])
 
 最后，我们尝试打印 `['🍍'], ['🍊', '🍌']` 的子数组 `['🍊', '🍌']` 的第2个元素。子数组索引值为 `1`的位置为 `🍌` ，因此它被打印出了。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -4515,13 +4807,15 @@ console.log(calc.count)
 - C: `undefined`
 - D: `ReferenceError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: A
 
 我们设置 `calc` 变量为 `Calc` 类的一个新实例。 然后，我们初始化一个 `Calc` 的新实例，而且调用了这个实例的 `increase` 方法。因为count属性是在 `Calc` class的constructor内部的，所以count属性不会在 `Calc` 的原型链上共享出去。这就意味着calc实例的count值不会被更新，count仍然是 `0`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -4555,13 +4849,15 @@ console.log(updatedUser === user)
 - C: `TypeError`
 - D: `ReferenceError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: B
 
  `updateUser` 函数更新user的 `email` 和 `password` 属性的值， 如果它们的值传入函数， 函数返回的就是 `user` 对象。 `updateUser` 函数的返回值是 `user` 对象，意味着updatedUser的值与 `user` 指向的是同一个 `user` 对象。`updatedUser === user` 为 `true`.
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -4582,7 +4878,9 @@ console.log(fruit)
 - C: `['🍇', '🍊', '🍎']`
 - D: `['🍇', '🍌', '🍊', '🍎']`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: C
 
@@ -4590,7 +4888,7 @@ console.log(fruit)
 其次，我们在fruit数组上调用 `splice` 方法。 splice方法会修改原始数组，也就意味着fruit数组此时为 `['🍊', '🍎']`。
 最后，我们在fruit数组上调用 `unshift` 方法，通过添加一个值的方式改变了原始数组，添加的是'🍇'，它成为了数组的第一个元素。现在fruit数组的组成为 `['🍇', '🍊', '🍎']`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -4612,7 +4910,9 @@ console.log(animals[dog])
 - C: `undefined`
 - D: `ReferenceError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: B
 
@@ -4624,7 +4924,7 @@ console.log(animals[dog])
 
 打印  `animals[dog]`，实际上是`animals["object Object"]`，这是因为转化`dog`对象为一个字符串结果 `"object Object"` ，所以返回 `{ emoji: "🐈", name: "Sara" }`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -4647,13 +4947,15 @@ console.log(user.email)
 - C: `undefined`
 - D: `ReferenceError`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: A
 
 `updateEmail` 函数是一个箭头函数，它没有和 `user` 对象绑定。这就意味着 `this` 关键字不会引用到 `user` 对象，但是会引用到全局对象。 `user` 对象内部的 `email` 的值不会更新。当打印 `user.email` 的时候， 原始值 `my@email.com` 被返回。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -4681,13 +4983,15 @@ runPromises()
 - C: `[['First', 'Second']]`
 - D: `'Third'`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: D
 
  `Promise.all` 方法可以并行式运行promise。如果其中一个promise失败了，`Promise.all` 方法会带上被reject的promise的值_rejects_。在这个例子中， `promise3` 带着 `"Third"` 值reject。我们在调用 `runPromises` 时在 `runPromises` 函数内部的 `catch` 方法去捕获任意error从而捕获到被reject的值。因为 `promise3` 带着 `"Third"` 被reject，所以只有 `"Third"` 打印。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -4708,7 +5012,9 @@ Object[method](keys.map((_, i) => {
 - C: `fromEntries`
 - D: `forEach`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: C
 
@@ -4716,7 +5022,7 @@ Object[method](keys.map((_, i) => {
 
 这样就创建了一个包含正确keys和values的子数组的数组，因此结果为`{ name: "Lydia", age: 22 }`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -4742,13 +5048,15 @@ console.log(member)
 - C: `{ email: "my@email.com", address: {} }`
 - D: `{ email: "my@email.com", address: undefined }`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: C
 
  `address` 的默认值是一个空对象 `{}`。当我们设置 `member` 变量为 `createMember` 函数返回的对象，我们没有为address参数传值，意味着address的值为默认的空对象 `{}`。一个空对象是一个truthy值，意味着 `address ? address : null` 条件会返回 `true`。address的值为空对象 `{}`。
 
-{% endhideBlock %}
+</details>
 
 ---
 
@@ -4770,7 +5078,9 @@ if (!typeof randomValue === "string") {
 - C: `TypeError`
 - D: `undefined`
 
-{% hideBlock 查看答案 %}
+<details>
+<summary>查看答案</summary>
+
 
 #### 答案: B
 
@@ -4778,7 +5088,7 @@ if (!typeof randomValue === "string") {
 
  `!typeof randomValue === "string"` 总是返回false，因为我们实际上是在执行 `false === "string"`。因为条件返回的是 `false`，所以 `else` 语句中的代码块会被运行，因此打印 `Yay it's a string!` 。
 
-{% endhideBlock %}
+</details>
 
 ## 写在最后
 

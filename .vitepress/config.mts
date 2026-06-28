@@ -65,6 +65,10 @@ export default defineConfig({
       {
         text: 'Shopify',
         items: getAllMarkdownFiles(path.resolve(__dirname, '../shopify'))
+      },
+      {
+        text: 'WeChat',
+        items: getAllMarkdownFiles(path.resolve(__dirname, '../wechat'))
       }
     ],
 
@@ -83,6 +87,11 @@ export default defineConfig({
         text: 'Shopify',
         collapsed: true,
         items: getAllMarkdownFiles(path.resolve(__dirname, '../shopify'))
+      }],
+      '/wechat/': [{
+        text: 'WeChat',
+        collapsed: true,
+        items: getAllMarkdownFiles(path.resolve(__dirname, '../wechat'))
       }]
     },
     outline: { 

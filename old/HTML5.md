@@ -106,17 +106,18 @@ HTML5草案的前身名为 Web Applications 1.0，于2004年被WHATWG提出，�
 
 ```html
 <video src=""></video>
-ogg 文件，适用于Firefox、Opera 以及 Chrome 浏览器。 
- <video> 元素支持三种视频格式： .MP4, .WebM, 和.ogg:
-
 <audio src=""></audio>
-    音频文件必须是 MP3 或 Wav 类型 mpeg。 
-     <video   controls="controls" autoplay="autoplay">
-          <source src="video/movie.ogg" type="video/ogg" >
-          <source src="video/movie.webm" type="video/webm">
-          <embed src="video/oceans.mp4" >   
-    </video>
+
+<video controls="controls" autoplay="autoplay">
+    <source src="video/movie.ogg" type="video/ogg">
+    <source src="video/movie.webm" type="video/webm">
+    <embed src="video/oceans.mp4">
+</video>
 ```
+
+ogg 文件，适用于 Firefox、Opera 以及 Chrome 浏览器。 
+`<video>` 元素支持三种视频格式：.MP4、.WebM 和 .ogg。
+音频文件必须是 MP3 或 Wav 类型 mpeg。
 
 + 属性
   + controls属性：如果出现该属性，则向用户显示控件，比如播放按钮。
@@ -126,8 +127,8 @@ ogg 文件，适用于Firefox、Opera 以及 Chrome 浏览器。
   + poster属性：规定视频正在下载时显示的图像，直到用户点击播放按钮。
 
 + source
-  			<source> 标签为媒介元素（比如 <video> 和 <audio>）定义媒介资源。
-    			<source> 标签允许您规定可替换的视频/音频文件供浏览器根据它对媒体类型或者编解码器的支持进行选择。
+  			`<source>` 标签为媒介元素（比如 `<video>` 和 `<audio>`）定义媒介资源。
+    			`<source>` 标签允许您规定可替换的视频/音频文件供浏览器根据它对媒体类型或者编解码器的支持进行选择。
     			Type属性值：
     				用于视频：video/ogg   video/mp4     video/webm
     				用于音频：audio/ogg   audio/mpeg
@@ -152,7 +153,9 @@ datalist   定义选项列表。
 
 应用代码：
 
+```html
 <progress  id=“pr”  value=“30”  max=“100”  > </progress>
+```
 
 （2）meter标签：
 
@@ -166,20 +169,23 @@ datalist   定义选项列表。
 
 应用代码： 
 
+```html
 <meter  id="mt"  value="30"  min="10"  max="100"> </meter>
+```
 
 （3）details标签：折叠区块
 
 用于描述文档或文档某个部分的细节；
 
-目前只有 Chrome 和 Safari 6 支持 <details> 标签。
+目前只有 Chrome 和 Safari 6 支持 `<details>` 标签。
 
- <summary>在其内，配合使用，为其定义标题；并且该是其内第一个标签           
+`<summary>` 在其内，配合使用，为其定义标题；并且该是其内第一个标签           
 
 属性：open =”open” :设置信息是否可见 
 
 应用：
 
+```html
  <details open="open">
 
 ​     <summary>标题</summary>
@@ -187,10 +193,11 @@ datalist   定义选项列表。
      <p>详细内容描述</p>
 
 </details>
+```
 
 4，datalist   必须和list属性结合使用。做提示信息。
 
-```
+```html
 <input type="url"     list="url_list"    name="link" />
 <datalist    id="url_list"> 
     <option label="W3School" value="http://www.W3School.com.cn" /> 
@@ -231,16 +238,26 @@ color        颜色
 
 应用：    
 
+```html
 ​        <input  name="email1"   type="email"   required   />
+```
  multiple     选择（上传）多个
 
 2、  url  :      输入URL地址的文本框
 
-​      应用：    <input  name=”url1”   type="url"  required  />
+​      应用：
+
+```html
+<input  name="url1"   type="url"  required  />
+```
 
 3、  color ：  用来选取颜色。
 
-  应用： <input  name=”color1”  type="color"  required />
+  应用：
+
+```html
+<input  name="color1"  type="color"  required />
+```
 
 4、 number：   用来输入数字的文本框。
 
@@ -252,9 +269,11 @@ color        颜色
 
 ​         value：默认值
 
-  应用：<input  name=”number1”  type="number"  value="20"  minn="10"  max="100"         
+  应用：
 
-​          step="5"  required />
+```html
+<input  name="number1"  type="number"  value="20"  min="10"  max="100" step="5"  required />
+```
 
  
 
@@ -270,9 +289,11 @@ color        颜色
 
  
 
- 应用： <input  name="range1"  type="range"  value="25"  min="0"  max="100"   
+ 应用：
 
-​         step="5"  />
+```html
+<input  name="range1"  type="range"  value="25"  min="0"  max="100" step="5"  />
+```
 
 6、   search : 用于搜索域，显示为常规的文本框，除了火狐浏览
 
@@ -280,7 +301,11 @@ color        颜色
 
    
 
-应用：<input  name=”search1”   type="search"  />
+应用：
+
+```html
+<input  name="search1"   type="search"  />
+```
 
 7、    date :   提供多个选取日期和时间的新输入类型 
 
@@ -306,7 +331,7 @@ color        颜色
 
 第一种：
 
-```
+```html
 <form oninput="out.value=parseInt(a.value)+parseInt(b.value)">
 
     <input type="range" id="a" value="50" > +
@@ -342,7 +367,11 @@ HTML5增加了大量在提交时对表单及表单元素内容有效性验证的
 
 ​      将属性值设为某个格式的正则表达式，在提交时会检查其内容是否符合给定格式。 
 
-​    例：<input pattern = “[0-9][A-Z]{3}" title="输入内容：一个数与三个大写字母" placeholder='输入内容：一个数与三个大写字母'>
+​    例：
+
+```html
+<input pattern="[0-9][A-Z]{3}" title="输入内容：一个数与三个大写字母" placeholder="输入内容：一个数与三个大写字母">
+```
 
  1:用户名验证规则 : 用户名长度为6~12并且由字母组成 
 
@@ -362,7 +391,9 @@ HTML5增加了大量在提交时对表单及表单元素内容有效性验证的
 
 **（5****）  autocomplete属性：输入富足和所用的自动完成功能，是一个节省输入时间，同时也十分方便的功能。只有三种：on/off/""。on可显示指定候补输入的数据列表，使用datalist元素与list属性提供候补输入的数据列表，自动完成时，可以将该datalist元素中的数据作为候补输入的数据在文本框中显示： (autocomplete    是否自动提示信息    属性值   on    off)
 
-<input type="text" name="greeting" **autocomplete**="on"  list ="greeting">
+```html
+<input type="text" name="greeting" autocomplete="on"  list ="greeting">
+```
 
 (6)**Novalidate****属性**  **取消验证**     可以对form表单添加**novalidate**属性，即使form表单中的input添加了required，也将不进行验证
 
