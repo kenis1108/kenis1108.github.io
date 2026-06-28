@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as t,ag as p}from"./chunks/framework.DPDPlp3K.js";const g=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"old/HTML5.md","filePath":"old/HTML5.md"}'),l={name:"old/HTML5.md"};function h(n,s,k,e,r,o){return t(),a("div",null,s[0]||(s[0]=[p("",150)]))}const c=i(l,[["render",h]]);export{g as __pageData,c as default};
