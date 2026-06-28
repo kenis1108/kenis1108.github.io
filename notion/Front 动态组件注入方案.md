@@ -1,4 +1,37 @@
-# Web 版 Linux 桌面工具栏动态组件注入方案
+## 标题备选
+
+1. 手把手梳理：Front 动态组件注入方案
+2. Front 动态组件注入方案 学习笔记：核心概念和实践步骤一次讲清楚
+3. 从零理解 Front 动态组件注入方案：把容易混淆的地方说明白
+
+## 摘要
+
+这篇文章围绕「Front 动态组件注入方案」整理核心概念、实践步骤和注意事项，适合需要快速复习或动手验证的技术同学阅读。
+
+## 正文
+
+哈喽大家好👋 我是程序🦍kk。把复杂知识掰成大白话讲明白，是我一直以来的小追求✨；**打好基础才能稳步进阶**，是我始终秉持的学习理念～
+
+> 📢 我搭建了5000人程序猿专属学习交流群
+群内会同步前端开发/全栈开发/Web3开发/远程工作等干货资源
+关注我并回复 **加群** ，就能加入交流圈啦🚀
+>
+
+## 前言
+
+**把零散笔记整理成可复用的方法，才是真的学到手。**
+
+这类知识点如果只看一遍，很容易停留在“好像懂了”的阶段。
+
+这篇围绕「Front 动态组件注入方案」把关键概念和操作步骤重新梳理，方便后续复习和实践。
+
+## 正文整理
+
+下面进入正文整理。建议大家按自己的使用场景挑重点看，再回到实践里验证。
+
+如果你也在整理自己的技术笔记，可以把本文当作一个结构参考：先讲问题，再讲步骤，最后补注意点。
+
+## Web 版 Linux 桌面工具栏动态组件注入方案
 
 ## 目录
 1. [核心需求](#核心需求)
@@ -39,7 +72,7 @@
 ## 详细方案
 
 ### 方案1：Web Components + 自定义元素注册
-#### 实现步骤
+### 实现步骤
 ```javascript
 // 1. 组件包装器（以 Vue 为例）
 import { defineCustomElement } from 'vue'
@@ -62,17 +95,17 @@ function injectComponent(tagName, props) {
 }
 ```
 
-#### 优点
+### 优点
 - 浏览器原生支持
 - 天然样式隔离（Shadow DOM）
 
-#### 缺点
+### 缺点
 - 需要手动处理框架生命周期
 
 ---
 
 ### 方案2：模块联邦（Module Federation）
-#### Webpack 配置
+### Webpack 配置
 ```javascript
 // 微应用配置（暴露组件）
 new ModuleFederationPlugin({
@@ -91,32 +124,32 @@ new ModuleFederationPlugin({
 })
 ```
 
-#### 动态加载
+### 动态加载
 ```javascript
 const { default: VueComponent } = await import('vue_tool/ToolButton')
 const app = Vue.createApp(VueComponent)
 app.mount('#toolbar-slot')
 ```
 
-#### 适用场景
+### 适用场景
 - 已有微前端架构的项目
 - 需要热更新能力
 
 ---
 
 ### 方案3：iframe 沙箱隔离
-#### 实现示例
+### 实现示例
 ```html
 <!-- 宿主页面 -->
 <div id="toolbar">
-  <iframe 
-    src="https://your-components.com/vue-button" 
+  <iframe
+    src="https://your-components.com/vue-button"
     style="border: none; height: 40px;"
   ></iframe>
 </div>
 ```
 
-#### 通信机制
+### 通信机制
 ```javascript
 // 子应用发送消息
 window.parent.postMessage({
@@ -132,14 +165,14 @@ window.addEventListener('message', (event) => {
 })
 ```
 
-#### 安全建议
+### 安全建议
 - 使用 `sandbox` 属性限制 iframe 权限
 - 验证消息来源 `event.origin`
 
 ---
 
 ### 方案4：运行时编译（Dynamic Import + Eval）
-#### 实现代码
+### 实现代码
 ```javascript
 async function loadVueComponent(url) {
   const code = await fetch(url).then(res => res.text())
@@ -157,14 +190,14 @@ async function loadVueComponent(url) {
 }
 ```
 
-#### 注意事项
+### 注意事项
 - 必须启用 CSP `unsafe-eval`
 - 建议配合 Babel 转译
 
 ---
 
 ### 方案5：浏览器插件扩展
-#### manifest.json
+### manifest.json
 ```json
 {
   "manifest_version": 3,
@@ -176,7 +209,7 @@ async function loadVueComponent(url) {
 }
 ```
 
-#### injector.js
+### injector.js
 ```javascript
 chrome.runtime.sendMessage({ type: 'INJECT_COMPONENT' }, (response) => {
   const el = document.createElement(response.tagName)
@@ -187,7 +220,7 @@ chrome.runtime.sendMessage({ type: 'INJECT_COMPONENT' }, (response) => {
 ---
 
 ### 方案6：WebAssembly 组件
-#### Rust 实现示例
+### Rust 实现示例
 ```rust
 // lib.rs
 #[wasm_bindgen]
@@ -200,7 +233,7 @@ impl ToolButton {
     pub fn new(text: &str) -> Self {
         Self { text: text.into() }
     }
-    
+
     pub fn render(&self) -> JsValue {
         // 返回虚拟 DOM 结构
         json!({
@@ -211,7 +244,7 @@ impl ToolButton {
 }
 ```
 
-#### 前端调用
+### 前端调用
 ```javascript
 import init, { ToolButton } from './pkg/rust_component.wasm'
 
@@ -247,7 +280,7 @@ graph TD
   C --> G[React 组件]
   D --> H[微应用模块]
   E --> I[第三方组件]
-  
+
   style A fill:#f9f,stroke:#333
   style B fill:#bbf,stroke:#333
 ```
@@ -255,3 +288,24 @@ graph TD
 1. 优先使用 Web Components 作为基础方案
 2. 复杂微前端场景搭配 Module Federation
 3. 对不可信组件使用 iframe 隔离
+
+## 写在最后
+
+好啦，今天的分享就到这里！
+
+💬 互动时间：
+
+你还想看「Front 动态组件注入方案」相关的哪一块展开？可以把你的使用场景或具体问题留言给我。
+
+最后，感谢你看到这里👏
+
+如果喜欢这篇内容，不妨顺手给小编安排一波👇
+**点赞**👍｜**转发**📲｜**推荐**❤️｜**评论**📣
+
+要是想第一时间蹲到新内容推送，记得给我点个**星标**⭐️
+
+更多干货内容正在持续填坑中，咱们下期见👋
+
+## 标签建议
+
+技术笔记
