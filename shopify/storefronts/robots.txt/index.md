@@ -1,13 +1,44 @@
+## 标题备选
 
+1. Shopify 开发实战：Shopify robots.txt 自定义 一篇讲清楚
+2. 手把手梳理 Shopify：Shopify robots.txt 自定义 的关键用法和避坑点
+3. 做 Shopify 项目别只会改主题，这篇带你搞懂 Shopify robots.txt 自定义
+
+## 摘要
+
+这篇文章适合 Shopify 主题和应用开发者，围绕「Shopify robots.txt 自定义」梳理核心概念、配置路径和实战注意点，方便项目中快速对照。
+
+## 正文
+
+哈喽大家好👋 我是程序🦍kk。把复杂知识掰成大白话讲明白，是我一直以来的小追求✨；**打好基础才能稳步进阶**，是我始终秉持的学习理念～
+
+> 📢 我搭建了5000人程序猿专属学习交流群
+群内会同步前端开发/全栈开发/Web3开发/远程工作等干货资源
+关注我并回复 **加群** ，就能加入交流圈啦🚀
+>
+
+## 前言
+
+**Shopify 项目最容易卡住的地方，往往不是“会不会写代码”，而是主题、应用和后台配置之间的关系没理顺。**
+
+很多同学做 Shopify 开发时，会同时碰到 Liquid、主题目录、Checkout、Metafields、应用后台、性能优化这些概念。单独看不难，放到真实项目里就容易散。
+
+这篇围绕「Shopify robots.txt 自定义」把原始笔记整理成更适合阅读和复用的版本，适合做主题开发、应用开发或者接手 Shopify 项目时快速对照。
+
+## Shopify 实战整理
+
+下面进入 Shopify 相关内容整理。建议大家边看边对照自己的店铺、主题代码和应用后台，很多问题只有放到真实配置里才容易看清楚。
+
+如果你正在做 Shopify 项目，可以重点留意主题代码、后台配置、应用能力和官方限制之间的边界，很多线上问题都出在这些交界处。
 
 参考：[https://help.shopify.com/en/manual/promoting-marketing/seo/editing-robots-txt](https://help.shopify.com/en/manual/promoting-marketing/seo/editing-robots-txt)
 
 ---
 
-GMC = Google Merchant Center。它是 Google 的商家平台，用来上传/管理商品数据并在 Google 购物、广告等渠道展示。  
-在你前面的 robots.txt 场景下，GMC 需要能抓取商品和相关资源（商品页、图片、结构化数据）。如果被 robots.txt 阻挡，会在 GMC 诊断里看到“被 robots.txt 阻止”。处理要点：  
-- 确保允许 Googlebot 和 Googlebot-image 抓取商品页、图片资源；通常 Disallow: 为空即全放行。  
-- 保存 robots.txt 后，在浏览器访问 https://你的域名/robots.txt 验证，再在 GMC 的“测试 robots.txt”或“抓取诊断”里重新测试。  
+GMC = Google Merchant Center。它是 Google 的商家平台，用来上传/管理商品数据并在 Google 购物、广告等渠道展示。
+在你前面的 robots.txt 场景下，GMC 需要能抓取商品和相关资源（商品页、图片、结构化数据）。如果被 robots.txt 阻挡，会在 GMC 诊断里看到“被 robots.txt 阻止”。处理要点：
+- 确保允许 Googlebot 和 Googlebot-image 抓取商品页、图片资源；通常 Disallow: 为空即全放行。
+- 保存 robots.txt 后，在浏览器访问 https://你的域名/robots.txt 验证，再在 GMC 的“测试 robots.txt”或“抓取诊断”里重新测试。
 - 若诊断列出具体被挡的 URL，把对应路径用 Allow: 放开（不要放开 /admin、/checkout 等敏感路径）。
 
 ---
@@ -16,3 +47,24 @@ GMC = Google Merchant Center。它是 Google 的商家平台，用来上传/管�
 - Disallow: 空值表示“无禁止路径”，即对该 user-agent 完全允许抓取所有路径（等价于 Allow: /）。
 - User-agent: Googlebot-image 指定下面的规则作用于 Google 的图片抓取机器人。
 - 紧随的 Disallow: 同样为空，含义是对图片爬虫不做限制，允许抓取所有路径。
+
+## 写在最后
+
+好啦，今天的分享就到这里！
+
+💬 互动时间：
+
+你现在做 Shopify 更常遇到的是主题开发、Checkout 定制、应用接入，还是性能优化？如果你在「Shopify robots.txt 自定义」上踩过坑，也可以把场景留言出来。
+
+最后，感谢你看到这里👏
+
+如果喜欢这篇内容，不妨顺手给小编安排一波👇
+**点赞**👍｜**转发**📲｜**推荐**❤️｜**评论**📣
+
+要是想第一时间蹲到新内容推送，记得给我点个**星标**⭐️
+
+更多干货内容正在持续填坑中，咱们下期见👋
+
+## 标签建议
+
+Shopify、主题开发、独立站

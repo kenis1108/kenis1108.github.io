@@ -1,8 +1,22 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const sourceDir = path.resolve('old');
-const outputDir = path.resolve('wechat/old');
+const usage = `Usage: node adapt-markdown-to-kk-wechat.mjs <source-md-or-dir> [output-dir]
+
+Examples:
+  node adapt-markdown-to-kk-wechat.mjs old wechat/old
+  node adapt-markdown-to-kk-wechat.mjs shopify wechat/shopify
+  node adapt-markdown-to-kk-wechat.mjs notion/example.md wechat/notion`;
+
+const [sourceArg, outputArg] = process.argv.slice(2);
+
+if (!sourceArg) {
+  console.error(usage);
+  process.exit(1);
+}
+
+const sourceRoot = path.resolve(sourceArg);
+const outputDir = path.resolve(outputArg ?? path.join('wechat', path.basename(sourceRoot).replace(/\.md$/i, '')));
 
 const openingBlock = `哈喽大家好👋 我是程序🦍kk。把复杂知识掰成大白话讲明白，是我一直以来的小追求✨；**打好基础才能稳步进阶**，是我始终秉持的学习理念～
 
@@ -57,23 +71,60 @@ const titleOverrides = {
   '通过谷歌服务获取网站favicon.md': '通过谷歌服务获取网站 favicon',
   '域名、子域名、IP地址与服务器端口之间的关系以及子域名和反向代理的区别.md':
     '域名、子域名、IP、端口和反向代理的区别',
+  'shopify/Shopify Slate.md': 'Shopify Slate 已弃用？迁移到 Shopify CLI',
+  'shopify/shopify性能优化最佳实践.md': 'Shopify 性能优化最佳实践',
+  'shopify/apps/Dev Dashboard/Dev Dashboard.md': 'Shopify Dev Dashboard',
+  'shopify/apps/Locksmith.md': 'Shopify Locksmith 应用',
+  'shopify/apps/单点登录/multipass往customer account api迁移.md':
+    'Shopify Multipass 迁移到 Customer Account API',
+  'shopify/storefronts/Alpine.js.md': 'Shopify 主题开发中的 Alpine.js',
+  'shopify/storefronts/App/App.md': 'Shopify App',
+  'shopify/storefronts/Dev tools.md': 'Shopify 开发工具',
+  'shopify/storefronts/Email Direct Marketing.md': 'Shopify Email Direct Marketing',
+  'shopify/storefronts/Liquid中的Truthy and falsy.md': 'Liquid 中的 Truthy and Falsy',
+  'shopify/storefronts/Metafields/Metafields.md': 'Shopify Metafields',
+  'shopify/storefronts/PageFly.md': 'Shopify PageFly',
+  'shopify/storefronts/Swiper.md': 'Shopify 主题 Swiper',
+  'shopify/storefronts/Variant.md': 'Shopify Variant',
+  'shopify/storefronts/config目录.md': 'Shopify 主题 config 目录',
+  'shopify/storefronts/robots.txt/index.md': 'Shopify robots.txt 自定义',
+  'shopify/storefronts/多语言.md': 'Shopify 多语言配置',
+  'shopify/storefronts/性能问题排查(性能优化).md': 'Shopify 主题性能问题排查',
+  'shopify/storefronts/问题对应的代码定位/问题对应的代码定位.md': 'Shopify 主题问题对应的代码定位',
+  'shopify/storefronts/调试技巧/调试技巧.md': 'Shopify 主题调试技巧',
+  'shopify/storefronts/自定义Checkout/自定义Checkout.md': 'Shopify 自定义 Checkout',
+  'shopify/storefronts/自定义PDP/自定义PDP.md': 'Shopify 自定义 PDP',
+  'shopify/storefronts/自定义Page.md': 'Shopify 自定义 Page',
 };
 
 function stripQuotes(value) {
   return value.trim().replace(/^["']|["']$/g, '').trim();
 }
 
-function parseArticle(file) {
-  const raw = fs.readFileSync(path.join(sourceDir, file), 'utf8');
+function normalizePathForKey(value) {
+  return value.split(path.sep).join('/');
+}
+
+function titleOverrideFor(articlePath, relativePath) {
+  const normalizedRelative = normalizePathForKey(relativePath);
+  const normalizedSourceRelative = normalizePathForKey(path.relative(process.cwd(), articlePath));
+  const basename = path.basename(articlePath);
+
+  return titleOverrides[normalizedSourceRelative] ?? titleOverrides[normalizedRelative] ?? titleOverrides[basename];
+}
+
+function parseArticle(articlePath, relativePath) {
+  const raw = fs.readFileSync(articlePath, 'utf8');
   const match = raw.match(/^---\s*\r?\n([\s\S]*?)\r?\n---\s*\r?\n?/);
   const frontmatter = match?.[1] ?? '';
   const body = match ? raw.slice(match[0].length) : raw;
+  const file = path.basename(articlePath);
   const fallbackTitle = file.replace(/\.md$/i, '');
-  const title = titleOverrides[file] ?? stripQuotes(frontmatter.match(frontmatterTitle)?.[1] ?? fallbackTitle);
+  const title = titleOverrideFor(articlePath, relativePath) ?? stripQuotes(frontmatter.match(frontmatterTitle)?.[1] ?? fallbackTitle);
   const category = stripQuotes(frontmatter.match(frontmatterCategory)?.[1] ?? '');
   const tagLine = stripQuotes(frontmatter.match(frontmatterTags)?.[1] ?? '');
 
-  return { raw, frontmatter, body, file, title, category, tagLine };
+  return { raw, frontmatter, body, file, relativePath, path: articlePath, title, category, tagLine };
 }
 
 function normalizeText(value) {
@@ -153,7 +204,14 @@ function removeExistingKkFrames(body) {
 }
 
 function topic(article) {
-  const haystack = `${article.title} ${article.category} ${article.tagLine} ${article.file}`.toLowerCase();
+  const haystack =
+    `${article.title} ${article.category} ${article.tagLine} ${article.relativePath} ${article.file}`.toLowerCase();
+  if (
+    /shopify|liquid|storefront|checkout|pdp|metafields?|multipass|customer account api|slate|pagefly|locksmith|swiper|robots\.txt|alpine\.js|dev dashboard/.test(
+      haystack,
+    )
+  )
+    return 'shopify';
   if (/oppo|电池|直供|自动开机/.test(haystack)) return 'hardware';
   if (/selenium/.test(haystack)) return 'selenium';
   if (/koa2|mongodb|api项目/.test(haystack)) return 'node';
@@ -328,6 +386,11 @@ function titleOptions(article) {
       `${title} 学习笔记：核心概念和实践步骤一次讲清楚`,
       `从零理解 ${title}：把容易混淆的地方说明白`,
     ],
+    shopify: [
+      `Shopify 开发实战：${title} 一篇讲清楚`,
+      `手把手梳理 Shopify：${title} 的关键用法和避坑点`,
+      `做 Shopify 项目别只会改主题，这篇带你搞懂 ${title}`,
+    ],
   };
 
   return byTopic[t].map(polishSentence);
@@ -353,6 +416,7 @@ function summary(article) {
     webpack: `这篇文章适合想补齐前端工程化基础的同学，围绕 Webpack 的概念、配置和使用场景做系统梳理，方便上手项目打包。`,
     tool: `这篇文章面向喜欢折腾工具和开发环境的同学，围绕「${title}」整理关键步骤、配置点和注意事项，方便按需复用。`,
     general: `这篇文章围绕「${title}」整理核心概念、实践步骤和注意事项，适合需要快速复习或动手验证的技术同学阅读。`,
+    shopify: `这篇文章适合 Shopify 主题和应用开发者，围绕「${title}」梳理核心概念、配置路径和实战注意点，方便项目中快速对照。`,
   };
   return summaries[topic(article)];
 }
@@ -445,6 +509,11 @@ function intro(article) {
       `这类知识点如果只看一遍，很容易停留在“好像懂了”的阶段。`,
       `这篇围绕「${title}」把关键概念和操作步骤重新梳理，方便后续复习和实践。`,
     ],
+    shopify: [
+      `**Shopify 项目最容易卡住的地方，往往不是“会不会写代码”，而是主题、应用和后台配置之间的关系没理顺。**`,
+      `很多同学做 Shopify 开发时，会同时碰到 Liquid、主题目录、Checkout、Metafields、应用后台、性能优化这些概念。单独看不难，放到真实项目里就容易散。`,
+      `这篇围绕「${title}」把原始笔记整理成更适合阅读和复用的版本，适合做主题开发、应用开发或者接手 Shopify 项目时快速对照。`,
+    ],
   };
   return intros[topic(article)].join('\n\n');
 }
@@ -453,6 +522,7 @@ function mainSectionTitle(article) {
   const t = topic(article);
   if (t === 'docker') return '## 实操步骤整理';
   if (t === 'git') return '## 核心操作整理';
+  if (t === 'shopify') return '## Shopify 实战整理';
   if (['javascript', 'css', 'html', 'react', 'vue-react', 'vue', 'angular', 'webpack', 'network'].includes(t))
     return '## 知识点整理';
   if (t === 'python') return '## 使用步骤整理';
@@ -481,6 +551,8 @@ function bridge(article) {
     webpack: '下面进入正文。建议大家把配置项和打包结果联系起来看，这样更容易理解 Webpack 的工作方式。',
     tool: '下面进入具体内容。工具类配置建议一步一步来，改完一个关键点就验证一次结果。',
     general: '下面进入正文整理。建议大家按自己的使用场景挑重点看，再回到实践里验证。',
+    shopify:
+      '下面进入 Shopify 相关内容整理。建议大家边看边对照自己的店铺、主题代码和应用后台，很多问题只有放到真实配置里才容易看清楚。',
   };
   return bridges[topic(article)];
 }
@@ -504,6 +576,8 @@ function bodyPrompt(article) {
     webpack: '如果你项目里已经有 Webpack 配置，可以对照这里的概念看看每个配置项到底在解决什么问题。',
     tool: '如果你也遇到类似配置场景，可以先按本文步骤跑通，再根据自己的环境微调。',
     general: '如果你也在整理自己的技术笔记，可以把本文当作一个结构参考：先讲问题，再讲步骤，最后补注意点。',
+    shopify:
+      '如果你正在做 Shopify 项目，可以重点留意主题代码、后台配置、应用能力和官方限制之间的边界，很多线上问题都出在这些交界处。',
   };
   return prompts[topic(article)];
 }
@@ -528,6 +602,7 @@ function endingPrompt(article) {
     webpack: `你现在项目还在用 Webpack，还是已经切到 Vite？如果想看一次真实项目配置拆解，可以留言。`,
     tool: `你有没有折腾过「${title}」这类工具或环境配置？如果有更省事的方案，也欢迎在评论区补充。`,
     general: `你还想看「${title}」相关的哪一块展开？可以把你的使用场景或具体问题留言给我。`,
+    shopify: `你现在做 Shopify 更常遇到的是主题开发、Checkout 定制、应用接入，还是性能优化？如果你在「${title}」上踩过坑，也可以把场景留言出来。`,
   };
   return prompts[topic(article)];
 }
@@ -564,6 +639,7 @@ function tagSuggestion(article) {
     webpack: ['Webpack', '前端工程化'],
     tool: ['工具配置', '效率工具'],
     general: ['技术笔记'],
+    shopify: ['Shopify', '主题开发', '独立站'],
   };
 
   return Array.from(new Set([...pieces, ...defaults[topic(article)]]))
@@ -608,17 +684,62 @@ function outputName(file) {
   return file.replace(/\.md$/i, '.wechat.md');
 }
 
+function collectMarkdownFiles(targetPath) {
+  const stat = fs.statSync(targetPath);
+
+  if (stat.isFile()) {
+    if (!targetPath.endsWith('.md') || targetPath.endsWith('.wechat.md')) return [];
+    return [
+      {
+        path: targetPath,
+        relativePath: path.basename(targetPath),
+      },
+    ];
+  }
+
+  if (!stat.isDirectory()) {
+    return [];
+  }
+
+  const entries = fs.readdirSync(targetPath, { withFileTypes: true });
+  const files = [];
+
+  for (const entry of entries) {
+    const entryPath = path.join(targetPath, entry.name);
+
+    if (entry.isDirectory()) {
+      files.push(...collectMarkdownFiles(entryPath));
+      continue;
+    }
+
+    if (!entry.isFile() || !entry.name.endsWith('.md') || entry.name.endsWith('.wechat.md')) {
+      continue;
+    }
+
+    files.push({
+      path: entryPath,
+      relativePath: path.relative(sourceRoot, entryPath),
+    });
+  }
+
+  return files.sort((a, b) => a.relativePath.localeCompare(b.relativePath, 'zh-Hans-CN'));
+}
+
+if (!fs.existsSync(sourceRoot)) {
+  console.error(`Source path does not exist: ${sourceRoot}`);
+  process.exit(1);
+}
+
 fs.mkdirSync(outputDir, { recursive: true });
 
-const files = fs
-  .readdirSync(sourceDir)
-  .filter((file) => file.endsWith('.md'))
-  .sort((a, b) => a.localeCompare(b, 'zh-Hans-CN'));
+const files = collectMarkdownFiles(sourceRoot);
 
 for (const file of files) {
-  const article = parseArticle(file);
+  const article = parseArticle(file.path, file.relativePath);
   const adapted = adapt(article);
-  fs.writeFileSync(path.join(outputDir, outputName(file)), `${adapted}\n`, 'utf8');
+  const targetPath = path.join(outputDir, outputName(file.relativePath));
+  fs.mkdirSync(path.dirname(targetPath), { recursive: true });
+  fs.writeFileSync(targetPath, `${adapted}\n`, 'utf8');
 }
 
 console.log(`Adapted ${files.length} articles to ${path.relative(process.cwd(), outputDir)}`);

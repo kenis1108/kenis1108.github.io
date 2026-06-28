@@ -22,6 +22,23 @@ Use this skill to transform a user's draft into a complete Chinese WeChat public
    - WeChat-ready article body
    - optional cover suggestion and tags when useful
 
+## Batch Script
+
+For bulk conversion, use the generic script in `scripts/adapt-markdown-to-kk-wechat.mjs`.
+It accepts any Markdown file or directory, recursively processes `.md` files, skips existing `.wechat.md` outputs, and preserves the source subdirectory structure under the output directory.
+
+```bash
+node scripts/adapt-markdown-to-kk-wechat.mjs <source-md-or-dir> [output-dir]
+```
+
+Examples:
+
+```bash
+node scripts/adapt-markdown-to-kk-wechat.mjs old wechat/old
+node scripts/adapt-markdown-to-kk-wechat.mjs shopify wechat/shopify
+node scripts/adapt-markdown-to-kk-wechat.mjs notion/example.md wechat/notion
+```
+
 ## Output Format
 
 Return the final answer in this order:
