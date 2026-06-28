@@ -1,1 +1,0 @@
-import{_ as i,c as a,o as t,ag as l}from"./chunks/framework.DPDPlp3K.js";const c=JSON.parse('{"title":"HTML5 发展史","description":"","frontmatter":{},"headers":[],"relativePath":"old/HTML5.md","filePath":"old/HTML5.md"}'),e={name:"old/HTML5.md"};function n(h,s,p,k,o,d){return t(),a("div",null,s[0]||(s[0]=[l("",71)]))}const g=i(e,[["render",n]]);export{c as __pageData,g as default};
