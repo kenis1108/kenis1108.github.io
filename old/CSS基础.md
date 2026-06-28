@@ -1,19 +1,37 @@
----
-title: CSS基础
-category: 前端
-tags: CSS
-abbrlink: 599b70c0
-date: 2019-02-25 10:03:22
+## 标题备选
 
+1. CSS 基础补课：CSS 基础，核心知识点一次讲清楚
+2. 前端样式不扎实？这篇带你系统梳理 CSS 基础
+3. 手把手梳理 CSS 基础：布局、选择器和常用写法
 
----
+## 摘要
 
+这篇文章适合前端初学者系统复习 CSS，围绕「CSS 基础」梳理基础语法、常用属性和页面样式实践，适合边看边查。
 
+## 正文
 
+哈喽大家好👋 我是程序🦍kk。把复杂知识掰成大白话讲明白，是我一直以来的小追求✨；**打好基础才能稳步进阶**，是我始终秉持的学习理念～
 
+> 📢 我搭建了5000人程序猿专属学习交流群
+群内会同步前端开发/全栈开发/Web3开发/远程工作等干货资源
+关注我并回复 **加群** ，就能加入交流圈啦🚀
+>
 
+## 前言
 
-# CSS简介
+**CSS 写得稳，页面开发才能少踩很多坑。**
+
+选择器、盒模型、布局、动画这些内容看起来基础，但实际写页面时经常会反复用到。
+
+这篇围绕「CSS 基础」做一次系统整理，适合前端入门和查漏补缺。
+
+## 知识点整理
+
+下面进入正文。CSS 很适合边看边写 demo，遇到不确定的属性可以直接在浏览器里试。
+
+如果你平时写样式容易靠试错，可以把这些基础点重新过一遍，很多布局问题会清晰不少。
+
+## CSS简介
 
 - CSS(cascading style sheet) 汉译为**层叠样式表**,用于控制网页样式;
 - WEB标准中的表现标准语言,在网页中主要对网页信息的显示进行控制;
@@ -31,7 +49,7 @@ date: 2019-02-25 10:03:22
 - 缩短改版时间
 - 对网站的重构有很好的支持
 
-# CSS语法
+## CSS语法
 
 ```txt
 选择符 {属性: 属性值 ;属性:属性值}
@@ -44,16 +62,14 @@ date: 2019-02-25 10:03:22
 5）在书写样式过程中，空格、换行等操作不影响属性显示。
 ```
 
-
-
-# CSS样式表
+## CSS样式表
 
 ## 内部样式表
 
 ``` html
 语法：
     <style type="text/css">
-         css语句 
+         css语句
     </style>
 
 注：使用style标记创建样式时，最好将该标记写在<head></head>;
@@ -71,7 +87,6 @@ date: 2019-02-25 10:03:22
       rel：用于定义文档关联，表示关联样式表；
       type：定义文档类型；
 
-      
 (2) 导入外部样式表
       <style type="text/css">
 			@import  url("目标文件的路径及文件名全称");
@@ -82,7 +97,6 @@ date: 2019-02-25 10:03:22
 
 ## link  和  @import区别
 
-
 1. 老祖宗的差别：link属于XHTML标签，而@import完全是CSS提供的一种方式。 link标签除了可以加载CSS外，还可以做很多其它的事情，比如定义RSS，定义rel连接属性等，@import就只能加载CSS。
 
 2. 加载顺序的差别：当一个页面被加载的时候（就是被浏览者浏览的时候），link引用的CSS会同时被加载，而@import引用的CSS 会等到页面全部被下载完再被加载。所以有时候浏览@import加载CSS的页面时开始会没有样式。
@@ -91,24 +105,19 @@ date: 2019-02-25 10:03:22
 
 4. 使用dom控制样式时的差别：当使用javascript控制dom去改变样式的时候，只能使用link标签，因为@import不是dom可以控制的.
 
-
 ## 内联（行内）样式
 
 ```txt
 <标签 style="属性1:值1;属性2:值2; ……"></标签>
 ```
 
-
-
-# CSS样式表的权重关系
+## CSS样式表的权重关系
 
 + 内联样式表的优先级别最高
 + 内部样式表与外部样式表的优先级和书写的顺序有关，后书写的优先级别高。
 + 同在一个样式表中的优先级和书写的顺序也有关，后书写的优先级别高。(被覆盖的只是相同属性的样式)
 
-
-
-# CSS选择符
+## CSS选择符
 
 ```txt
 CSS基本选择符：类型选择符、id选择符、class选择符(类选择符)
@@ -138,8 +147,6 @@ b)所有的页面元素都可以作为选择符;
 （2）当统一文档某个元素的显示效果时，可以使用类型选择符；（如：改变文档所有p段落样式）
 ```
 
-
-
 ## 类（class）选择符
 
 [![6rbAOK.png](https://s3.ax1x.com/2021/03/16/6rbAOK.png)](https://imgtu.com/i/6rbAOK)
@@ -153,8 +160,6 @@ b)所有的页面元素都可以作为选择符;
         如：<div class="top"></div>
                .top{属性:属性值;}
 ```
-
-
 
 ## ID选择符
 
@@ -172,8 +177,6 @@ b)所有的页面元素都可以作为选择符;
  (5) 最大的用处：创建网页的外围结构。(唯一性、起名字不能使用关键字)
 ```
 
-
-
 ## 伪类选择器
 
 ```txt
@@ -186,25 +189,21 @@ a:active `{color: yellow;}`               /* 鼠标按下去时的状态 */
 1）当这4个超链接伪类选择符联合使用时，应注意他们的顺序，正常顺序为：
 a，a:link,a:visited,a:hover,a:active,错误的顺序有时会使超链接的样式失效；lvha
 2）为了简化代码，可以把伪类选择符中相同 的声明提出来放在a选择符中；
-例如：a`{color:red;}`     a:hover`{color:green;}` 
+例如：a`{color:red;}`     a:hover`{color:green;}`
 表示超链接的三种状态都相同，只有鼠标划过变化颜色
 ```
-
-
 
 ## 通配符
 
 ```txt
 语法：*`{属性：属性值;}`
 
-说明：通配选择符的写法是“*”，其含义就是所有标签；    
+说明：通配选择符的写法是“*”，其含义就是所有标签；
 		表示该样式适用所有网页元素；
 
 用法：常用来重置样式。
 例：*`{margin:0;padding:0;}`
 ```
-
-
 
 ## 群组选择符
 
@@ -212,23 +211,19 @@ a，a:link,a:visited,a:hover,a:active,错误的顺序有时会使超链接的样
 语法：选择符1，……，选择符5 `{属性：属性值;}`
 
 说明：当有多个选择符应用相同的样式时，可以将选择符用“，”分隔的方式，合并为一组。
-   
+
      实例：.top, #nav, p`{width:100px;}`
 ```
-
-
 
 ## 包含选择器（后代选择器）
 
 ```txt
-语法：选择符1(父)  选择符2（后代）`{属性：属性值;}` 
+语法：选择符1(父)  选择符2（后代）`{属性：属性值;}`
                    选择符父级  选择符子级`{属性：属性值;}`
 
 说明：选择符1和选择符2用空格隔开，含义就是选择符1中包含的所有选择符2;
 	实例： div   ul  li`{height:200px;}`
 ```
-
-
 
 ## 伪对象选择符（伪元素）
 
@@ -238,13 +233,13 @@ a，a:link,a:visited,a:hover,a:active,错误的顺序有时会使超链接的样
         语法：选择符::after{content:”文字”;}
 	        选择符::after{content:url(图片路径)；}
    如：div::after{content:url(logo.jpg);}
-      div::after{content:"文本内容";} 
+      div::after{content:"文本内容";}
 
-2）::before    
+2）::before
    说明：与content属性一起使用,定义在元素内容前的内容。
    如：div::before{content:"在其前放内容";}
 
-3）::first-letter 
+3）::first-letter
    说明：定义对象内第一个字符的样式。(该伪元素只能用于块级元素)
 
 4）::first-line
@@ -267,7 +262,7 @@ css中用四位数字表示权重，
     继承样式的权重为0000
     群组集合选择符权重为他本身
      注：如果权重相同时，则执行后写的样式；
-     
+
      内联>id>类，属性，伪类>标签，伪对象>继承
      1000 100    10         1        0
 ```
@@ -279,7 +274,7 @@ css中用四位数字表示权重，
 外部作用于所有文件
 ```
 
-# CSS层叠性
+## CSS层叠性
 
 ```txt
 css层叠指的是样式的优先级，当产生冲突时以优先级高的为准。
@@ -290,16 +285,12 @@ css层叠指的是样式的优先级，当产生冲突时以优先级高的为�
 
 ```
 
-
-
-# CSS属性
+## CSS属性
 
 ```txt
 属性：属性是指定选择符所具有的属性，它是css的核心，css2共有150多个属性
 属性值：属性值包括法定属性值及常见的数值加单位，如25px，或颜色值等。
 ```
-
-
 
 ## 文本属性
 
@@ -419,9 +410,8 @@ text-decoration:
 ## 检索或设置对象中的文本的大小写(只对英文起作用)
 
 ```txt
-`{text-transform:none/capitalize/uppercase/lowercase}` 
-capitalize:首字母大写;uppercase:全部大写;lowercase:全部小写 
-
+`{text-transform:none/capitalize/uppercase/lowercase}`
+capitalize:首字母大写;uppercase:全部大写;lowercase:全部小写
 
 font-variant：属性设置小型大写字母的字体显示，意味着所有的小写字母均会被转换为大写，但是所有使用小型大写字体的字母与其余文本相比，其字体尺寸更小
 font-variant:small-caps浏览器会显示小型大写字母的字体
@@ -429,7 +419,6 @@ normal：默认值。浏览器显示一个标准的字体
 例：把段落设置为小型大写字母字体：
 p.small `{font-variant: small-caps}`
 <p class="small">This is a paragraph</p>
-
 
 ```
 
@@ -440,8 +429,6 @@ p.small `{font-variant: small-caps}`
 说明：图文排列中常用；此属性无法单独使用，需要支持的条件； 只会对inline-block元素类型起作用；
 
 ```
-
-
 
 ## 列表属性
 
@@ -459,21 +446,16 @@ list-style-position:outside(外边)/inside(里边)；
 
 *list-style:none;去掉列表符号*
 
-
-
 ## 边框属性
 
 ```txt
 border:边框宽度 边框风格 边框颜色;
 	例如：border:5px solid #ff0000
 
-
 边框：border,网页中很多修饰性线条都是由边框来实现的。
 边框宽度：border-width:
 边框颜色：border-color:
 边框样式：border-style:solid(实线)/dashed(虚线)dotted(点划线)double(双线) none(没有线)可单独设置一方向边框，
-
-
 
 可单独设置一方向边框，
     border-bottom:边框宽度 边框风格 边框颜色;  底边框
@@ -481,8 +463,6 @@ border:边框宽度 边框风格 边框颜色;
     border-right:边框宽度 边框风格 边框颜色;  右边框
     border-top:边框宽度 边框风格 边框颜色;   上边框
 ```
-
-
 
 ## 背景属性
 
@@ -512,12 +492,6 @@ border:边框宽度 边框风格 边框颜色;
 - **5、背景图的固定 性`{`{background-attachment:scroll(滚动)/fixed(固定);}`**fixed 固定，不随内容一块滚动；
   scroll:随内容一块滚动。
 
-
-
-
-
-
-
 ## 浮动
 
 语法：float:none/left/right;
@@ -530,9 +504,7 @@ border:边框宽度 边框风格 边框颜色;
 
 [![6rbZwD.jpg](https://s3.ax1x.com/2021/03/16/6rbZwD.jpg)](https://imgtu.com/i/6rbZwD)
 
-
-
-清除浮动属性 
+清除浮动属性
 
 语法：`{clear： ;}`
 
@@ -542,19 +514,11 @@ both：  清除元素两边浮动
 
 left：    清除元素左边浮动
 
-right:    清除元素右边浮动 
-
-
-
-
-
-
+right:    清除元素右边浮动
 
 清除浮动方法
 
 1，在想清除的浮动元素后面添加一个空元素，并给这个空元素添加一个样式属性，clear: both;
-
- 
 
 高度自适应详细说明
 
@@ -564,17 +528,11 @@ right:    清除元素右边浮动
 
 .clearfix:after`{ content: "."; display: block; clear: both; font-size: 1px;/*将文字设置到最小，为了解决一些老版本浏览器文字默认高度的问题*/ height: 0px; overflow:hidden;visibility:hidden;}`
 
- 
-
- 
-
 什么情况下需要清浮动
 
 最外面的盒子给了固定的高所以没清除浮动，如果最外面的盒子不给高，出现**高度塌陷**，需要清除浮动
 
-
-
-# css属性继承
+## css属性继承
 
 ```txt
 不可继承的：display、margin、border、padding、background、height、min-height、max- height、、min-width、max-width、overflow、position、left、right、top、 bottom、z-index、float、clear、table-layout、vertical-align
@@ -586,9 +544,7 @@ right:    清除元素右边浮动
 表格元素可继承：border-collapse。
 ```
 
-
-
-# 盒模型
+## 盒模型
 
 ```txt
 盒模型是css布局的基石，它规定了网页元素如何显示以及元素间相互关系。css定义所有的元素都可以拥有像盒子一样的外形和平面空间。即都包含内容区、补白（填充）、边框、边界(外边距)这就是盒模型。
@@ -597,8 +553,6 @@ right:    清除元素右边浮动
 [![6rHxwF.png](https://s3.ax1x.com/2021/03/16/6rHxwF.png)](https://imgtu.com/i/6rHxwF)
 
 [![6rbFQx.png](https://s3.ax1x.com/2021/03/16/6rbFQx.png)](https://imgtu.com/i/6rbFQx)
-
-
 
 ## padding
 
@@ -637,15 +591,13 @@ right:    清除元素右边浮动
 |                                | a:两个相邻元素上下的margin值 不会叠加 按照较大值设置。                                          |
 |                                | b:如果父元素和第一个子元素没有浮动的情况下，给第一个子元素添加margin-top,会错误放在父元素上面。 |
 
-
-
 ## 盒子大小计算
 
 [![6rHveU.png](https://s3.ax1x.com/2021/03/16/6rHveU.png)](https://imgtu.com/i/6rHveU)
 
 [![6rHXLT.png](https://s3.ax1x.com/2021/03/16/6rHXLT.png)](https://imgtu.com/i/6rHXLT)
 
-# 文本溢出
+## 文本溢出
 
 ## overflow
 
@@ -657,8 +609,6 @@ auto：如果内容被修剪，则浏览器会显示滚动条，以便查看其�
 inherit：规定应该从父元素继承overflow属性的值。
 ```
 
-
-
 ## white-space
 
 ```txt
@@ -669,18 +619,12 @@ pre-line:合并空白符序列，但是保留换行符；
 nowrap:文本不会换行，文本会在同一行上继续，直到遇到<br/>标签为止;
 ```
 
-
-
 ## text-overflow
 
 ```txt
 clip：不显示省略号（...），而是简单的裁切;
 ellipsis：当对象内文本溢出时，显示省略标记；
 ```
-
-
-
-
 
 ## 文本溢出变省略号设置
 
@@ -692,13 +636,11 @@ text-overflow属性仅是：当文本溢出时是否显示省略标记，并不�
 3、溢出内容为隐藏：overflow：hidden；
 4、溢出文本显示省略号：
      text-overflow：ellipsis;
-                        
+
 注：必须是单行文本才能设置本文溢出！！！
 ```
 
-
-
-# 元素类型
+## 元素类型
 
 ```txt
 根据css显示分类，XHTML元素被分为
@@ -708,22 +650,18 @@ text-overflow属性仅是：当文本溢出时是否显示省略标记，并不�
 
 &&
 
-三种类型：	
+三种类型：
 	块状元素，内联元素，内联块元素(css2.1增加)
 ```
-
-
 
 ## 块状元素的特点
 
 ```txt
 A:块状元素在网页中就是以块的形式显示，所谓块状就是元素显示为矩形区域，
 B:默认情况下，块状元素都会占据一行，通俗地说，两个相邻块状元素不会出现并列显示的现象；默认情况下，块状元素会按顺序自上而下排列。
-C:块状元素都可以定义自己的宽度和高度。 
+C:块状元素都可以定义自己的宽度和高度。
 D:块状元素一般都作为其他元素的容器，它可以容纳其它内联元素和其它块状元素。我们可以把这种容器比喻为一个盒子。
 ```
-
-
 
 ## 内联元素的特点
 
@@ -735,15 +673,11 @@ D:内联元素加了浮动就相当于自动转换为内联块元素。
 当display为none时不显示。
 ```
 
-
-
 ## 可变元素
 
 ```txt
 需要根据上下文关系确定该元素是块元素或者内联元素。
 ```
-
-
 
 ## 常见的标签
 
@@ -764,33 +698,29 @@ colgroup-col - 表单列分组元素
 table-tr-td  表格及行-单元格
 ```
 
-##  内联
+## 内联
 
 ```txt
-a –超链接（锚点）                               
-b - 粗体(不推荐)                         
+a –超链接（锚点）
+b - 粗体(不推荐)
 i - 斜体
-em - 强调                                                         
+em - 强调
 span - 常用内联容器，定义文本内区块
 strong - 粗体强调
-sub - 下标   
+sub - 下标
 sup - 上标
 u - 下划线
 ```
 
-
-
 ## 内联块元素
 
 ```txt
-img - 图片                         
-input - 输入框               
-label - 表单标签                  
+img - 图片
+input - 输入框
+label - 表单标签
 textarea - 多行文本输入框
-select - 项目选择  
+select - 项目选择
 ```
-
-
 
 ## 元素类型的转换
 
@@ -799,8 +729,6 @@ select - 项目选择
 ```txt
 盒子模型可通过display属性来改变默认的显示类型
 ```
-
-
 
 ## display的属性值
 
@@ -825,14 +753,10 @@ select - 项目选择
 | table-caption      | 此元素会作为一个表格标题显示（类似 `<caption>`）                   |
 | inherit            | 规定应该从父元素继承 display 属性的值。                            |
 
-
-
 ```txt
 A、大部分块元素display属性值默认为block，其中列表li的默认值为list-item。
 B、大部分内联元素的display属性值默认为inline,其中img,input，默认为inline-block（行内块元素）。
 ```
-
-
 
 ## 元素在容器中垂直居中
 
@@ -840,11 +764,7 @@ B、大部分内联元素的display属性值默认为inline,其中img,input，�
 	三个条件：
 		1：必须给容器（父元素）加上text-align:center;
 		2:必须给当前元素转成行内块元素（display:inline-block;）再给当前元素加上vertical-align:middle;
-		3：在当前元素的后面（没有回车）加上同级元素span;并对span进行vertical-align:middle;width:0;height:100%;display:inline-block 
-
-
-
-
+		3：在当前元素的后面（没有回车）加上同级元素span;并对span进行vertical-align:middle;width:0;height:100%;display:inline-block
 
 ## 置换元素
 
@@ -853,7 +773,7 @@ B、大部分内联元素的display属性值默认为inline,其中img,input，�
 在之前的浅谈HTML中的块级元素和内联元素中了解到了内联元素一般是不能设置宽高的，但是也有特殊。比如img是内联元素，但可以设置宽高，这肯定让不少人迷惑。这样我们就要引入HTML中置换元素的概念（非置换元素在w3c中没有给出明确的解释，姑且我们就把除置换元素外的元素当作非置换元素吧）。
 
 二、置换元素与非置换元素
-a) 置换元素：浏览器根据元素的标签和属性，来决定元素的具体显示内容。 
+a) 置换元素：浏览器根据元素的标签和属性，来决定元素的具体显示内容。
 例如：浏览器会根据<img>标签的src属性的值来读取图片信息并显示出来，而如果查看(x)html代码，则看不到图片的实际内容；<input>标签的type属性来决定是显示输入框，还是单选按钮等。 (x)html中的<img>、<input>、<textarea>、<select>都是置换元素。这些元素往往没有实际的内容，即是一个空元素。
 
 置换元素在其显示中生成了框，这也就是有的内联元素（img,input）能够设置宽高的原因。
@@ -861,12 +781,7 @@ a) 置换元素：浏览器根据元素的标签和属性，来决定元素的�
 b) 不可替换元素（非置换元素）：(x)html 的大多数元素是不可替换元素，即其内容直接表现给用户端（如浏览器）。
 ```
 
-
-
-
-
-
-# CSS定位
+## CSS定位
 
 - CSS 有三种基本的定位机制：**普通流、浮动流、定位流**。
 
@@ -883,11 +798,7 @@ b) 不可替换元素（非置换元素）：(x)html 的大多数元素是不可
 | **fixed**    | **相对浏览器的绝对定位，是相对于浏览器窗口的指定坐标进行定位。此元素的位置可通过 "left"、"top"、"right" 以及"bottom" 属性来规定。不论窗口滚动与否，元素都会留在那个位置。**                                                                     |
 | **sticky**   | **可以看出是`position:relative`和`position:fixed`的结合体——当元素在屏幕内，表现为relative，就要滚出显示器屏幕的时候，表现为fixed。**                                                                                                            |
 
-
-
 [![6rbVeO.png](https://s3.ax1x.com/2021/03/16/6rbVeO.png)](https://imgtu.com/i/6rbVeO)
-
-
 
 ```txt
 二、绝对定位和相对定位的区别
@@ -896,8 +807,6 @@ b) 不可替换元素（非置换元素）：(x)html 的大多数元素是不可
 
 2、绝对定位将对象从文档流中拖离出来因此不占据空间，相对定位不破坏正常的文档流顺序无论是否进行移动，元素仍然占据原来的空间。
 ```
-
-
 
 ## 包含块
 
@@ -908,8 +817,6 @@ b) 不可替换元素（非置换元素）：(x)html 的大多数元素是不可
 
 定义元素为包含块：给绝对定位元素的父元素添加声明position：relative；
 ```
-
-
 
 ## 定位元素层次关系
 
@@ -922,9 +829,6 @@ number:无单位的整数值。可为负数
 没有设置z-index时，最后写的对象优先显示在上层，设置后，数值越大，层越靠上；
 必须有定位才能使用该属性
 ```
-
-
-
 
 ## 元素在浏览器窗口居中的方法
 
@@ -954,9 +858,7 @@ div{
 }
 ```
 
-
-
-# **透明度的设置**
+## **透明度的设置**
 
 ```
 IE10以下浏览器写法：
@@ -976,23 +878,21 @@ opacity:  .value（0.2）
 Background:rgba(255,255,255,0.5)仅仅只是透明背景颜色，不透明文字
 ```
 
-
-
-# **marquee滚动字幕的应用**
+## **marquee滚动字幕的应用**
 
 ``` html
 <marquee behavior=“scroll/alternate” direction="up/down/left/right" scrollamount=“5s ” height="" width="">这里放的是内容</marquee>
 
 <!--
-behavior（行为）="scroll(滚动)/alternate（晃动） 
+behavior（行为）="scroll(滚动)/alternate（晃动）
 direction（方向）="up(从下向上)/down（从上向下）/left（从右向左）/right（从左向右）"
-scrollamount（滚动速度）="value" 
+scrollamount（滚动速度）="value"
 height="" (上下滚动范围)
-width=""(左右滚动范围)  
+width=""(左右滚动范围)
 -->
 ```
 
-# 锚点
+## 锚点
 
 ```
 命名锚点链接的应用：
@@ -1008,10 +908,7 @@ width=""(左右滚动范围)
 
 [![6rbky6.png](https://s3.ax1x.com/2021/03/16/6rbky6.png)](https://imgtu.com/i/6rbky6)
 
-
-
-
-# 宽高自适应
+## 宽高自适应
 
 ```txt
 	网页布局中经常要定义元素的宽和高。但很多时候我们希望元素的大小能够根据窗口或子元素自动调整，这就是pc自适应。
@@ -1037,8 +934,6 @@ width=""(左右滚动范围)
 	注：如果设置子元素的高度跟随父元素的高度变化而变化，那么父元素必须有高度。
 ```
 
-
-
 ## 最小高度的自适应
 
 ```txt
@@ -1046,15 +941,12 @@ min-height属性：最小高度；(IE6浏览器不识别该属性)
 
 hack1:min-height:value;_height:value;
 
-hack2:min-height:value;  height:auto!important;height:value; 
+hack2:min-height:value;  height:auto!important;height:value;
 max-height属性：最大高度
 max-width属性：最大宽度
 min-width属性：最小宽度
 
-
 ```
-
-
 
 ## 浮动元素父元素高度自适应（高度塌陷）
 
@@ -1069,12 +961,10 @@ hack1：给父元素添加声明overflow:hidden;(触发一个BFC)
 
 hack2:在浮动元素下方添加空div,并给该元素添加
         声明：div`{clear:both; height:0; overflow:hidden;}`
-        
+
 hack3:万能清除浮动法
 选择符:after`{content:“";clear:both;display:block;height:0;overflow:hidden;visibility:hidden;}`
 ```
-
-
 
 ## visibility:hidden/隐藏
 
@@ -1083,13 +973,7 @@ visibility:hidden;和display:none;的区别：
 visibility:hidden;属性会使对象不可见，但该对象在网页所占的空间没有改变，等于留出了一块空白区域，而 display:none属性会使这个对象彻底消失不显示，也不再占用位置。
 ```
 
-
-
-
-
-
-
-# 扩展
+## 扩展
 
 ``` html
 <!-- iframe框架 -->
@@ -1102,14 +986,11 @@ visibility:hidden;属性会使对象不可见，但该对象在网页所占的�
 <a href="news.html#top">返回我原来页面的原来位置</a>
 ```
 
-
-# BFC
+## BFC
 
 **BFC(Block formatting context)直译为“块级格式化上下文”。它是一个独立的渲染区域，只有Block-level box（块）参与， 它规定了内部的Block-level Box如何布局，并且与这个区域外部毫不相干。**
 
-
 ## BFC的布局规则
-
 
 1. 内部的Box会在垂直方向，一个接一个地放置。
 2. Box垂直方向的距离由margin决定。属于同一个BFC的两个相邻Box的margin会发生重叠（按照最大margin值设置）
@@ -1118,15 +999,13 @@ visibility:hidden;属性会使对象不可见，但该对象在网页所占的�
 5. BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。
 6. 计算BFC的高度时，内部的浮动元素也参与计算，就是不会出现高度塌陷
 
-
 ## 哪些元素或属性能触发BFC
-
 
 + 根元素(html)
 + float属性不为none
 + position为absolute或fixed
 + display为inline-block, table-cell, table-caption, flex, inline-flex
-+ overflow不为visible 
++ overflow不为visible
 
 ## BFC的应用
 
@@ -1135,3 +1014,24 @@ visibility:hidden;属性会使对象不可见，但该对象在网页所占的�
 3. 防止margin上下重叠
 
 <a href="http://www.zhangxinxu.com/wordpress/2015/02/css-deep-understand-flow-bfc-column-two-auto-layout/">详细讲解：CSS深入理解流体特性和BFC特性下多栏自适应布局</a>
+
+## 写在最后
+
+好啦，今天的分享就到这里！
+
+💬 互动时间：
+
+你写 CSS 最容易卡在哪块：布局、响应式、动画，还是兼容性？可以把你的页面场景留言出来。
+
+最后，感谢你看到这里👏
+
+如果喜欢这篇内容，不妨顺手给小编安排一波👇
+**点赞**👍｜**转发**📲｜**推荐**❤️｜**评论**📣
+
+要是想第一时间蹲到新内容推送，记得给我点个**星标**⭐️
+
+更多干货内容正在持续填坑中，咱们下期见👋
+
+## 标签建议
+
+CSS、前端、前端基础

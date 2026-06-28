@@ -1,20 +1,37 @@
----
-title: HTML5
-category: 前端
-tags: HTML5
-abbrlink: 98f3a6d9
-date: 2019-02-26 14:41:40
+## 标题备选
 
+1. HTML 基础补课：HTML5 的常用标签和语义一次讲清楚
+2. 前端入门第一站：系统梳理 HTML5
+3. 手把手梳理 HTML5：页面结构和常用能力都在这里
 
----
+## 摘要
 
+这篇文章适合前端入门同学复习 HTML，围绕「HTML5」整理常用标签、页面结构和基础能力，帮你打好页面开发基础。
 
+## 正文
 
+哈喽大家好👋 我是程序🦍kk。把复杂知识掰成大白话讲明白，是我一直以来的小追求✨；**打好基础才能稳步进阶**，是我始终秉持的学习理念～
 
+> 📢 我搭建了5000人程序猿专属学习交流群
+群内会同步前端开发/全栈开发/Web3开发/远程工作等干货资源
+关注我并回复 **加群** ，就能加入交流圈啦🚀
+>
 
+## 前言
 
-# HTML5发展史
+**HTML 是前端页面的骨架，基础越扎实，后面写组件越顺。**
 
+很多页面问题不是框架问题，而是结构、语义和标签使用不够清晰。
+
+这篇围绕「HTML5」把常用知识点整理出来，适合入门阶段反复对照。
+
+## 知识点整理
+
+下面进入正文。HTML 的重点不是死记标签，而是理解每个标签适合放在哪种内容场景里。
+
+如果你正在学前端，建议把常用标签按页面结构重新归类记忆，会比单纯背列表更有效。
+
+## HTML5发展史
 
 HTML5草案的前身名为 Web Applications 1.0，于2004年被WHATWG提出，于2007年被W3C接纳，并成立了新的 HTML 工作团队。
 1. HTML 5 的第一份正式草案已于2008年1月22日公布。HTML5 仍处于完善之中。然而，大部分现代浏览器已经具备了某些 HTML5 支持。
@@ -29,14 +46,11 @@ HTML5草案的前身名为 Web Applications 1.0，于2004年被WHATWG提出，�
 
 由上面的图可以得知，现在的HTML5还不是一个最终统一的版本，所以说HTML5用在手机端的开发
 
-
-# 浏览器兼容
+## 浏览器兼容
 
 ```txt
 支持Html5的浏览器包括Firefox（火狐浏览器），IE9及其更高版本，Chrome（谷歌浏览器），Safari，Opera等；国内的 遨游浏览器（Maxthon），以及基于IE或Chromium（Chrome的工程版或称实验版）所推出的360浏览器、搜狗浏览器、QQ浏览器、猎豹 浏览器等国产浏览器同样具备支持HTML5的能力。
 ```
-
-
 
 [![6rX3CQ.jpg](https://s3.ax1x.com/2021/03/16/6rX3CQ.jpg)](https://imgtu.com/i/6rX3CQ)
 
@@ -44,9 +58,7 @@ HTML5草案的前身名为 Web Applications 1.0，于2004年被WHATWG提出，�
 
 不同的浏览器显示的效果可能不一样。因为HTML5没有一个统一的标准，不同的浏览器解析时不一样的，现在还处于一个推广的阶段，但是大部分的还是一样的
 
-
-
-# 语法
+## 语法
 
 + 内容类型（ContentType）
 
@@ -57,36 +69,31 @@ HTML5草案的前身名为 Web Applications 1.0，于2004年被WHATWG提出，�
   + `<!DOCTYPE html>不区分大小写`
 
 + 指定字符集编码
-  
+
   + `<meta charset="UTF-8">`
-  
+
 + 可省略标记的元素
-  
-  + 不允许写结束标记的元素：br、col、embed、hr、img、input、link、meta	  
+
+  + 不允许写结束标记的元素：br、col、embed、hr、img、input、link、meta
   + 可以省略结束标记的元素：li、dt、dd、p、option、colgroup、thead、tbody、tfoot、tr、td、th
   + 可以省略全部标记的元素：html、head、body、colgroup、tbody
 
 + 属性值可以使用双引号，也可以使用单引号。
 
-
-
-# 语义化标签
+## 语义化标签
 
 扩展：语义化的重要性：
    1. 当页面加载失败的时候，还能够呈现出清晰的结构
    2. 有利于SEO优化，利于被搜索引擎收录（即便于网络爬虫的识别）
    3. 在项目开发及维护时，语义化的也很大程度上降低开发难度，节省成本
 
-
 ```txt
 在HTML 5出来之前，我们用div来表示页面章节，但是这些div都没有实际意义。（即使我们用css样式的id和class形容这块内容的意义）。这些标签只是我们提供给浏览器的指令，只是定义一个网页的某些部分。但现在，那些之前没“意义”的标签因为因为html5的出现消失了，这就是我们平时说的“语义”。
 ```
 
-
-
 + section元素 表示页面中的一个区块
 + article元素 表示一块与上下文无关的独立的内容
-+ aside元素 在article之外的，与article内容相关的辅助信息 
++ aside元素 在article之外的，与article内容相关的辅助信息
 + header元素 表示页面中一个内容区块或整个页面的标题
 + footer元素 表示页面中一个内容区块或整个页面的脚注
 + nav元素 表示页面中导航链接部分
@@ -94,15 +101,12 @@ HTML5草案的前身名为 Web Applications 1.0，于2004年被WHATWG提出，�
 + main元素 表示页面中的主要的内容(ie不兼容)
 + hgroup标题的一个分组
 + mark定义高亮显示的文本(span)
-+ dialog标记定义一个对话框(会话框)类似微信 
-+ embed 标记定义外部的可交互的内容或插件 比如flash 
-  	
++ dialog标记定义一个对话框(会话框)类似微信
++ embed 标记定义外部的可交互的内容或插件 比如flash
 
 [![6rX83j.png](https://s3.ax1x.com/2021/03/16/6rX83j.png)](https://imgtu.com/i/6rX83j)
 
-
-
-# 多媒体标签
+## 多媒体标签
 
 ```html
 <video src=""></video>
@@ -115,7 +119,7 @@ HTML5草案的前身名为 Web Applications 1.0，于2004年被WHATWG提出，�
 </video>
 ```
 
-ogg 文件，适用于 Firefox、Opera 以及 Chrome 浏览器。 
+ogg 文件，适用于 Firefox、Opera 以及 Chrome 浏览器。
 `<video>` 元素支持三种视频格式：.MP4、.WebM 和 .ogg。
 音频文件必须是 MP3 或 Wav 类型 mpeg。
 
@@ -161,13 +165,13 @@ datalist   定义选项列表。
 
 用于表示已知范围或分数值内的标量测量,也被称为尺度；属性仅用于已知最大和最小值的度量；ie浏览器不支持（  此标签不常用）
 
-常用属性：value：设置 规定度量的当前值 
+常用属性：value：设置 规定度量的当前值
 
-​                  min：规定范围的最小值 
+​                  min：规定范围的最小值
 
-​                  max：规定范围的最大值 
+​                  max：规定范围的最大值
 
-应用代码： 
+应用代码：
 
 ```html
 <meter  id="mt"  value="30"  min="10"  max="100"> </meter>
@@ -179,9 +183,9 @@ datalist   定义选项列表。
 
 目前只有 Chrome 和 Safari 6 支持 `<details>` 标签。
 
-`<summary>` 在其内，配合使用，为其定义标题；并且该是其内第一个标签           
+`<summary>` 在其内，配合使用，为其定义标题；并且该是其内第一个标签
 
-属性：open =”open” :设置信息是否可见 
+属性：open =”open” :设置信息是否可见
 
 应用：
 
@@ -199,18 +203,14 @@ datalist   定义选项列表。
 
 ```html
 <input type="url"     list="url_list"    name="link" />
-<datalist    id="url_list"> 
-    <option label="W3School" value="http://www.W3School.com.cn" /> 
-    <option label="Google" value="http://www.google.com" /> 
-    <option label="Microsoft" value="http://www.microsoft.com" /> 
+<datalist    id="url_list">
+    <option label="W3School" value="http://www.W3School.com.cn" />
+    <option label="Google" value="http://www.google.com" />
+    <option label="Microsoft" value="http://www.microsoft.com" />
 </datalist>
 ```
 
-
-
-# HTML5表单
-
-
+## HTML5表单
 
 Html表单一直都是web的核心技术之一，html5为表单添加了新的js功能和结构上更加自由的写法，极大的提高了开发效率，xhtml中需要放在form中，而html5中表单元素可以放在页面任何位置；
 
@@ -228,15 +228,11 @@ date        日期
 
 search     搜索
 
-color        颜色 
-
-
-
- 
+color        颜色
 
 1、 email： 邮箱类型的文本框验证
 
-应用：    
+应用：
 
 ```html
 ​        <input  name="email1"   type="email"   required   />
@@ -275,8 +271,6 @@ color        颜色
 <input  name="number1"  type="number"  value="20"  min="10"  max="100" step="5"  required />
 ```
 
- 
-
 5、   range： 用来只允话输入一段范围内数值的文本框
 
    属性：   min  最小值
@@ -286,8 +280,6 @@ color        颜色
 ​                step  拖动的步幅间隔值
 
 ​                value：默认值
-
- 
 
  应用：
 
@@ -299,15 +291,13 @@ color        颜色
 
 器其他都会在输入框里显示一个取消搜索的符号
 
-   
-
 应用：
 
 ```html
 <input  name="search1"   type="search"  />
 ```
 
-7、    date :   提供多个选取日期和时间的新输入类型 
+7、    date :   提供多个选取日期和时间的新输入类型
 
    属性：
 
@@ -323,7 +313,7 @@ color        颜色
 
 ·datetime-local - 选取时间、日、月、年（本地时间）
 
-8、    output ：用于不同类型的输出，比如计算或脚本输出，显    示计算结果 
+8、    output ：用于不同类型的输出，比如计算或脚本输出，显    示计算结果
 
 注：必须从属于某个表单。即，必须将它书写在表单内部，或对它添加form属性。
 
@@ -344,28 +334,25 @@ color        颜色
 
   </form>
 
-
 ```
 
-对新元素样式的使用： 
+对新元素样式的使用：
 
 注意，跟 input  标签设置样式一样，但是要设置标签中局部的样式不能实现。如改变日历的背景色，颜色框的按钮效果，等，这些都不可以实现
-
-
 
 **表单验证**
 
 HTML5增加了大量在提交时对表单及表单元素内容有效性验证的功能。
 
-1、自动验证 
+1、自动验证
 
    1）、required
 
-​      可以应用在大多数输入元素上（除了隐藏元素和图片），在提交时如果元素内容为空白，则不允许提交，同时显示提示文字。 
+​      可以应用在大多数输入元素上（除了隐藏元素和图片），在提交时如果元素内容为空白，则不允许提交，同时显示提示文字。
 
   2）、pattern
 
-​      将属性值设为某个格式的正则表达式，在提交时会检查其内容是否符合给定格式。 
+​      将属性值设为某个格式的正则表达式，在提交时会检查其内容是否符合给定格式。
 
 ​    例：
 
@@ -373,17 +360,15 @@ HTML5增加了大量在提交时对表单及表单元素内容有效性验证的
 <input pattern="[0-9][A-Z]{3}" title="输入内容：一个数与三个大写字母" placeholder="输入内容：一个数与三个大写字母">
 ```
 
- 1:用户名验证规则 : 用户名长度为6~12并且由字母组成 
+ 1:用户名验证规则 : 用户名长度为6~12并且由字母组成
 
-​    pattern="[A-z]{6,12}" 
+​    pattern="[A-z]{6,12}"
 
-  2:密码验证规则 : 密码必须是数组与字母组合 
+  2:密码验证规则 : 密码必须是数组与字母组合
 
-​    pattern="[A-Za-z].*[0-9]|[0-9].*[A-Za-z]" 
+​    pattern="[A-Za-z].*[0-9]|[0-9].*[A-Za-z]"
 
- 
-
-**（3****）   placeholder属性：(文本框的提示信息) 
+**（3****）   placeholder属性：(文本框的提示信息)
 
 文本框处于未输入状态时文本框中显示的输入提示。
 
@@ -397,14 +382,12 @@ HTML5增加了大量在提交时对表单及表单元素内容有效性验证的
 
 (6)**Novalidate****属性**  **取消验证**     可以对form表单添加**novalidate**属性，即使form表单中的input添加了required，也将不进行验证
 
-在 Safari 和 Internet Explorer 9 及之前的版本中不支持 novalidate 属性。  	
+在 Safari 和 Internet Explorer 9 及之前的版本中不支持 novalidate 属性。
 (7)**disabled**禁用
 
+## **html5**与html4的区别
 
-
-# **html5**与html4的区别
-
-1. 废除了一些过时的html4标签：center、font、u 
+1. 废除了一些过时的html4标签：center、font、u
 2. 添加了一些新的元素
       - 更加智能的表单元素：date、email、url等；
       - 更加合理的结构标签：section、nav、aside等；
@@ -414,7 +397,28 @@ HTML5增加了大量在提交时对表单及表单元素内容有效性验证的
 
 **HTML5学习参考的网站：**
 
-http://www.runoob.com （学习文档网站） 
+http://www.runoob.com （学习文档网站）
 http://caniuse.com  （查看不同浏览器版本对html5标签的支持情况）
 http://www.w3school.com.cn （w3c文档）
 https://developer.mozilla.org/zh-CN/  （学习文档网站）
+
+## 写在最后
+
+好啦，今天的分享就到这里！
+
+💬 互动时间：
+
+你学 HTML 时最容易混淆哪些标签？如果想看语义化页面结构实战，也可以在评论区告诉我。
+
+最后，感谢你看到这里👏
+
+如果喜欢这篇内容，不妨顺手给小编安排一波👇
+**点赞**👍｜**转发**📲｜**推荐**❤️｜**评论**📣
+
+要是想第一时间蹲到新内容推送，记得给我点个**星标**⭐️
+
+更多干货内容正在持续填坑中，咱们下期见👋
+
+## 标签建议
+
+HTML5、前端、HTML、前端基础

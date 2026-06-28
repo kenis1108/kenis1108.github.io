@@ -66,10 +66,6 @@ export default defineConfig({
         text: 'Shopify',
         items: getAllMarkdownFiles(path.resolve(__dirname, '../shopify'))
       },
-      {
-        text: 'WeChat',
-        items: getAllMarkdownFiles(path.resolve(__dirname, '../wechat'))
-      }
     ],
 
     sidebar: {
@@ -88,11 +84,6 @@ export default defineConfig({
         collapsed: true,
         items: getAllMarkdownFiles(path.resolve(__dirname, '../shopify'))
       }],
-      '/wechat/': [{
-        text: 'WeChat',
-        collapsed: true,
-        items: getAllMarkdownFiles(path.resolve(__dirname, '../wechat'))
-      }]
     },
     outline: { 
       level: [2,4], // 显示2-4级标题

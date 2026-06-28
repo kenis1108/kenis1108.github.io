@@ -1,14 +1,35 @@
----
-title: ES5和ES6
-category: 前端
-tags: JavaScript
-abbrlink: 31430fd1
-date: 2019-03-14 13:22:49
+## 标题备选
 
+1. JavaScript 基础补课：ES5 和 ES6，核心知识点一次讲清楚
+2. 前端人绕不开：ES5 和 ES6 从概念到代码示例
+3. 手把手梳理 ES5 和 ES6：面试和实战都能用上
 
----
+## 摘要
 
-# ES5和ES6
+这篇文章适合前端基础巩固和面试复习，围绕「ES5 和 ES6」整理概念、示例和易混点，帮助你把 JavaScript 基础打扎实。
+
+## 正文
+
+哈喽大家好👋 我是程序🦍kk。把复杂知识掰成大白话讲明白，是我一直以来的小追求✨；**打好基础才能稳步进阶**，是我始终秉持的学习理念～
+
+> 📢 我搭建了5000人程序猿专属学习交流群
+群内会同步前端开发/全栈开发/Web3开发/远程工作等干货资源
+关注我并回复 **加群** ，就能加入交流圈啦🚀
+>
+
+## 前言
+
+**前端基础不是背概念，而是知道每个知识点在代码里怎么用。**
+
+JavaScript 的知识点很多：语法、事件、正则、面向对象、异步、模块化、性能优化，每一块都能影响真实项目。
+
+这篇围绕「ES5 和 ES6」把原始笔记重新梳理成更适合阅读和复习的版本。
+
+## 知识点整理
+
+下面进入正文。代码示例建议直接敲一遍，很多细节只有运行起来才会真正记住。
+
+如果你正在准备前端面试，可以把这里的代码示例当作复习清单逐个过一遍。
 
 - 我们所说的 ES5 和 ES6 其实就是在 js 语法的发展过程中的一个版本而已
 - 比如我们使用的微信
@@ -26,8 +47,6 @@ date: 2019-03-14 13:22:49
   - 这就出现了兼容性问题
   - 所以我们写代码的时候就要考虑哪些方法是 ES5 或者 ES6 的，看看是不是浏览器都支持
 
-
-
 ## ES5 增加的数组常用方法
 
 ### 数组方法之 forEach
@@ -44,9 +63,9 @@ date: 2019-03-14 13:22:49
     // item 就是数组中的每一项
     // index 就是每一项对应的索引
     // arr 就是原始数组
-    console.log(item) 
-    console.log(index) 
-    console.log(arr) 
+    console.log(item)
+    console.log(index)
+    console.log(arr)
   })
   ```
 
@@ -63,8 +82,6 @@ date: 2019-03-14 13:22:49
     console.log(arr)
   }
   ```
-
-
 
 ### 数组方法之 map
 
@@ -101,8 +118,6 @@ date: 2019-03-14 13:22:49
   console.log(newArr)
   ```
 
-  
-
 ### 数组方法之 filter
 
 - `filter` ： 是将数组遍历一遍，按照我们的要求把数数组中符合的内容过滤出来
@@ -138,13 +153,11 @@ date: 2019-03-14 13:22:49
   console.log(newArr)
   ```
 
-
-
-## JSON 
+## JSON
 
 JSON与XML都是常见的数据格式
 
-JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩展标记语言，与HTML都是标记语言 
+JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩展标记语言，与HTML都是标记语言
 
 [![6cRw36.png](https://s3.ax1x.com/2021/03/17/6cRw36.png)](https://imgtu.com/i/6cRw36)
 
@@ -160,7 +173,7 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
   var json2 = { "name": "cxh", "sex": "man" }; //  JSON对 象
   //由JSON字符串转换为JSON对象
   //方法一
-  var obj1 = eval('(' + json1 + ')'); 
+  var obj1 = eval('(' + json1 + ')');
   //方法二
   var obj3 = JSON.parse(json1); // 需严格的json格式（注：字符串中的属性必须要使用双引号引起来）
   //将JSON对象转化为JSON字符串
@@ -168,13 +181,9 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
   var str2=JSON.stringify(json2);
   ```
 
-
-
-
-
 ## this 关键字
 
-- 每一个函数内部都有一个关键字是 `this` 
+- 每一个函数内部都有一个关键字是 `this`
 
 - 可以让我们直接使用的
 
@@ -235,7 +244,7 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
 
 ​	使用于所有数据类型
 
-​	语法：Object.prototype.toString.call(你要检测的数据)	
+​	语法：Object.prototype.toString.call(你要检测的数据)
 
 ```javascript
  // typeof  只能准确的检测基本数据类型
@@ -266,8 +275,6 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
     console.groupEnd()
 ```
 
- 
-
 ### call 和 apply 和 bind
 
 - 刚才我们说过的都是函数的基本调用方式里面的 this 指向
@@ -275,9 +282,7 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
 - 这三个方法就是 **call** / **apply** / **bind**
 - 是强行改变 this 指向的方法
 
-
-
-#### call
+### call
 
 - `call` 方法是附加在函数调用后面使用，可以忽略函数本身的 this 指向
 
@@ -301,9 +306,7 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
     - 第一个参数是你要改变的函数内部的 this 指向
     - 第二个参数开始，依次是向函数传递参数
 
-
-
-#### apply
+### apply
 
 - `apply` 方法是附加在函数调用后面使用，可以忽略函数本身的 this 指向
 
@@ -327,9 +330,7 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
     - 第一个参数是你要改变的函数内部的 this 指向
     - 第二个参数是一个 **数组**，数组里面的每一项依次是向函数传递的参数
 
-
-
-#### bind
+### bind
 
 - `bind` 方法是附加在函数调用后面使用，可以忽略函数本身的 this 指向
 
@@ -354,14 +355,10 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
   - `fn(1, 2)` 的时候 this 指向 window
   - `newFn(1, 2)` 的时候执行的是一个和 fn 一摸一样的函数，只不过里面的 this 指向改成了 obj
 
-
-
 ## ES6新增的内容
 
 - 之前的都是 ES5 的内容
 - 接下来我们聊一下 ES6 的内容
-
-
 
 ### let 和 const 关键字
 
@@ -452,7 +449,7 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
      ```javascript
      const num = 100
      num = 200 // 这里就会报错了，因为 const 声明的变量值不可以改变（我们也叫做常量）
-     
+
      //obj存储的是对象的地址，给obj添加内容，地址不变。因此不报错
      const obj={
          name:'张三'
@@ -473,25 +470,20 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
      const num // 这里就会报错了，因为 const 声明的时候必须赋值
      ```
 
-
 ## Map 和 Set
 
 - Map 和 Set 是 ES6 新增的两个数据类型
 - 都是属于内置构造函数
 - 使用 new 的方式来实例化使用
 
-
-
 ### Set
 
-- Set 是一个构造函数，用来生成 Set 数据结构，它类似于数组，但是成员的值都是唯一的、没有重复的， 初始化 Set 可以接受一个数组或类数组对象作为参数，也可以创建一个空的 Set： 
-
-  
+- Set 是一个构造函数，用来生成 Set 数据结构，它类似于数组，但是成员的值都是唯一的、没有重复的， 初始化 Set 可以接受一个数组或类数组对象作为参数，也可以创建一个空的 Set：
 
   ```javascript
   const s = new Set()
   console.log(s)
-  
+
   /*
   	Set(0) {}
           size: (...)
@@ -507,7 +499,7 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
   // 实例化的时候直接添加数据要以数组的形式添加
   const s = new Set([1, 2, 3, {}, function () {}, true, 'hwllo'])
   console.log(s)
-  
+
   /*
   	Set(7) {1, 2, 3, {…}, ƒ, …}
           size: (...)
@@ -526,9 +518,7 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
 
 - 看上去是一个类似数组的数据结构，但不是数组，就是 **Set 数据结构**
 
-
-
-#### 常用方法和属性
+### 常用方法和属性
 
 - `size`  ： 用来获取该数据结构中有多少数据的
 
@@ -559,9 +549,9 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
   s.add(0)
   s.add({})
   s.add(function () {})
-  
+
   s.delete(0)
-  
+
   console.log(s.size) // 2
   ```
 
@@ -572,9 +562,9 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
   s.add(0)
   s.add({})
   s.add(function () {})
-  
+
   s.clear()
-  
+
   console.log(s.size) // 0
   ```
 
@@ -585,7 +575,7 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
   s.add(0)
   s.add({})
   s.add(function () {})
-  
+
   console.log(s.has(0)) // true
   ```
 
@@ -596,7 +586,7 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
   s.add(0)
   s.add({})
   s.add(function () {})
-  
+
   s.forEach(item => {
       console.log(item) // 0   {}   function () {}
   })
@@ -614,7 +604,7 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
   const s = new Set([1, 2, 3, 4, 5, 6])
   const a = [...s]
   console.log(a) // (6) [1, 2, 3, 4, 5, 6]
-  
+
   console.log(a[0]) // 1
   console.log([...s][0]) // 1
   ```
@@ -631,23 +621,21 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
 
   ```javascript
   const s = new Set([1, 2, 3])
-  
+
   s.add(4)  // 此时 size 是 4
   s.add(1)  // 此时 size 是 4
   s.add(2)  // 此时 size 是 4
   s.add(3)  // 此时 size 是 4
   ```
 
-
-
 ## Map
 
-- Map 是一个构造函数，用来生成 Map 数据结构，它类似于对象，也是键值对的集合，但是“键”可以是非字符串， 初始化 Map 需要一个二维数组，或者直接初始化一个空的 Map： 
+- Map 是一个构造函数，用来生成 Map 数据结构，它类似于对象，也是键值对的集合，但是“键”可以是非字符串， 初始化 Map 需要一个二维数组，或者直接初始化一个空的 Map：
 
   ```javascript
   const m = new Map()
   console.log(m)
-  
+
   /*
   	Map(0) {}
           size: (...)
@@ -663,13 +651,13 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
 
 - 我们也管 Map 叫做 （值 = 值 的数据类型）
 
-  ```javascript 
+  ```javascript
       // MAP 是 ES6 的一个新的数据类型
       // MAP 是一个类似于 对象 的数据集合
       // 对象是一个 键值对 的集合 key : value
       // 对象的成员都是 键 = 值
       // MAP 我们也叫做 值 = 值 的数据集合
-  
+
       // 先认识一下对象
       // **对象的 key 都是字符串，并且不管设置什么，对象的 key 只能是字符串**
       // 如果你想把引用数据类型当作对象的 key 来使用，那么再添加到对象中的时候
@@ -677,25 +665,25 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
        var obj = {
          name: 'Jack'
        }
-  
+
        var a = {
          name: 'a'
        }
-  
+
        var b = {
          name: 'b'
        }
-  
+
        console.log(a.toString())
        console.log(b.toString())
-  
+
        obj[a] = 1
        obj[b] = 2
-  
+
        console.log(obj)
       // MAP 可以把一个引用数据类型当作 key 来使用
       // 使用方式就是 new Map()
-  
+
       const m = new Map()
       //   初始化的时候就给一些值
       //   传递的参数需要是一个数组
@@ -705,8 +693,6 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
       //   这个两个数据第一个就是 key，第二个就是 value
       // const m = new Map([['name', 'Jack'], [{ a: 100 }, 18]])
   ```
-
-
 
 ### 常用方法和属性
 
@@ -722,7 +708,7 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
   ```javascript
   const m = new Map([[{}, {}], [function () {}, function () {}], [true, 1]])
   m.delete(true)
-  
+
   console.log(m.size) // 2
   ```
 
@@ -738,7 +724,7 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
 
   ```javascript
   const m = new Map()
-  
+
   m.set({ name: 'Jack' }, { age: 18 })
   m.set(true, function () {})
   console.log(m.get(true)) // function () {}
@@ -748,12 +734,12 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
 
   ```javascript
   const m = new Map()
-  
+
   m.set({ name: 'Jack' }, { age: 18 })
   m.set(true, function () {})
-  
+
   m.clear()
-  
+
   console.log(m.size) // 0
   ```
 
@@ -761,10 +747,10 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
 
   ```javascript
   const m = new Map()
-  
+
   m.set({ name: 'Jack' }, { age: 18 })
   m.set(true, function () {})
-  
+
   console.log(m.has(true)) // true
   ```
 
@@ -776,10 +762,8 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
   m.forEach(function (item) {
       console.log(item)
   })
-  
-  ```
 
-  
+  ```
 
 ## 箭头函数
 
@@ -825,8 +809,6 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
   }
   ```
 
-  
-
 ### 箭头函数的特殊性
 
 - 箭头函数内部没有 this的指向，箭头函数的 this 是上下文的 this
@@ -849,17 +831,16 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
       console.log(this)
     }
   }
-  
+
   obj.fn()
   obj.fun()
-  
-  
+
   <div>hello</div>
   <script>
       var div1=document.querySelector('div')
       div1.onclick= function () {
           console.log(this) //div对象
-  		
+
           let fn=() => {
               console.log(this)
           }
@@ -915,12 +896,10 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
     },
     fun: a => a + 10
   }
-  
+
   console.log(fn(10)) // 20
   console.log(fun(10)) // 20
   ```
-
-
 
 ### 函数传递参数的时候的默认值
 
@@ -959,16 +938,12 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
 
   - 注意： **箭头函数如果你需要使用默认值的话，那么一个参数的时候也需要写 （）**
 
-
-
 ### 解构赋值
 
 - 解构赋值：解析一个数据结构并赋值
 - 作用：就是快速的从对象或者数组中取出成员的一个语法方式
 
-
-
-#### 解构对象
+### 解构对象
 
 - 快速的从对象中获取成员
 
@@ -979,7 +954,7 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
     age: 18,
     gender: '男'
   }
-  
+
   let name = obj.name
   let age = obj.age
   let gender = obj.gender
@@ -992,7 +967,7 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
     age: 18,
     gender: '男'
   }
-  
+
   // 前面的 {} 表示我要从 obj 这个对象中获取成员了
   // name age gender 都得是 obj 中有的成员
   // obj 必须是一个对象
@@ -1045,9 +1020,7 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
   console.log(userId)
   ```
 
-  
-
-#### 解构数组
+### 解构数组
 
 - 快速的从数组中获取成员
 
@@ -1062,7 +1035,7 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
   ```javascript
   // 使用解构赋值的方式从数组中获取成员
   const arr = ['Jack', 'Rose', 'Tom']
-  
+
   // 前面的 [] 表示要从 arr 这个数组中获取成员了
   // a b c 分别对应这数组中的索引 0 1 2
   // arr 必须是一个数组
@@ -1077,15 +1050,11 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
   console.log(d)
   ```
 
-  
-
-#### 注意
+### 注意
 
 - `{}` 是专门解构对象使用的
 - `[]` 是专门解构数组使用的
 - 不能混用
-
-
 
 ### 模版字符串
 
@@ -1104,10 +1073,10 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
 
      ```javascript
      // 这个单引号或者双引号不能换行，换行就会报错了
-     let str = 'hello world' 
-     
+     let str = 'hello world'
+
      // 下面这个就报错了
-     let str2 = 'hello 
+     let str2 = 'hello
      world'
      ```
 
@@ -1116,7 +1085,7 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
      	hello
      	world
      `
-     
+
      console.log(str) // 是可以使用的
      ```
 
@@ -1127,7 +1096,7 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
      let num = 100
      let str = 'hello' + num + 'world' + num
      console.log(str) // hello100world100
-     
+
      // 直接写在字符串里面不好使
      let str2 = 'hellonumworldnum'
      console.log(str2) // hellonumworldnum
@@ -1141,8 +1110,6 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
      ```
 
      - 在 **``** 里面的 `${}` 就是用来书写变量的位置
-
-
 
 ### 展开运算符
 
@@ -1219,13 +1186,13 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
 
 ### Array.from()
 
-- 将含有length属性，以数字为key(索引)的对象、类数组转成真正的数组。 
+- 将含有length属性，以数字为key(索引)的对象、类数组转成真正的数组。
 
-- Array.from(obj, map函数); 
+- Array.from(obj, map函数);
 
-- 第一个参数为要转换的对象，第二个参数为一个函数，可选，类似map函数。 
+- 第一个参数为要转换的对象，第二个参数为一个函数，可选，类似map函数。
 
-- map函数 : 遍历数组--操作数组--返回数组 
+- map函数 : 遍历数组--操作数组--返回数组
 
   ```Javascript
   var arr = [1,2,3,4,5];
@@ -1236,13 +1203,13 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
   console.log(lis);
   lis.push('abc');
   console.log(lis);
-  
+
   将lis集合转成 数组：
   lis = Array.from(lis);
   console.log( lis )
   lis.push('abc');
   console.log(lis);
-  
+
   将对象转成 数组：
   var obj = {
       "0" : 10 ,
@@ -1252,25 +1219,25 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
   };
   var arr = Array.from( obj );
   console.log( arr );
-  
+
   第二个参数是一个匿名函数 实现的是map功能：
   var newArr = Array.from( obj , (item) => { return item*2; } )
   console.log( newArr );
-  
+
   ```
 
-  ### Symbol类型 
+  ### Symbol类型
 
   ```Javascript
   //ES5 的对象属性名都是字符串，这容易造成属性名的冲突。
   //ES6 引入了一种新的原始数据类型 Symbol，表示独一无二的值。
-  
+
   //在创建symbol类型数据时的参数只是作为标识使用，直接使用 Symbol() 也是可以的。
-  
+
   let s = Symbol('xm');
   console.log( s );
   console.log( typeof s );
-  
+
   对象的属性名现在可以有两种类型，一种是原来就有的字符串，另一种就是新增的 Symbol 类型。
   var xm = Symbol();
   var obj = {
@@ -1278,7 +1245,7 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
   }
   //Symbol类型的属性 取值是 必须 obj[xm] 不能用obj.xm
   console.log( obj[xm] );
-  
+
   var s4 = Symbol();
   var obj = {
       'name': 'xm',
@@ -1289,13 +1256,11 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
   console.log(obj.name); // xm
   console.log(obj[s4]); // xh 访问对象的Symbol属性的值
   console.log(obj[Symbol('age')]); // undefined
-  
-  
+
   //修改symbol类型的属性
   obj[xm] = "web前端";
   console.log( obj[xm] );
-  
-  
+
   //对象的Symbol属性不会被遍历出来（可以用来保护对象的某个属性）
   var obj = {
       "sname":"小明",
@@ -1307,8 +1272,7 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
   for( var key in obj ){
       console.log(key + " -> " + obj[key] );
   }
-  
-  
+
   Object.getOwnPropertySymbols 方法会返回当前对象的所有 Symbol 属性，返回数组
   let id = Symbol("id");
   let obj = {
@@ -1318,18 +1282,17 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
   let arr = Object.getOwnPropertySymbols(obj);
   console.log(arr); //[Symbol(id),Symbol(name)]
   console.log(obj[arr[0]]);  //'007'  访问对象的Symbol属性的值
-  
-  
+
   //虽然这样保证了Symbol的唯一性，但我们不排除希望能够多次使用同一个symbol值的情况。
   let s1 = Symbol('name');
   let s2 = Symbol('name');
   console.log( s1 === s2 ); // false
-  
+
   //官方提供了全局注册并登记的方法：
-  let name1 = Symbol.for('name'); //检测到未创建后新建 
-  let name2 = Symbol.for('name'); //检测到已创建后返回 
+  let name1 = Symbol.for('name'); //检测到未创建后新建
+  let name2 = Symbol.for('name'); //检测到已创建后返回
   console.log(name1 === name2); // true
-  
+
   //通过symbol对象获取到参数值：
   let name1 = Symbol.for('张三');
   let name2 = Symbol.for('丽丽');
@@ -1337,7 +1300,23 @@ JSON（JavaScript Object Notation）轻量级数据格式；XML 是一种可扩�
   console.log(Symbol.keyFor(name2)); // '丽丽'
   ```
 
+## 写在最后
 
+好啦，今天的分享就到这里！
 
+💬 互动时间：
 
-  
+你最近复习 JavaScript 最头疼的是原型链、事件循环、正则，还是异步？评论区留一个关键词，后面可以单独展开。
+
+最后，感谢你看到这里👏
+
+如果喜欢这篇内容，不妨顺手给小编安排一波👇
+**点赞**👍｜**转发**📲｜**推荐**❤️｜**评论**📣
+
+要是想第一时间蹲到新内容推送，记得给我点个**星标**⭐️
+
+更多干货内容正在持续填坑中，咱们下期见👋
+
+## 标签建议
+
+JavaScript、前端、前端基础

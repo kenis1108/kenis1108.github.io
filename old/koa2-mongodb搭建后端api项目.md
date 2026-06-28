@@ -1,16 +1,37 @@
----
-title: koa2+mongodb搭建后端api项目
-tags: 
-- koa2
-- mongodb
-category: 
-- [编程相关,Node.js]
-abbrlink: 80d480ac
-date: 2021-11-22 11:28:28
+## 标题备选
 
----
+1. Node.js 后端实战：用 Koa2 + MongoDB 搭建 API 项目
+2. 手把手教你：Koa2 + MongoDB 搭建后端 API 项目
+3. Koa2 + MongoDB 项目怎么起步？这篇把主流程讲清楚
 
-# 使用koa2+mongodb搭建后端api项目
+## 摘要
+
+这篇文章适合想用 Node.js 写后端接口的同学，围绕 Koa2 + MongoDB 项目的搭建流程和目录思路，整理一份可复用的入门笔记。
+
+## 正文
+
+哈喽大家好👋 我是程序🦍kk。把复杂知识掰成大白话讲明白，是我一直以来的小追求✨；**打好基础才能稳步进阶**，是我始终秉持的学习理念～
+
+> 📢 我搭建了5000人程序猿专属学习交流群
+群内会同步前端开发/全栈开发/Web3开发/远程工作等干货资源
+关注我并回复 **加群** ，就能加入交流圈啦🚀
+>
+
+## 前言
+
+**写后端 API，最关键的是先把项目骨架和数据链路跑通。**
+
+Koa2 负责处理请求，MongoDB 负责存数据，两者组合起来很适合做 Node.js 后端入门练习。
+
+这篇围绕原始笔记，把 Koa2 + MongoDB 搭建后端 API 项目的主流程重新梳理一遍。
+
+## 实操步骤整理
+
+下面进入项目搭建流程。建议大家边创建文件边启动服务验证，避免最后才集中排错。
+
+如果你准备拿这个结构继续扩展接口，建议先把路由、控制器、数据库连接这些职责拆清楚。
+
+## 使用koa2+mongodb搭建后端api项目
 
 ## 一、环境搭建
 ```txt
@@ -36,7 +57,7 @@ npm dev (启动命令自行查看package.json)
 ![](https://gitee.com/huang_jian_hua/blog-images-bed/raw/master/20211122114218.png)
 
 ### 创建mongodb文件夹
-#### mongodb文件夹结构
+### mongodb文件夹结构
 ![](https://gitee.com/huang_jian_hua/blog-images-bed/raw/master/20211122114700.png)
 ```txt
 controller文件夹: 存放对数据库增删改查的函数的文件,文件名对应数据库中的一个表(集合);
@@ -136,7 +157,6 @@ module.exports = app;
 
 ```
 
-
 2. 创建数据库集合的模板类型和模型
 ```js
 /**
@@ -151,7 +171,7 @@ const sportsCarSchema = new mongoose.Schema({
 });
 
 module.exports = { sportsCarSchema };
-``` 
+```
 
 ```js
 /**
@@ -319,3 +339,24 @@ router.post("/update", updateOne);
 
 module.exports = router;
 ```
+
+## 写在最后
+
+好啦，今天的分享就到这里！
+
+💬 互动时间：
+
+你更想看 Koa2 + MongoDB 的哪一块后续：登录鉴权、接口分层，还是部署上线？可以直接留言。
+
+最后，感谢你看到这里👏
+
+如果喜欢这篇内容，不妨顺手给小编安排一波👇
+**点赞**👍｜**转发**📲｜**推荐**❤️｜**评论**📣
+
+要是想第一时间蹲到新内容推送，记得给我点个**星标**⭐️
+
+更多干货内容正在持续填坑中，咱们下期见👋
+
+## 标签建议
+
+koa2、编程相关、Node.js、Koa2、MongoDB
