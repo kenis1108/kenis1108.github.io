@@ -8,16 +8,43 @@ date: 2019-03-10 14:30:14
 
 ---
 
+## 标题备选
 
+1. JavaScript 基础补课：JavaScript 事件机制，核心知识点一次讲清楚
+2. 前端人绕不开：JavaScript 事件机制 从概念到代码示例
+3. 手把手梳理 JavaScript 事件机制：面试和实战都能用上
 
+## 摘要
 
+这篇文章适合前端基础巩固和面试复习，围绕「JavaScript 事件机制」整理概念、示例和易混点，帮助你把 JavaScript 基础打扎实。
 
-# EVENT（上）
+## 正文
+
+哈喽大家好👋 我是程序🦍kk。把复杂知识掰成大白话讲明白，是我一直以来的小追求✨；**打好基础才能稳步进阶**，是我始终秉持的学习理念～
+
+> 📢 我搭建了5000人程序猿专属学习交流群
+群内会同步前端开发/全栈开发/Web3开发/远程工作等干货资源
+关注我并回复 **加群** ，就能加入交流圈啦🚀
+>
+
+## 前言
+
+**前端基础不是背概念，而是知道每个知识点在代码里怎么用。**
+
+JavaScript 的知识点很多：语法、事件、正则、面向对象、异步、模块化、性能优化，每一块都能影响真实项目。
+
+这篇围绕「JavaScript 事件机制」把原始笔记重新梳理成更适合阅读和复习的版本。
+
+## 知识点整理
+
+下面进入正文。代码示例建议直接敲一遍，很多细节只有运行起来才会真正记住。
+
+如果你正在准备前端面试，可以把这里的代码示例当作复习清单逐个过一遍。
+
+## EVENT（上）
 
 - 之前我们简单的了解过一些事件，比如 `onclick` / `onload` / `onscroll` / ...
 - 今天开始，我们详细的学习一些 **事件**
-
-
 
 ## 什么是事件
 
@@ -48,8 +75,6 @@ date: 2019-03-10 14:30:14
 
   - 当我们点击 div 的时候，就会执行事件处理函数内部的代码
   - 每点击一次，就会执行一次事件处理函数
-
-
 
 ## 事件对象
 
@@ -105,8 +130,6 @@ date: 2019-03-10 14:30:14
   }
   ```
 
-
-
 ## 点击事件的光标坐标点获取
 
 - 刚才即然说了，可以获取到坐标点，那么接下来我们就学习一下怎么获取坐标点
@@ -117,8 +140,6 @@ date: 2019-03-10 14:30:14
   - 相对浏览器窗口
   - ...
 - 因为都不一样，所以我们获取的 **事件对象** 里面的属性也不一样
-
-
 
 ### 相对于你点击的元素来说
 
@@ -159,11 +180,7 @@ date: 2019-03-10 14:30:14
   </body>
   ```
 
-
-
 [![6cRIKS.jpg](https://s3.ax1x.com/2021/03/17/6cRIKS.jpg)](https://imgtu.com/i/6cRIKS)
-
-
 
 ### 相对于浏览器窗口你点击的坐标点
 
@@ -210,8 +227,6 @@ date: 2019-03-10 14:30:14
   ```
 
 [![6cRHEj.jpg](https://s3.ax1x.com/2021/03/17/6cRHEj.jpg)](https://imgtu.com/i/6cRHEj)
-
-
 
 ### 相对于页面你点击的坐标点
 
@@ -274,14 +289,14 @@ date: 2019-03-10 14:30:14
 
 注：
 
-- X Y 一般出现在坐标系 
-  - 描述一个点位 
-  - 当你看到 X Y 这一类的东西的时候 
-  - 和元素没有关系，和鼠标的点有关系 
-  - 就是在事件对象里面获取 
-- width height left top 一般出现在距离或者位置 
-  - 描述一个距离或者位置关系 
-  - 一般出现在元素身上 
+- X Y 一般出现在坐标系
+  - 描述一个点位
+  - 当你看到 X Y 这一类的东西的时候
+  - 和元素没有关系，和鼠标的点有关系
+  - 就是在事件对象里面获取
+- width height left top 一般出现在距离或者位置
+  - 描述一个距离或者位置关系
+  - 一般出现在元素身上
 
 ## 点击按键信息（了解）
 
@@ -290,15 +305,11 @@ date: 2019-03-10 14:30:14
 - 我们使用 `事件对象.button` 来获取信息
 - `0` 为鼠标左键，`2` 为鼠标右键
 
-
-
 ## 常见的事件（了解）
 
 - 我们在写页面的时候经常用到的一些事件
 - 大致分为几类，**浏览器事件** / **鼠标事件** / **键盘事件** / **表单事件** / **触摸事件**
 - 不需要都记住，但是大概要知道
-
-
 
 ### 浏览器事件
 
@@ -306,8 +317,6 @@ date: 2019-03-10 14:30:14
 - `scroll` ： 浏览器滚动的时候触发
 - `resize` ： 浏览器窗口改变事件
 - ...
-
-
 
 ### 鼠标事件
 
@@ -325,16 +334,12 @@ date: 2019-03-10 14:30:14
 - `select`：选中事件（支持 input 和 textarea 标签）
 - ...
 
-
-
 ### 键盘事件
 
 - `keyup` ： 键盘抬起事件
 - `keydown` ： 键盘按下事件
 - `keypress` ： 键盘按下再抬起事件（键盘产生可打印字符事件）
 - ...
-
-
 
 ### 表单事件
 
@@ -345,16 +350,12 @@ date: 2019-03-10 14:30:14
 - `blur` ：失去焦点事件
 - ...
 
-
-
 ### 触摸事件
 
 - `touchstart` ： 触摸开始事件
 - `touchend` ： 触摸结束事件
 - `touchmove` ： 触摸移动事件
 - ...
-
-
 
 ## 键盘事件
 
@@ -372,11 +373,9 @@ date: 2019-03-10 14:30:14
   - 所以说，我们一般只给能在页面上选中的元素（表单元素） 和 `document` 来绑定键盘事件
 
   ```javascript
-  document.onkeyup = function () { // code.. } 
+  document.onkeyup = function () { // code.. }
   oInput.onkeyup = function () { // code.. }
   ```
-
-
 
 ### 确定按键
 
@@ -392,17 +391,15 @@ date: 2019-03-10 14:30:14
   document.keyup = function (e) {
     // 事件对象的兼容写法
     e = e || window.event
-    
+
     // 获取键盘码的兼容写法
     var keyCode = e.keyCode || e.which
-    
+
     console.log(keyCode)
   }
   ```
 
-
-
-#### 常见的键盘码（了解）
+### 常见的键盘码（了解）
 
 - 8： 删除键（delete）
 - 9： 制表符（tab）
@@ -413,8 +410,6 @@ date: 2019-03-10 14:30:14
 - 27： 取消键（esc）
 - 32： 空格键（space）
 - ...
-
-
 
 ### 组合按键
 
@@ -434,14 +429,12 @@ date: 2019-03-10 14:30:14
   document.onkeyup = function (e) {
     e = e || window.event
     keyCode = e.keyCode || e.which
-    
+
     if (e.altKey && keyCode === 65) {
       console.log('你同时按下了 alt 和 a')
     }
   }
   ```
-
-  
 
 ## 事件的绑定方式
 
@@ -455,7 +448,7 @@ date: 2019-03-10 14:30:14
   oDiv.onclick = function () {
     console.log('我是第一个事件')
   }
-  
+
   oDiv.onclick = function () {
     console.log('我是第二个事件')
   }
@@ -469,8 +462,6 @@ date: 2019-03-10 14:30:14
 
   - 这个方法不兼容，在 IE 里面要使用 `attachEvent`
 
-
-
 ### 事件监听
 
 - `addEventListener` :  非 IE 7 8 下使用
@@ -481,7 +472,7 @@ date: 2019-03-10 14:30:14
   oDiv.addEventListener('click', function () {
     console.log('我是第一个事件')
   }, false)
-  
+
   oDiv.addEventListener('click', function () {
     console.log('我是第二个事件')
   }, false)
@@ -499,7 +490,7 @@ date: 2019-03-10 14:30:14
   oDiv.attachEvent('onclick', function () {
     console.log('我是第一个事件')
   })
-  
+
   oDiv.attachEvent('onclick', function () {
     console.log('我是第二个事件')
   })
@@ -511,7 +502,7 @@ date: 2019-03-10 14:30:14
 
 - `removeEventListener `:  非 IE 7 8 下使用
 
-- 语法：元素.removeEventListener('事件类型'， 事件处理函数， 冒泡还是捕获) 
+- 语法：元素.removeEventListener('事件类型'， 事件处理函数， 冒泡还是捕获)
 
 - `detachEvent`：IE 7 8 下使用
 
@@ -541,8 +532,7 @@ date: 2019-03-10 14:30:14
   - `addEventListener` ： 非 IE 7 8 的浏览器
   - `attachEvent` ： IE 7 8 浏览器
 
-
-# EVENT（下）
+## EVENT（下）
 
 - 今天来聊一聊事件的执行机制
 
@@ -556,11 +546,9 @@ date: 2019-03-10 14:30:14
 
 [![6cRoDg.jpg](https://s3.ax1x.com/2021/03/17/6cRoDg.jpg)](https://imgtu.com/i/6cRoDg)
 
-
-
 ## 事件的传播
 
-- 事件传播也称为事件流，指的是事件的流向，事件的执行顺序。 
+- 事件传播也称为事件流，指的是事件的流向，事件的执行顺序。
 - 就像上面那个图片一样，我们点击在红色盒子身上的同时，也是点击在了粉色盒子上
 - 这个是既定事实，那么两个盒子的点击事件都会触发
 - 这个就叫做 **事件的传播**
@@ -584,8 +572,6 @@ date: 2019-03-10 14:30:14
   - 先点在自己身上，就是先执行自己的事件处理函数，逐层向上最后执行 window 的事件处理函数
   - 反之，则是先执行 window 的事件处理函数，逐层向下最后执行自己身上的事件处理函数
 
-
-
 ## 冒泡、捕获、目标
 
 - 我们刚才聊过了，每一个事件，都是有可能从自己到 window ，有可能要执行多个同类型事件
@@ -604,8 +590,6 @@ date: 2019-03-10 14:30:14
 
 - 就是从 window 的事件处理函数开始，依次向内，只要事件 **目标** 的事件处理函数执行
 - 也就是从上向下的执行事件处理函数
-
-
 
 ### 冒泡和捕获的区别
 
@@ -631,25 +615,25 @@ date: 2019-03-10 14:30:14
         e = e || window.event
         this.innerHTML += 1
         console.log(e)
-  
+
         // 不冒泡
         // e.cancelBubble = true
-  
+
         // 不传播
         // e.stopPropagation()
       })
-  
+
       center.addEventListener('click', function (e) {
         e = e || window.event
         this.innerHTML += 2
-  
+
         // e.stopPropagation()
       })
-  
+
       out.addEventListener('click', function () {
         this.innerHTML += 3
       })
-  
+
   ```
 
 ## 事件委托
@@ -671,7 +655,7 @@ date: 2019-03-10 14:30:14
     </ul>
     <script>
     	var oUl = docuemnt.querySelector('ul')
-      
+
       oUl.addEventListener('click', function (e) {
         console.log('我是 ul 的点击事件，我被触发了')
       })
@@ -681,8 +665,6 @@ date: 2019-03-10 14:30:14
 
   - 像上面一段代码，当你点击 ul 的时候肯定会触发
   - 但是当你点击 li 的时候，其实也会触发
-
-
 
 ### target
 
@@ -701,7 +683,7 @@ date: 2019-03-10 14:30:14
     </ul>
     <script>
     	var oUl = docuemnt.querySelector('ul')
-      
+
       oUl.addEventListener('click', function (e) {
         e = e || window.event
         var target = e.target || e.srcElement
@@ -713,8 +695,6 @@ date: 2019-03-10 14:30:14
 
   - 上面的代码，当你点击 ul 的时候，target 就是 ul
   - 当你点击在 li 上面的时候，target 就是 li
-
-
 
 ### 委托
 
@@ -733,11 +713,11 @@ date: 2019-03-10 14:30:14
     </ul>
     <script>
     	var oUl = docuemnt.querySelector('ul')
-      
+
       oUl.addEventListener('click', function (e) {
         e = e || window.event
         var target = e.target || e.srcElement
-       
+
         // 判断你点击的是 li
         if (target.nodeName.toUpperCase() === 'LI') {
         	// 确定点击的是 li
@@ -751,8 +731,6 @@ date: 2019-03-10 14:30:14
   ```
 
   - 上面的代码，我们就可以把 li 要做的事情委托给 ul 来做
-
-
 
 ### 总结
 
@@ -775,9 +753,7 @@ date: 2019-03-10 14:30:14
 
 2. 减少事件注册，节省内存占用
 
-3. 新增元素无需再次注册事件 
-
-   
+3. 新增元素无需再次注册事件
 
 ## 默认行为
 
@@ -786,8 +762,6 @@ date: 2019-03-10 14:30:14
   - 比如我们点击 a 标签的时候，我们不需要注册点击事件，他自己就会跳转页面
   - ...
 - 这些不需要我们注册就能实现的事情，我们叫做 **默认事件**
-
-
 
 ### 阻止默认行为
 
@@ -809,12 +783,12 @@ date: 2019-03-10 14:30:14
   <a href="https://www.baidu.com">点击我试试</a>
   <script>
   	var oA = document.querySelector('a')
-  
+
     a.addEventListener("click", function (e) {
       e = e || window.event
-      
+
       console.log(this.href)
-      
+
       e.preventDefault ? e.preventDefault() : e.returnValue = false
     })
   </script>
@@ -823,3 +797,23 @@ date: 2019-03-10 14:30:14
   - 这样写完以后，你点击 a 标签的时候，就不会跳转链接了
   - 而是会在控制台打印出 a 标签的 href 属性的值
 
+## 写在最后
+
+好啦，今天的分享就到这里！
+
+💬 互动时间：
+
+你最近复习 JavaScript 最头疼的是原型链、事件循环、正则，还是异步？评论区留一个关键词，后面可以单独展开。
+
+最后，感谢你看到这里👏
+
+如果喜欢这篇内容，不妨顺手给小编安排一波👇
+**点赞**👍｜**转发**📲｜**推荐**❤️｜**评论**📣
+
+要是想第一时间蹲到新内容推送，记得给我点个**星标**⭐️
+
+更多干货内容正在持续填坑中，咱们下期见👋
+
+## 标签建议
+
+JavaScript、前端、前端基础

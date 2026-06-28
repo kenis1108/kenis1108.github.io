@@ -8,9 +8,40 @@ category: 前端
 
 ---
 
+## 标题备选
 
+1. JavaScript 基础补课：JavaScript 基础，核心知识点一次讲清楚
+2. 前端人绕不开：JavaScript 基础 从概念到代码示例
+3. 手把手梳理 JavaScript 基础：面试和实战都能用上
 
-# JavaScript发展历史
+## 摘要
+
+这篇文章适合前端基础巩固和面试复习，围绕「JavaScript 基础」整理概念、示例和易混点，帮助你把 JavaScript 基础打扎实。
+
+## 正文
+
+哈喽大家好👋 我是程序🦍kk。把复杂知识掰成大白话讲明白，是我一直以来的小追求✨；**打好基础才能稳步进阶**，是我始终秉持的学习理念～
+
+> 📢 我搭建了5000人程序猿专属学习交流群
+群内会同步前端开发/全栈开发/Web3开发/远程工作等干货资源
+关注我并回复 **加群** ，就能加入交流圈啦🚀
+>
+
+## 前言
+
+**前端基础不是背概念，而是知道每个知识点在代码里怎么用。**
+
+JavaScript 的知识点很多：语法、事件、正则、面向对象、异步、模块化、性能优化，每一块都能影响真实项目。
+
+这篇围绕「JavaScript 基础」把原始笔记重新梳理成更适合阅读和复习的版本。
+
+## 知识点整理
+
+下面进入正文。代码示例建议直接敲一遍，很多细节只有运行起来才会真正记住。
+
+如果你正在准备前端面试，可以把这里的代码示例当作复习清单逐个过一遍。
+
+## JavaScript发展历史
 
 ```txt
 1. 1994年，网景公司(Netscape)发布了Navigator浏览器0.9版，这是世界上第一款比较成熟的网络浏览器，轰动一时。但是这是一款名副其实的浏览器--只能浏览页面，浏览器无法与用户互动,当时解决这个问题有两个办法，一个是采用现有的语言,许它们直接嵌入网页。另一个是发明一种全新的语言。
@@ -41,7 +72,7 @@ ECMAScript（简称ES）版本名称了解：
 ......
 ```
 
-# JavaScript是什么
+## JavaScript是什么
 
 ```
 JavaScript是一种基于对象（Object）和事件驱动（Event Driven）的弱类型脚本语言，使用JavaScript可以轻松的实现与HTML的交互操作，并且完成丰富的页面交互效果
@@ -57,9 +88,7 @@ java属于面向对象的语言，面向对象是指用户自己定义类，对�
 弱类型：允许变量类型的隐式转换，允许强制类型转换
 ```
 
-
-
-# JavaScript能干什么
+## JavaScript能干什么
 
 ```txt
 1. 常见的网页效果【表单验证，轮播图...】
@@ -72,9 +101,7 @@ java属于面向对象的语言，面向对象是指用户自己定义类，对�
 8. ...
 ```
 
-
-
-# JavaScript特点 
+## JavaScript特点
 
 ```
 (1)脚本语言。JavaScript是一种解释型的脚本语言,C、C++等语言先编译后执行,而JavaScript是在程序的运行过程中逐行进行解释。
@@ -84,9 +111,7 @@ java属于面向对象的语言，面向对象是指用户自己定义类，对�
 (5)跨平台性。JavaScript脚本语言不依赖于操作系统,仅需要浏览器的支持。因此一个JavaScript脚本在编写后可以带到任意机器上使用,前提上机器上的浏览器支持JavaScript脚本语言,目前JavaScript已被大多数的浏览器所支持。
 ```
 
-
-
-# JavaScript的组成
+## JavaScript的组成
 
 ```txt
 1. ECMASCRIPT: 定义了javascript的语法规范,描述了语言的基本语法和数据类型
@@ -98,14 +123,10 @@ java属于面向对象的语言，面向对象是指用户自己定义类，对�
 
 总结： **JS 就是通过固定的语法去操作 浏览器 和 标签结构 来实现网页上的各种效果**
 
-
-
-# JavaScript代码的书写位置
+## JavaScript代码的书写位置
 
 - 和 `css` 一样，我们的 `js` 也可以有多种方式书写在页面上让其生效
 - `js` 也有多种方式书写，分为 **行内式**， **内嵌式**，**外链式**
-
-
 
 ## 行内式 JS 代码（不推荐）
 
@@ -118,12 +139,10 @@ java属于面向对象的语言，面向对象是指用户自己定义类，对�
   <!-- 写在其他元素上 -->
   <div onclick="alert('我是一个弹出层')">点一下试试看</div>
 
-  <!-- 
+  <!--
   	注：onclick 是一个事件（点击事件），当点击元素的时候执行后面的 js 代码
   -->
   ```
-
-
 
 ## 内嵌式 JS 代码
 
@@ -135,12 +154,10 @@ java属于面向对象的语言，面向对象是指用户自己定义类，对�
   	alert('我是一个弹出层')
   </script>
 
-  <!-- 
+  <!--
   	注：script 标签可以放在 head 里面也可以放在 body 里面
   -->
   ```
-
-
 
 ## 外链式 JS 代码（推荐）
 
@@ -164,21 +181,17 @@ java属于面向对象的语言，面向对象是指用户自己定义类，对�
   <script src="index3.js"></script>
   ```
 
+## 常用输出/调试方法
 
-
-# 常用输出/调试方法
-
-- alert( ) 浏览器弹窗，弹出的内容就是（）括号中的内容 
-- document.write( ) 向文档写入字符串、html 或 javascript代码 
+- alert( ) 浏览器弹窗，弹出的内容就是（）括号中的内容
+- document.write( ) 向文档写入字符串、html 或 javascript代码
 - console.log( ) 在控制台打印相关信息 
-- 注意：调试代码应当从最终的产品代码中删除掉 
+- 注意：调试代码应当从最终的产品代码中删除掉
 
-# JS 中的注释
+## JS 中的注释
 
 - 学习一个语言，先学习一个语言的注释，因为注释是给我们自己看的，也是给开发人员看的
 - 写好一个注释，有利于我们以后阅读代码
-
-
 
 ## 单行注释
 
@@ -192,12 +205,10 @@ java属于面向对象的语言，面向对象是指用户自己定义类，对�
   alert('我是一个弹出层')
   ```
 
-
-
 ## 多行注释
 
 - 一般用来写一大段话，或者注释一段代码
-- 可以直接写 `/**/` 然后在两个星号中间写注释，也可以按 shift + ctrl + / 
+- 可以直接写 `/**/` 然后在两个星号中间写注释，也可以按 shift + ctrl + /
 
   ```javascript
   /*
@@ -212,18 +223,12 @@ java属于面向对象的语言，面向对象是指用户自己定义类，对�
   alert('我是一个弹出层')
   ```
 
-
-
-
-
-# 变量
+## 变量
 
 - 变量指的是在程序中保存数据的一个容器
 - 变量是计算机内存中存储数据的标识符，根据变量名称可以获取到内存中存储的数据
 - 也就是说，我们向内存中存储了一个数据，然后要给这个数据起一个名字，为了是我们以后再次找到他
 - 语法： `var 变量名 = 值`
-
-
 
 ## 定义变量及赋值
 
@@ -243,8 +248,6 @@ var num2 = 200;
   2. 当再次给一个变量赋值的时候，前面一次的值就没有了
   3. 变量名称区分大小写（JS 区分大小写）
 
-
-
 ## 变量的命名规则和命名规范
 
 - 规则： 必须遵守的，不遵守就是错
@@ -257,7 +260,7 @@ var num2 = 200;
   1. 变量名尽量有意义（语义化）
   2. 遵循驼峰命名规则，由多个单词组成的时候，从第二个单词开始首字母大写
 
-## JavaScript关键字 
+## JavaScript关键字
 
 ```
 关键字可用于表示控制语句的开始或结束，或用于执行特定操作等。
@@ -270,7 +273,7 @@ function     this        with          default
 if           throw       delete        ......
 ```
 
-## JavaScript保留字 
+## JavaScript保留字
 
 ```
 保留字有可能在将来被用作关键字来使用，不能用作标识符！
@@ -282,18 +285,12 @@ throws       const        goto          private
 double       import       public        ......
 ```
 
-
-
 ---
 
-
-
-# 数据类型（重点）
+## 数据类型（重点）
 
 - 是指我们存储在内存中的数据的类型
 - 我们通常分为两大类 **基本数据类型** 和 **复杂数据类型**
-
-
 
 ## 基本数据类型
 
@@ -309,15 +306,11 @@ double       import       public        ......
 5. undefined类型（undefined）
    - 只有一个，就是 undefined，表示没有值的意思
 
-
-
 ## 复杂数据类型（暂时先不讲）
 
 1. 对象类型（object）
 2. 函数类型（function）
 3. 。。。
-
-
 
 ## 判断数据类型
 
@@ -334,8 +327,6 @@ var s1 = 'abcdefg';
 console.log(typeof(s1));
 ```
 
-
-
 ### 判断一个变量是不是数字
 
 - 可以使用 `isNaN` 这个方法来判断一个变量是不是数字
@@ -351,13 +342,9 @@ var s1 = 'Jack'
 console.log(isNaN(s1)); //=> true
 ```
 
-
-
 ## 数据类型转换
 
 - 数据类型之间的转换，比如数字转成字符串，字符串转成布尔，布尔转成数字等
-
-
 
 ### 其他数据类型转成数值
 
@@ -384,9 +371,7 @@ console.log(isNaN(s1)); //=> true
    - 运算符两边都是可运算数字才行
    - 如果运算符任何一遍不是一个可运算数字，那么就会返回 NaN
    - 加法不可以用
-5. Number.toFixed(n) 方法可把 Number 四舍五入保留n位小数 
-
-
+5. Number.toFixed(n) 方法可把 Number 四舍五入保留n位小数
 
 ### 其他数据类型转成字符串
 
@@ -399,24 +384,16 @@ console.log(isNaN(s1)); //=> true
    - 字符串拼接： 只要 `+` 任意一边是字符串，就会进行字符串拼接
    - 加法运算：只有 `+` 两边都是数字的时候，才会进行数学运算
 
-
-
 ### 其他数据类型转成布尔
 
 1. `Boolean(变量)`
    - 在 js 中，只有 `''`、`0`、`null`、`undefined`、`NaN`，这些是 false，其余都是 true
 
-
-
 ---
 
-
-
-# 运算符
+## 运算符
 
 - 就是在代码里面进行运算的时候使用的符号，不光只是数学运算，我们在 js 里面还有很多的运算方式
-
-
 
 ## 数学运算符
 
@@ -445,8 +422,6 @@ console.log(isNaN(s1)); //=> true
 
    - 会执行取余运算
    - 会自动把两边都转换成数字进行运算
-
-
 
 ## 赋值运算符
 
@@ -507,9 +482,7 @@ console.log(isNaN(s1)); //=> true
 
    - `a %= 10` 等价于 `a = a % 10`
 
-
-
-##  比较运算符
+## 比较运算符
 
 1. `==`
    - 比较符号两边的值是否相等，不管数据类型
@@ -536,7 +509,7 @@ console.log(isNaN(s1)); //=> true
    - 比较左边的值是否 小于或等于 右边的值
    - `1 <= 2`  true
    - `1 <= 1`  true
-   - `1 <= 0`  false 
+   - `1 <= 0`  false
 7. `>`
    - 比较左边的值是否 大于 右边的值
    - `1 > 0`  true
@@ -548,9 +521,7 @@ console.log(isNaN(s1)); //=> true
    - `1 < 1` false
    - `1 < 0` false
 
-
-
-## 逻辑运算符 
+## 逻辑运算符
 
 1. `&&`
    - 进行 且 的运算
@@ -574,8 +545,6 @@ console.log(isNaN(s1)); //=> true
    - 本身是 false 的，会变成 true
    - `!true`  false
    - `!false`  true
-
-
 
 ## 自增自减运算符（一元运算符）
 
@@ -607,7 +576,7 @@ console.log(isNaN(s1)); //=> true
    - 分成两种，**前置--** 和 **后置--**
    - 和 `++` 运算符道理一样
 
-## 进制介绍 
+## 进制介绍
 
 ```javascript
 //进制也就是进位计数制，是人为定义的带进位的计数方法。
@@ -616,26 +585,26 @@ console.log(isNaN(s1)); //=> true
 
 //使用 toString() 方法把十进制转为其他进制：
 var  x = 28;// 10进制
-console.log(x.toString(2)); //把十进转为2进制  
-console.log(x.toString(8));//把十进转为8进制  
-console.log(x.toString(16));//把十进转为16进制  
+console.log(x.toString(2)); //把十进转为2进制
+console.log(x.toString(8));//把十进转为8进制
+console.log(x.toString(16));//把十进转为16进制
 
 //使用 parseInt() 方法把其他进制转为十进制：
 var x = "110";//二进制的字符串
-console.log(parseInt(x, 2));//把这个字符串当做二进制，转为十进制  
+console.log(parseInt(x, 2));//把这个字符串当做二进制，转为十进制
 
 var x = "070";//八进制的字符串
-console.log(parseInt(x, 8));//把这个字符串当做八进制，转为十进制  
+console.log(parseInt(x, 8));//把这个字符串当做八进制，转为十进制
 
 var x = "0x1c";//十六进制的字符串
-console.log(parseInt(x, 16));//把这个字符串当做十六进制，转为十进制  
+console.log(parseInt(x, 16));//把这个字符串当做十六进制，转为十进制
 
 //parseInt()方法，第一个参数为要转换的字符串，第二个参数指定字符串的进制，默认为十进制
 //其他进制的相互转换，先使用parseInt变为十进制， 在利用toString变为其他进制。
 //在javaScript中，八进制以 0 开头，十六进制以 0x 开头，可省略。
 ```
 
-## 运算符优先级 
+## 运算符优先级
 
 [![620xk6.png](https://s3.ax1x.com/2021/03/18/620xk6.png)](https://imgtu.com/i/620xk6)
 
@@ -647,27 +616,22 @@ console.log(parseInt(x, 16));//把这个字符串当做十六进制，转为十�
 
 [![620OmR.png](https://s3.ax1x.com/2021/03/18/620OmR.png)](https://imgtu.com/i/620OmR)
 
-
 ---
 
+## 程序的三大结构
 
-# 程序的三大结构 
-
-+ 顺序结构 
-+ 选择结构  
++ 顺序结构
++ 选择结构
 + 循环结构 
-
 
 ## 分支结构(选择结构)
 
 - 我们的 js 代码都是顺序执行的（从上到下）
 - 逻辑分支就是根据我们设定好的条件来决定要不要执行某些代码
 
-
-
 ### IF 条件分支结构
 
-#### if 语句
+### if 语句
 
 - 通过一个 if 语句来决定代码执行与否
 
@@ -680,16 +644,14 @@ console.log(parseInt(x, 16));//把这个字符串当做十六进制，转为十�
   if (true) {
     alert('因为条件是 true，我会执行')
   }
-  
+
   // 条件为 false 的时候不执行 {} 里面的代码
   if (false) {
-  	alert('因为条件是 false，我不会执行')    
+  	alert('因为条件是 false，我不会执行')
   }
   ```
 
-
-
-#### if else 语句
+### if else 语句
 
 - 通过 if 条件来决定，执行哪一个 `{}` 里面的代码
 
@@ -698,25 +660,23 @@ console.log(parseInt(x, 16));//把这个字符串当做十六进制，转为十�
 - 两个 `{}` 内的代码一定有一个会执行
 
   ```javascript
-  // 条件为 true 的时候，会执行 if 后面的 {} 
+  // 条件为 true 的时候，会执行 if 后面的 {}
   if (true) {
     alert('因为条件是 true，我会执行')
   } else {
     alert('因为条件是 true，我不会执行')
   }
-  
+
   // 条件为 false 的时候，会执行 else 后面的 {}
   if (false) {
     alert('因为条件为 false，我不会执行')
   } else {
     alert('因为条件为 false，我会执行')
   }
-  
+
   ```
 
-
-
-#### if else if ... 语句
+### if else if ... 语句
 
 - 可以通过 if 和 else if 来设置多个条件进行判断
 
@@ -734,9 +694,9 @@ console.log(parseInt(x, 16));//把这个字符串当做十六进制，转为十�
   if (true) {
     alert('我是代码段1')
   } else if (false) {
-  	alert('我是代码段2')           
+  	alert('我是代码段2')
   }
-  
+
   // 第一个条件为 true，第二个条件为 true，最终会打印 “我是代码段1”
   // 因为只要前面有一个条件满足了，就不会继续判断了
   if (true) {
@@ -744,7 +704,7 @@ console.log(parseInt(x, 16));//把这个字符串当做十六进制，转为十�
   } else if (true) {
     alert('我是代码段2')
   }
-  
+
   // 第一个条件为 false，第二个条件为 true，最终会打印 “我是代码段2”
   // 只有前一个条件为 false 的时候才会继续向后判断
   if (false) {
@@ -752,7 +712,7 @@ console.log(parseInt(x, 16));//把这个字符串当做十六进制，转为十�
   } else if (true) {
     alert('我是代码段2')
   }
-  
+
   // 第一个条件为 false，第二个条件为 false，最终什么也不会发生
   // 因为当所有条件都为 false 的时候，两个 {} 里面的代码都不会执行
   if (false) {
@@ -762,9 +722,7 @@ console.log(parseInt(x, 16));//把这个字符串当做十六进制，转为十�
   }
   ```
 
-
-
-#### if else if … else 语句
+### if else if … else 语句
 
 - 和之前的 `if else if ...` 基本一致，只不过是在所有条件都不满足的时候，执行最后 else 后面的 `{}`
 
@@ -790,7 +748,7 @@ prompt(str1，str2)  弹出可输入的对话框
 返回值:
 
 1. 点击确定按钮，文本框中的内容将作为函数的返回值
-2. 点击取消按钮，将返回null 
+2. 点击取消按钮，将返回null
 
 ### SWITCH 条件分支结构
 
@@ -814,7 +772,7 @@ prompt(str1，str2)  弹出可输入的对话框
     default:
       上述情况都不满足的时候执行的代码
   }
-  
+
   工作原理：
   首先设置表达式 n（通常是一个变量）。
   随后表达式的值会与结构中的每个 case 的值做比较。
@@ -854,9 +812,6 @@ prompt(str1，str2)  弹出可输入的对话框
   }
   ```
 
-
-
-
 ### if...else if...else语句与switch case语句的比较：
 
 范围：前者可以比较定值也可以比较范围
@@ -866,8 +821,6 @@ prompt(str1，str2)  弹出可输入的对话框
 效率：前者效率低（每一个表达式都要求值对比）
 
 ​           后者效率高（表达式只需要跟case中的一个匹配就可以）
-
-
 
 ## 三元运算（扩展）
 
@@ -881,9 +834,6 @@ prompt(str1，str2)  弹出可输入的对话框
   var age = 18;
   age >= 18 ? alert('已经成年') : alert('没有成年')
   ```
-
-
-
 
 ## 循环结构
 
@@ -941,21 +891,20 @@ for (var i = 5; i >= 1; i--) {// 减量循环
 - 死循环：没有终止条件并一直执行的循环即为死循环。
 - for循环的嵌套，可以简单的理解为行和列的关系。
 
-#### 案例解析
+### 案例解析
 
 ```
 面试题：
 var a = 1
 var b = 2
-var c = (a,b)  
+var c = (a,b)
 console.log(c) // c=2
 
 var a = 1
 var b = 2
-var c = (a++,b)  
+var c = (a++,b)
 console.log(c) // c=2
 console.log(a) // a=2
-
 
 var k=0;
 for(var i=0, v=0; i<6, v<9; i++, v++){
@@ -969,8 +918,6 @@ k = i + v;
 }
 console.log(k);
 ```
-
-
 
 ### WHILE 循环
 
@@ -994,8 +941,6 @@ console.log(k);
 
   - 如果没有自身改变，那么就会一直循环不停了
 
-
-
 ### DO WHILE 循环
 
 - 是一个和 `while` 循环类似的循环
@@ -1015,16 +960,13 @@ console.log(k);
   } while (num < 10)
   ```
 
-
 for，while，  do while三个循环的区别
 
-for 循环一般用在循环次数可以确定的情景。 
+for 循环一般用在循环次数可以确定的情景。
 
-while 循环一般用在循环次数未知的情景。 
+while 循环一般用在循环次数未知的情景。
 
 do while：先执行一次，在判断，也是不知道循环次数
-
-
 
 ### BREAK 终止循环
 
@@ -1045,8 +987,6 @@ do while：先执行一次，在判断，也是不知道循环次数
     }
   }
   ```
-
-  
 
 ### CONTINUE 结束本次循环
 
@@ -1069,39 +1009,31 @@ do while：先执行一次，在判断，也是不知道循环次数
   }
   ```
 
-  
-
-
-
 - 我们代码里面所说的函数和我们上学的时候学习的什么三角函数、二次函数之类的不是一个东西
 
 ---
 
-
-# 函数的概念及作用
+## 函数的概念及作用
 
 [![62woMd.jpg](https://s3.ax1x.com/2021/03/18/62woMd.jpg)](https://imgtu.com/i/62woMd)
 
-
-乔帮主有很多武功招式，每个武功招式都有不一样的效果 
+乔帮主有很多武功招式，每个武功招式都有不一样的效果
 
 [![62w5xH.jpg](https://s3.ax1x.com/2021/03/18/62w5xH.jpg)](https://imgtu.com/i/62w5xH)
 
-降龙十八掌就是一个强大的武功招式，集结了十八条龙的能量，毁天灭地... 
+降龙十八掌就是一个强大的武功招式，集结了十八条龙的能量，毁天灭地...
 
-总结：不同的武功招式，聚集了不同的能量需要的时候，通过某种固定的方式来释放武功招式 
+总结：不同的武功招式，聚集了不同的能量需要的时候，通过某种固定的方式来释放武功招式
 
 - 通俗讲：函数就是可重复执行的代码块。
 -  函数的作用：
   - 1.通过函数可以封装任意多条语句，以便在任何地方、任何时候调用；
-  - 2.将代码编写在函数中，就可以避免在非必要情况下调用该代码。 
-- 回顾上面的故事情节，函数 替换 武功招式，调用 替换 释放...... 
+  - 2.将代码编写在函数中，就可以避免在非必要情况下调用该代码。
+- 回顾上面的故事情节，函数 替换 武功招式，调用 替换 释放......
 
 ## 函数的两个阶段（重点）
 
 - 按照我们刚才的说法，两个阶段就是 **放在盒子里面** 和 **让盒子里面的代码执行**
-
-
 
 ### 函数定义阶段
 
@@ -1110,9 +1042,7 @@ do while：先执行一次，在判断，也是不知道循环次数
 - 我们就要学习怎么 **放进去**，也就是书写一个函数
 - 我们有两种定义方式 **声明式** 和 **赋值式**
 
-
-
-#### 声明式
+### 声明式
 
 - 使用 `function` 这个关键字来声明一个函数
 
@@ -1128,15 +1058,13 @@ do while：先执行一次，在判断，也是不知道循环次数
   // {}: 就是我们用来放一段代码的位置（也就是我们刚才说的 “盒子”）
   ```
 
-
-
-#### 赋值式
+### 赋值式
 
 - 其实就是和我们使用 `var` 关键字是一个道理了
 
 - 首先使用 `var` 定义一个变量，把一个函数当作值直接赋值给这个变量就可以了
 
-- 语法： 
+- 语法：
 
   ```javascript
   var fn = function () {
@@ -1145,17 +1073,13 @@ do while：先执行一次，在判断，也是不知道循环次数
   // 不需要在 function 后面书写函数的名字了，因为在前面已经有了
   ```
 
-  
-
 ### 函数调用阶段
 
 - 就是让 **盒子里面** 的代码执行一下
 - 让函数执行
 - 两种定义函数的方式不同，但是调用函数的方式都是一样的
 
-
-
-#### 调用一个函数
+### 调用一个函数
 
 - 函数调用就是直接写 `函数名()` 就可以了
 
@@ -1164,24 +1088,22 @@ do while：先执行一次，在判断，也是不知道循环次数
   function fn() {
     console.log('我是 fn 函数')
   }
-  
+
   // 调用函数
   fn()
-  
+
   // 赋值式函数
   var fn2 = function () {
     console.log('我是 fn2 函数')
   }
-  
+
   // 调用函数
   fn2()
   ```
 
   - 注意： **定义完一个函数以后，如果没有函数调用，那么写在 {} 里面的代码没有意义，只有调用以后才会执行**
 
-
-
-#### 调用上的区别
+### 调用上的区别
 
 - 虽然两种定义方式的调用都是一样的，但是还是有一些区别的
 
@@ -1190,12 +1112,12 @@ do while：先执行一次，在判断，也是不知道循环次数
   ```javascript
   // 可以调用
   fn()
-  
+
   // 声明式函数
   function fn() {
     console.log('我是 fn 函数')
   }
-  
+
   // 可以调用
   fn()
   ```
@@ -1205,16 +1127,15 @@ do while：先执行一次，在判断，也是不知道循环次数
   ```javascript
   // 会报错
   fn()
-  
+
   // 赋值式函数
   var fn = function () {
     console.log('我是 fn 函数')
   }
-  
+
   // 可以调用
   fn()
   ```
-
 
 ## 变量与函数提升
 
@@ -1289,17 +1210,15 @@ fn1()
   function fn(行参写在这里) {
     // 一段代码
   }
-  
+
   fn(实参写在这里)
-  
+
   // 赋值式函数
   var fn = function (行参写在这里) {
     // 一段代码
   }
   fn(实参写在这里)
   ```
-
-
 
 ### 形参和实参的作用
 
@@ -1316,16 +1235,16 @@ fn1()
      function fn(num) {
        // 在函数内部就可以使用 num 这个变量
      }
-     
+
      var fn1 = function (num) {
      	// 在函数内部就可以使用 num 这个变量
      }
-     
+
      // 书写两个参数
      function fun(num1, num2) {
        // 在函数内部就可以使用 num1 和 num2 这两个变量
      }
-     
+
      var fun1 = function (num1, num2) {
        // 在函数内部就可以使用 num1 和 num2 这两个变量
      }
@@ -1343,13 +1262,13 @@ fn1()
 
      ```javascript
      function fn(num) {
-       // 函数内部可以使用 num 
+       // 函数内部可以使用 num
      }
-     
+
      // 这个函数的本次调用，书写的实参是 100
      // 那么本次调用的时候函数内部的 num 就是 100
-     fn(100) 
-     
+     fn(100)
+
      // 这个函数的本次调用，书写的实参是 200
      // 那么本次调用的时候函数内部的 num 就是 200
      fn(200)
@@ -1363,13 +1282,11 @@ fn1()
      function fn(num1, num2) {
        // 函数内部可以使用 num1 和 num2
      }
-     
+
      // 函数本次调用的时候，书写的参数是 100 和 200
      // 那么本次调用的时候，函数内部的 num1 就是 100，num2 就是 200
      fn(100, 200)
      ```
-
-     
 
 ### 参数个数的关系
 
@@ -1383,14 +1300,12 @@ fn1()
      function fn(num1, num2) {
        // 函数内部可以使用 num1 和 num2
      }
-     
+
      // 本次调用的时候，传递了两个实参，100 200 和 300
      // 100 对应了 num1，200 对应了 num2，300 没有对应的变量
      // 所以在函数内部就没有办法依靠变量来使用 300 这个值
      fn(100, 200, 300)
      ```
-
-     
 
 2. 行参比实参多
 
@@ -1402,17 +1317,16 @@ fn1()
      function fn(num1, num2, num3) {
        // 函数内部可以使用 num1 num2 和 num3
      }
-     
+
      // 本次调用的时候，传递了两个实参，100 和 200
      // 就分别对应了 num1 和 num2
      // 而 num3 没有实参和其对应，那么 num3 的值就是 undefined
      fn(100, 200)
      ```
 
-
 ### arguments
 
-`arguments`对象是所有（非箭头）函数中都可用的**局部变量**。你可以使用`arguments`对象在函数中引用函数的参数。此对象包含传递给函数的每个参数，第一个参数在索引0处。例如，如果一个函数传递了三个参数，你可以以如下方式引用他们： 
+`arguments`对象是所有（非箭头）函数中都可用的**局部变量**。你可以使用`arguments`对象在函数中引用函数的参数。此对象包含传递给函数的每个参数，第一个参数在索引0处。例如，如果一个函数传递了三个参数，你可以以如下方式引用他们：
 
 ```
 arguments[0]
@@ -1423,9 +1337,9 @@ arguments[1] = 'new value';
 
 ```
 
-`arguments`对象不是一个 [`Array`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Array) 。它类似于`Array`，但除了length属性和索引元素之外没有任何`Array`属性。 
+`arguments`对象不是一个 [`Array`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Array) 。它类似于`Array`，但除了length属性和索引元素之外没有任何`Array`属性。
 
-可以借用arguments.length可以来查看实参和形参的个数是否一致 
+可以借用arguments.length可以来查看实参和形参的个数是否一致
 
 ```
 function add(a, b) {
@@ -1442,13 +1356,9 @@ function add(a, b) {
 add(1,2,3,6,8);
 ```
 
-
-
 ## 函数的return（重点）
 
 - return 返回的意思，其实就是给函数一个 **返回值** 和 **终断函数**
-
-
 
 ### 终断函数
 
@@ -1463,18 +1373,16 @@ add(1,2,3,6,8);
     console.log(1)
     console.log(2)
     console.log(3)
-    
+
     // 写了 return 以后，后面的 4 和 5 就不会继续执行了
     return
     console.log(4)
     console.log(5)
   }
-  
+
   // 函数调用
   fn()
   ```
-
-
 
 ### 返回值
 
@@ -1485,11 +1393,11 @@ add(1,2,3,6,8);
   ```javascript
   // 比如 1 + 2 是一个表达式，那么 这个表达式的结果就是 3
   console.log(1 + 2) // 3
-  
+
   function fn() {
     // 执行代码
   }
-  
+
   // fn() 也是一个表达式，这个表达式就没有结果出现
   console.log(fn()) // undefined
   ```
@@ -1501,14 +1409,12 @@ add(1,2,3,6,8);
     // 执行代码
     return 100
   }
-  
+
   // 此时，fn() 这个表达式执行完毕之后就有结果出现了
   console.log(fn()) // 100
   ```
 
   - 我们可以在函数内部使用 `return` 关键把任何内容当作这个函数运行后的结果
-
-
 
 ## 函数的优点
 
@@ -1518,15 +1424,11 @@ add(1,2,3,6,8);
   2. 复用，在重复功能的时候直接调用就好
   3. 代码执行时机，随时可以在我们想要执行的时候执行
 
-
-
 ## 预解析（重点）
 
 - **预解析** 其实就是聊聊 js 代码的编译和执行
 - js 是一个解释型语言，就是在代码执行之前，先对代码进行通读和解释，然后在执行代码
 - 也就是说，我们的 js 代码在运行的时候，会经历两个环节 **解释代码** 和 **执行代码**
-
-
 
 ### 解释代码
 
@@ -1546,11 +1448,11 @@ add(1,2,3,6,8);
   ```javascript
   fn()
   console.log(num)
-  
+
   function fn() {
     console.log('我是 fn 函数')
   }
-  
+
   var num = 100
   ```
 
@@ -1561,7 +1463,7 @@ add(1,2,3,6,8);
     console.log('我是 fn 函数')
   }
   var num
-  
+
   fn()
   console.log(num)
   num = 100
@@ -1569,11 +1471,10 @@ add(1,2,3,6,8);
 
 - 赋值是函数会按照 `var` 关键字的规则进行预解析
 
-
 ### 预解析的无节操
   + if条件不管是否成立，里面的代码会进行预解析
   + return后面的代码虽然不会执行，但是会进行预解析
-#### 两个坑
+### 两个坑
   - 作用域和预解析
   - this指向
 
@@ -1610,14 +1511,10 @@ function fn(){
 console.log(fn)
 ```
 
-
-
 ## 作用域（重点）
 
 - 什么是作用域，就是一个变量可以生效的范围
 - 变量不是在所有地方都可以使用的，而这个变量的使用范围就是作用域
-
-
 
 ### 全局作用域
 
@@ -1627,7 +1524,7 @@ console.log(fn)
 
 - 全局作用域中声明的变量和函数，会作为window对象的属性和方法保存；
 
-- 变量在函数外声明，即为全局变量，拥有全局作用域。 
+- 变量在函数外声明，即为全局变量，拥有全局作用域。
 
   ```javascript
    var a = 123;//全局变量
@@ -1638,13 +1535,11 @@ console.log(fn)
       console.log(a);//123
   ```
 
-
-
 ### 局部作用域
 
 - 局部作用域内的变量只能在函数内部使用，所以也叫函数作用域；
 
-- 变量在函数内声明，即为局部变量，拥有局部作用域。 
+- 变量在函数内声明，即为局部变量，拥有局部作用域。
 
   ```javascript
    function fn() {
@@ -1655,31 +1550,25 @@ console.log(fn)
       console.log(b);//b is not defined
   ```
 
-
-注：可以直接给一个未声明的变量赋值(全局变量)，但不能直接使用未声明的变量！因为局部变量只作用于函数内，所以不同的函数可以使用相同名称的变量。当全局与局部有同名变量的时候，访问该变量将遵循 "就近原则"。 
+注：可以直接给一个未声明的变量赋值(全局变量)，但不能直接使用未声明的变量！因为局部变量只作用于函数内，所以不同的函数可以使用相同名称的变量。当全局与局部有同名变量的时候，访问该变量将遵循 "就近原则"。
 
 [![62rNy4.png](https://s3.ax1x.com/2021/03/18/62rNy4.png)](https://imgtu.com/i/62rNy4)
 
-
-## 变量的生命周期 
+## 变量的生命周期
 
 - 全局变量在页面打开时创建，在页面关闭后销毁。
--  局部变量在函数开始执行时创建，函数执行完后局部变量会自动销毁。 
-
-
+-  局部变量在函数开始执行时创建，函数执行完后局部变量会自动销毁。
 
 ## 变量使用规则（重点）
 
 - 有了作用域以后，变量就有了使用范围，也就有了使用规则
 - 变量使用规则分为两种，**访问规则** 和 **赋值规则**
 
-
-
 ### 访问规则
 
 - 当我想获取一个变量的值的时候，我们管这个行为叫做 **访问**
 
-- 获取变量的规则： 
+- 获取变量的规则：
 
   - 首先，在自己的作用域内部查找，如果有，就直接拿来使用
   - 如果没有，就去上一级作用域查找，如果有，就拿来使用
@@ -1688,22 +1577,22 @@ console.log(fn)
 
   ```javascript
   var num = 100
-  
+
   function fn() {
     var num2 = 200
-    
+
     function fun() {
       var num3 = 300
-      
+
       console.log(num3) // 自己作用域内有，拿过来用
       console.log(num2) // 自己作用域内没有，就去上一级，就是 fn 的作用域里面找，发现有，拿过来用
       console.log(num) // 自己这没有，去上一级 fn 那里也没有，再上一级到全局作用域，发现有，直接用
       console.log(a) // 自己没有，一级一级找上去到全局都没有，就会报错
     }
-    
+
     fun()
   }
-  
+
   fn()
   ```
 
@@ -1716,11 +1605,9 @@ console.log(fn)
     var num = 100
   }
   fn()
-  
+
   console.log(num) // 发现自己作用域没有，自己就是全局作用域，没有再上一级了，直接报错
   ```
-
-  
 
 ### 赋值规则
 
@@ -1738,7 +1625,7 @@ console.log(fn)
     num = 100
   }
   fn()
-  
+
   // fn 调用以后，要给 num 赋值
   // 查看自己的作用域内部没有 num 变量
   // 就会向上一级查找
@@ -1748,8 +1635,7 @@ console.log(fn)
   console.log(num) // 100
   ```
 
-
-## 自执行函数 
+## 自执行函数
 
 ```
 要执行一个函数，我们必须要有方法定义函数、引用函数。
@@ -1797,8 +1683,6 @@ console.log(fn)
 }();
 ```
 
-
-
 ## 递归函数
 
 - 什么是递归函数
@@ -1809,7 +1693,7 @@ console.log(fn)
 
 - 一般来说，递归需要有边界条件、递归前进段和递归返回段。
 
-- 当边界条件不满足时，递归前进；当边界条件满足时，递归返回。 
+- 当边界条件不满足时，递归前进；当边界条件满足时，递归返回。
 
   ```javascript
   // 下面这个代码就是一个最简单的递归函数
@@ -1824,8 +1708,6 @@ console.log(fn)
 
 - 需要有初始化，自增，执行代码，条件判断的，不然就是一个没有尽头的递归函数，我们叫做 **死递归**
 
-
-
 ### 简单实现一个递归
 
 - 我们先在用递归函数简单实现一个效果
@@ -1834,7 +1716,7 @@ console.log(fn)
 
   - 先算 1 + 2 得 3
   - 再算 3 + 3 得 6
-  - 再算 6 + 4 得 10 
+  - 再算 6 + 4 得 10
   - 再算 10 + 5 得 15
   - 结束
 
@@ -1848,7 +1730,7 @@ console.log(fn)
       return 5
     }
   }
-  
+
   add(1)
   ```
 
@@ -1868,7 +1750,7 @@ console.log(fn)
   add(1)
   ```
 
-- 老王有四个子女，老四比老三小2岁，老三比老二小2岁，老二比老大小2岁，老大现在16岁，问老四几岁？    
+- 老王有四个子女，老四比老三小2岁，老三比老二小2岁，老二比老大小2岁，老大现在16岁，问老四几岁？  
 
 ```
  function countAge(who) {
@@ -1883,37 +1765,35 @@ console.log(fn)
 
 [![62rFot.png](https://s3.ax1x.com/2021/03/18/62rFot.png)](https://imgtu.com/i/62rFot)
 
-注：递归函数在运行的时候，每调用一次函数就会在内存中开辟一块空间，内存消耗较大，注意防止栈溢出。 
+注：递归函数在运行的时候，每调用一次函数就会在内存中开辟一块空间，内存消耗较大，注意防止栈溢出。
 
-递归算法一般用于解决三类问题：    
+递归算法一般用于解决三类问题：  
 
-​	1.数据的定义是按递归定义的;   
+​	1.数据的定义是按递归定义的; 
 
-​	2.问题解法按递归算法实现;    
+​	2.问题解法按递归算法实现;  
 
-​	3.数据的结构形式是按递归定义的。 
+​	3.数据的结构形式是按递归定义的。
 
 ## 构造函数
 
 构造函数：用于创建特定类型的对象。
 
- JS内部构造函数：Object、Number、String、Array、Function、Boolean等等... 
+ JS内部构造函数：Object、Number、String、Array、Function、Boolean等等...
 
-当任意一个普通函数用于创建一类对象，并通过new操作符来调用时它就可以作为构造函数。 
+当任意一个普通函数用于创建一类对象，并通过new操作符来调用时它就可以作为构造函数。
 
-构造函数一般首字母大写。 
-
-
+构造函数一般首字母大写。
 
 ---
 
-# 对象
+## 对象
 
 - 对象是一个复杂数据类型
 - 对象是一组无序的键值对，是带有属性和方法的集合。
 -  通俗讲，对象就是无序的数据集合。
--  属性是与对象相关的值，方法是能够在对象上执行的动作。 
-- 对象的作用：用于在单个变量中存储多个值。 
+-  属性是与对象相关的值，方法是能够在对象上执行的动作。
+- 对象的作用：用于在单个变量中存储多个值。
 
 ## 创建一个对象
 
@@ -1951,10 +1831,10 @@ console.log(fn)
   访问对象成员：
       1. 对象.属性   对象.方法()
       2. 对象[变量或字符串]
-  
+
   删除属性：
       delete obj.attr;
-  
+
   遍历对象：{}
       for / in 循环
       for (var key in obj){
@@ -1974,11 +1854,9 @@ console.log(fn)
   Object()构造函数可以接收参数，通过这个参数可以把对象实例的创建过程委托给另一个内置构造函数（Number()、String()等），并返回另一个对象实例。
   使用自定义构造函数创建对象，可以通过传参添加属性和方法，当需要定义的同类对象较多时，节省了定义对象的代码量，并且使对象属性和方法的结构更加清晰
 
-
 ---
-  
 
-# 数据类型之间存储的区别
+## 数据类型之间存储的区别
 
   - 既然我们区分了基本数据类型和复杂数据类型
   - 那么他们之间就一定会存在一些区别
@@ -1987,15 +1865,11 @@ console.log(fn)
   - 栈： 主要存储基本数据类型的内容
   - 堆： 主要存储复杂数据类型的内容
 
-  
-
 ## 基本数据类型在内存中的存储情况
 
   - `var num = 100`，在内存中的存储情况
   - [![62rloq.png](https://s3.ax1x.com/2021/03/18/62rloq.png)](https://imgtu.com/i/62rloq)
   - 直接在 **栈空间** 内有存储一个数据
-
-  
 
 ## 复杂数据类型在内存中的存储情况
 
@@ -2019,8 +1893,6 @@ console.log(fn)
 
   - 这就是数据类型之间存储的区别
 
-  
-
 ## 数据类型之间的赋值
 
   - 基本数据类型之间的赋值
@@ -2028,9 +1900,9 @@ console.log(fn)
     ```javascript
     var num = 10
     var num2 = num
-    
+
     num2 = 200
-    
+
     console.log(num) // 10
     console.log(num2) // 200
     ```
@@ -2045,9 +1917,9 @@ console.log(fn)
       name: 'Jack'
     }
     var obj2 = obj
-    
+
     obj2.name = 'Rose'
-    
+
     console.log(obj.name) // Rose
     console.log(obj2.name) // Rose
     ```
@@ -2064,7 +1936,7 @@ console.log(fn)
     ```javascript
     var num = 1
     var str = '1'
-    
+
     console.log(num == str) // true
     ```
 
@@ -2073,7 +1945,7 @@ console.log(fn)
     ```javascript
     var obj = { name: 'Jack' }
     var obj2 = { name: 'Jack' }
-    
+
     console.log(obj == obj2) // false
     ```
 
@@ -2083,9 +1955,6 @@ console.log(fn)
     - 所以我们得到的就是 `false`
 
     [![62ridI.png](https://s3.ax1x.com/2021/03/18/62ridI.png)](https://imgtu.com/i/62ridI)
-
-
-
 
 ## 函数的参数
 
@@ -2100,7 +1969,7 @@ console.log(fn)
     n = 200
     console.log(n) // 200
   }
-  
+
   var num = 100
   fn(num)
   console.log(num) // 100
@@ -2116,7 +1985,7 @@ console.log(fn)
     o.name = 'Rose'
     console.log(o.name) // Rose
   }
-  
+
   var obj = {
     name: 'Jack'
   }
@@ -2130,26 +1999,20 @@ console.log(fn)
   - 在函数内部改变了空间内的数据
   - obj 看到的也是改变以后的内容
 
-
-
 ---
 
-# 数组
+## 数组
 
 - 什么是数组？
 - 数组，是有序的元素序列。 
 - 通俗讲，数组就是有序的数据集合。 
-- 数组属于对象类型。 
-- 数组的作用：用于在单个变量中存储多个值。 
-
-
+- 数组属于对象类型。
+- 数组的作用：用于在单个变量中存储多个值。
 
 ## 创建一个数组
 
 - 数组就是一个 `[]`
 - 在 `[]` 里面存储着各种各样的数据，按照顺序依次排好
-
-
 
 ### 字面量创建一个数组
 
@@ -2158,12 +2021,10 @@ console.log(fn)
   ```javascript
   // 创建一个空数组
   var arr1 = []
-  
+
   // 创建一个有内容的数组
   var arr2 = [1, 2, 3]
   ```
-
-
 
 ### 内置构造函数创建数组
 
@@ -2172,15 +2033,13 @@ console.log(fn)
   ```javascript
   // 创建一个空数组
   var arr1 = new Array()
-  
+
   // 创建一个长度为 10 的数组
   var arr2 = new Array(10)
-  
+
   // 创建一个有内容的数组
   var arr3 = new Array(1, 2, 3)
   ```
-
-  
 
 ### 数组的 length
 
@@ -2191,11 +2050,9 @@ console.log(fn)
   ```javascript
   // 创建一个数组
   var arr = [1, 2, 3]
-  
+
   console.log(arr.length) // 3
   ```
-
-
 
 ### 数组的索引
 
@@ -2216,12 +2073,10 @@ console.log(fn)
 
   ```javascript
   var arr = ['hello', 'world']
-  
+
   console.log(arr[0]) // hello
   console.log(arr[1]) // world
   ```
-
-  
 
 ## 数组的常用方法
 
@@ -2232,7 +2087,7 @@ console.log(fn)
   ```javascript
   // 创建一个数组
   var arr = [1, 2, 3]
-  
+
   // 我们想把数组变成只有 1 和 2
   arr = [1, 2]
   ```
@@ -2242,22 +2097,18 @@ console.log(fn)
   - 相当于把 arr 里面存储的地址给换了，也就是把存储空间换掉了，而不是在之前的空间里面修改
   - 所以我们就需要借助一些方法，在不改变存储空间的情况下，把存储空间里面的数据改变了
 
-
-
 ### 数组常用方法之 push
 
 - `push` 是用来在数组的末尾追加一个元素
 
   ```javascript
   var arr = [1, 2, 3]
-  
+
   // 使用 push 方法追加一个元素在末尾
   arr.push(4)
-  
+
   console.log(arr) // [1, 2, 3, 4]
   ```
-
-
 
 ### 数组常用方法之 pop
 
@@ -2265,14 +2116,12 @@ console.log(fn)
 
   ```javascript
   var arr = [1, 2, 3]
-  
+
   // 使用 pop 方法删除末尾的一个元素
   arr.pop()
-  
+
   console.log(arr) // [1, 2]
   ```
-
-
 
 ### 数组常用方法之 unshift
 
@@ -2280,14 +2129,12 @@ console.log(fn)
 
   ```javascript
   var arr = [1, 2, 3]
-  
+
   // 使用 unshift 方法想数组的最前面添加一个元素
   arr.unshift(4)
-  
+
   console.log(arr) // [4, 1, 2, 3]
   ```
-
-
 
 ### 数组常用方法之  shift
 
@@ -2295,14 +2142,12 @@ console.log(fn)
 
   ```javascript
   var arr = [1, 2, 3]
-  
+
   // 使用 shift 方法删除数组最前面的一个元素
   arr.shift()
-  
+
   console.log(arr) // [2, 3]
   ```
-
-
 
 ### 数组常用方法之 splice
 
@@ -2312,10 +2157,10 @@ console.log(fn)
 
   ```javascript
   var arr = [1, 2, 3, 4, 5]
-  
+
   // 使用 splice 方法截取数组
   arr.splice(1, 2)
-  
+
   console.log(arr) // [1, 4, 5]
   ```
 
@@ -2324,17 +2169,15 @@ console.log(fn)
 
   ```javascript
   var arr = [1, 2, 3, 4, 5]
-  
+
   // 使用 splice 方法截取数组
   arr.splice(1, 2, '我是新内容')
-  
+
   console.log(arr) // [1, '我是新内容', 4, 5]
   ```
 
   - `arr.splice(1, 2, '我是新内容')` 表示从索引 1 开始截取 2 个内容
   - 然后用第三个参数把截取完空出来的位置填充
-
-
 
 ### 数组常用方法之 reverse
 
@@ -2342,14 +2185,12 @@ console.log(fn)
 
   ```javascript
   var arr = [1, 2, 3]
-  
+
   // 使用 reverse 方法来反转数组
   arr.reverse()
-  
+
   console.log(arr) // [3, 2, 1]
   ```
-
-
 
 ### 数组常用方法之 sort
 
@@ -2357,17 +2198,16 @@ console.log(fn)
 
   ```javascript
   var arr = [2, 3, 1,11,7,22]
-  
+
   // 使用 sort 方法给数组排序
   //用法一
   arr.sort()
-  
+
   console.log(arr) // [1,11, 2,22,3,7]
-  
+
   ```
 
-注：以上方法都会改变原数组！ 
-
+注：以上方法都会改变原数组！
 
 ### 数组常用方法之 concat
 
@@ -2377,17 +2217,15 @@ console.log(fn)
 
   ```javascript
   var arr = [1, 2, 3]
-  
+
   // 使用 concat 方法拼接数组
   var newArr = arr.concat([4, 5, 6])
-  
+
   console.log(arr) // [1, 2, 3]
   console.log(newArr) // [1, 2, 3, 4, 5, 6]
   ```
 
   - 注意： **concat 方法不会改变原始数组**
-
-
 
 ### 数组常用方法之 join
 
@@ -2399,10 +2237,10 @@ console.log(fn)
 
   ```javascript
   var arr = [1, 2, 3]
-  
+
   // 使用 join 链接数组
   var str = arr.join('-')
-  
+
   console.log(arr) // [1, 2, 3]
   console.log(str) // 1-2-3
   ```
@@ -2417,10 +2255,10 @@ console.log(fn)
 
   ```javascript
   var arr = [1, 2, 3, 4, 5]
-  
+
   // 使用 indexOf 超找数组中的某一项
   var index = arr.indexOf(3)
-  
+
   console.log(index) // 2
   ```
 
@@ -2431,10 +2269,10 @@ console.log(fn)
 
   ```javascript
   var arr = [1, 2, 3, 4, 5]
-  
+
   // 使用 indexOf 超找数组中的某一项
   var index = arr.indexOf(10)
-  
+
   console.log(index) // -1
   ```
 
@@ -2442,16 +2280,16 @@ console.log(fn)
 
 ### 数组常用方法之 lastIndexOf
 
-- lastIndexOf 返回指定元素在数组中的最后一个的索引，不存在则返回 -1 
+- lastIndexOf 返回指定元素在数组中的最后一个的索引，不存在则返回 -1
 
 - 语法： lastIndexOf(你要找的数组中的项)`
 
   ```javascript
   var arr = [1, 2, 3, 4, 5]
-  
+
   // 使用 indexOf 超找数组中的某一项
   var index = arr.lastIndexOf(3)
-  
+
   console.log(index) // 2
   ```
 
@@ -2462,10 +2300,10 @@ console.log(fn)
 
   ```javascript
   var arr = [1, 2, 3, 4, 5]
-  
+
   // 使用 indexOf 超找数组中的某一项
   var index = arr.lastIndexOf(10)
-  
+
   console.log(index) // -1
   ```
 
@@ -2495,8 +2333,7 @@ console.log(fn)
   myBest 的结果是：Lemon,Apple
   ```
 
-
-注：以上方法不会改变原数组！ 
+注：以上方法不会改变原数组！
 
 ## for 和 for in 循环
 
@@ -2510,20 +2347,18 @@ console.log(fn)
 
   ```javascript
   var arr = [1, 2, 3, 4, 5]
-  
+
   // 使用 for 循环遍历数组
   for (var i = 0; i < arr.length; i++) {
     console.log(arr[i])
   }
-  
+
   // 会在控制台依次打印出 1， 2， 3， 4， 5
   ```
 
   - `i < arr.length` 因为 length 就是数组的长度，就是一个数字，所以我们可以直接用它来决定循环次数
   - `console.log(arr[i])` 因为随着循环，i 的值会从 0 开始依次增加
   - 所以我们实际上就相当于在打印 `arr[0]` / `arr[1]` / ...
-
-
 
 - 因为 **对象** 是没有索引的，所以我们没有办法使用 for 循环来遍历
 
@@ -2536,11 +2371,11 @@ console.log(fn)
     name: 'Jack',
     age: 18
   }
-  
+
   for (var key in obj) {
     console.log(key)
   }
-  
+
   // 会在控制台打印两次内容，分别是 name 和 age
   ```
 
@@ -2551,12 +2386,12 @@ console.log(fn)
 
 ### for...of：ES6新增
 
-- **for...of语句**在[可迭代对象](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/iterable)（包括[`Array`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Array)，[`Map`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Map)，[`Set`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set)，[`String`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/String)，[arguments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) 对象等等）上创建一个迭代循环，调用自定义迭代钩子，并为每个不同属性的值执行语句。 
+- **for...of语句**在[可迭代对象](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/iterable)（包括[`Array`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Array)，[`Map`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Map)，[`Set`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set)，[`String`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/String)，[arguments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) 对象等等）上创建一个迭代循环，调用自定义迭代钩子，并为每个不同属性的值执行语句。
 
 语法：
 
 ```
-for (variable of iterable) {  
+for (variable of iterable) {
 	statement
 }
 variable在每次迭代中，将不同属性的值分配给变量。iterable可枚举其枚举属性的对象。
@@ -2597,7 +2432,7 @@ for (var value of iterable) {
 
   ```javascript
   var arr = [1, 2, 3]
-  
+
   // 使用 forEach 遍历数组
   arr.forEach(function (item, index, arr) {
     // item 就是数组中的每一项元素
@@ -2610,15 +2445,13 @@ for (var value of iterable) {
   - forEach() 的时候传递的那个函数，会根据数组的长度执行
   - 数组的长度是多少，这个函数就会执行多少回
 
-
-
 ### map
 
 - 和 forEach 类似，只不过可以对数组中的每一项进行操作，返回一个新的数组
 
   ```javascript
   var arr = [1, 2, 3]
-  
+
   // 使用 map 遍历数组
   var newArr = arr.map(function (item, index, arr) {
     // item 就是数组中的每一项
@@ -2626,11 +2459,9 @@ for (var value of iterable) {
     // arr 就是原始数组
     return item + 10
   })
-  
+
   console.log(newArr) // [11, 12, 13]
   ```
-
-
 
 ### filter
 
@@ -2640,7 +2471,7 @@ for (var value of iterable) {
 
   ```javascript
   var arr = [1, 2, 3]
-  
+
   // 使用 filter 过滤数组
   var newArr = arr.filter(function (item, index, arr) {
     // item 就是数组中的每一项
@@ -2648,7 +2479,7 @@ for (var value of iterable) {
     // arr 就是原始数组
     return item > 1
   })
-  
+
   console.log(newArr) // [2, 3]
   ```
 
@@ -2656,15 +2487,14 @@ for (var value of iterable) {
 
   - 返回的新数组就会是原始数组中所有 `> 1` 的项
 
+### some
 
-### some 
-
-- 用于检测数组中的元素是否满足指定条件 
+- 用于检测数组中的元素是否满足指定条件
 - 会依次执行数组的每个元素：
   - 如果有一个元素满足条件，则表达式返回*true* , 剩余的元素不会再执行检测。
   - 如果没有满足条件的元素，则返回false。
 
-注：some() 不会对空数组进行检测。 
+注：some() 不会对空数组进行检测。
 
 ​	 some() 不会改变原始数组。
 
@@ -2677,14 +2507,14 @@ for (var value of iterable) {
     console.log(newArr) // true
 ```
 
-###  every
+### every
 
-- 用于检测数组所有元素是否都符合指定条件（通过函数提供） 
-- 使用指定函数检测数组中的所有元素： 
-  - 如果数组中检测到有一个元素不满足，则整个表达式返回 *false* ，且剩余的元素不会再进行检测。 
-  - 如果所有元素都满足条件，则返回 true。 
+- 用于检测数组所有元素是否都符合指定条件（通过函数提供）
+- 使用指定函数检测数组中的所有元素：
+  - 如果数组中检测到有一个元素不满足，则整个表达式返回 *false* ，且剩余的元素不会再进行检测。
+  - 如果所有元素都满足条件，则返回 true。
 
-注：every() 不会对空数组进行检测。 
+注：every() 不会对空数组进行检测。
 
 ​	 every() 不会改变原始数组。
 
@@ -2697,14 +2527,13 @@ for (var value of iterable) {
     console.log(newArr) // false
 ```
 
-###  reduceRight 和 reduce
+### reduceRight 和 reduce
 
--  reduce() 方法接收一个函数callback fn作为累加器(accumulator) 数组中每个值(从左到右)开始合并,最终合成一个值 
+-  reduce() 方法接收一个函数callback fn作为累加器(accumulator) 数组中每个值(从左到右)开始合并,最终合成一个值
 
-- reduceRight() 方法的功能和 reduce() 功能是一样的，不同的是 reduceRight() 从数组的末尾向前将数组中的数组项做累加。 
+- reduceRight() 方法的功能和 reduce() 功能是一样的，不同的是 reduceRight() 从数组的末尾向前将数组中的数组项做累加。
 
-- **注意:** reduce() 对于空数组是不会执行回调函数的。 
-
+- **注意:** reduce() 对于空数组是不会执行回调函数的。
 
   ```javascript
   //参数：
@@ -2714,30 +2543,28 @@ for (var value of iterable) {
   //arr：循环的数组
   //返回值：
   //函数累计处理的结果
-  
+
   //示例：求数组的和。
   var a = [1,2,3,4,5,6,7,8,9,10]
   var str = a.reduce(function(prev,cur,index,arr){
   return prev + cur ;
   })
   str // 55;
-  
+
   //示例：求阶乘
   var a = [1,2,3,4,5,6,7,8,9,10]
   var str = a.reduce(function(prev,cur,index,arr){
   return prev * cur ;
   })
-  
+
   str //3628800
   ```
-
-  
 
 ## 数组的排序
 
 - 排序，就是把一个乱序的数组，通过我们的处理，让他变成一个有序的数组
 
-### 函数排序 
+### 函数排序
 
 ``` javascript
 sort( [fn] ) 排序，返回数组
@@ -2752,8 +2579,6 @@ arr.sort(function (a,b) { //降序，只能对数值排序
     return b-a;
 });
 ```
-
-
 
 ### 冒泡排序
 - 先遍历数组，让挨着的两个进行比较，如果前一个比后一个大，那么就把两个换个位置
@@ -2839,7 +2664,6 @@ arr.sort(function (a,b) { //降序，只能对数值排序
   7. 口诀：
       - 双层for循环，一层减一层，里层减外层，变量相交换。
 
-
 ### 选择排序
 - 先假定数组中的第 0 个就是最小的数字的索引
 - 然后遍历数组，只要有一个数字比我小，那么就替换之前记录的索引
@@ -2867,7 +2691,7 @@ arr.sort(function (a,b) { //降序，只能对数值排序
          minIndex = i
        }
      }
-     
+
      // 遍历结束后找到最小的索引
      // 让第 minIndex 个和第 0 个交换
      var tmp = arr[minIndex]
@@ -2881,7 +2705,7 @@ arr.sort(function (a,b) { //降序，只能对数值排序
        // 因为第一遍的时候假定第 0 个，第二遍的时候假定第 1 个
        // 所以我们要假定第 j 个就行
        var minIndex = j
-       
+
        // 因为之前已经把最小的放在最前面了，后面的循环就不需要判断前面的了
        // 直接从 j + 1 开始
        for (var i = j + 1; i < arr.length; i++) {
@@ -2889,7 +2713,7 @@ arr.sort(function (a,b) { //降序，只能对数值排序
            minIndex = i
          }
        }
-     
+
        // 遍历结束后找到最小的索引
        // 第一堂的时候是和第 0 个交换，第二趟的时候是和第 1 个交换
        // 我们直接和第 j 个交换就行
@@ -2905,13 +2729,13 @@ arr.sort(function (a,b) { //降序，只能对数值排序
        ```javascript
        for (var j = 0; j < arr.length - 1; j++) {
          var minIndex = j
-         
+
          for (var i = j + 1; i < arr.length; i++) {
            if (arr[i] < arr[minIndex]) {
              minIndex = i
            }
          }
-       
+
          var tmp = arr[minIndex]
          arr[minIndex] = arr[j]
          arr[j] = tmp
@@ -2925,26 +2749,26 @@ arr.sort(function (a,b) { //降序，只能对数值排序
        ```javascript
        for (var j = 0; j < arr.length - 1; j++) {
          var minIndex = j
-         
+
          for (var i = j + 1; i < arr.length; i++) {
            if (arr[i] < arr[minIndex]) {
              minIndex = i
            }
          }
-       
+
          if (minIndex !== j) {
            var tmp = arr[minIndex]
            arr[minIndex] = arr[j]
-           arr[j] = tmp   
+           arr[j] = tmp
          }
        }
        ```
 
   6. 至此，选择排序完成
 
-### 快速排序 
+### 快速排序
 
-- 找中点，分左右，递归运算...... 
+- 找中点，分左右，递归运算......
 
 ```
 function quickSort(arr){
@@ -2971,9 +2795,7 @@ function quickSort(arr){
 }
 ```
 
-
-
-# ES5/String
+## ES5/String
 ## this 关键字
 - this 只能出现在作用域里面
 - this一般都是出现在函数内部
@@ -3061,9 +2883,8 @@ box.onclick=function(){
 box.onclick=fn
 box.onclick=fun
 box.onclick=obj.fn
-</script
+</script>
 ```
-
 
 ``` javascript
 //自执行函数里的 this 也是window对象
@@ -3074,12 +2895,12 @@ box.onclick=obj.fn
 
 ## 严格模式（了解）
 
-- 除了正常运行模式，ECMAscript5添加了第二种运行模式："严格模式"（strict mode）。顾名思义，这种模式使得Javascript在更严格的条件下运行。 
-- 设立"严格模式"的目的，主要有以下几个：   
-  1. 消除JavaScript语法的一些不合理、不严谨之处，减少一些怪异行为;    
-  1. 消除代码运行的一些不安全之处，保证代码运行的安全；    
-  1. 提高编译器效率，增加运行速度；    
-  1. 为未来新版本的JavaScript做好铺垫。 进入"严格模式"的标志："use strict"; 
+- 除了正常运行模式，ECMAscript5添加了第二种运行模式："严格模式"（strict mode）。顾名思义，这种模式使得Javascript在更严格的条件下运行。
+- 设立"严格模式"的目的，主要有以下几个： 
+  1. 消除JavaScript语法的一些不合理、不严谨之处，减少一些怪异行为;  
+  1. 消除代码运行的一些不安全之处，保证代码运行的安全；  
+  1. 提高编译器效率，增加运行速度；  
+  1. 为未来新版本的JavaScript做好铺垫。 进入"严格模式"的标志："use strict";
 
 ### 开启严格模式
 
@@ -3092,15 +2913,13 @@ box.onclick=obj.fn
   </script>
   ```
 
-
-
 ### 严格模式的规则
 
 1. 声明变量必须有 `var` 关键字
 
    ```javascript
    'use strict'
-   
+
    var num = 100
    num2 = 200 // 这个就会报错
    ```
@@ -3112,7 +2931,7 @@ box.onclick=obj.fn
 
    ```javascript
    'use strict'
-   
+
    function fn(p1, p1) {} // 直接就会报错
    ```
 
@@ -3123,7 +2942,7 @@ box.onclick=obj.fn
 
    ``` javascript
    'use strtic'
-   
+
    function fn() {
      console.log(this) // undefined
    }
@@ -3132,7 +2951,7 @@ box.onclick=obj.fn
 
    - 本身，全局声明式函数在调用的时候，函数内部的 this 是指向 window 的
    - 在严格模式下，是没有 this 的
-#### ES5严格模式的限制规范：
+### ES5严格模式的限制规范：
    1. 变量声明必须使用var，否则报错
    2. 对不合理的操作显示报错，不再做静默失败处理
    3. 禁止对象属性重名（IE）
@@ -3168,12 +2987,10 @@ box.onclick=obj.fn
    12. 新增一些保留字，不能使用他们作为标识符命名
         implements, interface, let, package, private, protected, public, static, yield
 
-
-
 ## 创建字符串（了解）
 
 - 我们创建字符串也分为两种方法 **字面量** 和 **构造函数**
-- 字面量： 
+- 字面量：
   ```javascript
   var str = 'hello'
   ```
@@ -3207,17 +3024,16 @@ Unicode 编码开头的 128 个和 ASCII 编码一样。
 - 我们操作字符串，也有一堆的方法来帮助我们操作
 - 字符串和数组有一个一样的地方，也是按照索引来排列的
 
-
 ### charAt
 
 - `charAt(索引)`  是找到字符串中指定索引位置的内容返回
 
   ``` javascript
   var str = 'Jack'
-  
+
   // 使用 charAt 找到字符串中的某一个内容
   var index = str.charAt(2)
-  
+
   console.log(index) // c
   ```
 
@@ -3228,17 +3044,15 @@ Unicode 编码开头的 128 个和 ASCII 编码一样。
 
   ``` javascript
   var str = 'Jack'
-  
+
   // 使用 charAt 找到字符串中的某一个内容
   var index = str.charAt(10)
-  
+
   console.log(index) // ''
   ```
 
   - 这个字符串根本没有索引 10 的位置
   - 所以就会返回一个空字符串 `''`
-
-
 
 ### charCodeAt
 
@@ -3246,16 +3060,14 @@ Unicode 编码开头的 128 个和 ASCII 编码一样。
 
   ``` javascript
   var str = 'Jack'
-  
+
   // 使用 charAt 找到字符串中的某一个内容
   var index = str.charCodeAt(0)
-  
+
   console.log(index) // 74
   ```
 
   - 因为 `J` 在 unicode 对照表里面存储的是 74，所以就会返回 74
-
-
 
 ### indexOf
 
@@ -3263,28 +3075,28 @@ Unicode 编码开头的 128 个和 ASCII 编码一样。
 
   ``` javascript
   var str = 'Jack'
-  
+
   // 使用 indexOf 找到对应的索引
   var index = str.indexOf('J')
-  
+
   console.log(index) // 0
   ```
 
   - 因为字符 `J` 在字符串 `Jack` 中的索引位置是 0
   - 所以会返回 0
 
-### lastIndexOf() 
+### lastIndexOf()
 
-- lastIndexOf 返回指定文本在字符串中*最后*一次出现的索引 
+- lastIndexOf 返回指定文本在字符串中*最后*一次出现的索引
 
   ```
   var str = "The full name of China is the People's Republic of China.";
   var pos = str.lastIndexOf("China");
   ```
 
-  注：如果未找到文本， indexOf() 和 lastIndexOf() 均返回 -1 
+  注：如果未找到文本， indexOf() 和 lastIndexOf() 均返回 -1
 
-### slice() 
+### slice()
 
 - slice() 提取字符串的某个部分并在新字符串中返回被提取的部分。
 
@@ -3292,7 +3104,7 @@ Unicode 编码开头的 128 个和 ASCII 编码一样。
 
   ```
   var str = "Apple, Banana, Mango";
-  var res = str.slice(7,13); 
+  var res = str.slice(7,13);
   res 的结果是：Banana
   ```
 
@@ -3305,8 +3117,6 @@ Unicode 编码开头的 128 个和 ASCII 编码一样。
   var res = str.slice(-13,-7);
   res 的结果是：Banana
   ```
-
-  
 
 ### substring
 
@@ -3345,7 +3155,7 @@ substr() 类似于 slice()。
 不同之处在于第二个参数规定被提取部分的*长度*。
 ### replace
 
-- 用另一个值替换在字符串中指定的值 
+- 用另一个值替换在字符串中指定的值
 
 ``` javascript
 str = "Please visit Microsoft and Microsoft!";
@@ -3353,8 +3163,8 @@ var n = str.replace("Microsoft", "W3School");
 console.log(n)  //Please visit W3School and Microsoft!
 ```
 
-默认地，replace() *只替换首个匹配* 
-- replace() 对大小写敏感 
+默认地，replace() *只替换首个匹配*
+- replace() 对大小写敏感
 
 ``` javascript
 str = "Please visit Microsoft!";
@@ -3362,7 +3172,7 @@ var n = str.replace("MICROSOFT", "W3School");
 console.log(n)  //Please visit Microsoft!
 ```
 
-如需执行大小写不敏感的替换，请使用正则表达式 /i（大小写不敏感） 
+如需执行大小写不敏感的替换，请使用正则表达式 /i（大小写不敏感）
 
 ``` javascript
 str = "Please visit Microsoft!";
@@ -3370,7 +3180,7 @@ var n = str.replace(/MICROSOFT/i, "W3School");
 console.log(n)  //Please visit W3School!
 ```
 
-如需替换所有匹配，请使用正则表达式的 g 标志 
+如需替换所有匹配，请使用正则表达式的 g 标志
 
 ``` javascript
 str = "Please visit Microsoft and Microsoft!";
@@ -3378,9 +3188,9 @@ var n = str.replace(/Microsoft/g, "W3School");
 console.log(n)  //Please visit W3School and W3School!
 ```
 
-### concat 
+### concat
 
-- 连接两个或多个字符串 
+- 连接两个或多个字符串
 
 ``` javascript
 var text1 = "Hello";
@@ -3391,15 +3201,15 @@ console.log(text3) //Hello World
 
 ### trim
 
-- 删除字符串两端的空白符 
+- 删除字符串两端的空白符
 
 ``` javascript
 var str = "       Hello World!        ";
 alert(str.trim());
 ```
 
-### split 
-- 字符串分割，将字符串转换为数组 
+### split
+- 字符串分割，将字符串转换为数组
   ``` javascript
   var txt = "a,b,c,d,e";   // 字符串
   txt.split(",");          // 用逗号分隔
@@ -3415,8 +3225,6 @@ var txt = "Hello";       // 字符串
 txt.split("");           // 分隔为字符
 ```
 
-
-
 ### toLowerCase 和 toUpperCase
 
 - 这两个方法分别使用用来给字符串转成 小写字母 和 大写字母 的
@@ -3431,23 +3239,14 @@ txt.split("");           // 分隔为字符
   console.log(lower) // hello
   ```
 
-  
-
-
-
-
-# Math 和 Date
+## Math 和 Date
 
 - Math 是 js 的一个内置对象，提供了一堆的方法帮助我们操作 **数字**
 - Date 是 js 的一个内置对象，提供了一堆的方法帮助我们操作 **时间**
 
-
-
 ## Math
 
 - 没有什么多余的东西，就是一堆的方法来操作数字
-
-
 
 ### random
 
@@ -3462,8 +3261,6 @@ txt.split("");           // 分隔为字符
   console.log(num) // 得到一个随机数
   ```
 
-
-
 ### round
 
 - `Math.round()` 是将一个小数 **四舍五入** 变成一个整数
@@ -3471,12 +3268,10 @@ txt.split("");           // 分隔为字符
   ```javascript
   var num = 10.1
   console.log(Math.round(num)) // 10
-  
+
   var num2 = 10.6
   console.log(Math.round(num2)) // 11
   ```
-
-  
 
 ### abs
 
@@ -3487,8 +3282,6 @@ txt.split("");           // 分隔为字符
   console.log(math.abs(num)) // 10
   ```
 
-
-
 ### ceil
 
 - `Math.ceil()` 是将一个小数 **向上取整** 得到的整数
@@ -3496,12 +3289,10 @@ txt.split("");           // 分隔为字符
   ```javascript
   var num = 10.1
   console.log(Math.ceil(num)) // 11
-  
+
   var num2 = 10.9
   console.log(Math.ceil(num2)) // 11
   ```
-
-  
 
 ### floor
 
@@ -3510,12 +3301,10 @@ txt.split("");           // 分隔为字符
   ```javascript
   var num = 10.1
   console.log(Math.floor(num)) // 10
-  
+
   var num2 = 10.9
   console.log(Math.floor(num2)) // 10
   ```
-
-  
 
 ### max
 
@@ -3525,8 +3314,6 @@ txt.split("");           // 分隔为字符
   console.log(Math.max(1, 2, 3, 4, 5)) // 5
   ```
 
-
-
 ### min
 
 - `Math.min()` 得到的是你传入的几个数字之中最小的那个数字
@@ -3534,8 +3321,6 @@ txt.split("");           // 分隔为字符
   ```javascript
   console.log(Math.min(1, 2, 3, 4, 5)) // 1
   ```
-
-
 
 ### PI
 
@@ -3548,19 +3333,19 @@ txt.split("");           // 分隔为字符
   - 因为计算机的计算精度问题，只能得到小数点后 15 位
   - **使用 Math.PI 的时候，是不需要加 () 的**
 
-### pow 
+### pow
 
-- `Math.pow(x,y)` 返回 x 的 y 次幂的值 
+- `Math.pow(x,y)` 返回 x 的 y 次幂的值
 
   ```javascript
   console.log(Math.pow(2, 3)) // 8
   ```
 
-### sqrt 
+### sqrt
 
 - `Math.sqrt(x)` 返回一个数的平方根 。
 
-- 注： x必须是大于等于 0 的数 
+- 注： x必须是大于等于 0 的数
 
   ```javascript
   console.log(Math.sqrt(9)) // 3
@@ -3569,10 +3354,10 @@ txt.split("");           // 分隔为字符
 ## Date
 
 - js 提供的内置构造函数。
-- Date 对象用于处理日期与时间。 
-- Date 对象自动使用当前系统的日期和时间作为其初始值。 
+- Date 对象用于处理日期与时间。
+- Date 对象自动使用当前系统的日期和时间作为其初始值。
 
-注：UTC国际标准时间又称世界时，以零经度线上的时间作为国际上统一采用的标准时间。因为零经度线通过英国格林尼治天文台，所以国际标准时间也称为格林尼治时间GMT。国际标准时间的起点：1970/01/01 00:00:00 北京时区的时间起点：1970/01/01 08:00:00所以，北京时间 = 国际标准时间 + 8小时 
+注：UTC国际标准时间又称世界时，以零经度线上的时间作为国际上统一采用的标准时间。因为零经度线通过英国格林尼治天文台，所以国际标准时间也称为格林尼治时间GMT。国际标准时间的起点：1970/01/01 00:00:00 北京时区的时间起点：1970/01/01 08:00:00所以，北京时间 = 国际标准时间 + 8小时
 
 ### new Date()
 
@@ -3581,7 +3366,7 @@ txt.split("");           // 分隔为字符
   ```javascript
   var time = new Date()
   console.log(time) // 当前时间 Fri Mar 01 2019 13:11:23 GMT+0800 (中国标准时间)
-  
+
   其下面几种格式都可以：
   　　// new Date("month dd,yyyy hh:mm:ss");
   　　// new Date("month dd,yyyy");
@@ -3609,57 +3394,53 @@ txt.split("");           // 分隔为字符
   2. 传递三个数字，前两个不变，第三个表示该月份的第几天，从 1 到 31
 
      ```javascript
-     var time = new Date(2019, 00, 05) 
+     var time = new Date(2019, 00, 05)
      console.log(time) // Sat Jan 05 2019 00:00:00 GMT+0800 (中国标准时间)
      ```
 
   3. 传递四个数字，前三个不变，第四个表示当天的几点，从 0 到 23
 
      ```javascript
-     var time = new Date(2019, 00, 05, 22) 
+     var time = new Date(2019, 00, 05, 22)
      console.log(time) // Sat Jan 05 2019 22:00:00 GMT+0800 (中国标准时间)
      ```
 
   4. 传递五个数字，前四个不变，第五个表示的是该小时的多少分钟，从 0 到 59
 
      ```javascript
-     var time = new Date(2019, 00, 05, 22, 33) 
+     var time = new Date(2019, 00, 05, 22, 33)
      console.log(time) // Sat Jan 05 2019 22:33:00 GMT+0800 (中国标准时间)
      ```
 
   5. 传递六个数字，前五个不变，第六个表示该分钟的多少秒，从 0 到 59
 
      ```javascript
-     var time = new Date(2019, 00, 05, 22, 33, 55) 
+     var time = new Date(2019, 00, 05, 22, 33, 55)
      console.log(time) // Sat Jan 05 2019 22:33:55 GMT+0800 (中国标准时间)
      ```
 
   6. 传入字符串的形式
 
      ```javascript
-     console.log(new Date('2019')) 
+     console.log(new Date('2019'))
      // Tue Jan 01 2019 08:00:00 GMT+0800 (中国标准时间)
-     console.log(new Date('2019-02')) 
+     console.log(new Date('2019-02'))
      // Fri Feb 01 2019 08:00:00 GMT+0800 (中国标准时间)
-     console.log(new Date('2019-02-03')) 
+     console.log(new Date('2019-02-03'))
      // Sun Feb 03 2019 08:00:00 GMT+0800 (中国标准时间)
-     console.log(new Date('2019-02-03 13:')) 
+     console.log(new Date('2019-02-03 13:'))
      // Sun Feb 03 2019 13:00:00 GMT+0800 (中国标准时间)
-     console.log(new Date('2019-02-03 13:13:')) 
+     console.log(new Date('2019-02-03 13:13:'))
      // Sun Feb 03 2019 13:13:00 GMT+0800 (中国标准时间)
-     console.log(new Date('2019-02-03 13:13:13')) 
+     console.log(new Date('2019-02-03 13:13:13'))
      // Sun Feb 03 2019 13:13:13 GMT+0800 (中国标准时间)
      ```
-
-
 
 ## 将日期字符串格式化成指定内容
 
 - 比如我们得到的时间字符串是 `Sun Feb 03 2019 13:13:13 GMT+0800 (中国标准时间)`
 - 我指向得到这个日期中是那一年，我们就要靠截取字符串的形式得到
 - 但是现在 js 为我们提供了一系列的方法来得到里面的指定内容
-
-
 
 ### getFullYear
 
@@ -3670,22 +3451,18 @@ txt.split("");           // 分隔为字符
   console.log(time.getFullYear()) // 2019
   ```
 
-
-
 ### getMonth
 
-- `getMonth()` 方法是得到指定字符串中的哪一个月份 
+- `getMonth()` 方法是得到指定字符串中的哪一个月份
 
   ```javascript
   var time = new Date(2019, 03, 03, 08, 00, 22)
   console.log(time.getMonth()) // 3
   ```
-  
+
   - 这里要有一个注意的地方
   - 月份是从 0 开始数的
   - 0 表示 1月，1 表示 2月，依此类推
-
-
 
 ### getDate
 
@@ -3696,8 +3473,6 @@ txt.split("");           // 分隔为字符
   console.log(time.getDate()) // 3
   ```
 
-
-
 ### getHours
 
 - `getHours()` 方法是得到指定字符串中的哪小时
@@ -3706,8 +3481,6 @@ txt.split("");           // 分隔为字符
   var time = new Date(2019, 03, 03, 08, 00, 22)
   console.log(time.getHours()) // 8
   ```
-
-
 
 ### getMinutes
 
@@ -3718,8 +3491,6 @@ txt.split("");           // 分隔为字符
   console.log(time.getMinutes()) // 0
   ```
 
-
-
 ### getSeconds
 
 - `getSeconds()` 方法是得到指定字符串中的哪秒钟
@@ -3728,8 +3499,6 @@ txt.split("");           // 分隔为字符
   var time = new Date(2019, 03, 03, 08, 00, 22)
   console.log(time.getSeconds()) // 22
   ```
-
-  
 
 ### getDay
 
@@ -3740,8 +3509,6 @@ txt.split("");           // 分隔为字符
   console.log(time.getDay()) // 1
   ```
 
-
-
 ### getTime
 
 - `getTime()` 方法是得到执行时间到 `格林威治时间` 的毫秒数
@@ -3751,9 +3518,7 @@ txt.split("");           // 分隔为字符
   console.log(time.getTime()) // 1554681622000
   ```
 
-
-
-### toLocaleString 
+### toLocaleString
 
 - toLocaleString()   返回一个'年月日 时分秒'的本地格式字符串
 
@@ -3761,15 +3526,13 @@ txt.split("");           // 分隔为字符
   d.toLocaleString();
   ```
 
-### toLocaleDateString 
+### toLocaleDateString
 
-- toLocaleDateString ()   返回一个'年月日'的本地格式字符串 
+- toLocaleDateString ()   返回一个'年月日'的本地格式字符串
 
   ```
   d.toLocaleDateString();
   ```
-
-  
 
 ### setFullYear
 
@@ -3783,7 +3546,7 @@ txt.split("");           // 分隔为字符
   var d = new Date();
   d.setFullYear(2020);
   console.log(d) //Thu Aug 27 2020 23:52:25 GMT+0800 (中国标准时间)
-  
+
   var d=new Date();
   d.setFullYear(2020,10,3);
   console.log(d) //Tue Nov 03 2020 23:52:25 GMT+0800 (中国标准时间)
@@ -3803,7 +3566,7 @@ txt.split("");           // 分隔为字符
   var d = new Date();
   d.setMonth(4);
   console.log(d) //Mon May 27 2019 23:56:08 GMT+0800 (中国标准时间)
-  
+
   var d = new Date();
   d.setMonth(4,20);
   console.log(d) //Mon May 20 2019 23:56:08 GMT+0800 (中国标准时间)
@@ -3811,7 +3574,7 @@ txt.split("");           // 分隔为字符
 
 ### setDate
 
-- setDate() 方法用于设置一个月的某一天。 
+- setDate() 方法用于设置一个月的某一天。
 
   ```
   var d = new Date();
@@ -3831,7 +3594,7 @@ txt.split("");           // 分隔为字符
   var d = new Date();
   d.setHours(15);
   console.log(d) //Tue Aug 27 2019 15:58:53 GMT+0800 (中国标准时间)
-  
+
   var d = new Date();
   d.setHours(15,35,1);
   console.log(d) //Tue Aug 27 2019 15:35:01 GMT+0800 (中国标准时间)
@@ -3849,7 +3612,7 @@ txt.split("");           // 分隔为字符
   var d = new Date();
   d.setMinutes(17);
   console.log(d) //Wed Aug 28 2019 00:17:28 GMT+0800 (中国标准时间)
-  
+
   var d = new Date();
   d.setMinutes(d.getMinutes()-90);
   console.log(d) //Tue Aug 27 2019 22:30:28 GMT+0800 (中国标准时间)
@@ -3857,7 +3620,7 @@ txt.split("");           // 分隔为字符
 
 ### setSeconds
 
--  setSeconds() 方法用于设置日期对象的秒字段。 
+-  setSeconds() 方法用于设置日期对象的秒字段。
 
   语法：*Date*.setSeconds(*sec*,*millisec*)
 
@@ -3865,7 +3628,7 @@ txt.split("");           // 分隔为字符
   var d = new Date();
   d.setSeconds(35);
   console.log(d) //Wed Aug 28 2019 00:02:35 GMT+0800 (中国标准时间)
-  
+
   var d = new Date();
   d.setSeconds(35,825);
   var n=d.getSeconds() + ":" + d.getMilliseconds();
@@ -3874,7 +3637,7 @@ txt.split("");           // 分隔为字符
 
 ### setTime
 
-- setTime() 方法以毫秒设置 Date 对象。 
+- setTime() 方法以毫秒设置 Date 对象。
 
   语法：*Date*.setTime(*millisec*)
 
@@ -3883,8 +3646,6 @@ txt.split("");           // 分隔为字符
   d.setTime(1332403882588);
   console.log(d) //Thu Mar 22 2012 16:11:22 GMT+0800 (中国标准时间)
   ```
-
-  
 
 ## 获取时间差
 
@@ -3899,23 +3660,19 @@ txt.split("");           // 分隔为字符
 - 然后在用两个毫秒数相减，就能得到两个时间点之间相差的毫秒数
 - 我们在通过这个毫秒数得到准确的时间
 
-
-
 ### 计算时间差
 
 - 例如：我们现在计算一下 `2019-01-01 00:00:00` 到 `2019-01-03 04:55:34` 的时间差
-
-
 
 1. 先获取两个时间点到 `格林威治时间` 的毫秒数
 
    ```javascript
    var time1 = new Date('2019-01-01 00:00:00')
    var time2 = new Date('2019-01-03 04:55:34')
-   
+
    time1 = time1.getTime()
    time2 = time2.getTime()
-   
+
    console.log(time1) // 1546272000000
    console.log(time2) // 1546462534000
    ```
@@ -3943,7 +3700,7 @@ txt.split("");           // 分隔为字符
      time1 = time1.getTime()
      time2 = time2.getTime()
      var differenceTime = time2 - time1
-     
+
      // 计算整的天数
      var day = differenceTime / (1000 * 60 * 60 * 24) // 2.20525462962963
      day = Math.floor(day) // 2
@@ -3965,11 +3722,11 @@ txt.split("");           // 分隔为字符
      time1 = time1.getTime()
      time2 = time2.getTime()
      var differenceTime = time2 - time1
-     
+
      // 计算整的天数
      var day = differenceTime / (1000 * 60 * 60 * 24) // 2.20525462962963
      day = Math.floor(day) // 2
-     
+
      // 计算整的小时数
      var afterHours = differenceTime - (1000 * 60 * 60 * 24 * 2)
      var hours = afterHours / (1000 * 60 * 60)
@@ -3992,16 +3749,16 @@ txt.split("");           // 分隔为字符
      time1 = time1.getTime()
      time2 = time2.getTime()
      var differenceTime = time2 - time1
-     
+
      // 计算整的天数
      var day = differenceTime / (1000 * 60 * 60 * 24) // 2.20525462962963
      day = Math.floor(day) // 2
-     
+
      // 计算整的小时数
      var afterHours = differenceTime - (1000 * 60 * 60 * 24 * 2)
      var hours = afterHours / (1000 * 60 * 60)
      hours = Math.floor(hours) // 4
-     
+
      // 计算整分钟数
      var afterMinutes = afterHours - (1000 * 60 * 60 * 4)
      var minutes = afterMinutes / (1000 * 60)
@@ -4016,21 +3773,21 @@ txt.split("");           // 分隔为字符
      time1 = time1.getTime()
      time2 = time2.getTime()
      var differenceTime = time2 - time1
-     
+
      // 计算整的天数
      var day = differenceTime / (1000 * 60 * 60 * 24) // 2.20525462962963
      day = Math.floor(day) // 2
-     
+
      // 计算整的小时数
      var afterHours = differenceTime - (1000 * 60 * 60 * 24 * 2)
      var hours = afterHours / (1000 * 60 * 60)
      hours = Math.floor(hours) // 4
-     
+
      // 计算整分钟数
      var afterMinutes = afterHours - (1000 * 60 * 60 * 4)
      var minutes = afterMinutes / (1000 * 60)
      minutes = Math.floor(minutes) // 55
-     
+
      // 计算整秒数
      var afterSeconds = afterMinutes - (1000 * 60 * 55)
      var seconds = afterSeconds / 1000
@@ -4045,26 +3802,26 @@ txt.split("");           // 分隔为字符
      time1 = time1.getTime()
      time2 = time2.getTime()
      var differenceTime = time2 - time1
-     
+
      // 计算整的天数
      var day = differenceTime / (1000 * 60 * 60 * 24) // 2.20525462962963
      day = Math.floor(day) // 2
-     
+
      // 计算整的小时数
      var afterHours = differenceTime - (1000 * 60 * 60 * 24 * 2)
      var hours = afterHours / (1000 * 60 * 60)
      hours = Math.floor(hours) // 4
-     
+
      // 计算整分钟数
      var afterMinutes = afterHours - (1000 * 60 * 60 * 4)
      var minutes = afterMinutes / (1000 * 60)
      minutes = Math.floor(minutes) // 55
-     
+
      // 计算整秒数
      var afterSeconds = afterMinutes - (1000 * 60 * 55)
      var seconds = afterSeconds / 1000
      seconds = Math.floor(seconds) // 34
-     
+
      // 计算毫秒数
      var milliSeconds = afterSeconds - (1000 * 34) // 0
      ```
@@ -4076,14 +3833,11 @@ txt.split("");           // 分隔为字符
      document.write(day + '天' + hours + '小时' + minutes + '分钟' + seconds + '秒' + milliSeconds + '毫秒')
      ```
 
-
-
-
 ### 定时器
 
 - 在 js 里面，有两种定时器，**倒计时定时器** 和 **间隔定时器**
 
-#### 倒计时定时器
+### 倒计时定时器
 
 - 倒计时多少时间以后执行函数
 
@@ -4103,9 +3857,7 @@ txt.split("");           // 分隔为字符
   - 只执行一次，就不在执行了
   - 返回值是，当前这个定时器是页面中的第几个定时器
 
-
-
-#### 间隔定时器
+### 间隔定时器
 
 - 每间隔多少时间就执行一次函数
 
@@ -4122,9 +3874,7 @@ txt.split("");           // 分隔为字符
   - 只要不关闭，会一直执行
   - 返回值是，当前这个定时器是页面中的第几个定时器
 
-
-
-#### 定时器的返回值
+### 定时器的返回值
 
 - 设置定时器的时候，他的返回值是部分 `setTimeout` 和 `setInterval` 的
 
@@ -4134,18 +3884,16 @@ txt.split("");           // 分隔为字符
   var timerId = setTimeout(function () {
     console.log('倒计时定时器')
   }, 1000)
-  
+
   var timerId2 = setInterval(function () {
     console.log('间隔定时器')
   }, 1000)
-  
+
   console.log(timerId) // 1
   console.log(timerId2) // 2
   ```
 
-
-
-#### 关闭定时器
+### 关闭定时器
 
 - 我们刚才提到过一个 timerId，是表示这个定时器是页面上的第几个定时器
 
@@ -4171,7 +3919,7 @@ txt.split("");           // 分隔为字符
 
   - 关闭以后定时器就不会在执行了
 
-- 原则上是 
+- 原则上是
 
   - `clearTimeout` 关闭 `setTimeout`
   - `clearInterval` 关闭 `setInterval`
@@ -4184,7 +3932,7 @@ txt.split("");           // 分隔为字符
   }, 1000)
   // 关闭倒计时定时器
   clearInterval(timerId)
-  
+
   var timerId2 = setInterval(function () {
     console.log('间隔定时器')
   }, 1000)
@@ -4192,9 +3940,7 @@ txt.split("");           // 分隔为字符
   clearTimeout(timerId2)
   ```
 
-  
-
-# BOM
+## BOM
 
 - 今天开始我们开始使用 js 去操作浏览器和页面中的 html 元素了
 
@@ -4202,13 +3948,13 @@ txt.split("");           // 分隔为字符
 
 原生对象（本地对象）：native object
 
-ECMA所定义的对象Number、String、Boolean、Object、Array、Function、Date、RegExp、内置对象(如 Math、Global不需要实例化)、Error ..... 
+ECMA所定义的对象Number、String、Boolean、Object、Array、Function、Date、RegExp、内置对象(如 Math、Global不需要实例化)、Error .....
 
 宿主对象：host object（ 如 window、BOM、DOM ）
 
 什么是宿主？web的运行环境，即操作系统、浏览器
 
-宿主提供的对象 -> 宿主对象 
+宿主提供的对象 -> 宿主对象
 
 ## BOM
 
@@ -4235,12 +3981,10 @@ ECMA所定义的对象Number、String、Boolean、Object、Array、Function、Da
   ``` javascript
   var windowHeight = window.innerHeight
   console.log(windowHeight)
-  
+
   var windowWidth = window.innerWidth
   console.log(windowWidth)
   ```
-
-  
 
 ### 浏览器的弹出层
 
@@ -4249,7 +3993,6 @@ ECMA所定义的对象Number、String、Boolean、Object、Array、Function、Da
   ```javascript
   window.alert('我是一个提示框')
   ```
-
 
   - 这个弹出层只是一个提示内容，只有一个确定按钮
   - 点击确定按钮以后，这个提示框就消失了
@@ -4260,7 +4003,6 @@ ECMA所定义的对象Number、String、Boolean、Object、Array、Function、Da
   var boo = window.confirm('我是一个询问框')
   console.log(boo)
   ```
-
 
   - 这个弹出层有一个询问信息和两个按钮
   - 当你点击确定的时候，就会得到 true
@@ -4273,17 +4015,15 @@ ECMA所定义的对象Number、String、Boolean、Object、Array、Function、Da
   console.log(str)
   ```
 
-
   - 这个弹出层有一个输入框和两个按钮
   - 当你点击取消的时候，得到的是 null
   - 当你点击确定的时候得到的就是你输入的内容
 
-
 ### 浏览器的窗口
 
-- open()：方法用于打开一个新的浏览器窗口或查找一个已命名的窗口。 
-  - 语法：window.open(*URL,name,specs,replace*) 
-- close()：方法用于关闭浏览器窗口。 
+- open()：方法用于打开一个新的浏览器窗口或查找一个已命名的窗口。
+  - 语法：window.open(*URL,name,specs,replace*)
+- close()：方法用于关闭浏览器窗口。
   - 语法：
     - window.close()：关闭当前窗口
     - 新窗口.close()：关闭指定窗口
@@ -4292,16 +4032,12 @@ ECMA所定义的对象Number、String、Boolean、Object、Array、Function、Da
 - window.screenX 属性返回窗口相对于屏幕的X坐标 （不支持IE9以下浏览器）
 - window.screenY 属性返回窗口相对于屏幕的Y坐标 （不支持IE9以下浏览器）
 
-  
-
 ### 浏览器的地址信息
 
-- 在 window 中有一个对象叫做 `location` 
+- 在 window 中有一个对象叫做 `location`
 - 就是专门用来存储浏览器的地址栏内的信息的
 
-
-
-#### location.href
+### location.href
 
 - `location.href` 这个属性存储的是浏览器地址栏内 url 地址的信息
 
@@ -4318,9 +4054,7 @@ ECMA所定义的对象Number、String、Boolean、Object、Array、Function、Da
   // 这个就会跳转页面到后面你给的那个地址
   ```
 
-
-
-#### location.reload
+### location.reload
 
 - `location.reload()` 这个方法会重新加载一遍页面，就相当于刷新是一个道理
 
@@ -4330,32 +4064,28 @@ ECMA所定义的对象Number、String、Boolean、Object、Array、Function、Da
 
   - 注意： **不要写在全局，不然浏览器就会一直处在刷新状态**
 
-#### host 
+### host
 
-- host 属性是一个可读可写的字符串，可设置或返回当前 URL 的主机名称和端口号。 
+- host 属性是一个可读可写的字符串，可设置或返回当前 URL 的主机名称和端口号。
 
   ```
   document.write(location.host);
   ```
 
-#### hostname  
+### hostname
 
-- hostname 属性是一个可读可写的字符串，可设置或返回当前 URL 的主机名。 
+- hostname 属性是一个可读可写的字符串，可设置或返回当前 URL 的主机名。
 
   ```
   document.write(location.hostname);
   ```
 
-  
-
 ### 浏览器的历史记录
 
-- window 中有一个对象叫做 `history` 
+- window 中有一个对象叫做 `history`
 - 是专门用来存储历史记录信息的
 
-
-
-#### history.back
+### history.back
 
 - `history.back` 是用来回退历史记录的，就是回到前一个页面，就相当于浏览器上的 ⬅️ 按钮
 
@@ -4365,9 +4095,7 @@ ECMA所定义的对象Number、String、Boolean、Object、Array、Function、Da
 
   - 前提是你要有上一条记录，不然就是一直在这个页面，也不会回退
 
-
-
-#### history.forward
+### history.forward
 
 - `history.forward` 是去到下一个历史记录里面，也就是去到下一个页面，就相当于浏览器上的 ➡️ 按钮
 
@@ -4377,7 +4105,7 @@ ECMA所定义的对象Number、String、Boolean、Object、Array、Function、Da
 
   - 前提是你要之前有过回退操作，不然的话你现在就是最后一个页面，没有下一个
 
-#### history.go
+### history.go
 
 - go(n)：n为整数，跳转第n个浏览过的文档
 
@@ -4398,9 +4126,7 @@ ECMA所定义的对象Number、String、Boolean、Object、Array、Function、Da
 - window 中有一个对象叫做 `navigator`
 - 是专门用来获取浏览器信息的
 
-
-
-#### navigator.userAgent
+### navigator.userAgent
 
 - `navigator.userAgent` 是获取的浏览器的整体信息
 
@@ -4409,9 +4135,7 @@ ECMA所定义的对象Number、String、Boolean、Object、Array、Function、Da
   // Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36
   ```
 
-
-
-#### navigator.appName
+### navigator.appName
 
 - `navigator.appName` 获取的是浏览器的名称
 
@@ -4419,9 +4143,7 @@ ECMA所定义的对象Number、String、Boolean、Object、Array、Function、Da
   console.log(window.navigator.appName)
   ```
 
-
-
-#### navigator.appVersion
+### navigator.appVersion
 
 - `navigator.appVersion` 获取的是浏览器的版本号
 
@@ -4429,9 +4151,7 @@ ECMA所定义的对象Number、String、Boolean、Object、Array、Function、Da
   console.log(window.navigator.appVersion)
   ```
 
-
-
-#### navigator.platform
+### navigator.platform
 
 - `navigator.platform` 获取到的是当前计算机的操作系统
 
@@ -4439,7 +4159,7 @@ ECMA所定义的对象Number、String、Boolean、Object、Array、Function、Da
   console.log(window.navigator.platform)
   ```
 
-### screen对象 
+### screen对象
 
 - screen对象包含有关客户端显示屏幕的信息
 
@@ -4450,16 +4170,15 @@ availHeight 属性返回显示屏幕的高度 (除 Windows 任务栏之外)
 availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
 ```
 
-# DOM
+## DOM
 
 - DOM（Document Object Model）： 文档对象模型
 
 - DOM描绘了一个层次化的节点树，即HTML文档中的所有内容都是节点(node)。
 
-- DOM树中的所有节点均可通过JS进行访问，允许开发人员添加、移除、修改和查询页面的某一部分。 
+- DOM树中的所有节点均可通过JS进行访问，允许开发人员添加、移除、修改和查询页面的某一部分。
 
   [![62rUOJ.png](https://s3.ax1x.com/2021/03/18/62rUOJ.png)](https://imgtu.com/i/62rUOJ)
-
 
 - W3C规定的三类DOM标准接口
 
@@ -4473,7 +4192,7 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
 
   DOM模型的节点：文档可以说是由节点构成的集合。在DOM模型中有以下3种常用节点：
 
-  1、元素节点：各种标签就是这些元素节点的名称，例如<div>、<p>等
+  1、元素节点：各种标签就是这些元素节点的名称，例如 `<div>`、`<p>` 等
 
   2、文本节点：文本节点总是被包含在元素节点里面的内容
 
@@ -4503,14 +4222,10 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
 
 - DOM： 页面中的标签，我们通过 js 获取到以后，就把这个对象叫做 DOM 对象
 
-
-
 ## 获取一个元素
 
 - 通过 js 代码来获取页面中的标签
 - 获取到以后我们就可以操作这些标签了
-
-
 
 ### getElementById
 
@@ -4529,8 +4244,6 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   ```
 
   - 获取到的就是页面中的那个 id 为 box 的 div 标签
-
-
 
 ### getElementsByClassName
 
@@ -4554,8 +4267,6 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   - 获取到的是一组元素，是一个长得和数组一样的数据结构，但不是数组，是伪数组
   - 这个一组数据也是按照索引排列的，所以我们想要准确的拿到这个 div，需要用索引来获取
 
-
-
 ### getElementsByTagName
 
 - `getElementsByTagName` 是通过标签的 标签 名称来获取标签的
@@ -4578,8 +4289,6 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   - 和 `getElementsByClassName` 一样，获取到的是一个长得很像数组的元素
   - 必须要用索引才能得到准确的 DOM 元素
 
-
-
 ### querySelector
 
 - `querySelector` 是按照选择器的方式来获取元素
@@ -4589,12 +4298,10 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
 - 这个方法只能获取到一个元素，并且是页面中第一个满足条件的元素
 
   ```javascript
-  console.log(document.querySelector('div')) // 获取页面中的第一个 div 元素 
+  console.log(document.querySelector('div')) // 获取页面中的第一个 div 元素
   console.log(docuemnt.querySelector('.box')) // 获取页面中第一个有 box 类名的元素
   console.log(document.querySelector('#box')) // 获取页面中第一个 id 名为 box 的元素
   ```
-
-
 
 ### querySelectorAll
 
@@ -4603,13 +4310,13 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
 - 这个方法能获取到所有满足条件的元素，以一个伪数组的形式返回
 
   ```javascript
-  console.log(document.querySelectorAll('div')) // 获取页面中的所有的 div 元素 
+  console.log(document.querySelectorAll('div')) // 获取页面中的所有的 div 元素
   console.log(docuemnt.querySelectorAll('.box')) // 获取页面中所有有 box 类名的元素
   ```
 
   - 获取到的是一组数据，也是需要用索引来获取到准确的每一个 DOM 元素
 
-注：query选择符选出来的元素及元素数组是静态的，而getElement这种方法选出的元素是动态的。静态的就是说选出的所有元素的数组，不会随着文档操作而改变． 
+注：query选择符选出来的元素及元素数组是静态的，而getElement这种方法选出的元素是动态的。静态的就是说选出的所有元素的数组，不会随着文档操作而改变．
 
 ## querySelector系列和getElementById的区别
 
@@ -4628,8 +4335,6 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
     var ps = document.getElementsByClassName('p');
     console.log(p1);*/
     ```
-
-
 
 3. 接受参数不同
    querySelector系列接收的参数是一个css选择器名。
@@ -4665,16 +4370,12 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
       console.log(lis.length)  //死循环
     ```
 
-
-
 ## 操作属性
 
 - 通过我们各种获取元素的方式获取到页面中的标签以后
 - 我们可以直接操作 DOM 元素的属性，就能直接把效果展示在页面上
 
-
-
-### innerHTML 
+### innerHTML
 
 - 获取元素内部的 HTML 结构
 
@@ -4685,16 +4386,16 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
         <span>hello</span>
       </p>
     </div>
-  
+
     <script>
       var div = document.querySelector('div')
       console.log(div.innerHTML)
   		/*
-  			
+
         <p>
           <span>hello</span>
         </p>
-  		
+
   		*/
     </script>
   </body>
@@ -4705,7 +4406,7 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   ```html
   <body>
     <div></div>
-  
+
     <script>
       var div = document.querySelector('div')
      	div.innerHTML = '<p>hello</p>'
@@ -4714,8 +4415,6 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   ```
 
   - 设置完以后，页面中的 div 元素里面就会嵌套一个 p 元素
-
-
 
 ### innerText
 
@@ -4728,7 +4427,7 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
         <span>hello</span>
       </p>
     </div>
-  
+
     <script>
       var div = document.querySelector('div')
       console.log(div.innerText) // hello
@@ -4741,7 +4440,7 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   ```html
   <body>
     <div></div>
-  
+
     <script>
       var div = document.querySelector('div')
      	div.innerText = '<p>hello</p>'
@@ -4751,8 +4450,6 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
 
   - 设置完毕以后，会把 `<p>hello</p>` 当作一个文本出现在 div 元素里面，而不会把 p 解析成标签
 
-
-
 ### getAttribute
 
 - 获取元素的某个属性（包括自定义属性）
@@ -4760,7 +4457,7 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   ```html
   <body>
     <div a="100" class="box"></div>
-  
+
     <script>
       var div = document.querySelector('div')
      	console.log(div.getAttribute('a')) // 100
@@ -4769,8 +4466,6 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   </body>
   ```
 
-
-
 ### setAttribute
 
 - 给元素设置一个属性（包括自定义属性）
@@ -4778,7 +4473,7 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   ```html
   <body>
     <div></div>
-  
+
     <script>
       var div = document.querySelector('div')
      	div.setAttribute('a', 100)
@@ -4788,8 +4483,6 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   </body>
   ```
 
-  
-
 ### removeAttribute
 
 - 直接移除元素的某个属性
@@ -4797,7 +4490,7 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   ```html
   <body>
     <div a="100" class="box"></div>
-  
+
     <script>
       var div = document.querySelector('div')
      	div.removeAttribute('class')
@@ -4806,42 +4499,41 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   </body>
   ```
 
-
 ### data-set
 
 - HTML5新特性-自定义属性
 
-- 在HTML5中我们可以使用data-前缀设置我们需要的自定义属性，来进行一些数据的存放 使用data-set可以获取这些数据 
+- 在HTML5中我们可以使用data-前缀设置我们需要的自定义属性，来进行一些数据的存放 使用data-set可以获取这些数据
 
   ```
   data属性的设置和读取方式：
   1、data-xxx 的格式，则采用正常格式来读写该属性值
-  
+
   <div id="test" data-name="小明">自定义属性data-name</div>
-  
+
   // 原生js方式
   var testData = document.getElementById("test");
   console.log(testData.dataset.name); // 读取data-name的值
   console.log(testData.getAttribute("data-name")); // 读取data-name的值
-  
+
   testData.dataset.age = 18;  // 设置data-age的值
   testData.setAttribute("data-age",18);  // 设置data-age的值
-  
+
   testData.removeAttribute("data-age");  // 删除data-age属性
-  
+
   2、data-xxx-yyy-zzz的格式，则采用首个单词的首字母小写的驼峰式xxxYyyZzz读写该自定义属性值
   <div id="test2" data-user-name="小明">自定义属性data-user-name</div>
-  
+
   // 原生js方式
   var testData2 = document.getElementById("test2");
   console.log(testData2.dataset.userName); // 读取data-user-name的值
   console.log(testData2.getAttribute("data-user-name")); // 读取data-user-name的值
-  
+
   testData.dataset.userAge = 18;  // 设置data-user-age的值
   testData2.setAttribute("data-user-age",18);  // 设置data-user-age的值
-  
+
   testData2.removeAttribute("data-user-age");  // 删除data-user-age属性
-  
+
   ```
 
 ### style
@@ -4853,23 +4545,19 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   ``` html
   <body>
     <div></div>
-  
+
     <script>
       var div = document.querySelector('div')
      	div.style.width = "100px"
       div.style.height = "100px"
       div.style.backgroundColor = "pink"
-      console.log(div) 
+      console.log(div)
       // <div style="width: 100px; height: 100px; background-color: pink;"></div>
     </script>
   </body>
   ```
 
-
-
   - 页面中的 div 就会变成一个宽高都是100，背景颜色是粉色
-
-
 
 ### className
 
@@ -4878,7 +4566,7 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   ```html
   <body>
     <div class="box"></div>
-  
+
     <script>
       var div = document.querySelector('div')
      	console.log(div.className) // box
@@ -4891,7 +4579,7 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   ```html
   <body>
     <div class="box"></div>
-  
+
     <script>
       var div = document.querySelector('div')
      	div.className = 'test'
@@ -4932,9 +4620,6 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   console.log(html1)
   ```
 
-
-
-
 ## DOM节点
 
 - DOM 就是我们 html 结构中一个一个的节点构成的
@@ -4944,25 +4629,17 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
 - 比如我们标签里面写的文字，那么就是文本节点
 - 写在每一个标签上的属性，就是属性节点
 
-
-
 ## 元素节点
 
 - 我们通过 `getElementBy...` 获取到的都是元素节点
-
-
 
 ## 属性节点
 
 - 我们通过 `getAttribute` 获取的就是元素的属性节点
 
-
-
 ## 文本节点
 
 - 我们通过 `innerText` 获取到的就是元素的文本节点
-
-
 
 ## 获取节点
 
@@ -4972,12 +4649,12 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
     <div>
       <p>hello</p>
     </div>
-    
+
     <script>
       // 这个 oDiv 获取的是页面中的 div 元素，就是一个元素节点
     	var oDiv = document.querySelector('div')
-      
-      console.log(oDiv.childNodes) 
+
+      console.log(oDiv.childNodes)
       /*
       	NodeList(3) [text, p, text]
         0: text
@@ -5003,12 +4680,12 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
     <div>
       <p>hello</p>
     </div>
-    
+
     <script>
       // 这个 oDiv 获取的是页面中的 div 元素，就是一个元素节点
     	var oDiv = document.querySelector('div')
-      
-      console.log(oDiv.children) 
+
+      console.log(oDiv.children)
       /*
       	HTMLCollection [p]
         0: p
@@ -5030,12 +4707,12 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
     <div>
       <p>hello</p>
     </div>
-    
+
     <script>
       // 这个 oDiv 获取的是页面中的 div 元素，就是一个元素节点
     	var oDiv = document.querySelector('div')
-      
-      console.log(oDiv.firstChild) // #text 
+
+      console.log(oDiv.firstChild) // #text
     </script>
   </body>
   ```
@@ -5051,12 +4728,12 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
     <div>
       <p>hello</p>
     </div>
-    
+
     <script>
       // 这个 oDiv 获取的是页面中的 div 元素，就是一个元素节点
     	var oDiv = document.querySelector('div')
-      
-      console.log(oDiv.lastChild) // #text 
+
+      console.log(oDiv.lastChild) // #text
     </script>
   </body>
   ```
@@ -5072,11 +4749,11 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
     <div>
       <p>hello</p>
     </div>
-    
+
     <script>
       // 这个 oDiv 获取的是页面中的 div 元素，就是一个元素节点
     	var oDiv = document.querySelector('div')
-      
+
       console.log(oDiv.firstElementChild) // <p>hello</p>
     </script>
   </body>
@@ -5094,11 +4771,11 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
       <p>hello</p>
       <p>world</p>
     </div>
-    
+
     <script>
       // 这个 oDiv 获取的是页面中的 div 元素，就是一个元素节点
     	var oDiv = document.querySelector('div')
-      
+
       console.log(oDiv.lastElementChild) // <p>world</p>
     </script>
   </body>
@@ -5117,11 +4794,11 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
       <li id="b">world</li>
       <li id="c">!!!</li>
     </ul>
-    
+
     <script>
       // 这个 oLi 获取的是页面中的 li 元素，就是一个元素节点
     	var oLi = document.querySelector('#b')
-      
+
       console.log(oLi.nextSibling) // #text
     </script>
   </body>
@@ -5140,11 +4817,11 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
       <li id="b">world</li>
       <li id="c">!!!</li>
     </ul>
-    
+
     <script>
       // 这个 oLi 获取的是页面中的 li 元素，就是一个元素节点
     	var oLi = document.querySelector('#b')
-      
+
       console.log(oLi.previousSibling) // #text
     </script>
   </body>
@@ -5163,11 +4840,11 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
       <li id="b">world</li>
       <li id="c">!!!</li>
     </ul>
-    
+
     <script>
       // 这个 oLi 获取的是页面中的 li 元素，就是一个元素节点
     	var oLi = document.querySelector('#b')
-      
+
       console.log(oLi.nextElementSibling) // <li id="c">!!!</li>
     </script>
   </body>
@@ -5186,11 +4863,11 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
       <li id="b">world</li>
       <li id="c">!!!</li>
     </ul>
-    
+
     <script>
       // 这个 oLi 获取的是页面中的 li 元素，就是一个元素节点
     	var oLi = document.querySelector('#b')
-      
+
       console.log(oLi.previousElementSibling) // <li id="a">hello</li>
     </script>
   </body>
@@ -5209,11 +4886,11 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
       <li id="b">world</li>
       <li id="c">!!!</li>
     </ul>
-    
+
     <script>
       // 这个 oLi 获取的是页面中的 li 元素，就是一个元素节点
     	var oLi = document.querySelector('#b')
-      
+
       console.log(oLi.parentNode) // <ul>...</ul>
     </script>
   </body>
@@ -5230,12 +4907,12 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
     <ul>
       <li id="a" a="100" test="test">hello</li>
     </ul>
-    
+
     <script>
       // 这个 oLi 获取的是页面中的 li 元素，就是一个元素节点
     	var oLi = document.querySelector('#a')
-      
-      console.log(oLi.attributes) 
+
+      console.log(oLi.attributes)
       /*
       	NamedNodeMap {0: id, 1: a, 2: test, id: id, a: a, test: test, length: 3}
         0: id
@@ -5246,7 +4923,7 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
         id: id
         test: test
         __proto__: NamedNodeMap
-      
+
       */
     </script>
   </body>
@@ -5254,8 +4931,6 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
 
   - 获取的是一组数据，是该元素的所有属性，也是一个伪数组
   - 这个 li 有三个属性，id / a / test 三个，所以就获取到了这三个
-
-
 
 ## 节点属性
 
@@ -5270,26 +4945,22 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
     <ul test="我是 ul 的一个属性">
       <li>hello</li>
     </ul>
-  
+
     <script>
       // 先获取 ul
       var oUl = document.querySelector('ul')
-      
+
       // 获取到 ul 下的第一个子元素节点，是一个元素节点
       var eleNode = oUl.firstElementChild
-      
+
       // 获取到 ul 的属性节点组合，因为是个组合，我们要拿到节点的话要用索引
       var attrNode = oUl.attributes[0]
-  
+
       // 获取到 ul 下的第一个子节点，是一个文本节点
       var textNode = oUl.firstChild
     </script>
   </body>
   ```
-
-  
-
-
 
 ### nodeType
 
@@ -5305,8 +4976,6 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   - `nodeType === 2` 就表示该节点是一个 **属性节点**
   - `nodeType === 3` 就表示该节点是一个 **文本节点**
 
-
-
 ### nodeName
 
 - `nodeName`：获取节点的节点名称
@@ -5320,8 +4989,6 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   - 元素节点的 `nodeName` 就是 **大写标签名**
   - 属性节点的 `nodeName` 就是 **属性名**
   - 文本节点的 `nodeName` 都是 **#text**
-
-
 
 ### nodeValue
 
@@ -5337,8 +5004,6 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   - 属性节点的 `nodeValue` 就是 **属性值**
   - 文本节点的 `nodeValue` 就是 **文本内容**
 
-
-
 ### 汇总
 
 |          | nodeType | nodeName   | nodeValue |
@@ -5346,8 +5011,6 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
 | 元素节点 | 1        | 大写标签名 | null      |
 | 属性节点 | 2        | 属性名     | 属性值    |
 | 文本节点 | 3        | \#text     | 文本内容  |
-
-
 
 ## 操作 DOM 节点
 
@@ -5358,8 +5021,6 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
 - 修改页面中的某一个节点
 - 获取页面中的某一个节点
 
-
-
 ## 创建一个节点
 
 - `createElement`：用于创建一个元素节点
@@ -5367,7 +5028,7 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   ```javascript
   // 创建一个 div 元素节点
   var oDiv = document.createElement('div')
-  
+
   console.log(oDiv) // <div></div>
   ```
 
@@ -5378,11 +5039,9 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   ```javascript
   // 创建一个文本节点
   var oText = document.createTextNode('我是一个文本')
-  
+
   console.log(oText) // "我是一个文本"
   ```
-
-
 
 ## 向页面中加入一个节点
 
@@ -5394,10 +5053,10 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   // 创建一个 div 元素节点
   var oDiv = document.createElement('div')
   var oText = document.createTextNode('我是一个文本')
-  
+
   // 向 div 中追加一个文本节点
   oDiv.appendChild(oText)
-  
+
   console.log(oDiv) // <div>我是一个文本</div>
   ```
 
@@ -5410,17 +5069,17 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
     <div>
       <p>我是一个 p 标签</p>
     </div>
-    
+
     <script>
     	var oDiv = document.querySelector('div')
       var oP = oDiv.querySelector('p')
-      
+
       // 创建一个元素节点
       var oSpan = document.createElement('span')
-      
+
       // 将这个元素节点添加到 div 下的 p 的前面
       oDiv.insertBefore(oSpan, oP)
-      
+
       console.log(oDiv)
       /*
       	<div>
@@ -5431,8 +5090,6 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
     </script>
   </body>
   ```
-
-
 
 ## 删除页面中的某一个节点
 
@@ -5445,20 +5102,20 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
     <div>
       <p>我是一个 p 标签</p>
     </div>
-    
+
     <script>
     	var oDiv = document.querySelector('div')
       var oP = oDiv.querySelector('p')
-      
+
       // 移除 div 下面的 p 标签
       oDiv.removeChild(oP)
-      
+
       console.log(oDiv) // <div></div>
     </script>
   </body>
   ```
 
-- `remove`：用于从下拉列表删除选项。 
+- `remove`：用于从下拉列表删除选项。
 
 - 语法：`selectObject.remove(index)`
 
@@ -5474,7 +5131,7 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   </script>
   </head>
   <body>
-  
+
   <form>
   <select id="mySelect">
     <option>Apple</option>
@@ -5485,14 +5142,12 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   <input type="button" onclick="removeOption()"
   value="Remove option">
   </form>
-  
+
   </body>
   </html>
   ```
 
-  注：该方法从选项数组的指定位置移除 <option> 元素。如果指定的下标比 0 小，或者大于或等于选项的数目，remove() 方法会忽略它并什么也不做。 如果不添加下标，那么则移除该对象本身
-
-
+  注：该方法从选项数组的指定位置移除 `<option>` 元素。如果指定的下标比 0 小，或者大于或等于选项的数目，remove() 方法会忽略它并什么也不做。 如果不添加下标，那么则移除该对象本身
 
 ## 修改页面中的某一个节点
 
@@ -5505,19 +5160,19 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
     <div>
       <p>我是一个 p 标签</p>
     </div>
-    
+
     <script>
     	var oDiv = document.querySelector('div')
       var oP = oDiv.querySelector('p')
-      
+
       // 创建一个 span 节点
       var oSpan = document.createElement('span')
       // 向 span 元素中加点文字
       oSpan.innerHTML = '我是新创建的 span 标签'
-      
+
      	// 用创建的 span 标签替换原先 div 下的 p 标签
       oDiv.replaceChild(oSpan, oP)
-      
+
       console.log(oDiv)
       /*
       	<div>
@@ -5545,9 +5200,6 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   console.log(res)
   ```
 
-
-
-
 ## 获取元素的非行间样式
 
 - 我们在操作 DOM 的时候，很重要的一点就是要操作元素的 css 样式
@@ -5568,7 +5220,7 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
     <div style="height: 100px;">
       <p>我是一个 p 标签</p>
     </div>
-  
+
     <script>
       var oDiv = document.querySelector('div')
   		console.log(oDiv.style.height) // 100px
@@ -5582,8 +5234,6 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
 - 这里我们就要使用方法来获取了 **getComputedStyle** 和 **currentStyle**
 
 - 这两个方法的作用是一样的，只不过一个在 **非 IE** 浏览器，一个在 **IE** 浏览器
-
-
 
 ## getComputedStyle（非IE使用）
 
@@ -5603,7 +5253,7 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
     <div style="height: 100px;">
       <p>我是一个 p 标签</p>
     </div>
-  
+
     <script>
       var oDiv = document.querySelector('div')
   		console.log(window.getComputedStyle(oDiv).width) // 100px
@@ -5613,8 +5263,6 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   ```
 
   - 这个方法获取行间样式和非行间样式都可以
-
-
 
 ## currentStyle（IE使用）
 
@@ -5630,7 +5278,7 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
     <div style="height: 100px;">
       <p>我是一个 p 标签</p>
     </div>
-  
+
     <script>
       var oDiv = document.querySelector('div')
   		console.log(oDiv.currentStyle.width) // 100px
@@ -5639,14 +5287,14 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   </body>
   ```
 
-## **文档碎片** 
+## **文档碎片**
 
 - 通俗易懂解释文档碎片：我们每次去超市买东西，都是用袋子一次性把所有东西运回来，而不可能选择每次只拿一样东西。而当我们用JS DOM向页面插入元素的时候，每插入一个元素，页面就会渲染一次，但当我们要插入过多元素的时候，页面渲染的次数会使得DOM的操作性能降低。而在这个过程中，文档碎片就类似于一个我们买东西的袋子，我们每次创建好一个元素的时候，不直接插入页面中，而是插入文档碎片里，最后再一次性地把所有元素插入页面中，这样页面只需要渲染一次，极大地提高了DOM操作性能（理论上）
-- **为何要创建文档碎片** 
+- **为何要创建文档碎片**
   - 在浏览器中，修改、删除或者增加DOM元素。更新DOM会导致浏览器重新绘制屏幕，对于少量的更新，一条条循环插入也会运行很好。但是，如果当我们要向document中添加大量数据时(比如1w条)，逐条添加节点，会导致回流,这样会带来巨大的开销，这个过程就可能会十分缓慢。我们通常解决这种情况的办法尽量减少更新DOM，这也就意味着将DOM的改变分批处理，并在“活动”文档树之外执行这些更新。当需要创建一个相对比较大的子树，应该在子树完全创建之后再将子树添加到DOM树中，这时采用文档碎片技术来容纳所有的节点
 
-- **如何创建文档碎片** 
-  - `var oFrag = document.createDocumentFragment();`  
+- **如何创建文档碎片**
+  - `var oFrag = document.createDocumentFragment();`
   - createdocumentfragment()方法创建了一虚拟的节点对象，节点对象包含所有属性和方法。
     当你想提取文档的一部分，改变，增加，或删除某些内容及插入到文档末尾可以使用createDocumentFragment() 方法。
     你也可以使用文档的文档对象来执行这些变化，但要防止文件结构被破坏，createDocumentFragment() 方法可以更安全改变文档的结构及节点。
@@ -5662,11 +5310,11 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
             oFragmeng.appendChild(op);  
         } 
         //最后一次性添加到document中
-    
+
         document.body.appendChild(oFragmeng); 
     ```
 
-- 案例：新增10000个li节点，统计执行的时间，通过对比两者的的执行时间来判断谁的性能更高一点。 
+- 案例：新增10000个li节点，统计执行的时间，通过对比两者的的执行时间来判断谁的性能更高一点。
 
 - ``` html
   //（1）使用普通方法挂载新增节点
@@ -5679,17 +5327,17 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
               window.onload = function(){
               var oBtn = document.getElementById("btn1");
               var oUl = document.getElementById("ul1");
-              
+
               var iStart = new Date().getTime();                  //开始执行的时间
               oBtn.onclick = function(){
                   //普通追加
-                 
+
                   for(var i=0; i<100000; i++){                   //使用for循环创建100000个li节点，并一个个的挂载在ul下面
                       var oLi = document.createElement("li");
                       oUl.appendChild(oLi);
                   }alert(new Date().getTime() - iStart);         //打印出最后这个程序耗费的而时间
               }
-              
+
           }
           </script>
       </head>
@@ -5700,7 +5348,7 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
           </ul>
       </body>
   </html>
-  
+
   //（2）使用文档碎片：
   <!DOCTYPE html>
   <html>
@@ -5711,12 +5359,12 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
               window.onload = function(){
               var oBtn = document.getElementById("btn1");
               var oUl = document.getElementById("ul1");
-                   
+
               var iStart = new Date().getTime();
               oBtn.onclick = function(){
                   //文档碎片方式
                   var oFrag = document.createDocumentFragment();//建立一个文档对象，作为新增节点的临时容器，最后将这个容器连的内容直接挂载在父节点ul下面。
-                   
+
                   for(var i=0; i<100000; i++){
                       var oLi = document.createElement("li");
                       oFrag.appendChild(oLi);
@@ -5724,7 +5372,7 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
                   oUl.appendChild(oFrag);
                   alert(new Date().getTime() - iStart);
               }
-              
+
           }
           </script>
       </head>
@@ -5745,7 +5393,7 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
 
 ## 数据渲染
 
-- 就是HTML中要显示的数据是通过js来实现的而不是直接在HTML中的数据，这个过程叫做数据渲染 
+- 就是HTML中要显示的数据是通过js来实现的而不是直接在HTML中的数据，这个过程叫做数据渲染
 
 - 渲染方式：
 
@@ -5773,7 +5421,7 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
     <script>
         var lis=document.querySelectorAll('li');
         var list=document.querySelector('.list')
-    
+
         for(var i=0;i<lis.length;i++){
             lis[i].onmouseover= function () {
                 this.style.background="lightblue"
@@ -5782,7 +5430,7 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
                 this.style.background='#fff'
             }
         }
-    
+
         var data=["111是香蕉",'222是桃子','333是西瓜']
         var str=""
         for(var j=0;j<data.length;j++){
@@ -5795,7 +5443,7 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
   - DOM循环
 
     - 优点：原有的DOM身上的事件不会丢失，不影响其它的DOM元素
-    - 缺点：DOM回流的次数过多，严重影响网页的性能 
+    - 缺点：DOM回流的次数过多，严重影响网页的性能
 
   - ```
     <!DOCTYPE html>
@@ -5817,7 +5465,7 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
         var list=document.querySelector('.list')
     //    var lis=document.getElementsByTagName('li')
     //    var list=document.getElementsByClassName('list')[0]
-    
+
         for(var i=0;i<lis.length;i++){
             lis[i].onmouseover= function () {
                 this.style.background="lightblue"
@@ -5859,7 +5507,7 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
     <script>
         var lis=document.querySelectorAll('li');
         var list=document.querySelector('.list')
-    
+
         for(var i=0;i<lis.length;i++){
             lis[i].onmouseover= function () {
                 this.style.background="lightblue"
@@ -5868,7 +5516,7 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
                 this.style.background='#fff'
             }
         }
-    
+
         var data=["111是香蕉",'222是桃子','333是西瓜']
         var frag=document.createDocumentFragment()
         for(var i=0;i<data.length;i++){
@@ -5879,8 +5527,6 @@ availWidth 属性返回显示屏幕的宽度 (除 Windows 任务栏之外)
         document.querySelector('.list').appendChild(frag)
     </script>
     ```
-
-    
 
 ## 获取元素的尺寸
 
@@ -5898,8 +5544,6 @@ var div1=document.querySelector('div').clientWidth
 console.log(div1)
 ```
 
-
-
 ## 获取元素边框的尺寸
 
 - clientLeft和clientTop 获取的上边框和左边框的宽度
@@ -5910,8 +5554,6 @@ console.log(div1)
 - 就是元素在页面上的什么位置
 - 我们有几个属性来获取，**offsetLeft** 和 **offsetTop** 和 **offsetWidth** 和 **offsetHeight**
 
-
-
 ## offsetLeft 和 offsetTop
 
 - 获取的是元素左边的偏移量和上边的偏移量
@@ -5921,13 +5563,9 @@ console.log(div1)
 - 有定位的情况下
   - 获取元素边框外侧到定位父级边框内侧的距离（其实就是我们写的 left 和 top 值）
 
-
-
 ## offsetWidth 和 offsetHeight
 
 - 获取元素 `内容宽高 + padding宽高 + border宽高` 的和
-
-
 
 ## 浏览器的 onscroll 事件
 
@@ -5943,8 +5581,6 @@ console.log(div1)
 
   - 注意：**前提是页面的高度要超过浏览器的可是窗口才可以**
 
-
-
 ## 浏览器滚动的距离
 
 - 浏览器内的内容即然可以滚动，那么我们就可以获取到浏览器滚动的距离
@@ -5955,8 +5591,6 @@ console.log(div1)
   - 所以说，**其实浏览器没有动，只不过是页面向上走了**
 - 所以，这个已经不能单纯的算是浏览器的内容了，而是我们页面的内容
 - 所以不是在用 window 对象了，而是使用 document 对象
-
-
 
 ### scrollTop
 
@@ -5995,7 +5629,6 @@ console.log(div1)
     }
     ```
   - 两个之间的区别和之前的 `scrollTop` 一样
-
 
 ## 常见事件
 
@@ -6040,3 +5673,23 @@ console.log(div1)
   - ontransitionend  过渡结束的时候触发
   - onanimationend  动画结束的时候触发
 
+## 写在最后
+
+好啦，今天的分享就到这里！
+
+💬 互动时间：
+
+你最近复习 JavaScript 最头疼的是原型链、事件循环、正则，还是异步？评论区留一个关键词，后面可以单独展开。
+
+最后，感谢你看到这里👏
+
+如果喜欢这篇内容，不妨顺手给小编安排一波👇
+**点赞**👍｜**转发**📲｜**推荐**❤️｜**评论**📣
+
+要是想第一时间蹲到新内容推送，记得给我点个**星标**⭐️
+
+更多干货内容正在持续填坑中，咱们下期见👋
+
+## 标签建议
+
+JavaScript、前端、前端基础

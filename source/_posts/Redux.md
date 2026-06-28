@@ -8,8 +8,38 @@ date: 2021-06-16 14:49:14
 
 ---
 
+## 标题备选
 
-# Redux
+1. React 入门到实践：把核心概念、JSX 和组件基础讲清楚
+2. 学 React 卡住了？先用这篇打牢基础
+3. 手把手梳理 React：从 Hello World 到组件开发
+
+## 摘要
+
+这篇文章适合正在入门 React 的前端同学，系统梳理核心概念、JSX、组件和常见写法，帮你建立清晰学习主线。
+
+## 正文
+
+哈喽大家好👋 我是程序🦍kk。把复杂知识掰成大白话讲明白，是我一直以来的小追求✨；**打好基础才能稳步进阶**，是我始终秉持的学习理念～
+
+> 📢 我搭建了5000人程序猿专属学习交流群
+群内会同步前端开发/全栈开发/Web3开发/远程工作等干货资源
+关注我并回复 **加群** ，就能加入交流圈啦🚀
+>
+
+## 前言
+
+**React 学起来不难，难的是先把主线概念理顺。**
+
+如果一上来就被 JSX、组件、状态、生命周期这些概念堆住，很容易越学越散。
+
+这篇会按原始学习笔记的顺序，把 React 的基础知识整理成适合复习和入门的公众号版本。
+
+## 知识点整理
+
+下面进入正文。你可以把它当作一份 React 基础复习清单，遇到不熟的概念再回到代码里验证。
+
+如果你刚开始学 React，建议先把 JSX 和组件这两块吃透，再继续看状态管理和路由。
 
 ## 简介
 
@@ -33,8 +63,6 @@ npm i -S redux
 >
 > - 代码书写上vuex的代码会比redux的感觉简单一些
 > - 两者在模块化上的实现也有区别，redux的模块化分的文件会更多，但是redux在命名空间层面的操作比vuex简单
-
-
 
 ## 三大原则（重点）
 
@@ -77,8 +105,6 @@ g. store的state被reducer更改为新state的时候，store.subscribe方法里�
 
 请注意：由于reducer被要求是纯函数，所以reducer函数里面不能改变State，必须返回一个全新的数据（不会自动合并原始数据的，因此一定要注意：别把原始数据搞丢了）。
 
-
-
 ## redux的使用
 
 **案例：在组件中展示一个按钮，点按钮后给redux中的数字+9，数字初始为0。实现一个计数器的效果**
@@ -89,8 +115,6 @@ g. store的state被reducer更改为新state的时候，store.subscribe方法里�
 - 创建视图组件（展示store中的数据）
 - 修改
 - 回显数据到视图组件
-
-
 
 **实现步骤**
 
@@ -144,8 +168,6 @@ const store = createStore(
 显示效果：
 
 ![](https://storage.lynnn.cn/assets/markdown/91147/pictures/2021/01/8a98ff5a63061eb039045fe1c42cd955d518311c.png?sign=7f00fc5ce078fb8192e4014f51649cb6&t=600a9550)
-
-
 
 b. 建立视图组件并且展示数据源
 
@@ -253,8 +275,6 @@ const reducers = combineReducers({ reducer, reducer2 });
 const store = createStore(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 ~~~
 
-
-
 ## 模块化
 
 针对redux的模块化，在一个常规项目中会将其代码拆分成以下几个部分：
@@ -269,8 +289,6 @@ const store = createStore(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && windo
 具体实现，以项目的代码为准。
 
 > 由于代码已经经过模块化，在获取redux中的数据的时候需要更改获取方式，比如说之前获取count是写成：this.state.count，模块化之后需要写成：this.state.counter.count，比之前多了一个模块化的模块名称（等同于vuex中命名空间）
-
-
 
 ## react-redux
 
@@ -309,10 +327,10 @@ React-redux所能解决的问题是：
     // 导入provider
     import { Provider } from "react-redux";
     import store from "./store/index";
-    
+
     // 导入需要展示的组件
     import App from "./Login";
-    
+
     // 渲染视图
     // 在展示app组件的时候需要按照组件的形式进行操作
     ReactDOM.render(
@@ -363,7 +381,7 @@ React-redux所能解决的问题是：
     // 导入type
     import { MOD_COUNT, MOD_AGE } from "../store/types/index";
     // import * as types from "../store/types/index";
-    
+
     // 第一步：在需要使用redux组件中导入一个由react-redux提供的hoc
     import { connect } from "react-redux";
     class Counter extends Component {
@@ -388,7 +406,7 @@ React-redux所能解决的问题是：
             );
         }
     }
-    
+
     // 第二步：在类外面定义俩个映射方法
     // 将redux中的state数据源映射到本组件自身的props中
     function mapStateToProps(state) {
@@ -408,13 +426,11 @@ React-redux所能解决的问题是：
             },
         };
     }
-    
+
     // 第三步：应用HOC
     // connect函数的俩个参数顺序不能颠倒
     export default connect(mapStateToProps, mapDispatchToProps)(Counter);
     ~~~
-  
-  
 
 ## redux-thunk（中间件）
 
@@ -444,15 +460,11 @@ React-redux所能解决的问题是：
 
 ![](https://storage.lynnn.cn/assets/markdown/91147/pictures/2020/10/19a9bd4441389b0de7378dbc88bd09cd43df515d.png?sign=befc0a76a6388904b5ec3cfb90add605&t=5f99b565)
 
-
-
 在使用前需要先安装这个中间件：
 
 ~~~shell
 npm i -S redux-thunk
 ~~~
-
-
 
 步骤：
 
@@ -475,7 +487,7 @@ npm i -S redux-thunk
     ~~~js
     // 解决插件报错的操作
     const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-    
+
     const store = createStore(
         // 合并多个reducer（整合数据源）,不合并会报错
         combineReducers({ counter, global }),
@@ -496,7 +508,7 @@ npm i -S redux-thunk
         // setTimeout(() => {
         //     return { type, payload };
         // }, 1000);
-    
+
         // 异步写法
         return (dispatch) => {
             setTimeout(() => {
@@ -505,8 +517,6 @@ npm i -S redux-thunk
         };
     };
     ~~~
-
-
 
 ## 面试题：redux优化
 
@@ -527,8 +537,6 @@ import search from "./Reducers/Reducer10";
 ~~~
 
 如何对其进行优化？
-
-
 
 解决思路：通过编写一个方法，实现指定文件夹的遍历，实现自动导入。
 
@@ -563,5 +571,23 @@ files.keys().forEach((element) => {
 });
 ~~~
 
+## 写在最后
 
+好啦，今天的分享就到这里！
 
+💬 互动时间：
+
+你学 React 时最卡的是 JSX、组件通信，还是状态管理？想看哪一块的实战案例，可以在评论区告诉我。
+
+最后，感谢你看到这里👏
+
+如果喜欢这篇内容，不妨顺手给小编安排一波👇
+**点赞**👍｜**转发**📲｜**推荐**❤️｜**评论**📣
+
+要是想第一时间蹲到新内容推送，记得给我点个**星标**⭐️
+
+更多干货内容正在持续填坑中，咱们下期见👋
+
+## 标签建议
+
+React、前端、前端基础

@@ -8,24 +8,50 @@ date: 2020-06-15 10:41:04
 
 ---
 
+## 标题备选
 
-# React
+1. React 入门到实践：把核心概念、JSX 和组件基础讲清楚
+2. 学 React 卡住了？先用这篇打牢基础
+3. 手把手梳理 React：从 Hello World 到组件开发
 
-# 一、概述
+## 摘要
+
+这篇文章适合正在入门 React 的前端同学，系统梳理核心概念、JSX、组件和常见写法，帮你建立清晰学习主线。
+
+## 正文
+
+哈喽大家好👋 我是程序🦍kk。把复杂知识掰成大白话讲明白，是我一直以来的小追求✨；**打好基础才能稳步进阶**，是我始终秉持的学习理念～
+
+> 📢 我搭建了5000人程序猿专属学习交流群
+群内会同步前端开发/全栈开发/Web3开发/远程工作等干货资源
+关注我并回复 **加群** ，就能加入交流圈啦🚀
+>
+
+## 前言
+
+**React 学起来不难，难的是先把主线概念理顺。**
+
+如果一上来就被 JSX、组件、状态、生命周期这些概念堆住，很容易越学越散。
+
+这篇会按原始学习笔记的顺序，把 React 的基础知识整理成适合复习和入门的公众号版本。
+
+## 知识点整理
+
+下面进入正文。你可以把它当作一份 React 基础复习清单，遇到不熟的概念再回到代码里验证。
+
+如果你刚开始学 React，建议先把 JSX 和组件这两块吃透，再继续看状态管理和路由。
+
+## 一、概述
 
 官网：https://reactjs.org/
 
 中文网（个人翻译站）：https://react.docschina.org/
-
-
 
 ## 1、介绍
 
 **React起源于Facebook的内部项目**，它是一个用于构建用户界面的javascript库，Facebook用它来架设公司的Instagram网站，并于2013年5月开源。
 
 React拥有较高的性能，代码逻辑非常简单，越来越多的人已开始关注和使用它。认为它可能是将来Web开发的主流工具**之一**。
-
-
 
 ## 2、特点
 
@@ -42,8 +68,6 @@ React拥有较高的性能，代码逻辑非常简单，越来越多的人已开
   - 使用React可以开发移动端—react-native
   - 可以开发VR应用—react 360
 
-
-
 ## 3、React与传统MVC的关系
 
 React用于**构建用户界面**的JavaScript 库，它不是一个完整的MVC框架，最多可以认为是MVC中的V（View）。可以简单地理解为：React将界面分成了各个独立的小块，每一个块就是组件，这些组件之间可以**组合、嵌套**，就成了我们的页面。
@@ -51,8 +75,6 @@ React用于**构建用户界面**的JavaScript 库，它不是一个完整的MVC
 Vue是一个框架。
 
 **React可以说它不是框架，它只是一个构建页面的JavaScript库，但是外面也认为其是一个框架。**
-
-
 
 ## 4、开发工具的安装
 
@@ -63,8 +85,6 @@ Vue是一个框架。
 - vscode安装react开发扩展
 
 ![](https://storage.lynnn.cn/assets/markdown/91147/pictures/2020/10/4d2506168810f2fb7195cd6b9f766ed998dc365d.png?sign=54df8319890c5709784d4eff96570639&t=5f8ee2a8)
-
-
 
 ## 5、React初识
 
@@ -135,9 +155,7 @@ React开发需要引入多个依赖文件，其中react.js、react-dom.js这两�
 > const vNode = React.createElement("div", {id: "hi",className: "cls"}, "hello world");
 > ~~~
 
-
-
-# 二、JSX语法
+## 二、JSX语法
 
 ## 1、概述
 
@@ -152,8 +170,6 @@ React使用JSX来替代常规的JavaScript，JSX可以理解为的JavaScript语�
 - 声明式语法更加直观，**与HTML结构相同**，**降低了学习成本**，提升开发效率速
 
 - jsx语法中一定要有一个**顶级元素包裹（XML一大特点）**，否则编译报错，程序不能运行
-
-
 
 ## 2、JSX重构Hello world
 
@@ -202,8 +218,6 @@ React使用JSX来替代常规的JavaScript，JSX可以理解为的JavaScript语�
 
 在写jsx语法的时候需要注意，如果对应的dom有多个层次，建议给整体添加小括号，这样的话允许通过格式化插件将代码格式化成多行，这样的好处，我们可以清晰的看清dom的层次结构。【建议】
 
-
-
 ## 3、JSX语法基础
 
 ### 3.1、插值表达式
@@ -229,8 +243,6 @@ ReactDOM.render(vNode, document.getElementById("app"));
 ~~~
 
 注意：在jsx语法中不支持“//”注释形式以及“<!---->”注释形式，只能使用“{/* */}”注释形式。
-
-
 
 ### 3.2、属性绑定
 
@@ -265,11 +277,9 @@ const vNode = (
 ReactDOM.render(vNode, app);
 ~~~
 
-
-
 ### 3.3、数组渲染
 
-#### 3.3.1、直接渲染
+### 3.3.1、直接渲染
 
 ~~~jsx
 let arr = ["张三", "李四", "王五", "罗翔"];
@@ -290,7 +300,7 @@ ReactDOM.render(vNode, el);
 
 ![](https://storage.lynnn.cn/assets/markdown/91147/pictures/2020/10/300444482c3a5c11e3fdf15003ba6142ba0b951d.png?sign=14d92baf0356eaf1441e41093edb4065&t=5f92987b)
 
-#### 3.3.2、处理并渲染
+### 3.3.2、处理并渲染
 
 ~~~jsx
 let arr = ["张三", "李四", "王五", "罗翔"];
@@ -309,7 +319,7 @@ const vNode = (
             }
             <hr />
             {
-                /* 
+                /*
                 给循环体包裹一层{}，不包就错，如果循环体就1行
             	{}与return可以被省略（箭头函数）
             	*/
@@ -326,9 +336,7 @@ const vNode = (
 ReactDOM.render(vNode, el);
 ~~~
 
-
-
-# 三、项目构建
+## 三、项目构建
 
 React团队推荐使用create-react-app（相当于vue的`vue-cli`）来创建React新的单页应用项目，它提供了一个**零配置**的现代构建设置。
 
@@ -367,8 +375,6 @@ npm start
 
 > 提示：如果本机安装了`yarn`（一款Facebook自家的包管理工具，类似npm），则安装好给予的项目启动命令提示是`yarn start`。
 
-
-
 ## 2、目录结构
 
 ![](https://storage.lynnn.cn/assets/markdown/91147/pictures/2020/10/d7961534de022d85cb6692d86bcd12573ab86e2b.png?sign=c6f3956be4f2b83e38b7ded996d9a923&t=5f93d80d)
@@ -386,9 +392,7 @@ npm start
 
 > 了解了react的目录结构后，可以对初始化的项目进行文件清理。**此处将`src`与`public`目录中的内容全部删除即可，后期如果需要自己往里面写内容。**
 
-
-
-# 四、组件
+## 四、组件
 
 ![组件](https://storage.lynnn.cn/assets/markdown/91147/pictures/2020/09/279e26e948d53d33a2a05e10e7c29aa736fe80a1.png?sign=9f63925b42a763bb945ad25cda41928f&t=5f5073bf)
 
@@ -403,13 +407,9 @@ npm start
   - 有状态
   - 有生命周期
 
-
-
 ## 1、组件的创建方式
 
 > 在react17之后，允许在项目不用“import React from "react";”，但是在之前的版本是不行的。建议写，肯定不会错。
-
-
 
 ### 1.1、函数创建组件
 
@@ -451,11 +451,9 @@ ReactDOM.render(<App></App>, document.getElementById("root"));
 >
 > ~~~html
 > <div id="root">
->     
+>
 > </div>
 > ~~~
-
-
 
 ### 1.2、类组件
 
@@ -497,8 +495,6 @@ class App extends Component {
 // 导出
 export default App;
 ~~~
-
-
 
 ## 2、组件传值（父-子）
 
@@ -544,8 +540,6 @@ export default App;
 
 > React的父传子的方式与Vue类似，都是通过调用子组件给子组件传递自定义属性方式进行传值的。
 
-
-
 ### 2.2、类组件
 
 在父组件中通过自定义属性向子组件传值后，如何在子级类组件中获取传递过来的值呢？
@@ -568,9 +562,7 @@ class Item extends Component {
 export default Item;
 ~~~
 
-
-
-# 五、 事件处理
+## 五、 事件处理
 
 ## 1、事件绑定
 
@@ -622,8 +614,6 @@ export default App;
 > - 在类组件中写事件处理程序的时候，不能写标准的`function xxx () {}`，写了就报错，一定要用简化的写法或者箭头函数形式
 > - 事件处理属性名称（事件绑定时用的属性）一定要使用符合react的小驼峰写法
 
-
-
 ## 2、事件对象
 
 React中可以通过事件处理函数的参数获取到事件对象，它的事件对象叫做：合成事件，**即兼容所有浏览器**，无需担心跨浏览器兼容问题。这个对象和之前学习的事件对象所包含的方法和属性都基本一致，不同的是React中的事件对象并不是浏览器提供的，而是它自己内部所构建的。此事件对象拥有和浏览器原生事件相同的接口，包括`stopPropagation()`和 `preventDefault()`，如果我们想获取到原生事件对象，可以通过`e.nativeEvent`属性来进行获取。
@@ -655,8 +645,6 @@ class App extends Component {
 export default App;
 ~~~
 
-
-
 ## 3、事件方法传参
 
 React中对于事件方法传参的方式有着非常灵活的用法。以传递参数`username`值为`zhangsan`为例，常见的有以下几种方式：
@@ -674,8 +662,6 @@ React中对于事件方法传参的方式有着非常灵活的用法。以传递
     - 对应的形参接收：`clickHandler(username,event)`
 
 > 关于this：指的是当前的这个组件对象，需要注意其指向问题。具体可以看下一节。
-
-
 
 ## 4、this指向问题
 
@@ -719,7 +705,7 @@ class App extends Component {
         // 解决this指向问题
         this.clickHandler = this.clickHandler.bind(this)
     }
-    
+
     render() {
         return (
             <div>
@@ -729,7 +715,7 @@ class App extends Component {
             </div>
         );
     }
-    
+
     clickHandler() {
         console.log(this);
     }
@@ -806,9 +792,7 @@ export default App;
 
 > 后续使用this（特别是在自定义事件处理程序中），一定要注意绑定绑定this指向。
 
-
-
-# 六、State状态
+## 六、State状态
 
 > 如果将state与vue中的某个点做类比的话，则其相当于vue组件中的`data`，作用就是用于存储当前组件中需要用到的数据。
 
@@ -866,8 +850,6 @@ export default App;
 
 > 切记：不要直接通过`this.state.xxx = xxxx`形式去更改state的值。否则会包警告，警告如下：Do not mutate state directly. Use setState()。
 
-
-
 ## 2、修改状态
 
 在vue中，data属性是利用`Object.defineProperty`处理过的，更改data的数据的时候会触发数据的`getter`和`setter`，但是React中没有做这样的处理，如果直接更改的话，react是无法得知的，所以，需要使用特殊的更改状态的方法`setState`。
@@ -898,8 +880,6 @@ this.setState(state => {
 
 上述两种参数形式的`updater`建议使用**函数形式**。因为对象形式在批量使用的时候会存在问题，因此建议使用函数形式。
 
-
-
 ## 3、props与state的区别
 
 > props = vue中的props
@@ -920,9 +900,7 @@ this.setState(state => {
 
 `props`的主要作用是让使用该组件的父组件可以传入参数来配置该组件。它是外部传进来的配置参数，组件内部无法控制也无法修改。除非外部组件主动传入新的`props`，否则组件的`props`永远保持不变。
 
-
-
-# 七、Props进阶
+## 七、Props进阶
 
 ## 1、children属性
 
@@ -964,8 +942,6 @@ export default Cmp;
 
 简而言之，上述写法形式有点像Vue里的插槽，但是不是，children这一小结所讲的内容简单来说就是父传子的另外一种写法而已：原先父传子是将值写在了**组件标签的属性中**，只不过现在写在了**组件标签里**而已。
 
-
-
 ## 2、props-type
 
 > 关于JavaScript的class中的静态成员与常规成员
@@ -976,7 +952,7 @@ export default Cmp;
 > 	name = 'lisi'
 > }
 > console.log((new App).name);
-> console.log(App.uname);		
+> console.log(App.uname);
 > // 常规的属性是在对象里的，如果要用得先实例化
 > // 静态属性是类里面的，使用的时候不要实例化
 > // 静态成员要优先于常规的成员
@@ -1007,7 +983,7 @@ function App(props){
 App.propTypes = {
     // 待验证的属性名：PropTypes.类型规则[.isRequired]
     prop-name:PropTypes.string,
-    // ... 
+    // ...
 }
 ~~~
 
@@ -1044,8 +1020,6 @@ App.propTypes = {
 
 需要注意，`isRequired`规则必须放在最后且不能独立于其他规则存在。更多的验证规则，可以参考[React官网](https://reactjs.org/docs/typechecking-with-proptypes.html)。
 
-
-
 ## 3、默认值
 
 如果`props`有属性没有传来数据，为了不让程序异常，我们可以依据业务情况给对应的属性设置默认值。
@@ -1078,9 +1052,7 @@ class App extends Component {
 }
 ~~~
 
-
-
-# 八、生命周期（重点）
+## 八、生命周期（重点）
 
 **函数组件无生命周期一说。**后续提到的生命周期钩子函数都是针对类组件的。但是在函数组件中有其它的办法去实现类似于类组件中的生命周期的效果。（后期再说：hooks）
 
@@ -1095,8 +1067,6 @@ class App extends Component {
 **完整的生命周期图**
 
 ![完整的生命周期图](https://storage.lynnn.cn/assets/markdown/91147/pictures/2020/10/d96aceebbcf9bf3dccc95b3afc7b2f75ef3e59ec.png?sign=81ab7fb514b47c66446ba45f557afe0f&t=5f96fd9b)
-
-
 
 **常用的生命周期图**
 
@@ -1281,8 +1251,6 @@ export default App22Child1;
 
 错误边界是React组件，可以在其子组件树中的任何位置捕获JavaScript错误。
 
-
-
 > 常用的生命周期：
 >
 > - **constructor**
@@ -1291,9 +1259,7 @@ export default App22Child1;
 > - **componentDidMount**
 > - **componentWillUnmount**
 
-
-
-# 九、表单处理
+## 九、表单处理
 
 ## 1、特别说明
 
@@ -1334,8 +1300,6 @@ export default App;
 - 给表单项的value/checked，设置成defaultValue/defaultChecked【非受控组件】
 
 React推荐我们使用受控组件。
-
-
 
 ## 2、受控组件
 
@@ -1476,8 +1440,6 @@ export default App;
 >   - 可以直接在事件绑定的位置传递标记，例如：`onChange={this.changeHandler.bind(this,'username')}`
 > - 表单项中表单项类型为`checkbox`的比较特殊，与其他类型的不同，需要特殊处理（取反操作，而其余的表单项是来什么值用什么值）
 
-
-
 ## 3、非受控组件
 
 没有和state数据源进行关联的表单项，而是**借助ref**，使用元素DOM方式获取表单元素值
@@ -1605,9 +1567,7 @@ class App extends Component {
 export default App;
 ~~~
 
-
-
-# 十、组件通信
+## 十、组件通信
 
 在React中，除了props可以实现数据传递以外，还支持两种形式数据传递：
 
@@ -1694,8 +1654,6 @@ class Son extends Component {
 export default Father;
 ~~~
 
-
-
 ## 2、子→父
 
 该传值的实现可以分为两种，思想大致如下：
@@ -1762,8 +1720,6 @@ class Son extends Component {
 export default Father;
 ~~~
 
-
-
 ## 3、跨组件通信（了解）
 
 网址：https://zh-hans.reactjs.org/docs/context.html
@@ -1806,7 +1762,6 @@ import Cmp2 from "./Components/Cmp2";
 // 导入context对象
 import ContextObj from "./Context/index";
 let { Provider } = context;
-
 
 class App extends Component {
     state = {
@@ -1873,9 +1828,7 @@ class Cmp2 extends Component {
 export default Cmp2;
 ~~~
 
-
-
-# 十一、HOC  - 高阶组件
+## 十一、HOC  - 高阶组件
 
 高阶函数。
 
@@ -1948,9 +1901,7 @@ export default Hoc(App);
 
 提示：高阶组件是强化组件的一种方式，一般是具备复用的，如果只是某个组件需要强化，则没有必要写成高阶组件的形式，直接在需要强化的组件中写强化的代码即可。
 
-
-
-# 十二、Redux（难）
+## 十二、Redux（难）
 
 ## 1、简介
 
@@ -1974,8 +1925,6 @@ npm i -S redux
 >
 > - 代码书写上vuex的代码会比redux的感觉简单一些
 > - 两者在模块化上的实现也有区别，redux的模块化分的文件会更多，但是redux在命名空间层面的操作比vuex简单
-
-
 
 ## 2、三大原则（重点）
 
@@ -2018,8 +1967,6 @@ g. store的state被reducer更改为新state的时候，store.subscribe方法里�
 
 请注意：由于reducer被要求是纯函数，所以reducer函数里面不能改变State，必须返回一个全新的数据（不会自动合并原始数据的，因此一定要注意：别把原始数据搞丢了）。
 
-
-
 ## 3、redux的使用
 
 **案例：在组件中展示一个按钮，点按钮后给redux中的数字+9，数字初始为0。实现一个计数器的效果**
@@ -2030,8 +1977,6 @@ g. store的state被reducer更改为新state的时候，store.subscribe方法里�
 - 创建视图组件（展示store中的数据）
 - 修改
 - 回显数据到视图组件
-
-
 
 **实现步骤**
 
@@ -2085,8 +2030,6 @@ const store = createStore(
 显示效果：
 
 ![](https://storage.lynnn.cn/assets/markdown/91147/pictures/2021/01/8a98ff5a63061eb039045fe1c42cd955d518311c.png?sign=7f00fc5ce078fb8192e4014f51649cb6&t=600a9550)
-
-
 
 b. 建立视图组件并且展示数据源
 
@@ -2194,8 +2137,6 @@ const reducers = combineReducers({ reducer, reducer2 });
 const store = createStore(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 ~~~
 
-
-
 ## 4、模块化
 
 针对redux的模块化，在一个常规项目中会将其代码拆分成以下几个部分：
@@ -2210,8 +2151,6 @@ const store = createStore(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && windo
 具体实现，以项目的代码为准。
 
 > 由于代码已经经过模块化，在获取redux中的数据的时候需要更改获取方式，比如说之前获取count是写成：this.state.count，模块化之后需要写成：this.state.counter.count，比之前多了一个模块化的模块名称（等同于vuex中命名空间）
-
-
 
 ## 5、react-redux
 
@@ -2250,10 +2189,10 @@ React-redux所能解决的问题是：
     // 导入provider
     import { Provider } from "react-redux";
     import store from "./store/index";
-    
+
     // 导入需要展示的组件
     import App from "./Login";
-    
+
     // 渲染视图
     // 在展示app组件的时候需要按照组件的形式进行操作
     ReactDOM.render(
@@ -2304,7 +2243,7 @@ React-redux所能解决的问题是：
     // 导入type
     import { MOD_COUNT, MOD_AGE } from "../store/types/index";
     // import * as types from "../store/types/index";
-    
+
     // 第一步：在需要使用redux组件中导入一个由react-redux提供的hoc
     import { connect } from "react-redux";
     class Counter extends Component {
@@ -2329,7 +2268,7 @@ React-redux所能解决的问题是：
             );
         }
     }
-    
+
     // 第二步：在类外面定义俩个映射方法
     // 将redux中的state数据源映射到本组件自身的props中
     function mapStateToProps(state) {
@@ -2349,13 +2288,11 @@ React-redux所能解决的问题是：
             },
         };
     }
-    
+
     // 第三步：应用HOC
     // connect函数的俩个参数顺序不能颠倒
     export default connect(mapStateToProps, mapDispatchToProps)(Counter);
     ~~~
-  
-  
 
 ## 6、redux-thunk（中间件）
 
@@ -2385,15 +2322,11 @@ React-redux所能解决的问题是：
 
 ![](https://storage.lynnn.cn/assets/markdown/91147/pictures/2020/10/19a9bd4441389b0de7378dbc88bd09cd43df515d.png?sign=befc0a76a6388904b5ec3cfb90add605&t=5f99b565)
 
-
-
 在使用前需要先安装这个中间件：
 
 ~~~shell
 npm i -S redux-thunk
 ~~~
-
-
 
 步骤：
 
@@ -2416,7 +2349,7 @@ npm i -S redux-thunk
     ~~~js
     // 解决插件报错的操作
     const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-    
+
     const store = createStore(
         // 合并多个reducer（整合数据源）,不合并会报错
         combineReducers({ counter, global }),
@@ -2437,7 +2370,7 @@ npm i -S redux-thunk
         // setTimeout(() => {
         //     return { type, payload };
         // }, 1000);
-    
+
         // 异步写法
         return (dispatch) => {
             setTimeout(() => {
@@ -2446,8 +2379,6 @@ npm i -S redux-thunk
         };
     };
     ~~~
-
-
 
 ## 7、面试题：redux优化
 
@@ -2468,8 +2399,6 @@ import search from "./Reducers/Reducer10";
 ~~~
 
 如何对其进行优化？
-
-
 
 解决思路：通过编写一个方法，实现指定文件夹的遍历，实现自动导入。
 
@@ -2504,19 +2433,13 @@ files.keys().forEach((element) => {
 });
 ~~~
 
-
-
 作业：vue综合案例的时候不是有nodejs，请使用当时的nodejs代码，结合受控/非受控组件，实现react的登录页面（不用管样式），登录成功之后将token保存到redux中。
 
-
-
-# 十三、路由
+## 十三、路由
 
 ## 1、介绍
 
 ![](https://storage.lynnn.cn/assets/markdown/91147/pictures/2020/10/cea272f101176b948ac627959723ae3a93a0e4b9.png?sign=a44bce7e29d23549df61fd1be8bbc8ea&t=5f9abd07)
-
-
 
 React Router官网：https://reactrouter.com/
 
@@ -2527,8 +2450,6 @@ npm i -S react-router-dom
 ~~~
 
 React Router现在的主版本是5，于2019年3月21日搞笑的发布，[搞笑的官网链接](<https://reacttraining.com/blog/react-router-v5/>)， 本来是要发布4.4的版本的，结果成了5。从4开始，使用方式相对于之前版本的思想有所不同。之前版本的思想是传统的思想：**路由应该统一在一处渲染**， Router 4之后是这样的思想：**一切皆组件**。
-
-
 
 ## 2、路由的使用
 
@@ -2554,8 +2475,6 @@ React Router现在的主版本是5，于2019年3月21日搞笑的发布，[搞�
 ![](https://storage.lynnn.cn/assets/markdown/91147/pictures/2020/10/2bdaba50f309c0a59921c7e188597c744931f703.png?sign=6e90bed85333f028465d58ca7faae7c7&t=5f9abe65)
 
 > 注意：`Link`和`Route`组件必须被`Router`组件给包裹，否则报错。
-
-
 
 ### 2.2、声明式导航
 
@@ -2627,8 +2546,6 @@ export default App;
 >
 > 刨除样式的影响，`Route`组件在HTML代码中的位置决定了渲染后其在页面中显示的位置。如果`Route`放在最后，则其显示的时候也在最后；若其放在渲染内容的最前面，相应的显示也会在最开始。
 
-
-
 ### 2.3、编程式导航
 
 react-router-dom中通过history对象中的push/go等方法实现编程式导航功能，这一点与之前的vue路由还是很相似的。
@@ -2649,8 +2566,6 @@ this.props.history.go(-1)
 ~~~
 
 > 请勿在根组件中写编程式导航，因为根组件默认是没有props对象，解决办法见后续。
-
-
 
 ## 3、路由参数
 
@@ -2688,8 +2603,6 @@ constructor(props){
     };
 }
 ~~~
-
-
 
 ## 4、嵌套路由
 
@@ -2739,8 +2652,6 @@ render() {
 
 - 创建父路由中的子路由需要的组件
 
-
-
 ## 5、重定向与404路由
 
 ### 5.1、重定向路由
@@ -2758,8 +2669,6 @@ import { Redirect } from "react-router-dom"
 <Redirect from="/from" to="/to"></Redirect>
 ~~~
 
-
-
 ### 5.2、404路由
 
 项目中少不了404页面的配置，在React里面配置404页面需要注意：
@@ -2768,7 +2677,7 @@ import { Redirect } from "react-router-dom"
 
   ~~~jsx
   import NotFound from "./Components/404";
-  
+
   <Route>
       <NotFound></NotFound>
   </Route>
@@ -2796,8 +2705,6 @@ import { Redirect } from "react-router-dom"
     </Switch>
 </div>
 ~~~
-
-
 
 ## 6、三种路由渲染方式
 
@@ -2841,8 +2748,6 @@ Route路由渲染组件是用于路由规则匹配成功后组件渲染容器，
 - 函数式渲染方式支持传递传递参数，其有一个形参“props”
 - children函数方式渲染，会在形参中接受到一个对象，对象中match属性如果当前地址匹配成功返回对象，否则null
 
-
-
 ## 7、withRouter高阶组件
 
 **作用：把不是通过路由切换过来的组件中，将react-router 的 history、location、match 三个对象传入props对象上**
@@ -2858,8 +2763,6 @@ export default withRouter(Cmp)
 ~~~
 
 > 该高阶组件是路由包自带的东西，因此只需要引入+使用就可以了，不需要自己定义。
-
-
 
 ## 8、封装自定义组件
 
@@ -2961,8 +2864,6 @@ class App extends Component {
 export default App;
 ~~~
 
-
-
 # 十四、三方组件
 
 ## 1、过渡动画组件
@@ -2978,8 +2879,6 @@ export default App;
 ~~~shell
 npm i -S react-transition-group
 ~~~
-
-
 
 ### 1.2、基本使用
 
@@ -3099,8 +2998,6 @@ render() {
 }
 ~~~
 
-
-
 ### 1.3、列表过渡动画
 
 **核心代码**
@@ -3177,8 +3074,6 @@ class App extends Component {
 export default App;
 ~~~
 
-
-
 ### 1.4、路由过渡动画
 
 路由过渡动画，即路由切换时为其添加动画效果。
@@ -3246,8 +3141,6 @@ class App extends Component {
 export default withRouter(App);
 ~~~
 
-
-
 ## 2、css-in-js技术
 
 ### 2.1、简介
@@ -3275,8 +3168,6 @@ npm i -S styled-components
 ~~~
 
 由于css后期会在模版字符串中编写，默认情况下vscode是没有css样式代码片段的（写样式的时候是没有代码提示的），为了提高css代码在模版字符串中编写的效率，此处强烈建议安装一个vscode的扩展：vscode-styled-components
-
-
 
 ### 2.2、定义样式与使用
 
@@ -3318,8 +3209,6 @@ export default App;
 **效果**
 
 ![](https://storage.lynnn.cn/assets/markdown/91147/pictures/2020/11/0d46a4677c99b01d7caaecc08ec7349d21962da9.png?sign=d576889f41bac254c738e300e5de8c23&t=5fa04de3)
-
-
 
 ### 2.3、样式继承
 
@@ -3369,8 +3258,6 @@ class App extends Component {
 export default App;
 ~~~
 
-
-
 ### 2.4、属性传递
 
 属性传递：样式值的动态传参（组件传值）
@@ -3409,8 +3296,6 @@ class App extends Component {
 
 export default App;
 ~~~
-
-
 
 ## 3、immutable.js
 
@@ -3479,8 +3364,6 @@ componentDidMount() {
 
 可以看到，当在更改`newState`更深层次的数据的时候，还是会影响到`state`的值。如果要深层复制，就得一层一层的做**递归拷贝**，这是一个复杂的问题。虽然有些第三方的库已经帮我们做好了，但是深层复制是非常消耗性能的。那么这个问题如何解决呢？这就需要用到`immutable.js`了。
 
-
-
 ### 3.2、介绍
 
 项目地址：https://immutable-js.github.io/immutable-js/
@@ -3494,8 +3377,6 @@ immutable.js出自Facebook，是最流行的**不可变数据**结构的实现�
 如果上面这张图不能直观的表现出变化，我们可以看下面这张图：
 
 ![](https://storage.lynnn.cn/assets/markdown/91147/pictures/2020/11/b3d75c9b8adeafc3dd5e11383a545c21cfc18a2c.gif?sign=537807d5a25d0fc0e7800003a9114e1b&t=5fa2321b)
-
-
 
 **使用immutable.js的优缺点**
 
@@ -3514,8 +3395,6 @@ immutable.js出自Facebook，是最流行的**不可变数据**结构的实现�
 ~~~shell
 npm i -S immutable
 ~~~
-
-
 
 ### 3.3、常用API
 
@@ -3559,8 +3438,6 @@ console.log(newMap1.update("age", (val) => val + 1).get("age"));
 console.log(newMap1.updateIn(["mobile", "private"], () => "13888888888").getIn(["mobile", "private"]));
 ~~~
 
-
-
 #### 3.3.2、array转List对象
 
 ~~~jsx
@@ -3584,8 +3461,6 @@ console.log(list.get(4));
 console.log(list.toArray());
 ~~~
 
-
-
 #### 3.3.3、JS转immutable（Map）
 
 ~~~jsx
@@ -3606,8 +3481,6 @@ console.log(immutable.get("name"));
 console.log(immutable.getIn(["mobile","private"]));
 ~~~
 
-
-
 #### 3.3.4、immutable转JS
 
 ~~~jsx
@@ -3626,8 +3499,6 @@ console.log(immutable.toJS());
 ~~~
 
 注意：toJS方法不需要导入（本身就在map对象的原型上），导入了实际也不会被使用。
-
-
 
 ### 3.4、Redux中集成
 
@@ -3717,10 +3588,6 @@ function reducer(state = defaultState, actions) {
 export default reducer;
 ~~~
 
-
-
-
-
 # 十五、Hooks
 
 ## 1、简介
@@ -3735,15 +3602,11 @@ React中组建由函数组件与类组件，在 React Hooks 出现之前，我�
 
 - hook使用比使用类组件简单许多（仁者见仁智者见智）
 
-
-
 ## 2、hook的使用限制
 
 - hook**只能**用在函数组件**中**，class组件不行
 - **普通**函数不能使用hook（hook不能在组件函数外去使用）
 - hook不能被有条件的调用，因此不能放在if/for中（如果真有有条件调用的需求，请把条件写在hook函数内）
-
-
 
 ## 3、常用的hook函数
 
@@ -3806,18 +3669,16 @@ const StateHook = () => {
 export default StateHook;
 ~~~
 
-
-
 ### 3.2、useEffect
 
 作用：模拟类组件中的生命周期的
 
 函数组件对于在一些生命周期中操作还是无能为力，所以 React提供了 useEffect 来帮助开发者处理函数组件，来帮助模拟完成一部份的开发中**非常常用的生命周期方法（并不是全部的生命周期）**。常被称为：**副作用处理函数**。此函数的操作是异步的。
 
-useEffect 相当类组件中的3个生命周期 
+useEffect 相当类组件中的3个生命周期
 
 - componentDidMount
-- componentDidUpdate 
+- componentDidUpdate
 - componetWillUnMount
 
 语法：
@@ -3942,8 +3803,6 @@ const About = () => {
 export default EffectHook;
 ~~~
 
-
-
 ### 3.3、useRef
 
 作用：用来生成对 DOM 对象的引用（类似于类组件中的createRef方法）
@@ -3970,8 +3829,6 @@ const RefHook = () => {
 
 export default RefHook;
 ~~~
-
-
 
 ### 3.4、redux相关
 
@@ -4009,8 +3866,6 @@ const App4 = () => {
 export default App4;
 ~~~
 
-
-
 ### 3.5、react-route-dom相关
 
 ~~~js
@@ -4043,8 +3898,6 @@ export default Home;
 ~~~
 
 注意点：用了这个三个hook，组件在导出的时候就不用再withRouter。
-
-
 
 ### 3.6、自定义hook
 
@@ -4109,3 +3962,23 @@ const App5 = () => {
 export default App5;
 ~~~
 
+## 写在最后
+
+好啦，今天的分享就到这里！
+
+💬 互动时间：
+
+你学 React 时最卡的是 JSX、组件通信，还是状态管理？想看哪一块的实战案例，可以在评论区告诉我。
+
+最后，感谢你看到这里👏
+
+如果喜欢这篇内容，不妨顺手给小编安排一波👇
+**点赞**👍｜**转发**📲｜**推荐**❤️｜**评论**📣
+
+要是想第一时间蹲到新内容推送，记得给我点个**星标**⭐️
+
+更多干货内容正在持续填坑中，咱们下期见👋
+
+## 标签建议
+
+React、前端、前端基础
