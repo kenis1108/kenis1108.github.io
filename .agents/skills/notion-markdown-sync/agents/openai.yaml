@@ -1,0 +1,4 @@
+interface:
+  display_name: "Notion Markdown Sync"
+  short_description: "Import Markdown to Notion and export pages to Markdown"
+  default_prompt: "Use $notion-markdown-sync to import Markdown into Notion or export a Notion page to Markdown."

@@ -6,3 +6,5 @@ node_modules
 .env
 .notion-import-state.json
 .notion-import-*-state.json
+
+.agents/skills/cave*

@@ -1,0 +1,4 @@
+interface:
+  display_name: "KK 公众号文章适配器"
+  short_description: "生成标题摘要开头结尾互动并润色成kk风格公众号文章"
+  default_prompt: "Use $kk-wechat-article-adapter to polish this draft into my WeChat public account article format with title, summary, intro, interaction, and outro."
