@@ -1,0 +1,16 @@
+{
+  "$schema": "https://cdn.jsdelivr.net/gh/devcontainers/spec@main/schemas/devContainer.base.schema.json",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/nix:1": {
+      "packages": "fish,yazi,chezmoi,fzf,neovim,lazygit,fd,ripgrep,bat",
+      "extraNixConfig": "experimental-features = nix-command flakes"
+    },
+    "ghcr.io/devcontainers/features/sshd:1": {}
+  },
+  "postCreateCommand": {
+    "dotfiles": "bash -lc 'test -d ~/dotfiles/.git || git clone --depth 1 https://github.com/mathiasbynens/dotfiles ~/dotfiles'"
+    // "fish-login-shell": "bash -lc 'FISH=$HOME/.nix-profile/bin/fish; grep -qxF \"$FISH\" /etc/shells || echo \"$FISH\" | sudo tee -a /etc/shells; sudo chsh -s \"$FISH\" vscode'",
+    // "fish-nix-config": "bash -lc 'mkdir -p $HOME/.config/fish/conf.d; printf \"%s\\n\" \"# Nix\" \"if test -f /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish\" \"    source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish\" \"end\" \"if test -f /nix/var/nix/profiles/default/share/fish/vendor_completions.d/nix.fish\" \"    source /nix/var/nix/profiles/default/share/fish/vendor_completions.d/nix.fish\" \"end\" \"# End Nix\" > $HOME/.config/fish/conf.d/nix.fish'"
+  }
+}
