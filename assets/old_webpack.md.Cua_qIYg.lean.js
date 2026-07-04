@@ -1,1 +1,0 @@
-import{_ as i,c as a,o as t,ag as l}from"./chunks/framework.DPDPlp3K.js";const o=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"old/webpack.md","filePath":"old/webpack.md"}'),n={name:"old/webpack.md"};function p(h,s,k,e,d,c){return t(),a("div",null,s[0]||(s[0]=[l("",202)]))}const g=i(n,[["render",p]]);export{o as __pageData,g as default};

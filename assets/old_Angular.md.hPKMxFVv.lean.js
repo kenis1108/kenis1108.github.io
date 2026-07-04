@@ -1,1 +1,0 @@
-import{_ as i,c as a,o as n,ag as t}from"./chunks/framework.DPDPlp3K.js";const g=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"old/Angular.md","filePath":"old/Angular.md"}'),l={name:"old/Angular.md"};function h(k,s,p,e,r,d){return n(),a("div",null,s[0]||(s[0]=[t("",58)]))}const F=i(l,[["render",h]]);export{g as __pageData,F as default};
