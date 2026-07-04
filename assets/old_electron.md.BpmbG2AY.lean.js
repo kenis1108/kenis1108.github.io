@@ -1,1 +1,0 @@
-import{_ as a,c as r,o as t,ag as o}from"./chunks/framework.DPDPlp3K.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"old/electron.md","filePath":"old/electron.md"}'),l={name:"old/electron.md"};function n(i,e,c,h,s,d){return t(),r("div",null,e[0]||(e[0]=[o("",34)]))}const b=a(l,[["render",n]]);export{u as __pageData,b as default};
