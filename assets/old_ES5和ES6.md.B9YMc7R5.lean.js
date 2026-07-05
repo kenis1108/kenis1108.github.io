@@ -1,1 +1,0 @@
-import{_ as s,c as a,o as t,ag as l}from"./chunks/framework.DPDPlp3K.js";const g=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"old/ES5和ES6.md","filePath":"old/ES5和ES6.md"}'),h={name:"old/ES5和ES6.md"};function n(k,i,p,e,d,r){return t(),a("div",null,i[0]||(i[0]=[l("",85)]))}const F=s(h,[["render",n]]);export{g as __pageData,F as default};
