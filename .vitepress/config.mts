@@ -54,10 +54,6 @@ export default defineConfig({
     },
     nav: [
       { text: 'Home', link: '/' },
-      { 
-        text: 'Old Articles',
-        items: getAllMarkdownFiles(path.resolve(__dirname, '../old'))
-      },
       {
         text: 'Notion',
         items: getAllMarkdownFiles(path.resolve(__dirname, '../notion'))
@@ -69,11 +65,6 @@ export default defineConfig({
     ],
 
     sidebar: {
-      '/old/': [{
-        text: 'Old Articles',
-        collapsed: true,
-        items: getAllMarkdownFiles(path.resolve(__dirname, '../old'))
-      }],
       '/notion/': [{
         text: 'Notion',
         collapsed: true,
