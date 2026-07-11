@@ -1,1 +1,0 @@
-import{_ as i,c as a,o as t,ag as l}from"./chunks/framework.DPDPlp3K.js";const c=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"old/Vuex.md","filePath":"old/Vuex.md"}'),n={name:"old/Vuex.md"};function h(p,s,e,k,r,d){return t(),a("div",null,s[0]||(s[0]=[l("",58)]))}const g=i(n,[["render",h]]);export{c as __pageData,g as default};

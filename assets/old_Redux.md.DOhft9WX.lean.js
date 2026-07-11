@@ -1,1 +1,0 @@
-import{_ as i,c as a,o as t,ag as n}from"./chunks/framework.DPDPlp3K.js";const g=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"old/Redux.md","filePath":"old/Redux.md"}'),l={name:"old/Redux.md"};function h(p,s,k,e,r,d){return t(),a("div",null,s[0]||(s[0]=[n("",107)]))}const y=i(l,[["render",h]]);export{g as __pageData,y as default};
