@@ -482,3 +482,7 @@ opencode opencode-desktop
 6. amend / rebase 后要 `git push --force-with-lease`，这是 nixpkgs 贡献里非常常见的动作。
 
 把这些流程跑通一次后，你就不只是“会改 Nix 表达式”，而是开始真正进入 nixpkgs 社区的工作方式了。
+
+
+# TODO: 告诉codex添加每次修改文件之后跑一下`nix fmt`, 否则pr可能因为格式化问题check不过
+# TODO: darwin的nixpkgs-review-gha需要使用sandbox=false
