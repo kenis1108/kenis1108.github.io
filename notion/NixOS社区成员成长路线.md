@@ -486,3 +486,4 @@ opencode opencode-desktop
 
 # TODO: 告诉codex添加每次修改文件之后跑一下`nix fmt`, 否则pr可能因为格式化问题check不过
 # TODO: darwin的nixpkgs-review-gha需要使用sandbox=false
+# TODO: https://github.com/NixOS/nixpkgs/blob/master/maintainers/README.md 如何成为包的维护者
