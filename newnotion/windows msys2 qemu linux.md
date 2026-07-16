@@ -10,8 +10,6 @@ open `ucrt64.exe`
 pacman -Syu
 pacman -S mingw-w64-ucrt-x86_64-qemu
 ```
-```
-```
 
 ## Prepare the mirror image
 
@@ -22,14 +20,10 @@ access to the windows disk drive via `/c`、`/d`
 cp /c/Users/<username>/Downloads/xxx.iso ./
 ```
 
-```
-```
 ## Create virtual disk
 
 ```bash
 qemu-img create -f qcow2 ubuntu26.04.qcow2 60G
-```
-```
 ```
 
 ## Start installation system
@@ -92,5 +86,4 @@ qemu-img snapshot -a install_done ubuntu26.04.qcow2
 
 # 删除快照
 qemu-img snapshot -d install_done ubuntu26.04.qcow2
-```
 ```
