@@ -14,8 +14,7 @@
 
 哈喽大家好👋 我是程序🦍kk。把复杂知识掰成大白话讲明白，是我一直以来的小追求✨；**打好基础才能稳步进阶**，是我始终秉持的学习理念～
 
-> 📢 我搭建了5000人程序猿专属学习交流群，群内会同步前端开发/全栈开发/Web3开发/远程工作等干货资源，关注我并回复 **加群** ，就能加入交流圈啦🚀复 **加群** ，就能加入交流圈啦🚀
->
+> 📢 我搭建了5000人程序猿专属学习交流群，群内会同步前端开发/全栈开发/Web3开发/远程工作等干货资源，关注我并回复 **加群** ，就能加入交流圈啦🚀
 
 ## 前言
 
@@ -91,14 +90,46 @@
    格式示例：
    ```nix
    {
-     github = "kenis0225";
-     githubId = 123456; # 通过 https://api.github.com/users/kenis0225 获取id
-     name = "kenis";
-     email = "xxx@xxx.com";
+     kenis = {
+       github = "kenis1108";
+       githubId = 123456; # 通过 https://api.github.com/users/kenis1108 获取 id
+       name = "kenis";
+       email = "xxx@xxx.com";
+     };
    }
    ```
 3. 修改对应包`meta.maintainers = [ lib.maintainers.kenis ];` 提交合并
 4. 之后所有该包的更新PR会自动通知你，你是第一审核人
+
+更具体一点，官方维护者文档里说得很直接：**只要你关心某个包，就可以把自己加成这个包的 maintainer，不需要先拿到 nixpkgs 仓库写入权限。**
+
+实际 PR 一般改两处：
+
+1. 在 `maintainers/maintainer-list.nix` 里新增自己的维护者信息。
+2. 在目标包的 `meta.maintainers` 里加上自己。
+
+例如：
+
+```nix
+meta = {
+  description = "Example package";
+  homepage = "https://example.com";
+  license = lib.licenses.mit;
+  maintainers = with lib.maintainers; [ kenis ];
+  platforms = lib.platforms.darwin;
+};
+```
+
+如果你是在“修包 / 更新包”的同一个 PR 里顺便把自己加成 maintainer，建议拆成两个 commit：
+
+```text
+maintainers: add kenis
+snipaste: add kenis as maintainer
+```
+
+`maintainers: add <handle>` 这个 commit 单独放，是因为维护者列表本身也要 review。这样别人看 PR 时会很清楚：一个 commit 是新增维护者身份，另一个 commit 才是包本身的修改。
+
+> 💡 小贴士：`githubId` 比 GitHub 用户名更稳定，因为用户名可以改。可以通过 `https://api.github.com/users/<你的 GitHub 用户名>` 查到，比如返回里的 `id` 字段。
 
 ---
 ## 四、第三步：申请Triager全局审核权限（官方团队身份）
@@ -127,26 +158,6 @@
 4. 在Matrix/Discourse参与社区讨论，主动帮助新人解决git rebase、拆分提交问题
 5. 积累足够Review记录后发帖申请Triager权限，正式拥有官方PR审核身份
 
-## 写在最后
-
-好啦，今天的分享就到这里！
-
-💬 互动时间：
-
-你还想看「NixOS社区成员成长路线」相关的哪一块展开？可以把你的使用场景或具体问题留言给我。
-
-最后，感谢你看到这里👏
-
-如果喜欢这篇内容，不妨顺手给小编安排一波👇
-**点赞**👍｜**转发**📲｜**推荐**❤️｜**评论**📣
-
-要是想第一时间蹲到新内容推送，记得给我点个**星标**⭐️
-
-更多干货内容正在持续填坑中，咱们下期见👋
-
-## 标签建议
-
-技术笔记
 
 ---
 ## 七、实战补充：一次 nixpkgs PR 从开分支到 review 通过的完整流程
@@ -242,6 +253,34 @@ packages/desktop/dist/mac/OpenCode.app
 这类问题就是实际做 PR 时最常见的：你以为只改了一个包，结果它的 dependent package 也被带出来了。
 
 ### 4. 本地先 build，再开口让别人 review
+
+改完 Nix 文件后，先在 nixpkgs 仓库根目录对**本次修改过的 Nix 文件**跑格式化，不要直接对整个仓库做全量格式化。
+
+```bash
+git diff --name-only -- '*.nix'
+nix fmt path/to/changed-file.nix
+```
+
+如果改了多个文件，就把这些文件路径一起传进去：
+
+```bash
+nix fmt path/to/changed-file.nix path/to/another-changed-file.nix
+```
+
+nixpkgs 的 CI 会检查 Nix 文件是否符合官方 formatter。如果只是 `nix build` 成功，但忘了格式化本次修改的文件，PR 仍然可能因为格式检查不过被挡住。
+
+如果你的本地环境暂时跑不了 `nix fmt`，也可以用官方文档里提到的 `treefmt`，但同样建议只带上本次修改的文件路径：
+
+```bash
+nix develop --command treefmt path/to/changed-file.nix
+nix-shell --run 'treefmt path/to/changed-file.nix'
+```
+
+格式化后再看一眼 diff，确认没有把无关文件也格式化进去：
+
+```bash
+git diff
+```
 
 最基本的验证：
 
@@ -395,8 +434,8 @@ https://github.com/Defelo/nixpkgs-review-gha
 pr: 540738
 x86_64-linux: false
 aarch64-linux: false
-x86_64-darwin: yes_sandbox_relaxed
-aarch64-darwin: yes_sandbox_relaxed
+x86_64-darwin: yes_sandbox_false
+aarch64-darwin: yes_sandbox_false
 riscv64-linux: false
 builders: gha
 extra-args: 留空
@@ -405,6 +444,19 @@ upterm: false
 post-result: true
 on-success: nothing
 ```
+
+这里的 Darwin 选项不要随手保持默认值。
+
+`nixpkgs-review-gha` 的 Darwin 输入不是简单的 true / false，而是下面几种：
+
+- `no`：不跑这个平台。
+- `yes_sandbox_false`：跑这个平台，并设置 `sandbox = false`。
+- `yes_sandbox_relaxed`：跑这个平台，并设置 `sandbox = relaxed`。
+- `yes_sandbox_true`：跑这个平台，并设置 `sandbox = true`。
+
+GitHub Actions 的 macOS runner 上，一些 Darwin 构建用 `relaxed` 或 `true` 可能会因为 sandbox 限制失败。实战里如果只是想验证 Darwin 包能不能构建，通常选 `yes_sandbox_false` 更稳。
+
+> ⚠️ 但评论结果时要写清楚 `sandbox = false`。官方贡献文档仍然建议能开 sandbox 时尽量开，因为 Hydra 会用 sandbox 构建。GHA 上用 `sandbox = false` 更像是给维护者提供一个可复查的 Darwin 构建信号，而不是替代所有最终 CI。
 
 不要随便选：
 
@@ -425,14 +477,14 @@ Generated using [`nixpkgs-review-gha`](https://github.com/Defelo/nixpkgs-review-
 Command: `nixpkgs-review pr 540738`
 Commit: `31a0c5721a2c8d43f860b6d639bc6260288f2c68`
 
-### `x86_64-darwin` (sandbox = relaxed)
+### `x86_64-darwin` (sandbox = false)
 
 ✅ 2 packages built:
 
 - `opencode`
 - `opencode-desktop`
 
-### `aarch64-darwin` (sandbox = relaxed)
+### `aarch64-darwin` (sandbox = false)
 
 ✅ 1 package built:
 
@@ -477,13 +529,27 @@ opencode opencode-desktop
 1. 稳定分支 PR 要选 `release-YY.MM`，不要选 channel 分支。
 2. `meta.platforms` 不是孤立字段，可能会影响依赖它的其他包。
 3. `nixpkgs-review` 比单独 `nix build .#某个包` 更能发现连带问题。
-4. backport bot 的 `CHANGES_REQUESTED` 不一定是构建失败，也可能只是要求人工确认非 cherry-pick commit。
-5. `Not-cherry-picked-because` 是 nixpkgs CI 识别的 footer，适合说明“为什么这个 release PR 不是从 master cherry-pick”。
-6. amend / rebase 后要 `git push --force-with-lease`，这是 nixpkgs 贡献里非常常见的动作。
+4. 改完 Nix 文件先对本次修改的文件跑 `nix fmt <file...>`，否则 build 成功也可能卡在格式检查；没必要全仓格式化。
+5. Darwin 上跑 `nixpkgs-review-gha` 时，要注意选择 `yes_sandbox_false`，并在结果里说明 `sandbox = false`。
+6. backport bot 的 `CHANGES_REQUESTED` 不一定是构建失败，也可能只是要求人工确认非 cherry-pick commit。
+7. `Not-cherry-picked-because` 是 nixpkgs CI 识别的 footer，适合说明“为什么这个 release PR 不是从 master cherry-pick”。
+8. amend / rebase 后要 `git push --force-with-lease`，这是 nixpkgs 贡献里非常常见的动作。
 
 把这些流程跑通一次后，你就不只是“会改 Nix 表达式”，而是开始真正进入 nixpkgs 社区的工作方式了。
 
+## 写在最后
 
-# TODO: 告诉codex添加每次修改文件之后跑一下`nix fmt`, 否则pr可能因为格式化问题check不过
-# TODO: darwin的nixpkgs-review-gha需要使用sandbox=false
-# TODO: https://github.com/NixOS/nixpkgs/blob/master/maintainers/README.md 如何成为包的维护者
+好啦，今天的分享就到这里！
+
+💬 互动时间：
+
+你还想看「NixOS社区成员成长路线」相关的哪一块展开？可以把你的使用场景或具体问题留言给我。
+
+最后，感谢你看到这里👏
+
+如果喜欢这篇内容，不妨顺手给小编安排一波👇
+**点赞**👍｜**转发**📲｜**推荐**❤️｜**评论**📣
+
+要是想第一时间蹲到新内容推送，记得给我点个**星标**⭐️
+
+更多干货内容正在持续填坑中，咱们下期见👋
