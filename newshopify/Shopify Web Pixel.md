@@ -2,6 +2,8 @@
 
 [https://shopify.dev/docs/api/web-pixels-api/standard-events](https://shopify.dev/docs/api/web-pixels-api/standard-events)
 
+Pixel Helper 是什么
+
 ```text
 Pixel Helper
   ____  _                 _  __
