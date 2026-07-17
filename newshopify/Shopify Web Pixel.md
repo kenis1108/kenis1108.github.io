@@ -17,6 +17,8 @@ Pixel Helper
                                    |_|
 ```
 
+Settings -> Customer events -> Add custom pixel
+
 测试代码
 
 ```javascript
