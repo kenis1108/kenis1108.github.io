@@ -1,3 +1,4 @@
+> 首次进入仓库时间：2026-04-07
 ## 标题备选
 
 1. Shopify 开发实战：Shopify Slate 已弃用？迁移到 Shopify CLI 一篇讲清楚

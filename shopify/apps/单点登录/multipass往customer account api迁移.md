@@ -1,3 +1,4 @@
+> 首次进入仓库时间：2026-03-23
 ## 标题备选
 
 1. Shopify 开发实战：Shopify Multipass 迁移到 Customer Account API 一篇讲清楚
