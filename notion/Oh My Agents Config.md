@@ -65,7 +65,11 @@
   description:
 
 - name: feishu-cli
-  url: https://www.feishu.cn/feishu-cli
+  url: https://github.com/larksuite/cli
+  description:
+
+- name: feishu-project-cli
+  url: https://github.com/larksuite/meegle-cli
   description:
 
 ---
