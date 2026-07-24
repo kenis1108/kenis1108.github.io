@@ -28,3 +28,16 @@ Shopify 后台里也会用这个概念，例如 Analytics 里的转化相关报�
 ## 对接Splitit payment分期支付
 
 https://developers.splitit.com/mcp-servers/docs
+
+## shopify webhook
+
+https://smee.io/ -> Start a new channel -> 保持页面打开
+
+Settings → Notifications → Webhooks → Create webhook
+Event：Order creation
+Format：JSON
+URL：上面的 smee channel 地址
+
+下一笔测试单完成后，smee 页面就会出现完整 payload
+
+Draft order 的 customAttributes 付款后会出现在订单 webhook 的 note_attributes 里
