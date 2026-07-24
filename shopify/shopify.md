@@ -29,11 +29,11 @@ Shopify 后台里也会用这个概念，例如 Analytics 里的转化相关报�
 
 https://developers.splitit.com/mcp-servers/docs
 
-## shopify webhook
+## shopify webhook 测试
 
-https://smee.io/ -> Start a new channel -> 保持页面打开
+公共webhook https://smee.io/ -> Start a new channel -> 保持页面打开
 
-Settings → Notifications → Webhooks → Create webhook
+Admin -> Settings → Notifications → Webhooks → Create webhook
 Event：Order creation
 Format：JSON
 URL：上面的 smee channel 地址
