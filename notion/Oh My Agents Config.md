@@ -72,6 +72,14 @@
   url: https://github.com/larksuite/meegle-cli
   description:
 
+- name: web-access
+  url: https://github.com/eze-is/web-access
+  description:
+
+- name: superpowers
+  url: https://github.com/obra/superpowers
+  description:
+
 ---
 
 ## Rules
