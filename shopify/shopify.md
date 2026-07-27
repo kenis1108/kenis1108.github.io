@@ -50,3 +50,4 @@ Draft order 的 customAttributes 付款后会出现在订单 webhook 的 note_at
 ## 直播
 
 https://apps.shopify.com/firework
+https://docs.firework.com/firework-for-developers
