@@ -4,6 +4,11 @@
 
 https://chromewebstore.google.com/detail/adswerve-datalayer-inspec/kmcbdogdandhihllalknlcjfpdjcleom
 
+## Shopify Web Pixel
+
+https://shopify.dev/docs/apps/build/marketing/pixels
+
+分为 Custom Pixel and App Pixel 
 
 ## SEO
 
