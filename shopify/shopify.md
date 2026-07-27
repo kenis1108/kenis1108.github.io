@@ -46,3 +46,7 @@ URL：上面的 smee channel 地址
 下一笔测试单完成后，smee 页面就会出现完整 payload
 
 Draft order 的 customAttributes 付款后会出现在订单 webhook 的 note_attributes 里
+
+## 直播
+
+https://apps.shopify.com/firework
