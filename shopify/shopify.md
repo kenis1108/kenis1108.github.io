@@ -55,3 +55,10 @@ Draft order 的 customAttributes 付款后会出现在订单 webhook 的 note_at
 
 https://apps.shopify.com/firework
 https://docs.firework.com/firework-for-developers
+
+## 千易
+
+居然是通过rest api获取订单信息，我以为是webhook呢
+
+<img width="842" height="168" alt="img_v3_02143_9d2db045-d81e-4aee-afd7-2ef5c098726g" src="https://github.com/user-attachments/assets/0b4c274c-be54-4d14-b411-2be1c2d09a6b" />
+
