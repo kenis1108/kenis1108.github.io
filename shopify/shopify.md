@@ -38,6 +38,10 @@ Shopify 后台里也会用这个概念，例如 Analytics 里的转化相关报�
 
 https://developers.splitit.com/mcp-servers/docs
 
+## 对接PayPal先用后付
+
+https://apps.shopify.com/paypal-payments-studio
+
 ## shopify webhook 测试
 
 公共webhook https://smee.io/ -> Start a new channel -> 保持页面打开
