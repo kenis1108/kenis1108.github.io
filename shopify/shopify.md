@@ -69,3 +69,8 @@ https://docs.firework.com/firework-for-developers/web/telemetry-console
 
 <img width="842" height="168" alt="img_v3_02143_9d2db045-d81e-4aee-afd7-2ef5c098726g" src="https://github.com/user-attachments/assets/0b4c274c-be54-4d14-b411-2be1c2d09a6b" />
 
+## 抽奖活动案例
+
+https://claspo.io/template/branching-quiz-popup/
+
+https://www.digioh.com/brand-example/evereden
