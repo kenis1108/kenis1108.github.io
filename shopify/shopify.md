@@ -74,3 +74,13 @@ https://docs.firework.com/firework-for-developers/web/telemetry-console
 https://claspo.io/template/branching-quiz-popup/
 
 https://www.digioh.com/brand-example/evereden
+
+## AVADA 是什么
+
+AVADA 是面向 Shopify 商家的第三方应用服务商（Avada Group），提供 SEO、图片优化、页面加速等工具。店铺安装后，应用会向主题注入自己的代码，在后台即可配置，无需开发从零写加速逻辑。
+
+页面加速方案: 先让页面内容和样式出来，再跑非必要的第三方脚本。 聊天、弹窗、评价、支付横幅等应用都会往页面塞 JS；这些脚本一上来就执行，会堵住主线程、拖慢首屏。AVADA 把这类脚本延后，等用户滚动、点击或点按时再执行。
+
+问题: JS 延迟会改写 Shopify ScriptTag。实现上常把 type="text/javascript" 改成浏览器不执行的类型（如 lightJs），等交互后再改回并执行。好处是测速分数上去；代价是 Splitit 这类必须尽早出现的横幅可能一直不跑。正确做法是关掉 JS delay，或把 web-components.splitit.com、shop-server.splitit.com 设为立即加载，而不是删除 ScriptTag。
+
+
