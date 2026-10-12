@@ -101,7 +101,3 @@ curl -X POST \
 - 显示 "Classic customer accounts" 或旧版登录页 → Legacy
 
 GraphQL 的优势是：可编程、可批量查多个店铺、适合在 App 里做自动判断。
-
----
-
-如果你告诉我具体要查哪家店（比如 CA 站），以及你更倾向用 GraphiQL App 还是 CLI，我可以按你的环境写一条可直接复制的命令。
