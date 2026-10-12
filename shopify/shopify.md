@@ -83,4 +83,15 @@ AVADA 是面向 Shopify 商家的第三方应用服务商（Avada Group），提
 
 问题: JS 延迟会改写 Shopify ScriptTag。实现上常把 type="text/javascript" 改成浏览器不执行的类型（如 lightJs），等交互后再改回并执行。好处是测速分数上去；代价是 Splitit 这类必须尽早出现的横幅可能一直不跑。正确做法是关掉 JS delay，或把 web-components.splitit.com、shop-server.splitit.com 设为立即加载，而不是删除 ScriptTag。
 
+## Shopify 的「购物车永久链接 / Buy Button」结账链接
+
+```text
+https://ecoflow-tech.myshopify.com/cart/55882164961353:1?channel=buy_button
+     │                              │     │            │  │
+     │                              │     │            │  └─ 来源标记（Buy Button）
+     │                              │     │            └─ 数量 = 1
+     │                              │     └─ 变体 ID（variant id）
+     │                              └─ /cart/变体:数量  → 清空购物车，放入这些商品
+     └─ 店铺域名
+```
 
