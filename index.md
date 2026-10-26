@@ -16,8 +16,6 @@ hero:
 
 features:
   - title: 待完成文章
-    details: 大文件分片上传，根据网络质量实时修改分片大小
-  - title: 待完成文章
     details: 前端实战：文件虚拟列表 实现缩略图的缓存，以及图标的缓存，不要在滚动的时候重复请求同一个图片
   - title: 待完成文章
     details: 如何将 Unicode 代码点转换为 \u 转义序列格式，每种编程语言表示Unicode 代码点有点差异
